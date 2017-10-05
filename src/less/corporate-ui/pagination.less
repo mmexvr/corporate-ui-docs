@@ -1,0 +1,57 @@
+.pagination {
+  border-radius: 0;
+  background-color: #fff;
+
+  &-light {
+    background-color: transparent;
+
+    > li,
+    > .active {
+
+      > span,
+      > a,
+      > a:focus {
+        color: inherit;
+        background-color: transparent;
+        border: 0;
+        padding: 0px 6px;
+        font-weight: normal;
+
+        &:hover {
+          background-color: transparent;
+          color: inherit;
+        }
+      }
+    }
+    > .active > span {
+      background-color: transparent;
+      font-weight: bold;
+      border-bottom: 1px solid #fff;
+      padding: 0;
+      margin: 0 10px;
+    }
+  }
+
+  > li {
+
+    &:first-child > a,
+    &:last-child > a {
+      border-radius: 0;
+    }
+    &.active {
+
+      > a,
+      > a:hover {
+        &:extend(.btn-primary);
+      }
+    }
+
+    > a {
+      color: inherit;
+    }
+    > span,
+    > a {
+      float: none;
+    }
+  }
+}

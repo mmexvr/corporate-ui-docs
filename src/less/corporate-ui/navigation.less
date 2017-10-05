@@ -1,0 +1,521 @@
+// SCANIA BOOTSTRAP THEME
+// NAVIGATION
+
+.navbar-default {
+  background-color: #fff;
+  margin-bottom: 0;
+  border: 0;
+  z-index: 1000;
+  font-size: 1.4rem;
+
+  > .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-header {
+    float: none;
+    display: block;
+    font-family: 'Scania Sans Headline';
+    padding: 12px 15px 3px;
+    border-bottom: 1px solid #e2e2e2;
+    font-size: 1.8rem;
+
+    .navbar-brand {
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+      height: auto;
+      font-size: 0;
+      padding: 0;
+      margin: 20px 30px 20px 15px;
+
+      &:before {
+        display: inline-block;
+        content: "";
+        background-image: url(/resources/logotype/scania/scania-wordmark.png);
+        background-image: url(/resources/logotype/scania/scania-wordmark.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        vertical-align: middle; // This is needed to make after able to align middle vertical
+        width: 170px;
+        height: 28px;
+      }
+      &:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        border-left: 1px solid #e2e2e2;
+        margin: 0 -20px 0 15px;
+        height: 20px;
+        cursor: default;
+      }
+    }
+    .navbar-symbol {
+      width: 48px;
+      height: 46px;
+      float: right;
+      margin-right: 10px;
+      margin-left: 45px;
+      margin-top: 9px;
+
+      &:before {
+        display: inline-block;
+        content: "";
+        background-image: url(/resources/logotype/scania/scania-symbol.png);
+        background-image: url(/resources/logotype/scania/scania-symbol.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: inherit;
+        height: inherit;
+      }
+    }
+    .navbar-nav {
+      margin: 11px 0 0 -15px;
+
+      a {
+        font-family: "Scania Sans";
+        font-size: 12px;
+        color: #747472;
+
+        &:hover {
+          color: inherit;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    // Top level - main navigation
+    + .navbar-collapse {
+      .top-level();
+
+      // Sub level - main navigation
+      + .navbar-collapse {
+        .sub-level();
+      }
+    }
+  }
+
+  .navbar-collapse {
+    position: relative;
+    border-bottom: 1px solid #d3d3d3;
+
+    a {
+      text-decoration: none;
+      position: static;
+    }
+
+    .active {
+
+      > a,
+      > a:hover,
+      > a:focus {
+        background-color: transparent;
+        color: #041e42;
+      }
+    }
+
+    &:first-child {
+      //.top-level();
+
+      .navbar-collapse {
+        //.sub-level();
+      }
+    }
+  }
+
+  .navbar-nav {
+
+    > li {
+
+      &.active > a,
+      &.open > a {
+        color: #041e42;
+        background-color: transparent;
+
+        &:hover,
+        &:focus {
+          color: #041e42;
+          background-color: transparent;
+        }
+      }
+
+      > a {
+        color: #041e42;
+
+        &:hover {
+          color: #041e42;
+        }
+      }
+      + li > a:before {
+        border-left: 1px solid #e2e2e2;
+      }
+    }
+  }
+}
+
+.app {
+
+  .navbar-default {
+
+    .navbar-header {
+      padding: 2px 0 0px;
+
+      + .navbar-collapse + .navbar-collapse {
+        padding: 0;
+      }
+    }
+  }
+}
+
+// NAV TABS
+ul.nav-tabs {
+  font-size: 0;
+  text-align: center;
+  border-bottom: 1px solid @color-primary-01;
+
+  > li {
+    margin-bottom: 0;
+    float: none;
+    display: inline-block;
+
+    > a {
+      padding: 15px 15px 14px 15px;
+      text-transform: none;
+      font-weight: normal;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      margin-right: 0;
+      border-top: 1px solid @color-primary-01;
+      border-right: 1px solid @color-primary-01;
+      position: relative;
+      background-color: #fff;
+      color: @color-primary-03;
+      font-size: 12px;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: #f7f7f7; 
+        border-top: 1px solid @color-primary-01;
+        border-right: 1px solid @color-primary-01;
+      }
+    }
+
+    &.active {
+
+      > a,
+      > a:hover,
+      > a:focus {
+        position: relative;
+        color: #fff;
+        background-color: @color-primary-03;
+        border-radius: 0;
+        border-top: 1px solid @color-primary-03;
+        border-left: 1px solid @color-primary-03;
+      }
+    }
+
+    &:first-child a,
+    &.active:first-child a {
+      border-left: 1px solid @color-primary-01; 
+    }
+    &.disabled a {
+        color: #999;
+        font-style: italic;
+    }    
+  }
+
+  &-light {
+    border-bottom: transparent;
+
+    > li {
+
+      &:hover a {
+        color: inherit;
+      }
+      &.active {
+        background-color: #fff;
+
+        a,
+        a:hover,
+        a:focus,
+        &:first-child a {
+          background-color: transparent;
+          display: inline-block;
+          color: inherit;
+          padding: 0;
+          margin: 15px 15px 13px 15px;
+          border-color: red;
+          border-width: 0 0 2px;
+        }
+      }
+
+      > a,
+      > a:hover {
+        background-color: transparent;
+        color: inherit;
+        border-color: #ddd;
+      }
+    }
+  }
+
+  .panel-heading & {
+    display: flex;
+    margin: -10px -15px -11px;
+
+    > li {
+      flex: 1;
+    }
+  }
+}
+
+.nav-pills li {
+
+  &.active > a {
+
+    &,
+    &:hover {
+      background-color: @brand-info;
+    }
+
+    > .badge {
+      color: @brand-info;
+    }
+  }
+
+  > a {
+    color: @brand-info;
+  }
+}
+
+.breadcrumb {
+
+  > .active {
+    color: #999;
+  }
+  > li + li:before {
+    &:extend([class^="icon-"]);
+    &:extend(.icon-angle-right:before);
+
+    color: #aaa;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .navbar-default {
+    font-size: 1.2rem;
+
+    &,
+    .app & {
+
+      .navbar-toggle {
+        display: block;
+        float: left;
+        margin: -18px 0 -19px -18px;
+        padding: 24px 17px;
+        border-radius: 0;
+
+        &.collapsed {
+
+          &:before {
+            content: none;
+          }
+          span {
+            display: block;
+          }
+        }
+        &:before {
+          font-family: 'corporate-icons';
+          content: "\e60d";
+          line-height: 14px;
+          height: 14px;
+          width: 22px;
+          display: block;
+        }
+        span {
+          display: none;
+        }
+      }
+      .navbar-header {
+        padding: 18px;
+        text-align: center;
+
+        + .navbar-collapse,
+        + .navbar-collapse + .navbar-collapse {
+          background-color: #f5f5f5;
+          border-top: 0px;
+          padding: 0;
+          font-size: 1.2rem;
+
+          &.collapse {
+            display: none !important;
+
+            &.in {
+              display: block !important;
+
+              + .navbar-collapse {
+                display: block !important;
+              }
+            }
+          }
+
+          li {
+            float: none;
+
+            &.active {
+
+              &:after {
+                content: "-";
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translate(0, -50%);
+                font-family: 'corporate-icons';
+                content: "\e662";
+              }
+
+              a {
+                border-left: 0;
+              }
+            }
+          }
+          + .navbar-collapse {
+            background-color: transparent;
+
+            > .navbar-nav li a {
+              padding-left: 35px;
+            }
+            li.active:after {
+              content: "";
+            }
+          }
+          .navbar-nav a {
+            padding: 10px 25px;
+            margin-left: 0;
+            border-bottom: 1px solid #e2e2e2;
+
+            &:hover {
+              text-decoration: none;
+            }
+            &:before,
+            &:after {
+              content: none !important;
+            }
+          }
+        }
+        .navbar-symbol {
+          width: 40px;
+          height: 37px;
+          margin: -5px;
+        }
+        .navbar-brand,
+        .navbar-nav {
+          display: none;
+        }
+      }
+      .navbar-nav {
+        float: none;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+
+  .navbar-nav {
+    margin: 0;
+
+     > li {
+
+      > a {
+        line-height: 18px;
+        border-bottom: 1px solid #eee;
+      }
+
+      &.active > a {
+        border-top: 0;
+        border-left: 4px solid #7c1c1d;
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+// .navbar.portal-navigation,
+// .navbar.navbar-scania {
+//   &:extend(.navbar-default all);
+// }
+
+
+// Mixins related to navigations
+.top-level() {
+  padding: 0;
+
+  .navbar-nav {
+
+    &.navbar-right:last-child {
+      margin-right: 0;
+    }
+    a {
+      padding: 20px 0;
+      white-space: nowrap; // This might not be a good idea we will see...
+      background-color: transparent;
+
+      &:before,
+      &:after {
+        content: "";
+        padding: 0 15px;
+      }
+      .app & {
+        padding: 16px 0;
+
+        &:first-child:before {
+          padding-right: 0;
+        }
+      }
+    }
+    + li a:before {
+      border-left: 1px solid #e2e2e2;
+    }
+  }
+}
+.sub-level() {
+  background-color: #f3f3f3;
+  font-size: 1.5rem;
+
+  a {
+    font-family: "Scania Sans";
+    text-transform: none;
+    position: relative;
+
+    &.active:after,
+    &:hover:after {
+      content: "";
+      border-bottom: 2px solid #c50918;
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      margin-bottom: -2px;
+    }
+    .app & {
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      &.active:after,
+      &:hover:after {
+        bottom: 8px;
+      }
+    }
+  }
+  li.active a:after {
+    &:extend(.navbar-default .navbar-header + .navbar-collapse + .navbar-collapse a.active:after);
+
+    .app & {
+      &:extend(.app .navbar-default .navbar-header + .navbar-collapse + .navbar-collapse a.active:after);
+    }
+  }
+
+  .navbar-nav:first-child {
+    margin-left: 0;
+  }
+}
