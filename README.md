@@ -36,4 +36,4 @@
 
 
 <h2>License</h2>
-<p>The Scania brand identity items like the Scania Sans font faces, the Scania Logotypes and logo symbol are copyrighted by Scania CV AB. All other interaction patterns and components found in this repository are available on an open source basis. Although you'll have great freedom to make improvements and new components to this repository, some changes to interaction patterns and use of colours etc may not be approved.</p>
+<p>The Scania brand identity items like the Scania Sans font faces, the Scania Logotypes and logo symbol are copyrighted by Scania CV AB. All other interaction patterns and components found in this repository are available on an open source basis. Although you'll have great freedom to make improvements and add new components to this repository, some changes to interaction patterns and use of colours etc may not be approved.</p>
