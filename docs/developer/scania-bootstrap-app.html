@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
@@ -5,49 +6,87 @@
   <meta charset="utf-8">
   <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
 
-
-  <title>Corporate UI - Developers</title>
+  <title>UX Library - Bootstrap CSS for Applications</title>
 
   <script src="https://static.scania.com/vendors/frameworks/jquery/1.11.3/jquery-1.11.3.min.js"></script>   
   <script src="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js"></script>
-  <link rel="stylesheet" href="https://static.scania.com/ux-library/developer/css/scania-bootstrap-docs.css">
-
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+  <link rel="stylesheet" href="css/scania-bootstrap-docs.css">
   <link rel="stylesheet" href="../../../css/ux-library.css">
-</head>
+
+  <!--  <link rel="stylesheet" href="https://static.scania.com/resources/fonts/scania-sans/cyrillic/scania-cyrillic-fonts.css" type="text/css">  -->   
+
+  <link rel="stylesheet" type="text/css" href="https://static.scania.com/resources/fonts/scania-sans/scania-tools-fonts.css">
+
+
   <style>
-    .bs-callout,
-    .highlight {
-        display: none;
-    }
+
+
+  sub-navigation nav-item.active a:after, 
+  nav-itemsub-navigation.active a:after,
+  sub-navigation nav-item:not(:first-child) a.active:after, 
+  nav-itemsub-navigation:not(:first-child) a.active:after, 
+  sub-navigation nav-item:not(:first-child) a:hover:after, 
+  nav-itemsub-navigation:not(:first-child) a:hover:after, 
+  sub-navigation nav-item a.active:after, 
+  nav-itemsub-navigation a.active:after, 
+  sub-navigation nav-item a:hover:after, 
+  nav-itemsub-navigation a:hover:after {
+    content: "";
+    border-bottom: 2px solid #c50918;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    margin-bottom: -2px;
+  }
+
+  body.scania.app {font-family: 'Scania Sans Semi Condensed';}
+
+  c-main-content {background-color: #E2E2E2;}
+
+
+  .bs-callout,
+  .highlight {
+      display: none;
+  }
+
   </style>
 </head>
 
-<body class="scania app ux-lib" data-env="dev" ng-controller="UxLib as uxlib">
-
-  <c-corporate-header site-name="Developers" site-url="/">
-    <nav-item location="https://github.scania.com/corporate-ui/">UX Library</nav-item>
-    <nav-item location="https://github.scania.com/scania/corporate-ui">Scania GitHub</nav-item>
+<body class="scania">
+  <c-corporate-header site-name="UX Library" site-url="/ux-library/">
+    <nav-item location="https://www.scania.com/ux-library/">UX Library</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
   </c-corporate-header>
 
   <c-main-content>
 
-    <c-main-navigation>
-          <primary-items>
-          <nav-item location="/">Home</nav-item>
-          <nav-item location="/development.html">Development</nav-item>         
-          <nav-item location="/testing.html" class="active">Testing
-          <sub-navigation caption="Testing">
-            <nav-item location="scania-bootstrap-app.html">Bootstrap CSS for Applications</nav-item>
-            <nav-item location="scania-bootstrap-public.html">Bootstrap Public CSS</nav-item>  
-            <nav-item location="../Examples/advanced-tables.html">Advanced Tables</nav-item>
-          </sub-navigation>
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui/">
+    <nav-item location="https://www.scania.com/world/#/">World Entry</nav-item>
+    <nav-item location="https://www.scania.com/group/en/">Scania Group</nav-item>
+  </c-corporate-header>
+  
+  <c-main-content>
+
+    <c-main-navigation show-search>
+      <primary-items>
+        <nav-item location="/corporate-ui/">Home</nav-item>
+        <nav-item location="/corporate-ui/styleguide/">Style Guide</nav-item>            
+        <nav-item location="/corporate-ui/developer/" class="active">Web Applications
+          <sub-navigation caption="Scania Bootstrap">
+            <nav-item location="/corporate-ui/developer/scania-bootstrap-app.html" class="active">Bootstrap CSS for Applications</nav-item>
+            <nav-item location="/corporate-ui/developer/scania-bootstrap-public.html">Bootstrap Public CSS</nav-item>  
+            <nav-item location="/corporate-ui/template/html-copy-paste/html-copy-paste.html">Copy Paste HTML</nav-item>
+          </sub-navigation>  
         </nav-item>
-        <nav-item location="https://github.scania.com/Scania/corporate-ui/issues/new">Report an Issue</nav-item>
-        <nav-item location="https://github.scania.com/corporate-ui/developer/support.html">Support</nav-item>
-        </primary-items>
+        <nav-item location="/corporate-ui/mobile-apps/">Mobile Apps</nav-item>
+            <nav-item location="https://github.scania.com/Scania/corporate-ui/issues/new">Report an Issue</nav-item>
+            <nav-item location="/ux-library/developer/support.html">Support</nav-item>
+      </primary-items>
     </c-main-navigation>
 
-    <section>
+    <section class="app">
         <div class="container"><!-- MAIN CONTAINER -->
           <div class="row">
           <div class="col-md-9 bs-docs-section">
