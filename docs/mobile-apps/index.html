@@ -5,12 +5,13 @@
   <meta charset="utf-8">
   <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
   <title>UX Library - Colours</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
   <script src="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js"></script>
 </head>
 <body unresolved class="scania">  
   <c-corporate-header site-name="UX Library" site-url="/corporate-ui/">
-    <nav-item location="https://www.scania.com/world/#/">World Entry</nav-item>
-    <nav-item location="https://www.scania.com/group/en/">Scania Group</nav-item>
+    <nav-item location="https://www.scania.com/ux-library/">UX Library</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
   </c-corporate-header>
 
   <c-main-content>
