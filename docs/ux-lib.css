@@ -17,9 +17,10 @@ img[alt='Clone me on GitHub'] {
   display: none;
 }
 
-
-
-
+a[href="/corporate-ui/template/"],
+a[href="/corporate-ui/component/"] { 
+  display: none;
+}
 
 
 .ux-lib[version-notfound]:after {
