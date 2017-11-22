@@ -1,7 +1,7 @@
 <h1>The Corporate UI Framework</h1>
 
-<p>In this repository you'll find all components described in <a href="https://github.scania.com/pages/Scania/ux-library/developer/">the UX Library (Scania Internal)</a>.</p>
-<p>The repository is a place for all Front End Developers to join the UI Developement at Scania. It is us togheter that develop and maintain this repository as well as <a href="https://github.scania.com/pages/Scania/ux-library/">the documentation (Scania Internal)</a>.</p>
+<p>In this repository you'll find all components described in <a href="https://scania.github.io/corporate-ui/developer/">the UX Library</a>.</p>
+<p>The repository is a place for all Front End Developers to join the UI Developement at Scania and elsewhere. It is us togheter that develop and maintain this repository as well as <a href="https://scania.github.io/corporate-ui/developer/">the documentation</a> (found in the /docs folder in this repo).</p>
 <ul>
 	<li>Something broken in a existing component? Help fixing it!</li>
 	<li>Found a component that needs to be extended? Get on and improve it!</li>
@@ -36,4 +36,4 @@
 
 
 <h2>License</h2>
-<p>The Scania brand identity items like the Scania Sans font faces, the Scania Logotypes and logo symbol are copyrighted by Scania CV AB. All other interaction patterns and components found in this repository are available on an open source basis. Although you'll have great freedom to make improvements and add new components to this repository, some changes to interaction patterns and use of colours etc may not be approved.</p>
+<p>The Scania brand identity items like the Scania Sans font faces, the Scania Logotypes and logo symbol are copyrighted by Scania CV AB, as well as all the sample content published in the UX Library. All other interaction patterns and components found in this repository are available on an open source basis. Although you'll have great freedom to make improvements and add new components to this repository, some changes to interaction patterns and use of colours etc may not be approved.</p>
