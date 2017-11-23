@@ -70,7 +70,7 @@
 
   <h2>HTML Elements</h2>
 
-  <code>
+  <code><pre>
 
     <h1>I am located in a standard HTML element</h1>
 
@@ -83,6 +83,7 @@
          <p>Hi there, since my element name includes a dash, you know that I am not one of HTML's standard elements.</p>
     </c-alert>
 
+  </pre>
   </code>  
 
   <c-alert type='success'>
@@ -123,8 +124,8 @@
     https://scania.github.io/corporate-ui/template/html-copy-paste/html-copy-paste.html
       </a>
     </li>
-    <li><a href="https://scania.github.io/corporate-ui/presentation/c-web-standards/web-standards.html">
-    https://scania.github.io/corporate-ui/presentation/c-web-standards/web-standards.html
+    <li><a href="https://scania.github.io/corporate-ui/presentation/web-standards/web-standards.html">
+    https://scania.github.io/corporate-ui/presentation/web-standards/web-standards.html
       </a>
     </li>
   </ul>  
@@ -207,50 +208,6 @@
     Polymer({
       is: 'c-web-standards',
       ready: function() {
-        var elms = document.querySelectorAll('.copyable');
-        for(var i=0; i < elms.length; i++) {
-          //elms[i].onclick = this.action;
-          elms[i].addEventListener('click', this.action);
-
-
-
-        }
-
-        var textarea = document.createElement('textarea')
-        textarea.setAttribute('id', 'temp-element')
-        document.body.appendChild(textarea)
-      },
-      action: function() {
-        var self = this,
-            html = this.outerHTML,
-            textarea = document.getElementById('temp-element'),
-            customElementName = (html.match(/\<(\w+)-(\w+)/g) || [''])[0].substring(1);
-
-        html = html.replace(/ style-scope c-html-copy-paste/g, '')
-        html = html.replace(/style-scope c-html-copy-paste/g, '')
-        html = html.replace(/ class=""/g, '')
-        html = html.replace(/ copyable/g, '')
-        //html = html.replace(/x-scope[\s\S]*?<\<\/c->/g, '');
-
-        if (customElementName.length) {
-          var ce = this.querySelector(customElementName) || this
-          var demo = ce.querySelector('demo-content')
-          var customElement = ce.cloneNode(false)
-          customElement.removeAttribute('class')
-          customElement.innerHTML = demo ? demo.innerHTML : ''
-          html = customElement.outerHTML
-        }
-
-        textarea.innerHTML = html
-        textarea.select();
-        document.execCommand('copy')
-
-        this.classList.toggle("copied")
-        
-        setTimeout(function(){ 
-          self.classList.toggle("copied") 
-        }, 700);
-
       }
     });
 
