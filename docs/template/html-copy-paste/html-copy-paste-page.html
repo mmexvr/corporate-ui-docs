@@ -17,6 +17,41 @@
 
 
 <div class="code-to-copy"> 
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8">
+  <title>Y O U R  P A G E  T I T L E</title>  
+  <dont-run-script src="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js"></script>
+</head>
+<body class="scania public app">
+ <dont-run-c-corporate-header site-name="UX Library" site-url="/ux-library/">
+    <nav-item location="https://www.scania.com/ux-library/">UX Library</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </dont-run-c-corporate-header>
+
+
+  <dont-run-c-main-content>
+
+
+    <dont-run-c-main-navigation show-search>
+      <primary-items>
+        <nav-item location="/corporate-ui/">Home</nav-item>
+        <nav-item location="/corporate-ui/styleguide/">Style Guide</nav-item>            
+        <nav-item location="/corporate-ui/developer/" class="active">Web Applications
+          <sub-navigation caption="Scania Bootstrap">
+            <nav-item location="/corporate-ui/developer/scania-bootstrap-app.html">Bootstrap CSS for Applications</nav-item>
+            <nav-item location="/corporate-ui/developer/scania-bootstrap-public.html">Bootstrap Public CSS</nav-item>  
+            <nav-item location="/corporate-ui/template/html-copy-paste/html-copy-paste.html" class="active">Copy Paste HTML</nav-item>
+          </sub-navigation>  
+        </nav-item>
+        <nav-item location="/corporate-ui/mobile-apps/">Mobile Apps</nav-item>
+            <nav-item location="https://github.com/scania/corporate-ui/issues/new">Report an Issue</nav-item>
+            <nav-item location="/corporate-ui/developer/support.html">Support</nav-item>
+      </primary-items>
+    </dont-run-c-main-navigation>
+
   <dont-run-c-highcharts type="spline" data="[[0,0],[1,7],[2,1],[3,6],[4,8],[5,6]]" title="Lowered fuel consumption during one week" x-label="Iterations" y-label="Awesomeness Index" height="400px">
 </dont-run-c-highcharts>
 </div>
@@ -254,7 +289,11 @@
 
         .code-to-copy   {
             display: none;
-        }      
+        }
+
+        textarea#temp-element {
+            display: none;
+        }  
 
 
   </style>
