@@ -128,6 +128,120 @@
       display: none;
   }
 
+
+        body:hover c-main-content {
+          display:block;
+        }
+
+        .copyable {
+            overflow: visible;
+        }
+
+
+        .copyable::before {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            content: ' ';
+            font-size: 18px;
+            z-index: 100;
+            width: 100%;
+            height: 100%;
+            color: white;
+            background-color: rgba(65, 141, 206, 0.72);
+            font-family: 'Scania Sans Condensed Bold';
+            text-align: center;
+            text-transform: uppercase;
+            padding: 15px;
+            cursor: copy;
+            opacity:0;
+            display: block;
+        }
+
+        .copyable::after {
+            position: absolute;
+            bottom: 100.1%;
+            left: 0;          
+            content: 'Copy HTML to Clipboard';
+            font-size: 16px;
+            z-index: 100;
+            font-family: 'Scania Sans Condensed Bold';
+            text-transform: uppercase;
+            cursor: copy;
+            opacity: 0;
+            background: rgb(65, 141, 206);
+            color: white;
+            padding: 3px 15px 1px;         
+        }        
+
+        .copyable.copied::before {
+            content: ' ';
+            cursor: progress;
+        }  
+
+        .copyable.copied::after {
+            content: 'Copying HMTL...';
+            cursor: progress;
+        }
+
+        .copyable:hover::before   {
+            opacity: 0.8;
+        }
+
+        .copyable.copied:hover::before,        
+        .copyable:hover::after {
+            opacity: 1;      
+        }    
+
+        .uncopyable {
+            overflow: visible;
+        }  
+
+       .uncopyable::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            content: ' ';
+            font-size: 18px;
+            z-index: 100;
+            color: white;
+            background-color: rgba(255, 0, 0, 0.6);
+            font-family: 'Scania Sans Condensed Bold';
+            text-transform: uppercase;
+            padding: 15px;
+            cursor: default;
+            opacity: 0;
+            display: block;
+        }
+
+        .uncopyable::after {
+            position: absolute;
+            bottom: 100.1%;         
+            left: 0;
+            content: 'Do not copy. This section is informative only.';
+            font-size: 16px;
+            z-index: 100;
+            font-family: 'Scania Sans Condensed Bold';
+            text-transform: uppercase;
+            cursor: default;
+            opacity: 0;
+            background: rgb(255, 0, 0);
+            color: white;
+            padding: 3px 15px 1px;           
+        }  
+
+        .uncopyable:hover::before,
+        .uncopyable:hover::after   {
+            opacity: 1;
+        }    
+
+        .code-to-copy   {
+            display: none;
+        }      
+
+        
   </style>
 
   <link rel="stylesheet" type="text/css" href="https://static.scania.com/resources/fonts/scania-sans/scania-tools-fonts.css">
