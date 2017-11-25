@@ -233,7 +233,7 @@
       },
       action: function() {
         var self = this,
-            html = self.parentNode.outerHTML,
+            html = self.previousSibling.innerHTML,
             textarea = document.getElementById('temp-element'),
 
         html = html.replace(/ style-scope c-html-copy-paste-components/g, '')
