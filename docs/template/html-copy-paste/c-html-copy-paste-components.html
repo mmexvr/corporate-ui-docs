@@ -235,7 +235,7 @@
         var self = this,
             html = self.parentNode.outerHTML,
             textarea = document.getElementById('temp-element'),
-        html.removeAttribute('class')
+        html = html.removeAttribute('class')
         html = html.replace(/ class=""/g, '')
         html = html.replace(/ copyable/g, '')
         html = html.replace(/dont-run-/g, '')
