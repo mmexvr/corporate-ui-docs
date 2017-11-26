@@ -241,7 +241,7 @@
       },
       action: function() {
         var self = this,
-            html = '<html><hej>',
+            html = self.previousElementSibling.innerHTML,
             textarea = document.getElementById('temp-element'),
 
         html = html.replace(/ style-scope c-html-copy-paste-page/g, '')
