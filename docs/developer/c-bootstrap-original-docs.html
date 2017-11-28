@@ -7175,15 +7175,14 @@
 
 $(function(){
 
-  $('.public-styling').click(function() {
-      alert('Jesper');
+  $(".public-styling").click(function() {
       $('body').toggleClass("app public");
       $('.app-styling').removeClass("active"); 
       $('.public-styling').addClass("active");   
       
   });
 
-  $('.app-styling').click(function() {
+  $(".app-styling").click(function() {
       $('body').toggleClass("public app");
       $('.app-styling').addClass("active"); 
       $('.public-styling').removeClass("active");     
