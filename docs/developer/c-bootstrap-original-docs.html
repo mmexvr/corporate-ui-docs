@@ -7171,7 +7171,27 @@
 
 </template>
 
-<script>var name = 'c-bootstrap-original-docs'; 
+<script>
+
+$(function(){
+  alert('Jesper')
+  $('.public-styling').click(function() {
+      $('body').toggleClass("public app");
+      $('.app-styling').removeClass("active"); 
+      $('.public-styling').addClass("active");   
+      
+  });
+
+  $('.app-styling').click(function() {
+      $('body').toggleClass("app public");
+      $('.app-styling').addClass("active"); 
+      $('.public-styling').removeClass("active");     
+  });  
+
+});
+
+
+var name = 'c-bootstrap-original-docs'; 
 Polymer({
   is: name,
   properties: {
@@ -7198,26 +7218,6 @@ Polymer({
     }  
   }
 });
-
-
-$(function(){
-
-  $('.public-styling').click(function() {
-      $('body').toggleClass("public app");
-      $('.app-styling').removeClass("active"); 
-      $('.public-styling').addClass("active");   
-      
-  });
-
-  $('.app-styling').click(function() {
-      $('body').toggleClass("app public");
-      $('.app-styling').addClass("active"); 
-      $('.public-styling').removeClass("active");     
-  });  
-
-});
-
-
 
 </script>
 </dom-module>
