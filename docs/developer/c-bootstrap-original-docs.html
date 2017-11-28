@@ -5189,8 +5189,8 @@
             </div>
           </div>
         </div>
-        </div>
       </div>
+    </div>
 
       <!-- JAVASCRIPT TAB CONTENT STARTS HERE -->
 
@@ -5199,10 +5199,10 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-md-9 bs-docs-section">
-            <div class="page-header">
-            <h1 id="overview">Bootstrap Javascript</h1>
-            </div>
-            <div class=".bs-docs-sidebar .hidden"></div>
+              <div class="page-header">
+                <h1 id="overview">Bootstrap Javascript</h1>
+              </div>
+<!--             <div class=".bs-docs-sidebar .hidden"></div> -->
 
                 <div class="bs-docs-section">
                   <div class="bs-callout bs-callout-danger">
@@ -5219,17 +5219,17 @@
                   <p>You can use all Bootstrap plugins purely through the markup API without writing a single line of JavaScript. This is Bootstrap's first-class API and should be your first consideration when using a plugin.</p>
 
                   <p>That said, in some situations it may be desirable to turn this functionality off. Therefore, we also provide the ability to disable the data attribute API by unbinding all events on the document namespaced with <code>data-api</code>. This looks like this:</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">'.data-api'</span><span class="p">)</span>
-                </code></pre></div>
+                    <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">'.data-api'</span><span class="p">)</span>
+                    </code></pre></div>
 
                   <p>Alternatively, to target a specific plugin, just include the plugin's name as a namespace along with the data-api namespace like this:</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">'.alert.data-api'</span><span class="p">)</span>
-                </code></pre></div>
+                    <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">'.alert.data-api'</span><span class="p">)</span>
+                    </code></pre></div>
 
                   <h3 id="js-programmatic-api">Programmatic API</h3>
                   <p>We also believe you should be able to use all Bootstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.btn.danger'</span><span class="p">).</span><span class="nx">button</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'fat'</span><span class="p">)</span>
-                </code></pre></div>
+                    <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.btn.danger'</span><span class="p">).</span><span class="nx">button</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'fat'</span><span class="p">)</span>
+                    </code></pre></div>
 
                   <p>All methods should accept an optional options object, a string which targets a particular method, or nothing (which initiates a plugin with default behavior):</p>
                 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">()</span>                      <span class="c1">// initialized with defaults</span>
@@ -5260,10 +5260,6 @@
                   </div>
                 </div>
 
-
-
-                <!-- Transitions
-                ================================================== -->
                 <div class="bs-docs-section">
                   <h1 id="transitions" class="page-header">Transitions <small>transition.js</small></h1>
 
@@ -5273,10 +5269,6 @@
                   <p>Transition.js is a basic helper for <code>transitionEnd</code> events as well as a CSS transition emulator. It's used by the other plugins to check for CSS transition support and to catch hanging transitions.</p>
                 </div>
 
-
-
-                <!-- Modal
-                ================================================== -->
                 <div class="bs-docs-section">
                   <h1 id="modals" class="page-header">Modals <small>modal.js</small></h1>
 
