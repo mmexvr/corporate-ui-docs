@@ -2558,19 +2558,23 @@
     is: name,
     properties: {
         fullbleed: true,
-        default-version: {
+        zone: {
+            type: String,
+            value: "app"
+        },       
+        version: {
             type: String,
             value: "3.2.0"
         },
-        default-section: {
+        section: {
             type: String,
             value: "css"
         },
-        show-code-examples: {
+        examples: {
             type: String,
             value: "true"
         },
-        show-alerts: {
+        alerts: {
             type: String,
             value: "false"
         }  
