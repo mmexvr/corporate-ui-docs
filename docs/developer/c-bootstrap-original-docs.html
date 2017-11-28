@@ -7165,7 +7165,27 @@
     </div>  
 </section>
 
+
   <div class="container portal-footer"></div> <!-- FOOTER -->
+
+  <script>
+    $(function(){
+
+    $(".public-styling").click(function() {
+        $('body').toggleClass("app public");
+        $('.app-styling').removeClass("active"); 
+        $('.public-styling').addClass("active");   
+        
+    });
+
+    $(".app-styling").click(function() {
+        $('body').toggleClass("public app");
+        $('.app-styling').addClass("active"); 
+        $('.public-styling').removeClass("active");     
+    });  
+
+  });
+  </script>
 
 </template>
 
@@ -7197,23 +7217,6 @@ Polymer({
       value: "false"
     }  
   }
-  ready: function () {
-    
-    $(".public-styling").click(function() {
-        $('body').toggleClass("app public");
-        $('.app-styling').removeClass("active"); 
-        $('.public-styling').addClass("active");   
-        
-    });
-
-    $(".app-styling").click(function() {
-        $('body').toggleClass("public app");
-        $('.app-styling').addClass("active"); 
-        $('.public-styling').removeClass("active");     
-    });  
-
-  });
-
 });
 
 </script>
