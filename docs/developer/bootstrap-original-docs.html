@@ -1,26 +1,81 @@
+
 <!DOCTYPE html>
-<html class="corporate-ui">
+<html lang="en-GB">
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Corporate UI - Bootstrap CSS</title>
-  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <meta charset="utf-8">
+  <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+
+  <title>UX Library - Bootstrap CSS for Applications</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
   <script src="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js"></script>
-  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://static.scania.com/resources/fonts/scania-sans/scania-tools-fonts.css">
 
   <link rel="import" href="https://scania.github.io/corporate-ui/developer/c-bootstrap-original-docs.html">
-
   <style>
-    section.style-scope.c-bootstrap-original-docs {
-      margin-top: 50px;
-    }
+
+
+  sub-navigation nav-item.active a:after, 
+  nav-itemsub-navigation.active a:after,
+  sub-navigation nav-item:not(:first-child) a.active:after, 
+  nav-itemsub-navigation:not(:first-child) a.active:after, 
+  sub-navigation nav-item:not(:first-child) a:hover:after, 
+  nav-itemsub-navigation:not(:first-child) a:hover:after, 
+  sub-navigation nav-item a.active:after, 
+  nav-itemsub-navigation a.active:after, 
+  sub-navigation nav-item a:hover:after, 
+  nav-itemsub-navigation a:hover:after {
+    content: "";
+    border-bottom: 2px solid #c50918;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    margin-bottom: -2px;
+  }
+
+  body.scania.app {font-family: 'Scania Sans Semi Condensed';}
+
+  .bs-callout,
+  .highlight {
+      display: none;
+  }
+
   </style>
-  
-  </head>
-  <body unresolved class="scania app">
+</head>
 
-  <c-bootstrap-original-docs  version="3.2.0" section="css" examples="true" alerts="false" zone="app" fullbleed></c-bootstrap-original-docs>
+<body class="scania app">
+  <c-corporate-header site-name="UX Library" site-url="/ux-library/">
+    <nav-item location="https://www.scania.com/ux-library/">UX Library</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </c-corporate-header>
 
+  <c-main-content>
+
+    <c-main-navigation show-search>
+      <primary-items>
+        <nav-item location="/corporate-ui/">Home</nav-item>
+        <nav-item location="/corporate-ui/styleguide/">Style Guide</nav-item>            
+        <nav-item location="/corporate-ui/developer/scania-bootstrap.html" class="active">Web Applications
+          <sub-navigation caption="Scania Bootstrap">
+            <nav-item location="/corporate-ui/developer/bootstrap-original-docs.html" class="active">Bootstrap Documentation</nav-item>
+            <nav-item location="/corporate-ui/template/html-copy-paste/html-copy-paste.html">HTML Copy Paste</nav-item>
+          </sub-navigation>  
+        </nav-item>
+        <nav-item location="/corporate-ui/mobile-apps/">Mobile Apps</nav-item>
+            <nav-item location="https://github.com/scania/corporate-ui/issues">Report an Issue</nav-item>
+            <nav-item location="/corporate-ui/developer/support.html">Support</nav-item>
+      </primary-items>
+    </c-main-navigation>
+
+
+
+    <section>
+      <c-bootstrap-original-docs  version="3.2.0" section="css" examples="true" alerts="false" zone="app" fullbleed></c-bootstrap-original-docs>
+    </section>  
 
 </body>
 </html>
