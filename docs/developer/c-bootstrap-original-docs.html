@@ -5603,12 +5603,10 @@
 
 
 
-                <!-- Dropdowns
-                ================================================== -->
                 <div class="bs-docs-section">
-                  <h1 id="dropdowns" class="page-header">Dropdowns <small>dropdown.js</small></h1>
+                  <h1 id="js-dropdowns" class="page-header">Dropdowns <small>dropdown.js</small></h1>
 
-                  <h2 id="dropdowns-examples">Examples</h2>
+                  <h2 id="js-dropdowns-examples">Examples</h2>
                   <p>Add dropdown menus to nearly anything with this simple plugin, including the navbar, tabs, and pills.</p>
 
                   <h3>Within a navbar</h3>
@@ -5702,7 +5700,7 @@
                   </div> <!-- /example -->
 
 
-                  <h2 id="dropdowns-usage">Usage</h2>
+                  <h2 id="js-dropdowns-usage">Usage</h2>
                   <p>Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the <code>.open</code> class on the parent list item. When opened, the plugin also adds <code>.dropdown-backdrop</code> as a click area for closing dropdown menus when clicking outside the menu. Note: The <code>data-toggle=dropdown</code> attribute is relied on for closing dropdown menus at an application level, so it's a good idea to always use it.</p>
 
                   <h3>Via data attributes</h3>
@@ -7093,10 +7091,10 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="#dropdowns">Dropdown</a>
+                  <a href="#js-dropdowns">Dropdown</a>
                   <ul class="nav">
-                    <li><a href="#dropdowns-examples">Examples</a></li>
-                    <li><a href="#dropdowns-usage">Usage</a></li>
+                    <li><a href="#js-dropdowns-examples">Examples</a></li>
+                    <li><a href="#js-dropdowns-usage">Usage</a></li>
                   </ul>
                 </li>
                 <li>
@@ -7173,24 +7171,6 @@
 
 <script>
 
-$(function(){
-
-  $(".public-styling").click(function() {
-      $('body').toggleClass("app public");
-      $('.app-styling').removeClass("active"); 
-      $('.public-styling').addClass("active");   
-      
-  });
-
-  $(".app-styling").click(function() {
-      $('body').toggleClass("public app");
-      $('.app-styling').addClass("active"); 
-      $('.public-styling').removeClass("active");     
-  });  
-
-});
-
-
 var name = 'c-bootstrap-original-docs'; 
 Polymer({
   is: name,
@@ -7217,6 +7197,24 @@ Polymer({
       value: "false"
     }  
   }
+
+  $(function(){
+
+    $(".public-styling").click(function() {
+        $('body').toggleClass("app public");
+        $('.app-styling').removeClass("active"); 
+        $('.public-styling').addClass("active");   
+        
+    });
+
+    $(".app-styling").click(function() {
+        $('body').toggleClass("public app");
+        $('.app-styling').addClass("active"); 
+        $('.public-styling').removeClass("active");     
+    });  
+
+  });
+  
 });
 
 </script>
