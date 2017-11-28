@@ -7203,13 +7203,16 @@ Polymer({
 $(function(){
 
   $('.public-styling').click(function() {
-      $('body').toggleClass("scania public");
-      $(this).toggleClass("active");
+      $('body').toggleClass("public app");
+      $('.app-styling').removeClass("active"); 
+      $('.public-styling').addClass("active");   
+      
   });
 
   $('.app-styling').click(function() {
-      $('body').toggleClass("scania app");
-      $(this).toggleClass("active");      
+      $('body').toggleClass("app public");
+      $('.app-styling').addClass("active"); 
+      $('.public-styling').removeClass("active");     
   });  
 
 });
