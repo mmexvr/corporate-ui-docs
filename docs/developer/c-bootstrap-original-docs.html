@@ -6,7 +6,7 @@
         display: none;
     }
   </style>  
-  
+
   <template>
 
     <link rel="stylesheet" href="css/scania-bootstrap-docs.css">
@@ -7175,14 +7175,16 @@
     $(function(){
 
     $(".public-styling").click(function() {
-        $('body').toggleClass("app public");
+        $('body').removeClass("app");
+        $('body').addClass("public");  
         $('.app-styling').removeClass("active"); 
         $('.public-styling').addClass("active");   
         
     });
 
     $(".app-styling").click(function() {
-        $('body').toggleClass("public app");
+        $('body').removeClass("public");
+        $('body').addClass("app");        
         $('.app-styling').addClass("active"); 
         $('.public-styling').removeClass("active");     
     });  
