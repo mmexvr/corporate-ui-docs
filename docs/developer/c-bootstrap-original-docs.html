@@ -48,12 +48,17 @@
     </nav>
 
     <ul class="nav nav-tabs margin-top">
-      <li class="active"><a href="scania-bootstrap-css.html">Boostrap CSS</a></li>
-      <li><a href="scania-bootstrap-components.html">Boostrap Components</a></li>
+      <li class="active"><a data-toggle="tab" href="#bootstrap-css-section">Boostrap CSS</a></li>
+      <li><a data-toggle="tab" href="#bootstrap-components-section">Boostrap Components</a></li>
+      <li><a data-toggle="tab" href="#bootstrap-javascript-section">Boostrap Javascript</a></li>      
     </ul>
-    
 
-    <div class="container-fluid bootstrap-css-section padding-top"><!-- MAIN CONTAINER -->
+
+
+
+<div class="tab-content">
+
+    <div id="bootstrap-css-section" class="tab-pane fade in active container-fluid padding-top">
      <div class="bs-docs-section panel">
       <div class="panel-body">
         <div class="row">
@@ -2423,7 +2428,7 @@
 <div class="col-md-3">
   <div class="bs-docs-sidebar hidden-print" role="complementary"  data-spy="affix" data-offset-top="150">
     <ul class="nav bs-docs-sidenav">
-      
+
       <li>
         <a href="#overview">Overview</a>
         <ul class="nav">
@@ -2538,7 +2543,7 @@
           <li><a href="#responsive-utilities-tests">Test cases</a></li>
         </ul>
       </li>
-      
+
     </ul>
     <a class="back-to-top" href="#top">
       Back to top
@@ -2549,15 +2554,10 @@
 </div>
 </div>
 </div>
-</div>
 
 
 
-
-
-
-
-<div class="container bootstrap-components-section padding-top"><!-- MAIN CONTAINER -->
+<div id="bootstrap-components-section" class="tab-pane fade container-fluid padding-top">
  <div class="panel">
   <div class="panel-body">
     <div class="row">
@@ -3274,7 +3274,7 @@
               </div><!-- /.col-lg-6 -->
             </div><!-- /.row -->
           </form>
-          
+
           
           <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-lg-6&quot;</span><span class="nt">&gt;</span>
@@ -3847,7 +3847,7 @@
           <h2 id="navbar-fixed-top">Fixed to top</h2>
           <p>Add <code>.navbar-fixed-top</code>.</p>
           <div class="bs-example bs-navbar-top-example">
-           
+
           </div><!-- /example -->
           <div class="highlight"><pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-default navbar-fixed-top&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
             ...
@@ -3866,7 +3866,7 @@
           <h2 id="navbar-fixed-bottom">Fixed to bottom</h2>
           <p>Add <code>.navbar-fixed-bottom</code> instead.</p>
           <div class="bs-example bs-navbar-bottom-example">
-            
+
           </div><!-- /example -->
           <div class="highlight"><pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-default navbar-fixed-bottom&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
             ...
@@ -5183,7 +5183,7 @@
       <div class="col-md-3">
         <div class="bs-docs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="150">
           <ul class="nav bs-docs-sidenav">
-            
+
             <li>
               <a href="#dropdowns">Dropdowns</a>
               <ul class="nav">
@@ -5316,7 +5316,7 @@
               </li>
               <li><a href="#wells">Wells</a></li>
 
-              
+
             </ul>
             <a class="back-to-top" href="#top">
               Back to top
