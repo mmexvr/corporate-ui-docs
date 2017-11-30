@@ -5,16 +5,24 @@
   <meta charset="utf-8">
   <title>UX Library - Copy Paste HTML</title>
 
-   <script>
+   <!--<script>
     /* this script must run before Polymer is imported */
     window.Polymer = {
       dom: 'shadow',
-      lazyRegister: true
+      lazyRegister: false
     };
+  </script> -->
+
+
+  <script>
+    window['Polymer'] = window['Polymer'] || {};
+    window['Polymer']['dom'] = 'shadow';    
   </script>
-  
+
+
+
   <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
-<!--   <script src="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js"></script> -->
+  <script src="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js"></script>
 </head>
 
 <body class="scania">
@@ -43,10 +51,7 @@
     </c-main-navigation>
 
 
-<!--       <script>
-        window['Polymer'] = window['Polymer'] || {};
-        window['Polymer']['dom'] = 'shadow';    
-      </script> -->
+
       
     <section class="app">
 
