@@ -396,17 +396,17 @@
 
       $(function () {
 
-      Highcharts.setOptions({
-          colors: ['#896a73','#60b269','#5e3885','#5da7a9','#041e42', '#d6001c', '#e35205', '#ceb888', '#53565a', '#c8c9c7', '#2c5234',
-                '#94a596', '#9ba5b4', '#f1a982', '#ebe3cf'
-            ],
-          chart: {
-              style: {
-                  fontFamily: 'Scania Sans Condensed'
-              }
-          },
+      // Highcharts.setOptions({
+      //     colors: ['#896a73','#60b269','#5e3885','#5da7a9','#041e42', '#d6001c', '#e35205', '#ceb888', '#53565a', '#c8c9c7', '#2c5234',
+      //           '#94a596', '#9ba5b4', '#f1a982', '#ebe3cf'
+      //       ],
+      //     chart: {
+      //         style: {
+      //             fontFamily: 'Scania Sans Condensed'
+      //         }
+      //     },
 
-          });
+      //     });
 
           // Create the chart
           Highcharts.chart('container1', {
@@ -728,17 +728,17 @@ Highcharts.setOptions(Highcharts.theme);
 
       $(function () {
 
-      Highcharts.setOptions({
-          colors: ['#ceb888', '#c8c9c7', '#94a596', '#041e42', '#53565a', '#97999b', '#2c5234',
-                '#e35205', '#9ba5b4', '#f1a982', '#ebe3cf'
-            ],
-          chart: {
-              style: {
-                  fontFamily: 'Scania Sans Condensed'
-              }
-          },
+      // Highcharts.setOptions({
+      //     colors: ['#ceb888', '#c8c9c7', '#94a596', '#041e42', '#53565a', '#97999b', '#2c5234',
+      //           '#e35205', '#9ba5b4', '#f1a982', '#ebe3cf'
+      //       ],
+      //     chart: {
+      //         style: {
+      //             fontFamily: 'Scania Sans Condensed'
+      //         }
+      //     },
 
-          });
+      //     });
 
           // Create the chart
         chart = new Highcharts.Chart({
@@ -792,6 +792,7 @@ Highcharts.setOptions(Highcharts.theme);
                 }
             }]
         });
+    Highcharts.setOptions(Highcharts.theme);        
     });
      </script>
      </div>
@@ -826,17 +827,17 @@ Highcharts.setOptions(Highcharts.theme);
 $(function () {
 
 
-      Highcharts.setOptions({
-          colors: ['#ceb888', '#c8c9c7', '#94a596', '#041e42', '#53565a', '#97999b', '#2c5234',
-                '#e35205', '#9ba5b4', '#f1a982', '#ebe3cf'
-            ],
-          chart: {
-              style: {
-                  fontFamily: 'Scania Sans Condensed'
-              }
-          },
+      // Highcharts.setOptions({
+      //     colors: ['#ceb888', '#c8c9c7', '#94a596', '#041e42', '#53565a', '#97999b', '#2c5234',
+      //           '#e35205', '#9ba5b4', '#f1a982', '#ebe3cf'
+      //       ],
+      //     chart: {
+      //         style: {
+      //             fontFamily: 'Scania Sans Condensed'
+      //         }
+      //     },
 
-          });
+      //     });
 
           // Create the chart
     Highcharts.chart('container-area-spline', {
@@ -879,7 +880,7 @@ $(function () {
             title: {
                 text: 'Gallons',
                 style: {
-                color: '#ffffff',
+                // color: '#ffffff',
                 fontFamily: 'Scania Sans Condensed Bold'
               },
             }
@@ -899,13 +900,14 @@ $(function () {
         series: [{
             name: 'NCG',
             data: [2, 4, 3, 5, 4, 10, 12],
-            color: '#CEB888'
+            // color: '#CEB888'
         }, {
             name: 'NGC',
             data: [2, 3, 4, 3, 3, 5, 4],
-            color: '#53565A'
+            // color: '#53565A'
         }]
     });
+  Highcharts.setOptions(Highcharts.theme);    
 });
 
 </script>
@@ -927,7 +929,7 @@ $(function () {
       <script src="https://static.scania.com/vendors/components/pure-js/highcharts/5.0.7/code/highcharts.js"></script>
       <script src="https://static.scania.com/vendors/components/pure-js/highcharts/5.0.7/code/modules/data.js"></script>
       <script src="https://static.scania.com/vendors/components/pure-js/highcharts/5.0.7/code/modules/drilldown.js"></script>
-      <script src="https://static.scania.com/vendors/components/pure-js/highcharts/5.0.7/code/js/themes/grid-light.js"></script>
+      <script src="https://static.scania.com/vendors/components/pure-js/highcharts/5.0.7/code/themes/corporate-ui.js"></script>
   <script src="/corporate-ui/ux-lib.js"></script>
 </body>
 </html>
