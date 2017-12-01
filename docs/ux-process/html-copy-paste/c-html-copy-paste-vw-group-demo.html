@@ -33,13 +33,14 @@
             height: 100%;
             color: white;
             background-color: rgba(65, 141, 206, 0.72);
-            font-family: 'Scania Sans Condensed Bold';
+            font-family: 'inherit';
             text-align: center;
             text-transform: uppercase;
             padding: 15px;
             cursor: copy;
             opacity:0;
             display: block;
+            font-weight: bold;                 
         }
 
         .copyable::after {
@@ -49,13 +50,14 @@
             content: 'Copy HTML to Clipboard';
             font-size: 16px;
             z-index: 100;
-            font-family: 'Scania Sans Condensed Bold';
+            font-family: 'inherit';
             text-transform: uppercase;
             cursor: copy;
             opacity: 0;
             background: rgb(65, 141, 206);
             color: white;
-            padding: 3px 15px 1px;         
+            padding: 3px 15px 1px;
+            font-weight: bold;         
         }        
 
         .copyable.copied::before {
@@ -92,12 +94,13 @@
             z-index: 100;
             color: white;
             background-color: rgba(255, 0, 0, 0.6);
-            font-family: 'Scania Sans Condensed Bold';
+            font-family: inherit;
             text-transform: uppercase;
             padding: 15px;
             cursor: default;
             opacity: 0;
             display: block;
+            font-weight: bold;
         }
 
         .uncopyable::after {
@@ -107,13 +110,14 @@
             content: 'Do not copy. This section is informative only.';
             font-size: 16px;
             z-index: 100;
-            font-family: 'Scania Sans Condensed Bold';
+            font-family: inherit;
             text-transform: uppercase;
             cursor: default;
             opacity: 0;
             background: rgb(255, 0, 0);
             color: white;
-            padding: 3px 15px 1px;           
+            padding: 3px 15px 1px;
+            font-weight: bold;           
         }  
 
         .uncopyable:hover::before,
@@ -151,7 +155,7 @@
 
                       <p class="lead">Let's try a paragraphs with the class=lead applied. It will be formatted according to your Bootstrap specs.</p>
                       <p>Let's try a few normal paragraphs. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus.</p>
-                      <p>Let's try a few paragraphs using Scania Sans Regular. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. </p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. </p>
                       </article>                  
                     </div>
                   </div>
@@ -168,11 +172,13 @@
   <div class="panel-body"> 
     <h3>Using H3 in a panel body gives a different look</h3>
     <h4>So do Header 4</h4>
-    <p>A paragraph in a application will be using Scania Sans Semi Condensed for increased readability without beeing to space consuming. These few options togheter forms the base of how the Scania app design is shaped, when using Bootstrap Panels. <span class="label label-success label-sm">Will be available in Corporate UI version 2.3.3</span></p>
+    <p>A paragraph in a application will be using the best for increased readability without beeing to space consuming. These few options togheter forms the base of how your CSS s0hapes the design, when using Bootstrap Panels.</p>
   </div>
 </div>
                 </div>
-                <div class="col-md-12">
+                </div>
+              <div class="row">                
+                <div class="col-md-6">
 <div class="panel panel-default copyable"> 
   <div class="panel-body"> 
     <h3>Removing the panel heading</h3>
@@ -259,7 +265,8 @@
   </div>
 </div>
                 </div> 
-                <div class="col-md-12">
+
+                <div class="col-md-6">
 <div class="panel panel-default copyable">    
   <div class="panel-body"> 
 
@@ -432,7 +439,7 @@
           <div class="form-group">
             <label class="control-label">Name of job
             </label>
-            <input type="text" value='' class="form-control" placeholder="Brödleverans">
+            <input type="text" value='' class="form-control" placeholder="DHL Delivery">
           </div>
         </div>
         <div class="col-xs-12 col-md-8">
@@ -541,7 +548,7 @@
 <div class="panel panel-primary panel-inverse copyable">
   <div class="panel-heading">
     <h3 class="panel-title">Edit job</h3>
-    <span>Brödleverans, ICA Åtvidaberg</span>
+    <span>DHL Delivery, ICA Åtvidaberg</span>
   </div>
   <div class="panel-body">
     <form id="form" action="" method="get">
@@ -550,7 +557,7 @@
           <div class="form-group">
             <label class="control-label">Name of job
             </label>
-            <input type="text" value='' class="form-control" placeholder="Brödleverans">
+            <input type="text" value='' class="form-control" placeholder="DHL Delivery">
           </div>
         </div>
         <div class="col-xs-12 col-md-8">
@@ -747,7 +754,7 @@
           <div class="col-md-2">
             <div class="panel panel-danger copyable">
               <div class="panel-heading">
-                <h3 class="panel-title" >Panel Danger</h3>
+                <h5 class="panel-title" >Panel Danger</h5>
               </div>    
               <div class="panel-body"> 
                 <h3>Panels can have different UX colors</h3>
