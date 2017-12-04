@@ -12,6 +12,18 @@
 	<script src="https://static.scania.com/build/global/2.3.3-pre/js/corporate-ui-brands.js?css=custom"></script>
 	<link rel="import" href="https://scania.github.io/corporate-ui/ux-process/c-process-flex.html">
 
+<script type="text/javascript">
+  
+var xhr = $.ajax( {
+    ,
+    url: 'https://static.scania.com/resources/fonts/scania-sans/scania-fonts.css',
+    success: function(msg) {
+        var filetime = xhr.getResponseHeader('Last-Modified');
+        console.log(filetime);
+    }
+});
+
+</script>
 </head>
 
 <body class="lamborghini">
