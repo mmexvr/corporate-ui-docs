@@ -24,8 +24,10 @@
 
 <script>
 
-   var client = new XMLHttpRequest(),
-       version;
+function init() {
+   var version = 666;
+   var client = new XMLHttpRequest();
+
    client.open('HEAD', 'https://static.scania.com/resources/fonts/scania-sans/scania-sans.js?random=' + Math.random(), true);
    client.send();
    client.onreadystatechange = function() {
@@ -39,7 +41,9 @@
     s.src = "https://static.scania.com/resources/fonts/scania-sans/scania-sans.js?stamp=" + version;
     $("head").append(s);
     console.log("https://static.scania.com/resources/fonts/scania-sans/scania-sans.js?stamp=" + version);
+  }
 
+  init();
 </script>
 
   <!-- Sample of how to add local scripts and CSS -->
@@ -49,7 +53,7 @@
 
 </head>
 
-<body class="scania bootstrap bootstrap-app">
+<body class="scania bootstrap bootstrap-app">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   <div class="container">
     <div class="row no-gutter master-header">
       <div class="col-md-5">
