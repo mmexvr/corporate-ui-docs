@@ -70,6 +70,10 @@
           </p>
           <p>Restrictions: The colours may only be used for their intended purposes. Any restrictions must be followed. The colours should not be altered.
           </p>
+          <h2>Variables</h2>
+          <p>For web development purposes you should use our LESS variables file to access colors:
+          <a href="https://static.scania.com/build/global/2.3.2/less/corporate-ui/variables.less">https://static.scania.com/build/global/2.3.2/less/corporate-ui/variables.less</a>
+          </p>          
           </div>
         </div> 
       </div>  
@@ -289,8 +293,6 @@
       </div>               
     </div>       
 
-
-
     <div class="row">
       <div class="col-md-12">
         <h2>Interaction Colours</h2>
@@ -316,6 +318,57 @@
           <div class="alert alert-info">Use the alert-info class when highligting information that is extra relevant at the time beeing.</div>
         </div>            
     </div>
+
+    <div class="row">
+      <div class="col-md-12">
+          <h2>Gradients</h2>
+          <p>When you need to illustrate information as a gradient, use the scale below. The colors should be used only to make gradients in charts. The colours are not allowed to be use elsewhere.</p>
+      </div> 
+      <div class="col-xs-6 col-md-2 sample">
+        <div style="background-color: #60e266" class="palette-colour"></div>
+        Gradient A<br />
+        rgb(96, 226, 102)<br />
+        HEX #60e266 <br />
+        LESS<br />@gradient-color-a
+       </div> 
+      <div class="col-xs-6 col-md-2 sample">      
+      <div style="background-color: #b9ee51" class="palette-colour"></div>
+          Gradient B<br />
+          rgb(185, 238, 81);<br />
+          HEX #b9ee51<br />
+          LESS<br />@gradient-color-b
+      </div>
+      <div class="col-xs-6 col-md-2 sample">
+      <div style="background-color: #ffec00" class="palette-colour"></div>
+          Gradient C<br />
+          rgb(255, 236, 0)<br />
+          HEX #ffec00<br />
+          LESS<br />@gradient-color-c
+      </div>
+
+      <div class="col-xs-6 col-md-2 sample">
+      <div style="background-color: #eda053" class="palette-colour"></div>
+          Gradient D<br />
+          rgb(237, 160, 83)<br />
+          HEX #eda053<br />
+          LESS<br />@gradient-color-d
+      </div>   
+      <div class="col-xs-6 col-md-2 sample">
+      <div style="background-color: #e16060" class="palette-colour"></div>
+          Gradient E<br />
+          rgb(225, 96, 96)<br />
+          HEX #e16060<br />
+          LESS<br />@gradient-color-e
+      </div> 
+      <div class="col-xs-12 col-md-2 sample pull-right">
+        <div style="transform: rotate(180deg);width:80px; height:80px; background: linear-gradient(#60e266, #b9ee51, #ffec00, #eda053, #e16060);" class="palette-colour"></div>
+        Gradient A to E<br />
+      </div>
+    </div>  
+
+
+
+
     <div class="row">
       <div class="col-md-12">
       <h2>Data Visualization Colours</h2>
@@ -343,17 +396,17 @@
 
       $(function () {
 
-      Highcharts.setOptions({
-          colors: ['#896a73','#60b269','#5e3885','#5da7a9','#041e42', '#d6001c', '#e35205', '#ceb888', '#53565a', '#c8c9c7', '#2c5234',
-                '#94a596', '#9ba5b4', '#f1a982', '#ebe3cf'
-            ],
-          chart: {
-              style: {
-                  fontFamily: 'Scania Sans Condensed'
-              }
-          },
+      // Highcharts.setOptions({
+      //     colors: ['#896a73','#60b269','#5e3885','#5da7a9','#041e42', '#d6001c', '#e35205', '#ceb888', '#53565a', '#c8c9c7', '#2c5234',
+      //           '#94a596', '#9ba5b4', '#f1a982', '#ebe3cf'
+      //       ],
+      //     chart: {
+      //         style: {
+      //             fontFamily: 'Scania Sans Condensed'
+      //         }
+      //     },
 
-          });
+      //     });
 
           // Create the chart
           Highcharts.chart('container1', {
@@ -675,17 +728,17 @@ Highcharts.setOptions(Highcharts.theme);
 
       $(function () {
 
-      Highcharts.setOptions({
-          colors: ['#ceb888', '#c8c9c7', '#94a596', '#041e42', '#53565a', '#97999b', '#2c5234',
-                '#e35205', '#9ba5b4', '#f1a982', '#ebe3cf'
-            ],
-          chart: {
-              style: {
-                  fontFamily: 'Scania Sans Condensed'
-              }
-          },
+      // Highcharts.setOptions({
+      //     colors: ['#ceb888', '#c8c9c7', '#94a596', '#041e42', '#53565a', '#97999b', '#2c5234',
+      //           '#e35205', '#9ba5b4', '#f1a982', '#ebe3cf'
+      //       ],
+      //     chart: {
+      //         style: {
+      //             fontFamily: 'Scania Sans Condensed'
+      //         }
+      //     },
 
-          });
+      //     });
 
           // Create the chart
         chart = new Highcharts.Chart({
@@ -739,6 +792,7 @@ Highcharts.setOptions(Highcharts.theme);
                 }
             }]
         });
+    Highcharts.setOptions(Highcharts.theme);        
     });
      </script>
      </div>
@@ -773,17 +827,17 @@ Highcharts.setOptions(Highcharts.theme);
 $(function () {
 
 
-      Highcharts.setOptions({
-          colors: ['#ceb888', '#c8c9c7', '#94a596', '#041e42', '#53565a', '#97999b', '#2c5234',
-                '#e35205', '#9ba5b4', '#f1a982', '#ebe3cf'
-            ],
-          chart: {
-              style: {
-                  fontFamily: 'Scania Sans Condensed'
-              }
-          },
+      // Highcharts.setOptions({
+      //     colors: ['#ceb888', '#c8c9c7', '#94a596', '#041e42', '#53565a', '#97999b', '#2c5234',
+      //           '#e35205', '#9ba5b4', '#f1a982', '#ebe3cf'
+      //       ],
+      //     chart: {
+      //         style: {
+      //             fontFamily: 'Scania Sans Condensed'
+      //         }
+      //     },
 
-          });
+      //     });
 
           // Create the chart
     Highcharts.chart('container-area-spline', {
@@ -826,7 +880,7 @@ $(function () {
             title: {
                 text: 'Gallons',
                 style: {
-                color: '#ffffff',
+                // color: '#ffffff',
                 fontFamily: 'Scania Sans Condensed Bold'
               },
             }
@@ -846,13 +900,14 @@ $(function () {
         series: [{
             name: 'NCG',
             data: [2, 4, 3, 5, 4, 10, 12],
-            color: '#CEB888'
+            // color: '#CEB888'
         }, {
             name: 'NGC',
             data: [2, 3, 4, 3, 3, 5, 4],
-            color: '#53565A'
+            // color: '#53565A'
         }]
     });
+  Highcharts.setOptions(Highcharts.theme);    
 });
 
 </script>
@@ -874,7 +929,7 @@ $(function () {
       <script src="https://static.scania.com/vendors/components/pure-js/highcharts/5.0.7/code/highcharts.js"></script>
       <script src="https://static.scania.com/vendors/components/pure-js/highcharts/5.0.7/code/modules/data.js"></script>
       <script src="https://static.scania.com/vendors/components/pure-js/highcharts/5.0.7/code/modules/drilldown.js"></script>
-      <script src="https://static.scania.com/vendors/components/pure-js/highcharts/5.0.7/code/js/themes/grid-light.js"></script>
+      <script src="https://static.scania.com/vendors/components/pure-js/highcharts/5.0.7/code/themes/corporate-ui.js"></script>
   <script src="/corporate-ui/ux-lib.js"></script>
 </body>
 </html>
