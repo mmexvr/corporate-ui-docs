@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
+
+  	<script type="text/javascript" src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject-all-but-chrome.js" charset="utf-8"></script>
+
+	<title>UX Proccess</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://static.scania.com/build/global/2.3.3-pre/js/corporate-ui-brands.js?css=custom"></script>
+	<link rel="import" href="https://scania.github.io/corporate-ui/ux-process/c-process-flex.html">
+
+  <script type="text/javascript">
+    
+    var client = new XMLHttpRequest();
+    client.open('HEAD', 'https://static.scania.com/resources/fonts/scania-sans/scania-fonts.css?random=' + Math.random(), true);
+    client.send();
+    client.onreadystatechange = function() {
+      if(this.readyState == this.HEADERS_RECEIVED) {
+        version =Date.parse(client.getResponseHeader("Last-Modified"));
+          console.log(version);
+      }
+    }
+
+  </script>
+
+</head>
+
+<body class="lamborghini">
+
+  <c-corporate-header site-name="UX Library" site-url="http://corporate-ui.com/ux-library/">
+    <nav-item location="http://corporate-ui.com">Corporate UI</nav-item>
+  </c-corporate-header>
+
+	<div class="container-fluid">
+		<c-process lang="de"></c-process>
+	</div>
+
+  <div class="container-fluid" style="margin-top: 140px">
+    <c-process lang="en"></c-process>
+  </div>
+
+
+  	<c-corporate-footer></c-corporate-footer>
+
+</body>
+</html>
