@@ -7,4 +7,8 @@ document.addEventListener('corporate-ui-loaded', function(e) {
 
   document.body.className += ' done-loading';
 
+
 });
+
+var elm = document.querySelector('c-main-navigation')
+elm.__proto__.setHeaderSize.call(elm)
