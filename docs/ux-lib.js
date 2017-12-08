@@ -11,9 +11,9 @@ document.addEventListener('corporate-ui-loaded', function(e) {
 });
 
 
-window.onload = function(){ 
+setTimeout(function(){ 
 
 var elm = document.querySelector('c-main-navigation')
 elm.__proto__.setHeaderSize.call(elm)
 
-};
+}, 200);
