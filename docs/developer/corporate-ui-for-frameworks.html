@@ -56,9 +56,9 @@
           <p>When calling the <a href="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js">corporate-ui.js</a> file a lot of things happens. The Scania fonts, logotype, favicons and the basic CSS and HTML framework (Scania Bootststrap) is loaded as well as the Polymer library. We also load the basic Web Components used by almost all applications; the Corporate Header, the Main Navigation, the Main Content element and the Corporate Footer. This does not work very well when an application is about to be initiated further on.</p>
 
           <h2>Wait for the application!</h2>
-          <p>All you have to do to make the Corporate UI work in your application is to avoid to load the basic components right away and instead include them after your application is completly initiated. You simply load the Corporate UI with the <strong>?preload=false</strong> parameter as you would load it in any HTML page header.</p>
-          <p class="text-info"><strong>
-          https://static.scania.com/build/global/2.3.2/js/corporate-ui.js?preload=false</strong></p>
+          <p>All you have to do to make the Corporate UI work in your application is to avoid loading the basic components right away and instead include them after your application is completly initiated. You simply load the Corporate UI with the <strong>?preload=false</strong> parameter as you would load it in any HTML page header.</p>
+          <p class="text-info"><strong><xmp>
+          <script src="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js?preload=false"></script></xmp></strong></p>
           <p>Then, after your app has started, you can easily include the basic components by using the <strong>window.CorporateUi.baseComponents();</strong> method. This will then load the components listed above and you're now ready to use those custom elements from wherever you need to apply them. In Angular, you could do it this way:
           <p class="text-info"><strong> 
 export class AppComponent {
