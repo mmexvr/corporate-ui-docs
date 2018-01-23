@@ -41,6 +41,12 @@
 
     <style>
      article p a {font-family: 'Scania Sans Bold'}
+     xmp {
+          font-size: 2.2rem;
+          color: #1a58e2;
+          line-height: normal;
+      }
+
     </style>
 
 
@@ -57,15 +63,15 @@
 
           <h2>Wait for the application!</h2>
           <p>All you have to do to make the Corporate UI work in your application is to avoid loading the basic components right away and instead include them after your application is completly initiated. You simply load the Corporate UI with the <strong>?preload=false</strong> parameter as you would load it in any HTML page header.</p>
-          <p class="text-info"><strong><xmp>
-          <script src="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js?preload=false"></script></xmp></strong></p>
+          <xmp>
+<script src="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js?preload=false"></script></xmp>
           <p>Then, after your app has started, you can easily include the basic components by using the <strong>window.CorporateUi.baseComponents();</strong> method. This will then load the components listed above and you're now ready to use those custom elements from wherever you need to apply them. In Angular, you could do it this way:
-          <p class="text-info"><strong> 
-export class AppComponent {
-  constructor(){window.CorporateUi.baseComponents();}
+          <xmp>
+export class AppComponent {<br>
+  constructor(){window.CorporateUi.baseComponents();}<br>
 } 
-</strong></p>
-          <p><strong>NOTE:</strong> Please <a href="mailto:corporate-ui@scania.com">send us an e-mail</a> an we'll help out.</p>
+          </xmp>
+          <p>So, that is the basic that you'll need to know. There might of course be additional questions that you'll have and they will be swiftly answered in the corporate-ui.slack.com channel or perhaps not as quick using standard <a href="mailto:corporate-ui@scania.com">e-mail</a>.</p>
 
 
           </article>
