@@ -16,8 +16,8 @@
 
 <body class="scania" ng-controller="ThisSite as thissite">
 
-  <c-corporate-header site-name="UX Library" site-url="/">
-    <nav-item location="https://github.scania.com/pages/Scania/ux-library/">UX Library</nav-item>
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui/">
+    <nav-item location="/corporate-ui/">UX Library</nav-item>
     <nav-item location="https://github.scania.com/scania/corporate-ui">Scania GitHub</nav-item>
   </c-corporate-header>
     
@@ -62,16 +62,20 @@
     function ThisSite() {
       var vm = this;
       vm.items = [
-        { name: 'home', location: '/', active: true },
-        { name: 'libs', location: '/libs/', children: [
-          { name: 'angular', location: '/libs/angular/' },
-          { name: 'react', location: '/libs/react/' }
+        { name: 'home', location: '/corporate-ui/', active: true },
+        { name: 'Style Guide', location: '/corporate-ui/styleguide/', children: [
+          { name: 'Logotype', location: '/corporate-ui/logotype/' },
+          { name: 'Icons', location: '/corporate-ui/icons/' },
+          { name: 'Colours', location: '/corporate-ui/colours/' },
+          { name: 'Typography', location: '/corporate-ui/typography/' }
         ] },
-        { name: 'gallery', location: '/gallery/', children: [
-          { name: 'sport', location: '/gallery/sport/' },
-          { name: 'motor', location: '/gallery/motor/' }
+        { name: 'Web Applications', location: '/corporate-ui/developer/', children: [
+          { name: 'Corporate UI', location: '/corporate-ui/developer/' },
+          { name: 'Caching', location: '/corporate-ui/developer/caching.html' },
+          { name: 'Scania Bootstrap', location: '/corporate-ui/developer/scania-bootstrap.html' },
+          { name: 'Support', location: '/corporate-ui/template/html-copy-paste/html-copy-paste.html' }          
         ] },
-        { name: 'contact', location: '/contact/' }
+        { name: 'Mobile Apps', location: '/corporate-ui/mobile-apps/' }
       ];
       vm.changeView = function($event, target) {
         $event.preventDefault();
