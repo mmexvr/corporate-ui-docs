@@ -27,18 +27,7 @@
         <nav-item ng-repeat="item in thissite.items" location="{{item.url}}" nav-item="item" active="{{item.active}}" ng-click="thissite.changeView($event, item)"></nav-item>
       </primary-items>
     </c-main-navigation>
-<!-- 
-    <c-main-navigation ng-cloak>
-      <primary-items>
-        <nav-item ng-repeat="item in thissite.items" location="{{item.url}}" active="{{item.active}}" ng-click="thissite.changeView($event, item)">
-          {{item.name}}
-          <sub-navigation ng-if="item.active && item.children" item="item" sub-navigation>
-            <nav-item ng-repeat="subItem in item.children" location="{{item.url}}">{{subItem.name}}</nav-item>
-          </sub-navigation>
-        </nav-item>
-      </primary-items>
-    </c-main-navigation>
- -->
+
     <section class="light">
       <div class="container">
         <h2>Angular navigation demo</h2>
@@ -107,12 +96,27 @@
           tAttrs.$set('template', tElement.html());
           // Need to a way to reset and compile template using template attribute when user clicks the navigation
           iAttrs.$observe('ngIf', function() {
-            console.log('apa')
+            console.log('Hey, we made it!')
           });
         }
       }
     }
     window.CorporateUi.baseComponents();
   </script>
+
+  <script>
+   // ServiceWorker is a progressive technology. Ignore unsupported browsers
+  if ('serviceWorker' in navigator) {
+    console.log('CLIENT: service worker registration in progress.');
+    navigator.serviceWorker.register('/corporate-ui/template/service-worker.js').then(function() {
+      console.log('CLIENT: service worker registration complete.');
+    }, function() {
+      console.log('CLIENT: service worker registration failure.');
+    });
+  } else {
+    console.log('CLIENT: service worker is not supported.');
+  }
+  </script>
+
 </body>
 </html>
