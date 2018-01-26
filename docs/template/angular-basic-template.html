@@ -23,13 +23,13 @@
   </c-corporate-header>
     
   <c-main-content>
-    <c-main-navigation ng-cloak>
+ <!--   <c-main-navigation ng-cloak>
       <primary-items>
         <nav-item ng-repeat="item in thissite.items" location="{{item.url}}" nav-item="item" active="{{item.active}}" ng-click="thissite.changeView($event, item)"></nav-item>
       </primary-items>
     </c-main-navigation>
-
-<!--     <c-main-navigation ng-cloak>
+ -->
+     <c-main-navigation ng-cloak>
       <primary-items>
         <nav-item ng-repeat="item in thissite.items" location="{{item.url}}" active="{{item.active}}" ng-click="thissite.changeView($event, item)">
           {{item.name}}
@@ -39,7 +39,7 @@
         </nav-item>
       </primary-items>
     </c-main-navigation>
- -->
+
     <section class="light">
       <div class="container">
         <h2>Angular navigation demo</h2>
