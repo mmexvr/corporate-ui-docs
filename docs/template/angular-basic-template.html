@@ -27,7 +27,18 @@
         <nav-item ng-repeat="item in thissite.items" location="{{item.url}}" nav-item="item" active="{{item.active}}" ng-click="thissite.changeView($event, item)"></nav-item>
       </primary-items>
     </c-main-navigation>
-
+<!-- 
+    <c-main-navigation ng-cloak>
+      <primary-items>
+        <nav-item ng-repeat="item in thissite.items" location="{{item.url}}" active="{{item.active}}" ng-click="thissite.changeView($event, item)">
+          {{item.name}}
+          <sub-navigation ng-if="item.active && item.children" item="item" sub-navigation>
+            <nav-item ng-repeat="subItem in item.children" location="{{item.url}}">{{subItem.name}}</nav-item>
+          </sub-navigation>
+        </nav-item>
+      </primary-items>
+    </c-main-navigation>
+ -->
     <section class="light">
       <div class="container">
         <h2>Angular navigation demo</h2>
@@ -51,7 +62,7 @@
     function ThisSite() {
       var vm = this;
       vm.items = [
-        { name: 'Home', location: '/corporate-ui/', active: true },
+        { name: 'home', location: '/corporate-ui/', active: true },
         { name: 'Style Guide', location: '/corporate-ui/styleguide/', children: [
           { name: 'Logotype', location: '/corporate-ui/logotype/' },
           { name: 'Icons', location: '/corporate-ui/icons/' },
@@ -64,9 +75,7 @@
           { name: 'Scania Bootstrap', location: '/corporate-ui/developer/scania-bootstrap.html' },
           { name: 'Support', location: '/corporate-ui/template/html-copy-paste/html-copy-paste.html' }          
         ] },
-        { name: 'Mobile Apps', location: '/corporate-ui/mobile-apps/' },
-        { name: 'Report an Issue', location: '/scania/corporate-ui/issues' },
-        { name: 'Support', location: '/corporate-ui/developer/support.html' }
+        { name: 'Mobile Apps', location: '/corporate-ui/mobile-apps/' }
       ];
       vm.changeView = function($event, target) {
         $event.preventDefault();
@@ -98,7 +107,7 @@
           tAttrs.$set('template', tElement.html());
           // Need to a way to reset and compile template using template attribute when user clicks the navigation
           iAttrs.$observe('ngIf', function() {
-            console.log('Hey, we made it!')
+            console.log('apa')
           });
         }
       }
@@ -119,6 +128,6 @@
     console.log('CLIENT: service worker is not supported.');
   }
   </script>
-
+  
 </body>
 </html>
