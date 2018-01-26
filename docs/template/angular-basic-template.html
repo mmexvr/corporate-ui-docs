@@ -51,7 +51,7 @@
     function ThisSite() {
       var vm = this;
       vm.items = [
-        { name: 'home', location: '/corporate-ui/', active: true },
+        { name: 'Home', location: '/corporate-ui/', active: true },
         { name: 'Style Guide', location: '/corporate-ui/styleguide/', children: [
           { name: 'Logotype', location: '/corporate-ui/logotype/' },
           { name: 'Icons', location: '/corporate-ui/icons/' },
@@ -64,7 +64,9 @@
           { name: 'Scania Bootstrap', location: '/corporate-ui/developer/scania-bootstrap.html' },
           { name: 'Support', location: '/corporate-ui/template/html-copy-paste/html-copy-paste.html' }          
         ] },
-        { name: 'Mobile Apps', location: '/corporate-ui/mobile-apps/' }
+        { name: 'Mobile Apps', location: '/corporate-ui/mobile-apps/' },
+        { name: 'Report an Issue', location: '/scania/corporate-ui/issues' },
+        { name: 'Support', location: '/corporate-ui/developer/support.html' }
       ];
       vm.changeView = function($event, target) {
         $event.preventDefault();
