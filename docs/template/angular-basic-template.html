@@ -48,6 +48,7 @@
       .controller('ThisSite', [ThisSite])
       .directive('navItem', navItem)
       .directive('subNavigation', ['$compile', '$timeout', subNavigation]);
+      
     function ThisSite() {
       var vm = this;
       vm.items = [
@@ -77,6 +78,7 @@
         target.active = true;
       }
     }
+
     function navItem() {
       return {
         restrict: 'A',
@@ -89,6 +91,7 @@
           </sub-navigation>'
       }
     }
+
     function subNavigation($compile, $timeout) {
       return {
         restrict: 'A',
