@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+<html lang="en-GB" class="corporate-ui">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8">
+  <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+  <title>UX Library - Colours</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
+  <script src="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js"></script>
+  <link rel="stylesheet" href="/corporate-ui/ux-lib.css">
+  <style type="text/css">    
+    .scania.bootstrap h1 {text-align: center; margin-top: 40px}    
+    .scania.bootstrap p {text-align: center;margin:20px 15% 40px;}    
+  </style>
+  <link rel="stylesheet" href="/corporate-ui/ux-lib.css">
+</head>
+<body unresolved class="scania">  
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui/">
+    <nav-item location="https://www.scania.com/ux-library/">UX Library</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </c-corporate-header>
+
+  <c-main-content>
+
+    <c-main-navigation show-search>
+      <primary-items>
+        <nav-item location="/corporate-ui/">Home</nav-item>
+        <nav-item location="/corporate-ui/styleguide/" class="active">Style Guide
+          <sub-navigation caption="Style Guide">
+            <nav-item location="/corporate-ui/logotype/">Logotype</nav-item>
+            <nav-item location="/corporate-ui/icons/">Icons</nav-item>
+            <nav-item location="/corporate-ui/colours/" class="active">Colours</nav-item>
+            <nav-item location="/corporate-ui/typography/">Typography</nav-item>
+          </sub-navigation>
+        </nav-item>            
+        <nav-item location="/corporate-ui/developer/">Web Applications</nav-item>
+        <nav-item location="/corporate-ui/mobile-apps/">Mobile Apps</nav-item>
+      </primary-items>
+    </c-main-navigation>
+    
+    <section>
+    <article>
+    <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      <h2>Data Visualization Colours</h2>
+        <h4>Column Chart Example</h4>
+        <p>For charts we're using a combination of all four palettes. The priority of the colours is shown in the sample chart below, starting with the secondary palette and then expands with the blue brand colour and the primary palette. If needed, we then add on colours from the tertiary palette.</p>
+      </div> 
+      <div class="col-md-12">
+      <div id="container1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+
+
+
+
+     <style>
+        text.highcharts-credits {
+            display: none;
+        }
+      </style>
+
+
+
+
+      <script>
+
+      $(function () {
+          Highcharts.chart('container1', {
+              chart: {
+                  type: 'column'
+              },
+              title: {
+                  text: 'Sample Chart for Scania UX Library',
+                  style: {
+                      color: '#041e42',
+                      fontFamily: 'Scania Sans Headline',
+                      },
+              },
+              subtitle: {
+                  text: 'These data are totaly fabricated.',
+                  style: {
+                      color: '#041e42',
+                      fontFamily: 'Scania Sans Bold',
+                      },
+              },
+              xAxis: {
+                  type: 'category'
+              },
+              yAxis: {
+                  title: {
+                      text: 'Customer satisfaction'
+                  }
+
+              },
+              legend: {
+                  enabled: false
+              },
+              plotOptions: {
+                  series: {
+                      borderWidth: 0,
+                      dataLabels: {
+                          enabled: true,
+                          format: '{point.y:.1f}%'
+                      }
+                  }
+              },
+
+              tooltip: {
+                  headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                  pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+              },
+
+              series: [{
+                  name: 'Brands',
+                  colorByPoint: true,
+                  data: [{
+                      name: 'Scania',
+                      y: 56.33,
+                      drilldown: 'Scania'
+                  }, {
+                      name: 'Volvo',
+                      y: 24.03,
+                      drilldown: 'Volvo'
+                  }, {
+                      name: 'Merceders',
+                      y: 35.38,
+                      drilldown: 'Merceders-Benz'
+                  }, {
+                      name: 'MAN',
+                      y: 40.77,
+                      drilldown: 'MAN'
+                  }, {
+                      name: 'Renault',
+                      y: 26.91,
+                      drilldown: 'Renault',
+                  }, {
+                      name: 'Navistar',
+                      y: 39.91,
+                      drilldown: 'none',
+                  }, {
+                      name: 'DAF',
+                      y: 19.91,
+                      drilldown: 'none',
+                  }, {
+                      name: 'Iveco',
+                      y: 29.91,
+                      drilldown: 'none',
+                  }, {
+                      name: 'Tata Prima',
+                      y: 25.9,
+                      drilldown: 'Tata Prima'
+                  }]
+              }],
+              drilldown: {
+                  series: [{
+                      name: 'Scania',
+                      id: 'Scania',
+                      data: [
+                          [
+                              'v11.0',
+                              34.13
+                          ],
+                          [
+                              'v8.0',
+                              37.2
+                          ],
+                          [
+                              'v9.0',
+                              8.11
+                          ],
+                          [
+                              'v10.0',
+                              5.33
+                          ],
+                          [
+                              'v6.0',
+                              1.06
+                          ],
+                          [
+                              'v7.0',
+                              0.5
+                          ]
+                      ]
+                  }, {
+                      name: 'Volvo',
+                      id: 'Volvo',
+                      data: [
+                          [
+                              'v40.0',
+                              5
+                          ],
+                          [
+                              'v41.0',
+                              4.32
+                          ],
+                          [
+                              'v42.0',
+                              3.68
+                          ],
+                          [
+                              'v39.0',
+                              2.96
+                          ],
+                          [
+                              'v36.0',
+                              2.53
+                          ],
+                          [
+                              'v43.0',
+                              1.45
+                          ],
+                          [
+                              'v31.0',
+                              1.24
+                          ],
+                          [
+                              'v35.0',
+                              0.85
+                          ],
+                          [
+                              'v38.0',
+                              0.6
+                          ],
+                          [
+                              'v32.0',
+                              0.55
+                          ],
+                          [
+                              'v37.0',
+                              0.38
+                          ],
+                          [
+                              'v33.0',
+                              0.19
+                          ],
+                          [
+                              'v34.0',
+                              0.14
+                          ],
+                          [
+                              'v30.0',
+                              0.14
+                          ]
+                      ]
+                  }, {
+                      name: 'Merceders-Benz',
+                      id: 'Merceders-Benz',
+                      data: [
+                          [
+                              'v35',
+                              2.76
+                          ],
+                          [
+                              'v36',
+                              2.32
+                          ],
+                          [
+                              'v37',
+                              2.31
+                          ],
+                          [
+                              'v34',
+                              1.27
+                          ],
+                          [
+                              'v38',
+                              1.02
+                          ],
+                          [
+                              'v31',
+                              0.33
+                          ],
+                          [
+                              'v33',
+                              0.22
+                          ],
+                          [
+                              'v32',
+                              0.15
+                          ]
+                      ]
+                  }, {
+                      name: 'MAN',
+                      id: 'MAN',
+                      data: [
+                          [
+                              'v8.0',
+                              2.56
+                          ],
+                          [
+                              'v7.1',
+                              0.77
+                          ],
+                          [
+                              'v5.1',
+                              0.42
+                          ],
+                          [
+                              'v5.0',
+                              0.3
+                          ],
+                          [
+                              'v6.1',
+                              0.29
+                          ],
+                          [
+                              'v7.0',
+                              0.26
+                          ],
+                          [
+                              'v6.2',
+                              0.17
+                          ]
+                      ]
+                  }, {
+                      name: 'Renault',
+                      id: 'Renault',
+                      data: [
+                          [
+                              'v12.x',
+                              0.34
+                          ],
+                          [
+                              'v28',
+                              0.24
+                          ],
+                          [
+                              'v27',
+                              0.17
+                          ],
+                          [
+                              'v29',
+                              0.16
+                          ]
+                      ]
+                  }]
+              }
+          });
+Highcharts.setOptions(Highcharts.theme);
+
+
+
+      });
+      </script>
+        </div>
+      </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Donut Chart Example</h4>
+        <p>Depending on what kind of data visualization tool you're using and what kind of background you want to embed it in, you might need to combine colours from all Scania palettes. </p>
+      </div> 
+      <div class="col-md-12">
+      <div id="container-photo-donut" style="width: 600px; height: 600px; margin: 0 auto"></div>
+
+
+
+
+
+
+
+    <style>
+      #container-photo-donut {
+        background-position: right ;
+        background-image: url(https://www.scania.com/content/scanianoe/global/en/home/experience-scania/merchandise/_jcr_content/par/main_hero_oI3nChPV.transform/Rend_1170X658/image.jpg);
+        padding:40px;}
+
+
+      path.highcharts-point {
+          opacity: 0.8;
+      }
+
+      html body #container-photo-donut g text {
+          fill: white !important;
+          text-transform: uppercase;
+      }
+    </style>
+
+
+
+
+      <script>
+
+
+      $(function () {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container-photo-donut',
+                type: 'pie',
+            },
+              title: {
+                  text: 'Eco Driving 2017',
+                  style: {
+                      color: '#ffffff',
+                      fontFamily: 'Scania Sans Headline Bold',
+                      fontSize: 26
+                      },
+              },
+              subtitle: {
+                  text: 'These data are totaly fabricated',
+                  style: {
+                      color: '#ffffff',
+                      fontFamily: 'Scania Sans Headline',
+                      fontSize: 14
+                      },
+              },
+            yAxis: {
+                title: {
+                    text: 'customer satisfaction'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    shadow: false
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.point.name +'</b>: '+ this.y +' %';
+                }
+            },
+            series: [{
+                name: 'Brands',
+                data: [["Merceders",5],["MAN",4],["Scania",8]],
+                
+                      color: '#ffff00',
+                      fontFamily: 'Scania Sans Headline',
+                      fontSize: 40,                
+                size: '100%',
+                innerSize: '70%',
+                showInLegend:true,
+                dataLabels: {
+                    enabled: false
+                }
+            }]
+        });
+    Highcharts.setOptions(Highcharts.theme);        
+    });
+     </script>
+     </div>
+      </div>
+
+
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Area Spline Chart Example</h4>
+        <p>Depending on what kind of data visualization tool you're using and what kind of background you want to embed it in, you might need to combine colours from all Scania palettes. </p>
+      </div> 
+      <div class="col-md-12">
+      <div id="container-area-spline" style="width: 100%; height: 600px; margin: 0 auto"></div>
+
+
+    <style>
+      #container-area-spline {
+        background-color: #94A596;
+        padding:30px;}
+
+      html body #container-area-spline g text {
+          fill: white !important;
+          text-transform: uppercase;
+      }
+    </style>
+
+
+<script>
+
+$(function () {
+    Highcharts.chart('container-area-spline', {
+        chart: {
+            type: 'areaspline',
+              style: {
+                fontFamily: 'Scania Sans Condensed Bold',
+              },
+        },
+        title: {
+            text: 'Lowered fuel consumption during one week',
+            style: {
+                color: '#ffffff',
+                fontFamily: 'Scania Sans Headline',
+              },
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            verticalAlign: 'top',
+            fill: '#53565A',
+            x: 150,
+            y: 100,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#dedede'
+        },
+        xAxis: {
+            categories: [
+                'Monday',
+                'Tuesday',
+                'Wednesday',
+                'Thursday',
+                'Friday',
+                'Saturday',
+                'Sunday',     
+            ],
+        },
+        yAxis: {
+            title: {
+                text: 'Gallons',
+                style: {
+                // color: '#ffffff',
+                fontFamily: 'Scania Sans Condensed Bold'
+              },
+            }
+        },
+        tooltip: {
+            shared: true,
+            valueSuffix: ' Gallons'
+        },
+        credits: {
+            enabled: false
+        },
+        plotOptions: {
+            areaspline: {
+                fillOpacity: 0.8
+            }
+        },
+        series: [{
+            name: 'NCG',
+            data: [2, 4, 3, 5, 4, 10, 12],
+            // color: '#CEB888'
+        }, {
+            name: 'NGC',
+            data: [2, 3, 4, 3, 3, 5, 4],
+            // color: '#53565A'
+        }]
+    });
+  Highcharts.setOptions(Highcharts.theme);    
+});
+
+</script>
+
+
+
+
+
+
+
+        </div>
+     </div>
+     </div>
+    </article>                      
+  </section>  
+</c-main-content>  
+<c-corporate-footer>  
+</c-corporate-footer>
+      <script src="https://static.scania.com/vendors/components/pure-js/highcharts/5.0.7/code/highcharts.js"></script>
+      <script src="https://static.scania.com/vendors/components/pure-js/highcharts/5.0.7/code/modules/data.js"></script>
+      <script src="https://static.scania.com/vendors/components/pure-js/highcharts/5.0.7/code/modules/drilldown.js"></script>
+      <script src="https://static.scania.com/vendors/components/pure-js/highcharts/5.0.7/code/themes/corporate-ui.js"></script>
+</body>
+</html>
