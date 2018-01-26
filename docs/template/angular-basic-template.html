@@ -15,7 +15,7 @@
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
 </head>
 
-<body class="scania" ng-controller="ThisSite as thissite">
+<body class="scania" ng-controller="UxLib as uxlib">
 
   <c-corporate-header site-name="Developers" site-url="/">
     <nav-item location="https://github.scania.com/pages/Scania/ux-library/">UX Library</nav-item>
@@ -23,15 +23,15 @@
   </c-corporate-header>
     
   <c-main-content>
- <!--   <c-main-navigation ng-cloak>
+    <c-main-navigation ng-cloak>
       <primary-items>
-        <nav-item ng-repeat="item in thissite.items" location="{{item.url}}" nav-item="item" active="{{item.active}}" ng-click="thissite.changeView($event, item)"></nav-item>
+        <nav-item ng-repeat="item in uxlib.items" location="{{item.url}}" nav-item="item" active="{{item.active}}" ng-click="uxlib.changeView($event, item)"></nav-item>
       </primary-items>
     </c-main-navigation>
- -->
-     <c-main-navigation ng-cloak>
+
+    <c-main-navigation ng-cloak>
       <primary-items>
-        <nav-item ng-repeat="item in thissite.items" location="{{item.url}}" active="{{item.active}}" ng-click="thissite.changeView($event, item)">
+        <nav-item ng-repeat="item in uxlib.items" location="{{item.url}}" active="{{item.active}}" ng-click="uxlib.changeView($event, item)">
           {{item.name}}
           <sub-navigation ng-if="item.active && item.children" item="item" sub-navigation>
             <nav-item ng-repeat="subItem in item.children" location="{{item.url}}">{{subItem.name}}</nav-item>
@@ -57,16 +57,14 @@
 
   <script>
     angular.module('CorporateUI', [])
-      .controller('ThisSite', [ThisSite])
+      .controller('UxLib', [UxLib])
       .directive('navItem', navItem)
       .directive('subNavigation', ['$compile', '$timeout', subNavigation]);
-
-    function ThisSite() {
+    function UxLib() {
       var vm = this;
-
       vm.items = [
         { name: 'home', location: '/', active: true },
-        { name: 'libraries', location: '/libs/', children: [
+        { name: 'libs', location: '/libs/', children: [
           { name: 'angular', location: '/libs/angular/' },
           { name: 'react', location: '/libs/react/' }
         ] },
@@ -76,7 +74,6 @@
         ] },
         { name: 'contact', location: '/contact/' }
       ];
-
       vm.changeView = function($event, target) {
         $event.preventDefault();
         for(i in vm.items) {
@@ -86,7 +83,6 @@
         target.active = true;
       }
     }
-
     function navItem() {
       return {
         restrict: 'A',
@@ -99,7 +95,6 @@
           </sub-navigation>'
       }
     }
-
     function subNavigation($compile, $timeout) {
       return {
         restrict: 'A',
@@ -107,35 +102,14 @@
         compile: function compile(tElement, tAttrs, transclude) {
           // Might be that we can set third param to false (visible attribute in dom)
           tAttrs.$set('template', tElement.html());
-
           // Need to a way to reset and compile template using template attribute when user clicks the navigation
           iAttrs.$observe('ngIf', function() {
-            console.log('Alive and kicking!')
+            console.log('apa')
           });
         }
       }
     }
-
     window.CorporateUi.baseComponents();
   </script>
-
-
-  <script>
-   // ServiceWorker is a progressive technology. Ignore unsupported browsers
-  if ('serviceWorker' in navigator) {
-    console.log('CLIENT: service worker registration in progress.');
-    navigator.serviceWorker.register('service-worker.js').then(function() {
-      console.log('CLIENT: service worker registration complete.');
-    }, function() {
-      console.log('CLIENT: service worker registration failure.');
-    });
-  } else {
-    console.log('CLIENT: service worker is not supported.');
-  }
-  </script>
-
-
-
-
 </body>
 </html>
