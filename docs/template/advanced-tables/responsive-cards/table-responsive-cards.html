@@ -109,24 +109,22 @@
 
 });</script>
 </head>
-<body class="scania app">
-	<c-corporate-header site-name="My New Application" site-url="/corporate-ui/">
+<body class="scania app" data-env="proto">
+	<c-corporate-header site-name="UX Library" site-url="/corporate-ui/">
 		<nav-item location="https://www.scania.com">Sample Link</nav-item>
 	</c-corporate-header>
 
 	<c-main-content>
 
-		<c-main-navigation>
+		<c-main-navigation show-search>
 			<primary-items>
-				<nav-item location="https://www.scania.com/ux-library">Home</nav-item>
-				<nav-item location="https://scania.github.io/corporate-ui/developer/" class="active">Web Applications
-					<sub-navigation caption="Templates">
-						<nav-item location="https://scania.github.io/corporate-ui/template/basic-template-app.html">Application Template</nav-item>
-						<nav-item location="https://scania.github.io/corporate-ui/template/basic-template.html" class="active">Public site Template</nav-item>
-						<nav-item location="https://scania.github.io/corporate-ui/template/angular-basic-template.html">Angular Template</nav-item>
-						<nav-item location="https://scania.github.io/corporate-ui/template/advanced-tables/table-basic-template.html">Tables Demos</nav-item>			
-					</sub-navigation>
-				</nav-item>
+				<nav-item location="../table-basic-template.html">Standard Tables</nav-item>
+				<nav-item location="../table-pagination.html">Table with Pagination</nav-item>            
+				<nav-item location="../table-filtered-app.html">Filtered table</nav-item>
+				<nav-item location="../table-column-selector-widget.html">Column Selector</nav-item>
+				<nav-item location="table-responsive-cards.html">Responsive Cards</nav-item>            
+				<nav-item location="../table-match-any-column.htm">Match Any Column</nav-item>
+				<nav-item location="../table-tree-view.html">Tree View</nav-item>                   
 			</primary-items>
 		</c-main-navigation>
 
