@@ -18,28 +18,7 @@
     .tablesorter-filter-row {border:none;}
   </style>
 
-  <!-- Table Sorter Plugin -->
-
-  <script src="https://static.scania.com/vendors/components/jQuery/table-sorter/2.28.15/js/jquery.tablesorter.min.js"></script>
-  <script src="https://static.scania.com/vendors/components/jQuery/table-sorter/2.28.15/js/jquery.tablesorter.widgets.min.js"></script>
-  <!-- Tablesorter: optional -->
-  <link rel="stylesheet"
-  href="https://static.scania.com/vendors/components/jQuery/table-sorter/2.28.15/addons/pager/jquery.tablesorter.pager.css">
-  <script src="https://static.scania.com/vendors/components/jQuery/table-sorter/2.28.15/addons/pager/jquery.tablesorter.pager.js"></script>
-  <script src="https://static.scania.com/vendors/components/jQuery/table-sorter/2.28.15/addons/expandable/jquery.tablesorter.expandable.js"></script>
-
-
   <link rel="stylesheet" href="https://static.scania.com/vendors/components/jQuery/hColumns/css/hcolumns.css" type="text/css">
-
-
-  <script>
-
-  </script>
-
-  <style>
-    tbody th {font-family: 'Scania Sans Bold'}
-    .tablesorter th, .tablesorter td {border:none !important;}
-  </style>  
 
   <link rel="stylesheet" href="/ux-library/ux-lib.css">
 </head>
@@ -58,7 +37,7 @@
             <nav-item location="table-pagination.html">Table with Pagination</nav-item>            
             <nav-item location="table-filtered-app.html">Filtered table</nav-item>
             <nav-item location="table-column-selector-widget.html">Column Selector</nav-item>
-            <nav-item location="table-responsive-cards.html">Responsive Cards</nav-item>            
+            <nav-item location="responsive-cards/table-responsive-cards.html">Responsive Cards</nav-item>            
             <nav-item location="table-match-any-column.htm">Match Any Column</nav-item>
             <nav-item location="table-tree-view.html">Tree View</nav-item>                   
         </primary-items>
@@ -66,8 +45,8 @@
 
 
 
-    <section class="bg-brand-01">
-        <div class="container mx-auto color-brand-02">
+    <section class="bg-brand-01 p-0">
+        <div class="container mx-auto color-brand-02 p-5">
             <h2 class="color-brand-02">Apple Tree View</h2>
             <p>This is a basic tree view often used by Apple.</p>     
         </div>
@@ -137,10 +116,6 @@
                     }
                 });
 
-              $(function () {
-                $("#table").tablesorter({sortList: [[0, 0], [1, 0]]});
-              });
-
             });
         </script>
 
@@ -148,6 +123,6 @@
       </div>
     </section>
   </c-main-content>
-  <script src="/ux-library/ux-lib.js"></script>
+  <script src="/corporate-ui/ux-lib.js"></script>
 </body>
 </html>
