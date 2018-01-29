@@ -6,11 +6,10 @@
   <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
 
 
-  <title>Lead Generator - Scania</title>
-  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+  <title>Table with Pagination</title>
 
-  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
-  <script src="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js"></script>
+  <script src="https://static.scania.com/vendors/frameworks/jquery/1.11.3/jquery-1.11.3.min.js"></script>   
+  <script src="https://static.scania.com/build/global/2.3.1/js/corporate-ui.js"></script>
 
   
     <!-- Table Sorter Plugin -->
@@ -26,37 +25,65 @@
 
     <script>
         $(function () {
-            $("#table-ecolution").tablesorter({sortList: [[0, 0], [1, 0]]});
+            $("#table-sample").tablesorter({sortList: [[0, 0], [1, 0]]});
         });
     </script>
 
+<style>
 
-  <link rel="stylesheet" href="/corporate-ui/ux-lib.css">
+    tbody th {font-family: 'Scania Sans Bold'}
+
+    .tablesorter-filter-row {border:none;}
+    
+    tbody th {font-family: 'Scania Sans Bold'}
+
+
+            .table thead > tr > td {
+                padding-top: 0;
+            }
+
+    .tablesorter th, .tablesorter td {border:none !important;}
+
+    .table tr.tablesorter-filter-row .form-control {
+        color: black;
+        font-size: inherit;
+    }
+
+
+</style>  
+
+  <link rel="stylesheet" href="/ux-library/ux-lib.css">
 </head>
 <body unresolved class="scania">
 
-  <c-corporate-header project="Corporate UI" site-name="Lead Generator"></c-corporate-header>
+<c-corporate-header site-name="UX Library">
+    <nav-item location="https://www.scania.com/world/#/">World Entry</nav-item>
+    <nav-item location="https://www.scania.com/group/en/">Scania Group</nav-item>
+</c-corporate-header>
 
-  <c-main-content>
+<c-main-content>
 
     <c-main-navigation show-search>
-      <primary-items>
-        <nav-item location="#/">Ecolution Leads</nav-item>
-        <nav-item location="#/">Online Leads</nav-item>
-        <nav-item location="#/">About us</nav-item>
-      </primary-items>
-
-      <secondary-item>
-        <nav-item location="#/"><span class="icon-user"></span></nav-item>
-      </secondary-item>
-
+        <primary-items>
+            <nav-item location="table-basic-template.html">Standard Tables</nav-item>
+            <nav-item location="table-pagination.html">Table with Pagination</nav-item>            
+            <nav-item location="table-filtered-app.html">Filtered table</nav-item>
+            <nav-item location="table-column-selector-widget.html">Column Selector</nav-item>
+            <nav-item location="table-responsive-cards.html">Responsive Cards</nav-item>            
+            <nav-item location="table-match-any-column.htm">Match Any Column</nav-item>
+            <nav-item location="table-tree-view.html">Tree View</nav-item>                   
+        </primary-items>
     </c-main-navigation>
 
- 
-<section class="light">
-    <div class="col-md-12">
-       <h3 class="heading">Find Leads by Ecolution</h3>
-    <table id="table-ecolution" class="tablesorter">
+
+
+    <section class="light">
+        <div class="container margin-bottom">
+            <h2>Table with Pagination</h2>
+            <p>This is a basic table, sortable with pagination based on the Tablesorter plugin. This is a quickly made prototype that needs to be improved when it comes to styling.</p>     
+        </div>
+        <div class="container-fluid">
+    <table id="table-sample" class="tablesorter">
        <thead>
             <tr>
                 <th>ECU</th>
@@ -338,5 +365,5 @@
 
   <c-corporate-footer></c-corporate-footer>
 
-  <script src="/corporate-ui/ux-lib.js"></script>
+  <script src="/ux-library/ux-lib.js"></script>
 </body>
