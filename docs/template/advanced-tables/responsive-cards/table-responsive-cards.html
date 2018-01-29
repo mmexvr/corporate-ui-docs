@@ -116,17 +116,31 @@
 
 	<c-main-content>
 
-		<c-main-navigation show-search>
-			<primary-items>
-				<nav-item location="../table-basic-template.html">Standard Tables</nav-item>
-				<nav-item location="../table-pagination.html">Table with Pagination</nav-item>            
-				<nav-item location="../table-filtered-app.html">Filtered table</nav-item>
-				<nav-item location="../table-column-selector-widget.html">Column Selector</nav-item>
-				<nav-item location="table-responsive-cards.html">Responsive Cards</nav-item>            
-				<nav-item location="../table-match-any-column.htm">Match Any Column</nav-item>
-				<nav-item location="../table-tree-view.html">Tree View</nav-item>                   
-			</primary-items>
-		</c-main-navigation>
+    <c-main-navigation show-search>
+        <primary-items>
+            <nav-item location="table-basic-template.html">Tables
+                <sub-navigation caption="Standard Tables">
+                    <nav-item location="../table-basic-template.html">Basic Table</nav-item>
+                    <nav-item location="../table-basic-template.html">Bordered</nav-item>
+                </sub-navigation>
+            </nav-item>        
+            <nav-item location="../table-match-any-column.htm">Filtered
+                <sub-navigation caption="Filtered Tables">
+                    <nav-item location="../table-match-any-column.htm">Match Any Column</nav-item>
+                    <nav-item location="../table-filtered-app.html">Filtered Columns</nav-item>
+                </sub-navigation>
+            </nav-item>
+            <nav-item location="../table-column-selector-widget.html" class="active">Responsive
+                <sub-navigation caption="Responsive Tables">
+                    <nav-item location="../table-column-selector-widget.html">Columns Selector</nav-item>
+                    <nav-item location="table-responsive-cards.html" class="active">Responsive Cards</nav-item>
+                <nav-item location="../table-filtered-app.html">Filtered Columns</nav-item>
+              </sub-navigation>
+            </nav-item>
+            <nav-item location="../table-pagination.html">Paginated</nav-item>               
+            <nav-item location="../table-tree-view.html">Apple Tree View</nav-item>                   
+        </primary-items>
+    </c-main-navigation>
 
 		<section class="mt-5">
 			<div class="container-fluid">
