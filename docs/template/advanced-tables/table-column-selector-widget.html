@@ -184,7 +184,8 @@
 		</c-main-navigation>
 
 		<section class="light">
-			<div class="container margin-bottom">
+			<div class="container-fluid margin-bottom">
+
 			    <ul class="nav nav-tabs nav-tabs-light">
 			      <li class="active app-styling"><a href="#">Application Styling</a></li>
 			      <li class="public-styling"><a href="#">Public Site Styling</a></li>   
@@ -238,26 +239,7 @@
 				</div>
 			</main-content>
 
-  <script>
-    $(function(){
+  <script src="/corporate-ui/ux-lib.js"></script>
 
-	    $(".public-styling").click(function() {
-	        $('body').removeClass("app");
-	        $('body').addClass("public");  
-	        $('.app-styling').removeClass("active"); 
-	        $('.public-styling').addClass("active");   
-	        
-	    });
-
-	    $(".app-styling").click(function() {
-	        $('body').removeClass("public");
-	        $('body').addClass("app");        
-	        $('.app-styling').addClass("active"); 
-	        $('.public-styling').removeClass("active");     
-	    });  
-
-  });
-  </script>
-  			
-		</body>
-		</html>
+</body>
+</html>
