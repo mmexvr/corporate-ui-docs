@@ -7,6 +7,16 @@
   <title>UX Library - Colours</title>
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
   <script src="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
+  <script src="/corporate-ui/js/google-analytics.js"></script>  
+
+  <script src="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
+  <script src="/corporate-ui/js/google-analytics.js"></script>  
+
+
 </head>
 <body unresolved class="scania">  
   <c-corporate-header site-name="UX Library" site-url="/corporate-ui/">
