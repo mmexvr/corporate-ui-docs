@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="utf-8">
-	<title>jQuery tablesorter 2.0 - Table Reflow Widget (beta)</title>
-  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+	<noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+	<title>Responsive Cards - Table Demo</title>
+  	<script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
 
 	<!-- demo -->
-    <script src="https://static.scania.com/build/global/2.3.2/js/corporate-ui.js"></script>
+    <script src="https://static.scania.com/build/global/2.3.4/js/corporate-ui.js"></script>
 
 
 	<!-- jQuery -->
@@ -108,37 +110,62 @@
 });</script>
 </head>
 <body class="scania app">
+	<c-corporate-header site-name="My New Application" site-url="/corporate-ui/">
+		<nav-item location="https://www.scania.com">Sample Link</nav-item>
+	</c-corporate-header>
 
-<table id="table3" class="table table-striped">
-	<thead>
-		<tr>
-			<th class="ui-table-reflow-ignore sorter-false">Paris</th>
-			<th colspan="2">Average Temperatures (C)</th>
-			<th colspan="2">Average Rainfall</th>
-		</tr>
-		<tr>
-			<th>Month</th>
-			<th>Minimum Temp</th>
-			<th>Maximum Temp</th>
-			<th>Precipitaion (mm)</th>
-			<th>Rainfall Days</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr><th>January</th><td>3</td><td>8</td><td>17.8</td><td>10</td></tr>
-		<tr><th>February</th><td>2</td><td>9</td><td>21.7</td><td>9</td></tr>
-		<tr><th>March</th><td>4</td><td>13</td><td>24.2</td><td>10</td></tr>
-		<tr><th>April</th><td>6</td><td>15</td><td>24.6</td><td>11</td></tr>
-		<tr><th>May</th><td>10</td><td>20</td><td>26.2</td><td>10</td></tr>
-		<tr><th>June</th><td>13</td><td>23</td><td>25.1</td><td>9</td></tr>
-		<tr><th>July</th><td>15</td><td>25</td><td>21.7</td><td>7</td></tr>
-		<tr><th>August</th><td>15</td><td>25</td><td>21.4</td><td>7</td></tr>
-		<tr><th>September</th><td>11</td><td>21</td><td>15.6</td><td>8</td></tr>
-		<tr><th>October</th><td>9</td><td>17</td><td>25.3</td><td>11</td></tr>
-		<tr><th>November</th><td>5</td><td>11</td><td>22.4</td><td>12</td></tr>
-		<tr><th>December</th><td>3</td><td>8</td><td>26.6</td><td>12</td></tr>
-	</tbody>
-</table>
+	<c-main-content>
 
+		<c-main-navigation>
+			<primary-items>
+				<nav-item location="https://www.scania.com/ux-library">Home</nav-item>
+				<nav-item location="https://scania.github.io/corporate-ui/developer/" class="active">Web Applications
+					<sub-navigation caption="Templates">
+						<nav-item location="https://scania.github.io/corporate-ui/template/basic-template-app.html">Application Template</nav-item>
+						<nav-item location="https://scania.github.io/corporate-ui/template/basic-template.html" class="active">Public site Template</nav-item>
+						<nav-item location="https://scania.github.io/corporate-ui/template/angular-basic-template.html">Angular Template</nav-item>
+						<nav-item location="https://scania.github.io/corporate-ui/template/advanced-tables/table-basic-template.html">Tables Demos</nav-item>			
+					</sub-navigation>
+				</nav-item>
+			</primary-items>
+		</c-main-navigation>
+
+		<section class="mt-5">
+			<div class="container-fluid">
+				<h1>Resonponsive Cards</h1>
+				<p>Resize your browser to re-arrange the table rows to cards.</p>
+				<table id="table3" class="table table-striped">
+					<thead>
+						<tr>
+							<th class="ui-table-reflow-ignore sorter-false">Paris</th>
+							<th colspan="2">Average Temperatures (C)</th>
+							<th colspan="2">Average Rainfall</th>
+						</tr>
+						<tr>
+							<th>Month</th>
+							<th>Minimum Temp</th>
+							<th>Maximum Temp</th>
+							<th>Precipitaion (mm)</th>
+							<th>Rainfall Days</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><th>January</th><td>3</td><td>8</td><td>17.8</td><td>10</td></tr>
+						<tr><th>February</th><td>2</td><td>9</td><td>21.7</td><td>9</td></tr>
+						<tr><th>March</th><td>4</td><td>13</td><td>24.2</td><td>10</td></tr>
+						<tr><th>April</th><td>6</td><td>15</td><td>24.6</td><td>11</td></tr>
+						<tr><th>May</th><td>10</td><td>20</td><td>26.2</td><td>10</td></tr>
+						<tr><th>June</th><td>13</td><td>23</td><td>25.1</td><td>9</td></tr>
+						<tr><th>July</th><td>15</td><td>25</td><td>21.7</td><td>7</td></tr>
+						<tr><th>August</th><td>15</td><td>25</td><td>21.4</td><td>7</td></tr>
+						<tr><th>September</th><td>11</td><td>21</td><td>15.6</td><td>8</td></tr>
+						<tr><th>October</th><td>9</td><td>17</td><td>25.3</td><td>11</td></tr>
+						<tr><th>November</th><td>5</td><td>11</td><td>22.4</td><td>12</td></tr>
+						<tr><th>December</th><td>3</td><td>8</td><td>26.6</td><td>12</td></tr>
+					</tbody>
+				</table>
+			</div>	
+		</section>
+	</c-main-content>	
 </body>
 </html>
