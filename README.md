@@ -1,12 +1,8 @@
-<h1>The Corporate UI Framework</h1>
+<h1>The Corporate UI Framework - Public Clone</h1>
 
 <p>In this repository you'll find all components described in <a href="https://scania.github.io/corporate-ui/developer/">the UX Library</a>.</p>
 <p>The repository is a place for all Front End Developers to join the UI Developement at Scania and elsewhere. It is us togheter that develop and maintain this repository as well as <a href="https://scania.github.io/corporate-ui/developer/">the documentation</a> (found in the /docs folder in this repo).</p>
-<ul>
-	<li>Something broken in a existing component? Help fixing it!</li>
-	<li>Found a component that needs to be extended? Get on and improve it!</li>
-	<li>Missing out on a component? Develop it!</li>
-</ul>
+<p><strong>NOTE!</strong> This repository is beeing updated regularly but for the acutal master is  hosted on the Scania GitHub Enterprise version.</p>
 
 <h2>The Corporate UI Development Process</h2>
 <p>There are many stakeholders that has interest in this library. Normaly, new needs and improvements are filtered from business and end users via UX designers and product owners.</p>
