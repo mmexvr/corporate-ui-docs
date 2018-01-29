@@ -57,15 +57,15 @@
       var vm = this;
 
       vm.items = [
-        { name: 'Home', location: '/corporate-ui/', active: true },
+        { name: 'Home', location: '/corporate-ui/'},
         { name: 'Style Guide', location: '/corporate-ui/styleguide/', children: [
           { name: 'Logotype', location: '/corporate-ui/logotype/' },
           { name: 'Icons', location: '/corporate-ui/icons/' },
           { name: 'Colours', location: '/corporate-ui/colours/' },
           { name: 'Typography', location: '/corporate-ui/typography/' }
         ] },
-        { name: 'Web Applications', location: '/corporate-ui/developer/', children: [
-          { name: 'Corporate UI', location: '/corporate-ui/developer/' },
+        { name: 'Web Applications', location: '/corporate-ui/developer/', active: true , children: [
+          { name: 'Corporate UI', location: '/corporate-ui/developer/', active: true  },
           { name: 'Caching', location: '/corporate-ui/developer/caching.html' },
           { name: 'Scania Bootstrap', location: '/corporate-ui/developer/scania-bootstrap.html' },
           { name: 'Support', location: '/corporate-ui/template/html-copy-paste/html-copy-paste.html' }
