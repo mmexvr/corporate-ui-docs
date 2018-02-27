@@ -9,36 +9,57 @@ Polymer({
     text: {
       type: String
     },
-    tab: {
-      type: Boolean,
-      value: false
+    location: {
+      type: String
     },
-    dataToggle: '',
-    renderLink: {
-      type: Boolean,
-      value: true
+    active: {
+      type: String,
+      observer: 'setActive'
     }
   },
   created: function() {
-    if (!this.children.length) {
-      this.attributes.renderLink = false;
-    }
-    this.className += ' ' + this.nodeName.toLowerCase(); // Adds nav-item class to nav-item element (is needed for some app specific style)
     this.classes = this.className; // Store default classlist without state included
   },
   attached: function() {
-    if( this.dataToggle ) {
-      this.querySelector('a').setAttribute('data-toggle', this.dataToggle);
-      this.querySelector('a').setAttribute('target', '_self');
-      this.removeAttribute('data-toggle');
+    var child = this.firstChild,
+        texts = [];
+
+    while (child) {
+        if (child.nodeType == 3) {
+            texts.push(child.data);
+            child.data = '';
+        }
+        child = child.nextSibling;
     }
 
-    if( !this.location ) {
-      this.renderLink = false;
+    var text = texts.join('').trim();
+
+    if (text) {
+      var anchor = document.createElement('a');
+      anchor.innerText = text;
+      anchor.href = this.location;
+      this.appendChild(anchor);
     }
 
     if( this.hasClass(this, 'active') ) {
       this.toggleExpand(this._getEvent());
+    }
+
+    if (this.active === 'true') {
+      this.classList.add('active');
+    }
+  },
+  setActive: function(newValue) {
+    if (newValue === 'true') {
+      this.classList.add('active');
+    } else {
+      this.classList.remove('active');
+    }
+
+    if (this.value != newValue) {
+      this.async(function() {
+        this.fire('navItem-active');
+      });
     }
   },
   hasClass: function(element, className) {

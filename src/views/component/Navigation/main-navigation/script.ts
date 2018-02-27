@@ -11,8 +11,13 @@ Polymer({
       value: true
     }
   },
+  listeners: {
+    'subNavigation-attached': 'setHeaderSize',
+    'navItem-active': 'setHeaderSize',
+    'fullscreen-toggled': 'setHeaderSize'
+  },
   attached: function() {
-    var self = this;
+    this.style.display = 'block';
 
     //$('primary-items, secondary-items' this).contents().unwrap();
 
@@ -23,69 +28,59 @@ Polymer({
       $('body').toggleClass('navigation-open');
     })
 
-    this.siteName = $('c-corporate-header')[0].siteName;
-    this.siteUrl = $('c-corporate-header')[0].siteUrl;
+    this.header = document.querySelector('c-corporate-header');
+    this.siteName = this.header.siteName;
+    this.siteUrl = this.header.siteUrl;
+
+    // If corporate-header exists tell the logotype to have sticky handling
+    if (this.header) {
+      $('.navbar-symbol', this.header).addClass('should-stick');
+    }
 
     // Show hamburger menu if item exist in main-navigation
     if ($('nav-item', this).length) {
-      $('c-corporate-header .navbar-toggle').removeClass('hidden');
+      $('.navbar-toggle', this.header).removeClass('hidden');
     }
 
-    // Move sub-navigation items to be rendered after connected anchor element
-    $('sub-navigation', this).each(function() {
-      $(this).parent().after(this);
-    });
+    this.sticky.call(this);
+    this.setHeaderSize.call(this);
 
-    $(window).on('scroll', function() {
-      self.sticky.call(self);
-    });
-
-    $(window).on('resize', function() {
-      self.setHeaderSize.call(self);
-    });
+    $(window).on('scroll', this.sticky.bind(this));
+    $(window).on('resize', this.setHeaderSize.bind(this));
 
     // Set start collapse value - couldnt get this to work in a better way...
     $('.navbar-toggle > a', this).addClass('collapsed');
-  },
-  ready: function() {
-    var self = this;
-    setTimeout(function() {
-      self.sticky.call(self);
-      self.setHeaderSize.call(self);
-    });
+
+    window.jQuery = window.preJQuery;
   },
   setHeaderSize: function() {
-    var headerHeight = $('.navbar-toggle:visible', this).height() || $('> nav', this).height() + $('sub-navigation:visible', this).height() || 'auto'; // On desktop mode it will use #main-nav on mobile .navbar-toggle
+    var headerHeight = $('.navbar-toggle:visible', this.header).height() || $('> nav', this).height() + $('sub-navigation:visible', this).height() || 'auto'; // On desktop mode it will use #main-nav on mobile .navbar-toggle
 
-    if( $(this).offset().top === 0 || $(this).height() != headerHeight ) {
+    if( parseInt(this.style.height) != headerHeight ) {
       $(this)
         .removeAttr('style')
+        .css({display: 'block'})
         .height( headerHeight );
     }
 
     $('> .navbar-default', this).removeAttr('style');
 
     // Used in mobile mode
-    if(window.innerWidth <= 991) {
-      var header = $('c-corporate-header').height();
-      $('> .navbar-default', this).css({ top: header });
+    if(window.innerWidth < 991) {
+      var header = $(this.header).height();
+      $('> .navbar-default', this).css({ 'padding-top': header });
     }
   },
   sticky: function() {
     var body = $('body'),
-        navContainer = $('> .navbar-default', this),
+        navContainer = $('> .navbar-default', this), // Using > could lead to performance issues due to manipulation of dom
         stickyNavTop = $(this).offset().top,
         scrollTop = $(window).scrollTop(); // our current vertical position from the top
 
-    navContainer.addClass('sticky');
-    body.addClass('header-is-sticky');
-
-    if (scrollTop <= Math.max(stickyNavTop - 15, 0)) {
+    if (scrollTop <= Math.max(stickyNavTop, 0)) {
       body.removeClass('header-is-sticky');
-    }
-
-    if(scrollTop <= stickyNavTop) {
-      navContainer.removeClass('sticky');
+    } else {
+      body.addClass('header-is-sticky');
     }
   }
 });

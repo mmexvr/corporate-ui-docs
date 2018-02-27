@@ -1,21 +1,34 @@
 // SCANIA BOOTSTRAP THEME
 // NAVIGATION
 
+@siteNameFont: 'Scania Sans Headline';
+@headerItems:  'Scania Sans';
+
+@topLevelFont: 'Scania Sans Bold';
+@subLevelFont: 'Scania Sans';
+
+@topLevelAppFont: 'Scania Sans Semi Condensed Bold';
+@subLevelAppFont: 'Scania Sans Semi Condensed';
+
 .navbar-default {
+  font-family: @headerItems;
   background-color: #fff;
   margin-bottom: 0;
   border: 0;
+  border-radius: 0;
   z-index: 1000;
   font-size: 1.4rem;
+  min-height: auto;
 
   > .container-fluid {
     padding-left: 0;
     padding-right: 0;
   }
+
   .navbar-header {
     float: none;
     display: block;
-    font-family: 'Scania Sans Headline';
+    font-family: @siteNameFont;
     padding: 12px 15px 3px;
     border-bottom: 1px solid #e2e2e2;
     font-size: 1.8rem;
@@ -32,8 +45,8 @@
       &:before {
         display: inline-block;
         content: "";
-        background-image: url(/resources/logotype/scania/scania-wordmark.png);
-        background-image: url(/resources/logotype/scania/scania-wordmark.svg);
+        background-image: url('/resources/logotype/scania/scania-wordmark.png');
+        background-image: url('/resources/logotype/scania/scania-wordmark.svg');
         background-repeat: no-repeat;
         background-size: cover;
         vertical-align: middle; // This is needed to make after able to align middle vertical
@@ -50,6 +63,7 @@
         cursor: default;
       }
     }
+
     .navbar-symbol {
       width: 48px;
       height: 46px;
@@ -61,21 +75,26 @@
       &:before {
         display: inline-block;
         content: "";
-        background-image: url(/resources/logotype/scania/scania-symbol.png);
-        background-image: url(/resources/logotype/scania/scania-symbol.svg);
+        background-image: url('/resources/logotype/scania/scania-symbol.png');
+        background-image: url('/resources/logotype/scania/scania-symbol.svg');
         background-repeat: no-repeat;
         background-size: cover;
         width: inherit;
         height: inherit;
       }
     }
+
     .navbar-nav {
       margin: 11px 0 0 -15px;
 
-      a {
+      a,
+      span {
         font-family: "Scania Sans";
         font-size: 12px;
         color: #747472;
+      }
+      a {
+        padding: 15px;
 
         &:hover {
           color: inherit;
@@ -101,7 +120,6 @@
 
     a {
       text-decoration: none;
-      position: static;
     }
 
     .active {
@@ -160,8 +178,15 @@
     .navbar-header {
       padding: 2px 0 0px;
 
-      + .navbar-collapse + .navbar-collapse {
-        padding: 0;
+      // Top level - main navigation
+      + .navbar-collapse {
+        font-family: @topLevelAppFont;
+
+        // Sub level - main navigation
+        + .navbar-collapse {
+          font-family: @subLevelAppFont;
+          padding: 0;
+        }
       }
     }
   }
@@ -171,7 +196,12 @@
 ul.nav-tabs {
   font-size: 0;
   text-align: center;
-  border-bottom: 1px solid @color-primary-01;
+  margin: 10px 20px 5px;
+
+  .app & {
+    text-align: left;
+    margin: 10px 20px 5px 0;
+  }
 
   > li {
     margin-bottom: 0;
@@ -179,22 +209,26 @@ ul.nav-tabs {
     display: inline-block;
 
     > a {
-      padding: 15px 15px 14px 15px;
-      text-transform: none;
-      font-weight: normal;
+      font-family: 'Scania Sans Bold';
+      padding: 10px 20px 9px 20px;
       -webkit-border-radius: 0;
       border-radius: 0;
       margin-right: 0;
       border-top: 1px solid @color-primary-01;
       border-right: 1px solid @color-primary-01;
-      position: relative;
       background-color: #fff;
       color: @color-primary-03;
-      font-size: 12px;
+      font-size: 1.4rem;
       text-transform: uppercase;
 
+      .app & {
+        font-family: 'Scania Sans Condensed Bold' !important;
+        padding: 8px 16px 7px 16px;
+        text-transform: none;
+      }
+
       &:hover {
-        background-color: #f7f7f7; 
+        background-color: #f7f7f7;
         border-top: 1px solid @color-primary-01;
         border-right: 1px solid @color-primary-01;
       }
@@ -216,12 +250,13 @@ ul.nav-tabs {
 
     &:first-child a,
     &.active:first-child a {
-      border-left: 1px solid @color-primary-01; 
+      border-left: 1px solid @color-primary-01;
     }
+
     &.disabled a {
         color: #999;
         font-style: italic;
-    }    
+    }
   }
 
   &-light {
@@ -229,11 +264,16 @@ ul.nav-tabs {
 
     > li {
 
-      &:hover a {
-        color: inherit;
+      a,
+      a:hover,
+      &:first-child a, {
+        font-family: 'Scania Sans';
+        background-color: transparent;
+        border-color: transparent;
+        color:@color-brand-01;
       }
+
       &.active {
-        background-color: #fff;
 
         a,
         a:hover,
@@ -243,18 +283,21 @@ ul.nav-tabs {
           display: inline-block;
           color: inherit;
           padding: 0;
-          margin: 15px 15px 13px 15px;
-          border-color: red;
+          margin: 15px 16px 13px;
+          border-color: #d6001c;
           border-width: 0 0 2px;
+          font-family: 'Scania Sans Bold';
         }
       }
 
-      > a,
-      > a:hover {
-        background-color: transparent;
-        color: inherit;
-        border-color: #ddd;
+      &:first-child a {
+        padding-left:0;
       }
+    }
+
+    .nav-tabs + & {
+      margin-top: 5px;
+      margin-bottom: 8px;
     }
   }
 
@@ -268,22 +311,95 @@ ul.nav-tabs {
   }
 }
 
-.nav-pills li {
+//nav-pills
+.nav-pills {
 
-  &.active > a {
+  li {
 
-    &,
-    &:hover {
-      background-color: @brand-info;
+    &.active > a {
+
+      &,
+      &:hover,
+      &:focus {
+        background-color: @interaction-info;
+        color: #fff;
+      }
+
+      > .badge {
+        color: @interaction-info;
+      }
     }
 
-    > .badge {
-      color: @brand-info;
+    > a {
+      color: @interaction-info;
     }
   }
 
-  > a {
-    color: @brand-info;
+  > li {
+
+    > a {
+      border-radius:0;
+
+      > .badge {
+        margin-left: 10px;
+        vertical-align: top;
+      }
+    }
+  }
+
+  ul.nav& {
+    padding: 0;
+    margin: 0;
+    font-family: 'Scania Sans Semi Condensed Bold';
+
+    li {
+      border: 1px solid @interaction-info;
+      background-color: #fff;
+
+      &.active {
+        background-color: @interaction-info;
+      }
+    }
+
+    li + li {
+      margin-left:-1px;
+      margin-bottom: 10px;
+    }
+
+    &.nav-stacked {
+      font-size: 1.56rem;
+      margin-bottom: 30px;
+
+      li {
+         border-color: #e2e2e2;
+
+         + li {
+          margin-left: 0;
+          margin-bottom: -1px;
+        }
+      }
+
+      > li {
+
+        + li {
+          margin-top: 0;
+          margin-left: 0;
+        }
+
+        &.active > a {
+         color: #fff;
+        }
+
+        > a {
+          padding: 22px;
+          color: #555;
+        }
+      }
+
+      li.active {
+        border-color: @interaction-info;
+      }
+    }
   }
 }
 
@@ -320,6 +436,7 @@ ul.nav-tabs {
           &:before {
             content: none;
           }
+
           span {
             display: block;
           }
@@ -407,6 +524,10 @@ ul.nav-tabs {
           width: 40px;
           height: 37px;
           margin: -5px;
+
+          &:before {
+            position: static;
+          }
         }
         .navbar-brand,
         .navbar-nav {
@@ -449,6 +570,7 @@ ul.nav-tabs {
 // Mixins related to navigations
 .top-level() {
   padding: 0;
+  font-family: @topLevelFont;
 
   .navbar-nav {
 
@@ -466,7 +588,8 @@ ul.nav-tabs {
         padding: 0 15px;
       }
       .app & {
-        padding: 16px 0;
+        padding-top: 16px;
+        padding-bottom: 16px;
 
         &:first-child:before {
           padding-right: 0;
@@ -479,6 +602,7 @@ ul.nav-tabs {
   }
 }
 .sub-level() {
+  font-family: @subLevelFont;
   background-color: #f3f3f3;
   font-size: 1.5rem;
 
@@ -490,7 +614,7 @@ ul.nav-tabs {
     &.active:after,
     &:hover:after {
       content: "";
-      border-bottom: 2px solid #c50918;
+      border-bottom: 2px solid #d6001c;
       position: absolute;
       left: 15px;
       right: 15px;

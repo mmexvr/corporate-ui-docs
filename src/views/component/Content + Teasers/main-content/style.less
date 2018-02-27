@@ -1,17 +1,7 @@
 :host {
   display: block;
-  min-height: 100%;
-  /*font-size: 16px;*/
+  flex-grow: 1;
   word-break: break-word;
-
-  &.dark > section,
-  .dark {
-    background-color: #eee;
-  }
-  &.light > section,
-  .light {
-    background-color: #fff;
-  }
 
   /* Grid related style */
   .row.text-middle {
@@ -35,7 +25,7 @@
     a:after {
       font-family: 'corporate-icons';
       content: "\e6e9";
-      color: #c50918;
+      color: #d6001c;
       padding-left: 6px;
     }
   }
@@ -51,7 +41,7 @@
       clear: left;
 
       &:nth-child(odd) {
-        background-color: #eee;
+        background-color: #eeeff0;
       }
       &.even:nth-child(odd) {
         background-color: transparent;
@@ -60,19 +50,13 @@
           background-color: transparent;
       }
       &.even:nth-child(even) ~:nth-child(even) {
-          background-color: #eee;
+          background-color: #eeeff0;
       }
       &.even:nth-child(odd) ~:nth-child(even) {
           background-color: transparent;
       }
       &.even:nth-child(odd) ~:nth-child(odd) {
-          background-color: #eee;
-      }
-      &.light {
-        background-color: transparent !important;
-      }
-      &.dark {
-        background-color: #eee !important;
+          background-color: #eeeff0;
       }
     }
   }
