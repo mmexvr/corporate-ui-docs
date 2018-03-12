@@ -41,7 +41,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "start": "gulp",
+    "prepublish": "gulp prepublish"
   },
   "repository": {
     "type": "git",
@@ -52,6 +53,9 @@
     "bootstrap",
     "polymer",
     "angular"
+  ],
+  "files": [
+    "dist"
   ],
   "author": "Comon Design Service team",
   "license": "ISC"
