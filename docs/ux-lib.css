@@ -22,6 +22,7 @@ a[href="/corporate-ui/component/"] {
   display: none;
 }
 
+p a {font-weight: bold}
 
 .ux-lib[version-notfound]:after {
   content: "Version '" attr(version-notfound) "' was not found. Fallback to '" attr(data-env) "'";
