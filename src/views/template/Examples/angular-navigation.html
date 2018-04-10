@@ -3,15 +3,16 @@
 
 <html lang="en-GB" ng-app="CorporateUI">
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <noscript>
     <meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html">
   </noscript>
 
-   <title>Corporate UI - Developers</title>
+  <title>Corporate UI - Developers</title>
 
   <script src="/js/corporate-ui.js?preload=false"></script>
+  <!-- <script src="/js/corporate-ui.js"></script> -->
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110069805-1"></script>
@@ -35,11 +36,11 @@
   <c-main-content>
     <c-main-navigation ng-cloak>
       <primary-items>
-        <nav-item ng-repeat="item in uxlib.items" location="{{item.url}}" nav-item="item" active="{{item.active}}" ng-click="uxlib.changeView($event, item)"></nav-item>
+        <nav-item ng-repeat="item in uxlib.items" location="{{item.location}}" item="item"></nav-item>
       </primary-items>
     </c-main-navigation>
 
-    <c-main-navigation ng-cloak>
+    <!-- <c-main-navigation ng-cloak>
       <primary-items>
         <nav-item ng-repeat="item in uxlib.items" location="{{item.url}}" active="{{item.active}}" ng-click="uxlib.changeView($event, item)">
           {{item.name}}
@@ -48,7 +49,7 @@
           </sub-navigation>
         </nav-item>
       </primary-items>
-    </c-main-navigation>
+    </c-main-navigation> -->
 
     <section class="light">
       <div class="container">
@@ -68,8 +69,8 @@
   <script>
     angular.module('CorporateUI', [])
       .controller('UxLib', [UxLib])
-      .directive('navItem', navItem)
-      .directive('subNavigation', ['$compile', '$timeout', subNavigation]);
+      .directive('item', [item])
+      /*.directive('subNavigation', ['$compile', '$timeout', subNavigation])*/;
 
     function UxLib() {
       var vm = this;
@@ -86,27 +87,25 @@
         ] },
         { name: 'contact', location: '/contact/' }
       ];
-
-      vm.changeView = function($event, target) {
-        $event.preventDefault();
-        for(i in vm.items) {
-          var item = vm.items[i];
-          delete item.active;
-        }
-        target.active = true;
-      }
     }
 
-    function navItem() {
+    function item() {
       return {
         restrict: 'A',
         scope: {
-          item: '=navItem'
+          item: '=item'
         },
-        template: '{{item.name}} \
+        template: '\
+          <a href="{{item.location}}" ng-click="changeView($event)">{{item.name}}</a> \
           <sub-navigation caption="{{item.name}}" ng-if="item.children">\
-            <nav-item ng-repeat="subItem in item.children" location="{{subItem.location}}" nav-item="subItem"></nav-item>\
-          </sub-navigation>'
+            <nav-item ng-repeat="subItem in item.children" location="{{subItem.location}}" item="subItem"></nav-item>\
+          </sub-navigation>',
+        link: function($scope, element, attrs) {
+          element.active = $scope.item.active;
+          $scope.changeView = function($event, target) {
+            $event.preventDefault();
+          }
+        }
       }
     }
 
@@ -119,7 +118,7 @@
           tAttrs.$set('template', tElement.html());
 
           // Need to a way to reset and compile template using template attribute when user clicks the navigation
-          iAttrs.$observe('ngIf', function() {
+          tAttrs.$observe('ngIf', function() {
             console.log('Alive and kicking!')
           });
         }

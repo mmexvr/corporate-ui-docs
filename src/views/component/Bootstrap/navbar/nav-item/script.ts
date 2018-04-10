@@ -13,7 +13,7 @@ Polymer({
       type: String
     },
     active: {
-      type: String,
+      type: Boolean,
       observer: 'setActive'
     }
   },
@@ -25,11 +25,11 @@ Polymer({
         texts = [];
 
     while (child) {
-        if (child.nodeType == 3) {
-            texts.push(child.data);
-            child.data = '';
-        }
-        child = child.nextSibling;
+      if (child.nodeType == 3) {
+        texts.push(child.data);
+        child.data = '';
+      }
+      child = child.nextSibling;
     }
 
     var text = texts.join('').trim();
@@ -45,21 +45,23 @@ Polymer({
       this.toggleExpand(this._getEvent());
     }
 
-    if (this.active === 'true') {
+    if (this.active) {
       this.classList.add('active');
-    }
-  },
-  setActive: function(newValue) {
-    if (newValue === 'true') {
-      this.classList.add('active');
-    } else {
-      this.classList.remove('active');
     }
 
-    if (this.value != newValue) {
+    this.onclick = (function() {
+      this.active = true;
+    }).bind(this);
+  },
+  setActive: function(newState) {
+    if (newState) {
+      this.classList.add('active');
+
       this.async(function() {
         this.fire('navItem-active');
       });
+    } else {
+      this.classList.remove('active');
     }
   },
   hasClass: function(element, className) {

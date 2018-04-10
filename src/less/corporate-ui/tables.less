@@ -17,7 +17,7 @@ table { //This is to override the Boostrap standard of "collapse" on all table e
       > td,
       > th {
         padding: @table-cell-padding;
-        border: 1px solid #e8e7eb;
+        border: 1px solid #dadada;
       }
     }
   }
@@ -29,8 +29,9 @@ table { //This is to override the Boostrap standard of "collapse" on all table e
     > tr {
 
       > th {
+        font-family: 'Scania Sans Condensed';
+        font-weight: bold;
         text-transform: uppercase;
-        font-family: 'Scania Sans Condensed Bold';
         border: 1px solid transparent;
 
         input,
@@ -77,20 +78,24 @@ table { //This is to override the Boostrap standard of "collapse" on all table e
   }
 
   caption {
-    text-align: left;
-    text-transform: uppercase;
-    border: 0;
-    line-height: normal;
-    background-color: @interaction-primary;
-    color: #fff;
-    padding: 25px;
 
-    + thead {
-      background-color: inherit;
-      color: inherit;
+    &,
+    .app & {
+      text-align: left;
+      text-transform: uppercase;
+      border: 0;
+      line-height: normal;
+      background-color: @interaction-primary;
+      color: #fff;
+      padding: 25px;
 
-      > tr > th {
-        border: 1px solid #e8e7eb;
+      + thead {
+        background-color: inherit;
+        color: inherit;
+
+        > tr > th {
+          border: 1px solid #dadada;
+        }
       }
     }
   }
