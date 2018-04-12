@@ -25,7 +25,7 @@
 <ul>
 <li>Clone the Corporate UI repo</li>
 <li>Download and install node.js: https://nodejs.org/en/</li>
-<li>CONFIGURE SCANIA PROXY: In environment variables (on computer) as well as in Git config. PROXY IS: http://PROXYSESO.SCANIA.COM:8080
+<li>CONFIGURE PROXY IF NEEDED: If you are under your corporate environment, you might need to set up a proxy to clone the repo.
 <li>INSTALL GULP (from command line): <b>npm install gulp-cli -g</b></li>
 <li>INSTALLING DEPENDENCIES (from command line): <b>npm install</b> from the corporate-ui folder.</li>
 <li>Start Gulp (from command line, as administrator on windows): <b>gulp</b></li>
