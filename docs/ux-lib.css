@@ -11,11 +11,11 @@ html {opacity:1;}
   font-weight: bold;
 }*/
 
-.ux-lib c-main-content > section {
+c-main-content > section {
     padding: 30px 0;
 }
 
-.ux-lib.app c-main-content > section {
+.app c-main-content > section {
     padding: 30px 0;
 }
 
