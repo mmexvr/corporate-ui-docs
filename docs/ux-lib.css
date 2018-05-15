@@ -1,7 +1,3 @@
-body#cds-site {
-    background-color: red !important;
-}
-
 @import url('https://static.scania.com/resources/logotype/group-brands.css');
 
 body.CRStest {background:red !important}
