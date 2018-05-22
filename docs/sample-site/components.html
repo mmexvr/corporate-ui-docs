@@ -7,7 +7,7 @@
   <title>Scania UX Library - Sample Site</title>
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
 
-  <script src="https://static.scania.com/build/global/2.0.1/js/corporate-ui.js"></script>
+  <script src="https://static.scania.com/build/global/2.5.0/js/corporate-ui.js"></script>
   <script src="https://static.scania.com/vendors/components/pure-js/js-cookie/2.1.4/js/js.cookie.js"></script>
 
 </head>
@@ -19,6 +19,7 @@
   </c-corporate-header>
 
   <c-main-content>
+    
     <c-main-navigation show-search>
       <primary-items>
         <nav-item location="home.html" class="active">Start</nav-item>
@@ -59,7 +60,7 @@
   </c-main-navigation>
 
  
-    <link rel="import" href="https://static.scania.com//build/global/2.0.1//html/component/Navigation/main-hero/main-hero.html">
+    <link rel="import" href="https://static.scania.com//build/global/2.5.0/html/component/Navigation/main-hero/main-hero.html">
     <c-main-hero image="https://static.scania.com/resources/images/demo/default-image.jpg">
       <h1>Main Hero</h1>
       <p>This is the main hero component</p>
@@ -68,7 +69,7 @@
   
   <section class="light"> 
 
-    <link rel="import" href="https://static.scania.com//build/global/2.0.1//html/component/Contact/contact-us/contact-us.html">
+    <link rel="import" href="https://static.scania.com//build/global/2.5.0/html/component/Contact/contact-us/contact-us.html">
     <c-contact-us title="Chat to our sales team" number="0345 450 7735" cta="Let us call you back" link="#">
       Get in touch and we can help
     </c-contact-us>
@@ -79,7 +80,7 @@
   
   <section class="light"> 
 
-  <link rel="import" href="https://static.scania.com//build/global/2.0.1//html/component/Contact/map-card/map-card.html">
+  <link rel="import" href="https://static.scania.com//build/global/2.5.0/html/component/Contact/map-card/map-card.html">
   <c-map-card>
     <h5>Vaxholm, Sweden</h5>
     <h4>23 SEP - 04 OCT 2014</h4>
@@ -93,7 +94,7 @@
  
   <section class="light">  
 
-  <link rel="import" href="https://static.scania.com//build/global/2.0.1//html/component/Content%20+%20Teasers/teaser/teaser.html">
+  <link rel="import" href="https://static.scania.com//build/global/2.5.0/html/component/Content%20+%20Teasers/teaser/teaser.html">
   <c-teaser variation="1" headline="Teaser 1" description="Molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.">
     <c-teaser-item headline="Life at Scania" image="https://static.scania.com/resources/images/demo/truck-tires-mud.png">
       Scania’s spirit of leadership is built upon shared and inclusive core values. This creates a unique climate where our employees enjoy taking on responsibility – and the chance to develop and realise their potential.
@@ -143,7 +144,7 @@
 
   <section class="light"> 
 
-    <link rel="import" href="https://static.scania.com//build/global/2.0.1//html/component/Listing%20Components/article-grid/article-grid.html">
+    <link rel="import" href="https://static.scania.com//build/global/2.5.0/html/component/Listing%20Components/article-grid/article-grid.html">
     <c-article-grid>
       <c-article-item x="4" y="8" img="https://static.scania.com/resources/images/demo/C025_Tiled_Display_17.jpg" title="Wirelessly charged city buses" subtitle="Innovation">
         <p>Phil Sampson charts Scania`s history over the past 50 years.</p>
@@ -165,22 +166,23 @@
 </c-main-content>  
 
 <c-corporate-footer>
-  <c-social-share>
-    <c-social-media name="facebook" link="https://www.facebook.com/search/top/?q=%23scania"></c-social-media>
-    <c-social-media name="twitter" link="https://twitter.com/search?q=%23scania&src=typd"></c-social-media>
-    <c-social-media name="linkedin" link="https://twitter.com/search?q=%23scania&src=typd"></c-social-media>
-    <c-social-media name="instagram" link="https://www.instagram.com/explore/tags/scania/"></c-social-media>
-    <c-social-media name="vk" link="https://twitter.com/search?q=%23scania&src=typd"></c-social-media>
-    <c-social-media name="weibo" link="https://twitter.com/search?q=%23scania&src=typd"></c-social-media>
-  </c-social-share>
+    <c-social-share>
+      <nav-item name="facebook" location="https://www.facebook.com/search/top/?q=%23scania"></nav-item>
+      <nav-item name="twitter" location="https://twitter.com/search?q=%23scania&src=typd"></nav-item>
+      <nav-item name="locationedin" location="https://twitter.com/search?q=%23scania&src=typd"></nav-item>
+      <nav-item name="instagram" location="https://www.instagram.com/explore/tags/scania/"></nav-item>
+      <nav-item name="vk" location="https://twitter.com/search?q=%23scania&src=typd"></nav-item>
+      <nav-item name="weibo" location="https://twitter.com/search?q=%23scania&src=typd"></nav-item>
+    </c-social-share>
 
-  <nav-item location="#">privacy policy</nav-item>
-  <nav-item location="#">terms &amp; conditions</nav-item>
-  <nav-item location="#">cookies</nav-item>
-  <nav-item location="#">site map</nav-item>
-  <nav-item location="#">contact us</nav-item>
-  <nav-item location="#">accessibility</nav-item>
-</c-corporate-footer>
+    <nav-item location="#">privacy policy</nav-item>
+    <nav-item location="#">terms &amp; conditions</nav-item>
+    <nav-item location="#">cookies</nav-item>
+    <nav-item location="#">site map</nav-item>
+    <nav-item location="#">contact us</nav-item>
+    <nav-item location="#">accessibility</nav-item>
+  </c-corporate-footer>
+
 
 </body>
 </html>
