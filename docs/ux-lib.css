@@ -22,8 +22,8 @@ img[alt='Clone me on GitHub'] {
   display: none;
 }
 
-a[href="/corporate-ui/template/"],
-a[href="/corporate-ui/component/"] { 
+a[href="/corporate-ui-docs/template/"],
+a[href="/corporate-ui-docs/component/"] { 
   display: none;
 }
 

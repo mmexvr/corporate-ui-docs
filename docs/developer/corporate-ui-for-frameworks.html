@@ -10,17 +10,17 @@
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
 
   <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
-  <script src="https://static.scania.com/build/global/2.4.1/js/corporate-ui.js"></script>
+  <script src="https://static.scania.com/build/global/2.5.0/js/corporate-ui.js"></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
-  <script src="/corporate-ui/js/google-analytics.js"></script>  
+  <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
 
 
-  <link rel="stylesheet" href="/corporate-ui/ux-lib.css">
+  <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">
 </head>
 <body unresolved class="scania">
 
-  <c-corporate-header site-name="UX Library" site-url="/corporate-ui/">
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
     <nav-item location="https://www.scania.com/ux-library/">UX Library</nav-item>
     <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
   </c-corporate-header>
@@ -28,20 +28,20 @@
   <c-main-content>
     <c-main-navigation show-search>
       <primary-items>
-        <nav-item location="/corporate-ui/">Home</nav-item>
-        <nav-item location="/corporate-ui/styleguide/">Style Guide</nav-item>            
-        <nav-item location="/corporate-ui/developer/" class="active">Web Applications
+        <nav-item location="/corporate-ui-docs/">Home</nav-item>
+        <nav-item location="/corporate-ui-docs/styleguide/">Style Guide</nav-item>            
+        <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
           <sub-navigation caption="Web Applications">
-            <nav-item location="/corporate-ui/developer/">Corporate UI</nav-item>
-            <nav-item location="/corporate-ui/developer/corporate-ui-for-frameworks.html" class="active">JS Frameworks</nav-item>   
-            <nav-item location="/corporate-ui/component/">Available Components</nav-item>
-            <nav-item location="/corporate-ui/template/">Templates</nav-item>
-            <nav-item location="/corporate-ui/developer/scania-bootstrap.html">Scania Bootstrap</nav-item>
-            <nav-item location="/corporate-ui/developer/uiaas.html">UIaaS</nav-item>
-            <nav-item location="/corporate-ui/developer/support.html">Support</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/">Corporate UI</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/corporate-ui-for-frameworks.html" class="active">JS Frameworks</nav-item>   
+            <nav-item location="/corporate-ui-docs/component/">Available Components</nav-item>
+            <nav-item location="/corporate-ui-docs/template/">Templates</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/scania-bootstrap.html">Scania Bootstrap</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/uiaas.html">UIaaS</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
           </sub-navigation>
         </nav-item>
-        <nav-item location="/corporate-ui/mobile-apps/">Mobile Apps</nav-item>
+        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
       </primary-items>
     </c-main-navigation>
 
@@ -65,12 +65,12 @@
 
           <h2>What's happening in corporate-ui.js?</h2>
 
-          <p>When calling the <a href="https://static.scania.com/build/global/2.4.1/js/corporate-ui.js" target="_blank">corporate-ui.js</a> file a lot of things happens. The latest versions of the Scania fonts, logotype, favicons and the basic CSS and HTML framework (Scania Bootstrap) is loaded as well as the Polymer library. We also load the basic Web Components used by almost all applications; the Corporate Header, the Main Navigation, the Main Content element and the Corporate Footer. This doesn't work very well when an application is about to be initiated further on.</p>
+          <p>When calling the <a href="https://static.scania.com/build/global/2.5.0/js/corporate-ui.js" target="_blank">corporate-ui.js</a> file a lot of things happens. The latest versions of the Scania fonts, logotype, favicons and the basic CSS and HTML framework (Scania Bootstrap) is loaded as well as the Polymer library. We also load the basic Web Components used by almost all applications; the Corporate Header, the Main Navigation, the Main Content element and the Corporate Footer. This doesn't work very well when an application is about to be initiated further on.</p>
 
           <h2>Wait for the application!</h2>
           <p>All you have to do to make the Corporate UI work in your application is to avoid loading the basic components right away and instead include them after your application is completely initiated. You simply load the Corporate UI with the <strong>?preload=false</strong> parameter as you would load it in any HTML page header.</p>
           <xmp>
-<script src="https://static.scania.com/build/global/2.4.1/js/corporate-ui.js?preload=false"></script></xmp>
+<script src="https://static.scania.com/build/global/2.5.0/js/corporate-ui.js?preload=false"></script></xmp>
           <p>Then, after your app has started, you can easily include the basic components by using the <strong>window.CorporateUi.baseComponents();</strong> method. This will then load the components listed above and you're now ready to use those custom elements from wherever you need to apply them. In Angular, you could do it this way:
           <xmp>
 export class AppComponent {
@@ -80,7 +80,7 @@ export class AppComponent {
 } 
           </xmp>
 
-          <p><a href="/corporate-ui/template/angular-basic-template.html" class="btn btn-primary">View Demo</a><p>
+          <p><a href="/corporate-ui-docs/template/angular-basic-template.html" class="btn btn-primary">View Demo</a><p>
           <p>So, that is basically that you'll need to know. There might of course be additional questions that you'll have and they will be swiftly answered in the <a href="https://corporate-ui.slack.com" target="_blank">corporate-ui.slack.com</a> channel, or perhaps not as quick, using standard <a href="mailto:corporate-ui@scania.com">e-mail</a>.</p>
 
           <h2>Next step: Developing your application</h2>
@@ -92,7 +92,7 @@ export class AppComponent {
 
       <c-corporate-footer></c-corporate-footer>
 
-      <script src="/corporate-ui/ux-lib.js"></script>
+      <script src="/corporate-ui-docs/ux-lib.js"></script>
 
     </body>
     </html>
