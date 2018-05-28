@@ -18,7 +18,7 @@
 
   <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
     <nav-item location="/corporate-ui-docs/">UX Library</nav-item>
-    <nav-item location="https://github.scania.com/scania/corporate-ui">Scania GitHub</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">Scania GitHub</nav-item>
   </c-corporate-header>
     
   <c-main-content>
@@ -57,22 +57,22 @@
       var vm = this;
 
       vm.items = [
-        { name: 'Home', location: '/corporate-ui/'},
-        { name: 'Style Guide', location: '/corporate-ui/styleguide/', children: [
-          { name: 'Logotype', location: '/corporate-ui/logotype/' },
-          { name: 'Icons', location: '/corporate-ui/icons/' },
-          { name: 'Colours', location: '/corporate-ui/colours/' },
-          { name: 'Typography', location: '/corporate-ui/typography/' }
+        { name: 'Home', location: '/corporate-ui-docs/'},
+        { name: 'Style Guide', location: '/corporate-ui-docs/styleguide/', children: [
+          { name: 'Logotype', location: '/corporate-ui-docs/logotype/' },
+          { name: 'Icons', location: '/corporate-ui-docs/icons/' },
+          { name: 'Colours', location: '/corporate-ui-docs/colours/' },
+          { name: 'Typography', location: '/corporate-ui-docs/typography/' }
         ] },
-        { name: 'Web Applications', location: '/corporate-ui/developer/', active: true , children: [
-          { name: 'Corporate UI', location: '/corporate-ui/developer/', active: true  },
-          { name: 'UIaaS', location: '/corporate-ui/developer/uiaas.html' },
-          { name: 'Scania Bootstrap', location: '/corporate-ui/developer/scania-bootstrap.html' },
-          { name: 'Support', location: '/corporate-ui/template/html-copy-paste/html-copy-paste.html' }
+        { name: 'Web Applications', location: '/corporate-ui-docs/developer/', active: true , children: [
+          { name: 'Corporate UI', location: '/corporate-ui-docs/developer/', active: true  },
+          { name: 'UIaaS', location: '/corporate-ui-docs/developer/uiaas.html' },
+          { name: 'Scania Bootstrap', location: '/corporate-ui-docs/developer/scania-bootstrap.html' },
+          { name: 'Support', location: '/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html' }
         ] },
-        { name: 'Mobile Apps', location: '/corporate-ui/mobile-apps/' },
+        { name: 'Mobile Apps', location: '/corporate-ui-docs/mobile-apps/' },
         { name: 'Report an Issue', location: '/scania/corporate-ui/issues' },
-        { name: 'Support', location: '/corporate-ui/developer/support.html' }
+        { name: 'Support', location: '/corporate-ui-docs/developer/support.html' }
       ];
 
       vm.changeView = function($event, target) {
