@@ -1,1 +1,0 @@
-A dashboard component used to show choosen components in page
