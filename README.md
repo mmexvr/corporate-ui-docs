@@ -1,6 +1,6 @@
 <h1>The Corporate UI Framework</h1>
 
-<p>In this repository you'll find all documentation of the components contained in <a href="https://github.com/Scania/corporate-ui"> repository.</a>.</p>
+<p>In this repository you'll find all documentation of the components contained in <a href="https://github.com/Scania/corporate-ui">the Corporate UI repository.</a>.</p>
 
 <h2>The Corporate UI Development Process</h2>
 <p>There are many stakeholders that has interest in this library. Normally, new needs and improvements are filtered from business and end users via UX designers and product owners.</p>
