@@ -19,14 +19,16 @@
 
   <c-corporate-header site-name="UX Library" site-url="/corporate-ui/">
     <nav-item location="/corporate-ui/">UX Library</nav-item>
-    <div class="dropdown">
-    <a data-toggle="dropdown" href="#">Jesper Karlsson</a>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-        <li><a href="">Home</a></li>
-        <li><a href="">Home2</a></li>            
-        <li><a href="">Home4</a></li>
-      </ul>
-    </div>
+	<nav-item>
+	    <div class="dropdown">
+	    <a data-toggle="dropdown" href="#">Jesper Karlsson</a>
+	      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+	        <li><a href="">Home</a></li>
+	        <li><a href="">Home2</a></li>            
+	        <li><a href="">Home4</a></li>
+	      </ul>
+	    </div>
+	</nav-item>
   </c-corporate-header>
     
   <c-main-content>
@@ -35,6 +37,7 @@
         <nav-item ng-repeat="item in thissite.items" location="{{item.url}}" nav-item="item" active="{{item.active}}" ng-click="thissite.changeView($event, item)"></nav-item>
       </primary-items>
       <secondary-items>
+          <nav-item>
             <div class="dropdown">
             <a data-toggle="dropdown" href="#">Dropdown 1</a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
@@ -43,6 +46,8 @@
                 <li><a href="">Home4</a></li>
               </ul>
 	        </div>
+	      </nav-item>
+          <nav-item>
             <div class="dropdown">
             <a data-toggle="dropdown" href="#">Dropdown 2</a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
@@ -51,6 +56,7 @@
                 <li><a href="">Home4</a></li>
               </ul>
           </div>
+        </nav-item>         
       </secondary-items>
     </c-main-navigation>
 
