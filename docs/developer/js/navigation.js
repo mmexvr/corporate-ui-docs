@@ -42,7 +42,7 @@ $('#scania-bootstrap-docs-navigation').append('\
     	    </ul>\
           </div>\
     </nav>');
-$('body').append('\<script src="https://static.scania.com/build/users/cds/1.0.0/google-analytics/google.js" type="text/javascript"></script>');
+$('body').append('\<script src="https://d31jnweo1ynb8u.cloudfront.net/build/users/cds/1.0.0/google-analytics/google.js" type="text/javascript"></script>');
 
 /*
 
