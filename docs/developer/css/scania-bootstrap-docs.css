@@ -755,12 +755,7 @@ h1[id] {
 .bs-examples p {
   margin-bottom: 20px;
 }
-#focusedInput {
-  outline: thin dotted \9;
-  -moz-box-shadow: 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: 0 0 8px rgba(82, 168, 236, 0.6);
-  border-color: rgba(82, 168, 236, 0.8);
-}
+
 .hll {
   background-color: #ffc;
 }
