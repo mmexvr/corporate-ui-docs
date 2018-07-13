@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">
 
 </head>
-<body unresolved class="scania">
+<body class="scania">
 
   <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
     <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
@@ -97,7 +97,8 @@
             <h2 style="margin-top:40px" name="public">Public Headers</h2>
             <p>Public headers are used on sites where we communicate with users outside of the Scania Network, for example fleet owners, potential new customers and journalists. Basically, the public headers are stronger and bolder than what we use for internal applications. They are most often written in uppercase and the headers should be short, yet still descriptive. Most headers for external use are center aligned.</p>
 
-            <table class="table public">
+            <div class="table-responsive">
+              <table class="table public">
               <tbody>        
                 <tr>
                   <td><h1>Header 1</h1></td>
@@ -124,13 +125,15 @@
                   <td><xmp><h6>Your text</h6></xmp></td>         
                 </tr>   
               </tbody>
-            </table>
+              </table>
+            </div>
 
             <h2 name="internal" style="margin-top:40px">Article Headers</h2>
             <p>Headers within the HTML article element should be used for traditionall documents like reports and news articles. The headers are smaller than our other headers to balance better with a smaller bread text. Basically, they are styled for high readability and to work good in print.</p>
             <div class="app">
               <article>
-                <table class="table">
+                <div class="table-responsive">
+                  <table class="table">
                   <tbody>        
                     <tr>
                       <td><h1>Header 1</h1></td>
@@ -157,13 +160,14 @@
                       <td><xmp><h6>Your text</h6></xmp></td>         
                     </tr>   
                   </tbody>
-                </table>
+                  </table>
+                </div>
               </article>     
             </div>
           <h2 name="internal" style="margin-top:40px">Application Headers</h2>
             <p>We use the headers slightly differently when it comes to external and internal communication. Below you'll find basic styles and corresponding HTML tags to be used to achive the correct header.</p>
-
-            <table class="table app">
+             <div class="table-responsive">
+              <table class="table app">
               <tbody>        
                 <tr>
                   <td><h1>Header 1</h1></td>
@@ -190,7 +194,8 @@
                   <td><xmp><h6>Your text</h6></xmp></td>         
                 </tr>   
               </tbody>
-            </table>
+              </table>
+            </div>
 
             <h2 style="margin-top:40px">Stylesheets</h2>
             <xmp><link rel="stylesheet" type="text/css" href="https://static.scania.com/resources/fonts/scania-sans/scania-sans.css"></xmp>
@@ -198,7 +203,8 @@
 
             <h2 name="internal">Cyrillic Fonts</h2>
             <p>All Scania Sans fonts are available in cyrillic versions. They are included in the Corporate UI setup. If needed for applications on a stand alone basis, then include the CSS mentioned above and the cyrillic fonts will be loaded when needed.</p>
-            <table class="table" style="font-size:20px">
+            <div class="table-responsive">
+              <table class="table" style="font-size:20px">
               <tbody>        
                 <tr>
                   <td style="font-family:'Scania Sans'">Scania Sans Regular</td>
@@ -233,7 +239,8 @@
                   <td style="font-family:'Scania Sans Condensed Italic'">ан сеа епицури пертинациа</td>
                 </tr> 
               </tbody>
-            </table>
+              </table>
+            </div>
           </div>
         </div>
     </section>
