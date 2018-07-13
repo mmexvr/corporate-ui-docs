@@ -14,8 +14,12 @@
     <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
     <link rel="import" href="scania-doc/scania-doc.html">
     <link rel="stylesheet" href="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.1.0-CF/css/ux-library.css">
+
+  <link rel="import" href="https://static.scania.com/build/global/3.1.0/components/alert/alert.html">
+  <link rel="import" href="https://static.scania.com/build/global/3.1.0/components/find-a-dealer-teaser/find-a-dealer-teaser.html">
+    
   </head>
-  <body class="scania ux-lib" data-env="dev">
+  <body class="scania ux-lib">
 
   <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
     <nav-item location="https://www.scania.com/ux-library/">UX Library</nav-item>
@@ -39,12 +43,12 @@
         <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
       </primary-items>
     </c-main-navigation>
-    
+
       <scania-doc></scania-doc>
     </c-main-content>
 
     <c-corporate-footer></c-corporate-footer>
-
+  
     <script>
       var html_root = 'https://static.scania.com/build/global/3.1.0/components',
       component = CorporateUi.getUrlParameter('c'),
