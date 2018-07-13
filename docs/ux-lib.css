@@ -12,8 +12,8 @@ body.CRStest {background:red !important}
 
 
 .container-fluid {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
 }
 
 
@@ -33,13 +33,6 @@ html {opacity:1;}
   font-weight: bold;
 }*/
 
-c-main-content > section {
-    padding: 30px 0;
-}
-
-.app c-main-content > section {
-    padding: 30px 0;
-}
 
 img[alt='Clone me on GitHub'] {
   display: none;
