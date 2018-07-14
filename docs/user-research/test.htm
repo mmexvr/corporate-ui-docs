@@ -90,19 +90,52 @@
         margin: 0;
     }
     </style>
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.1.0-CF/js/corporate-ui.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
+  <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
+
+
 </head>
-<body>
-    <div id="topBar"><a href="#">Blog</a><a href="#">Photos</a><a href="#">Projects</a></div>
-    <div class="post">
-    <h1>Welcome</h1>
-    <h2>two hours ago</h2>
-    <p>Hi!</p>
-    <p>Welcome to my sample blog!</p>
-    <p>This post is here to help demonstrate how easy it is to take an existing site, along with full-width bars and fixed-position elements, and make it take full advantage of iPhone X's edge-to-edge display.</p>
-    <p>The actual post describing how to adopt the new API is over on the <a href="https://webkit.org/blog/7929/designing-websites-for-iphone-x/">WebKit blog</a>.</p>
-    <p>There, you will learn all about new WebKit features, including <code>viewport-fit</code>, <code>env()</code>, safe area insets, and <code>min()</code> and <code>max()</code>.</p>
-    <p>I hope that it helps you adopt these new features in your websites.</p>
-    </div>
-    <div id="bottomBar"><a href="#">About Me</a><a href="#">Contact</a><a href="#">Site Map</a></div>
+
+<body class="scania">
+
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </c-corporate-header>
+
+  <c-main-content>
+
+    <c-main-navigation show-search>
+      <primary-items>
+        <nav-item location="/corporate-ui-docs/">Home</nav-item>
+        <nav-item location="/corporate-ui-docs/styleguide/">Style Guide</nav-item>            
+        <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
+          <sub-navigation caption="Scania Bootstrap">
+            <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html">Bootstrap Documentation</nav-item>
+            <nav-item location="/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html" class="active">HTML Copy Paste</nav-item>
+          </sub-navigation>  
+        </nav-item>
+        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
+            <nav-item location="https://github.com/scania/corporate-ui/issues/new">Report an Issue</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+      </primary-items>
+    </c-main-navigation>
+
+      
+    <section class="dark app">
+
+
+
+      <link rel="import" href="https://scania.github.io/corporate-ui-docs/template/html-copy-paste/c-html-copy-paste.html">
+
+      <c-html-copy-paste fullbleed></c-html-copy-paste> 
+
+
+    </section>
+
+
+  </c-main-content>
 </body>
 </html>
