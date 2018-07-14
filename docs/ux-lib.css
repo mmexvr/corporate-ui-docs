@@ -12,16 +12,6 @@ body.CRStest {background:red !important}
 
 html {opacity:1;}
 
-body {background-color: #000}
-
-c-main-content {background-color: #fff;}
-
-/*a, strong, button {
-  font-family: inherit;
-  color: #041e42;
-  font-weight: bold;
-}*/
-
 
 img[alt='Clone me on GitHub'] {
   display: none;
