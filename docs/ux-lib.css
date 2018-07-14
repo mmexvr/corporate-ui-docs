@@ -7,6 +7,9 @@ body.CRStest {background:red !important}
   h1, .public h1, .app .public h1, .portlet-application h1, article h1 {
       font-size: 3.6rem;
   }
+  h1.small {
+    line-height: 1.25;
+  }
 }
 
 
