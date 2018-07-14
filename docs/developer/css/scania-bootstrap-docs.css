@@ -233,7 +233,7 @@
 }
 .bs-docs-sidebar.affix {
   position: fixed;
-  top: 10px;
+  top: 90px;
 }
 .bs-docs-sidenav {
   margin-top: 20px;
@@ -1139,4 +1139,12 @@ body,
   .bs-docs-sidebar.affix {
     width: 263px;
   }
+  .bs-docs-sidebar {
+    display: none
+  }
 }
+
+@media min-width900px {
+  .bs-docs-sidebar {
+    display: none
+  }
