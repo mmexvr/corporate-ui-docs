@@ -308,6 +308,7 @@
   margin-bottom: 0;
 }
 
+.bs-docs-section h1[id].page-header,
 .bs-docs-section .page-header h1[id],
 .bs-docs-section .page-header h2[id] {
   margin-top: 0;
