@@ -10,22 +10,10 @@ body.CRStest {background:red !important}
 }
 
 
+html {opacity:1;background-color: black}
 
-.container-fluid {
-    margin-left: 15px !important;
-    margin-right: 15px !important;
-}
+body {background: white}
 
-
-@media (min-width: 1201px) {
-    .container-fluid {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-}
-
-
-html {opacity:1;}
 
 /*a, strong, button {
   font-family: inherit;
