@@ -12,6 +12,9 @@ body.CRStest {background:red !important}
 
 html {opacity:1;}
 
+body {background-color: #000}
+
+c-main-content {background-color: #fff;}
 
 /*a, strong, button {
   font-family: inherit;
