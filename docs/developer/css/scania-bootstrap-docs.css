@@ -1144,7 +1144,7 @@ body,
   }
 }
 
-@media min-width900px {
+@media (max-width: 900px) {
   .bs-docs-sidebar {
     display: none
   }
