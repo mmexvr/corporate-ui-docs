@@ -235,6 +235,11 @@
   position: fixed;
   top: 90px;
 }
+
+.bs-docs-sidebar.affix-top {
+  position: fixed;
+  top: 90px;
+}
 .bs-docs-sidenav {
   margin-top: 20px;
   margin-bottom: 20px;
