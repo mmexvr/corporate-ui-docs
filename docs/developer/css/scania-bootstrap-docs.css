@@ -305,9 +305,12 @@
 .bs-docs-section {
   margin-bottom: 60px;
 }
-h1[id] {
+.bs-docs-section h1[id],
+.bs-docs-section h2[id] {
   margin-top: 0;
-  padding-top: 20px;
+  padding-top: 150px;
+  padding-bottom: 0;
+  margin: 0;
 }
 .bs-callout {
   border-left: 3px solid #eee;
