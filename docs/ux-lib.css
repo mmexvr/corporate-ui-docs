@@ -2,6 +2,9 @@
 
 body.CRStest {background:red !important}
 
+.text-left {text-align:left !important;}
+.text-center {text-align:center !important;}
+.text-right {text-align:right}
 
 @media (max-width: 768px) {
   h1, .public h1, .app .public h1, .portlet-application h1, article h1 {
@@ -209,5 +212,7 @@ p a {font-weight: bold}
 .bentley .footer .footer-copy-text {
   display: none;
 }
+
+
 
 
