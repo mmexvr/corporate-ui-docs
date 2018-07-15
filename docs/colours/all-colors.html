@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en-GB" class="corporate-ui">
 <head>
-	<meta name="viewport" content="initial-scale=1, viewport-fit=cover">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
-	<noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
-	<title>UX Library - Colours</title>
-	<script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
-	<script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
-	<script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.1.0-CF/js/corporate-ui.js"></script>
-	<style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8">
+  <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+  <title>UX Library - Colours</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.1.0-CF/js/corporate-ui.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
+  <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
+
+
+  <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">
+  <style type="text/css">    
+    .scania.bootstrap h1 {text-align: center; margin-top: 40px}    
+    .scania.bootstrap p {text-align: center;margin:20px 15% 40px;}    
+  </style>
+  <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">
+
+  	<style>
 
 		span {
 			margin-right: 15px;
@@ -47,11 +57,32 @@
 		}
 
 	</style>
+
 </head>
+<body class="scania">  
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </c-corporate-header>
 
-<body class="scania app margin-top">
+  <c-main-content>
 
-	<c-main-content>
+    <c-main-navigation show-search>
+      <primary-items>
+        <nav-item location="/corporate-ui-docs/">Home</nav-item>
+        <nav-item location="/corporate-ui-docs/styleguide/" class="active">Style Guide
+          <sub-navigation caption="Style Guide">
+            <nav-item location="/corporate-ui-docs/logotype/">Logotype</nav-item>
+            <nav-item location="/corporate-ui-docs/icons/">Icons</nav-item>
+            <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
+            <nav-item location="/corporate-ui-docs/typography/">Typography</nav-item>
+          </sub-navigation>
+        </nav-item>            
+        <nav-item location="/corporate-ui-docs/developer/">Web Applications</nav-item>
+        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
+      </primary-items>
+    </c-main-navigation>
+ 
 		<section class="light">
 			<div class="container-fluid">	
 				<article class="foreground">
@@ -363,8 +394,9 @@
 				</article>
 			</div>
 		</section>
-	</c-main-content>		
-	<script src="/corporate-ui-docs/ux-lib.js"></script>
-	<link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">
+	</c-main-content>  
+<c-corporate-footer></c-corporate-footer>		
+<script src="/corporate-ui-docs/ux-lib.js"></script>
+<link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">
 </body>
 </html>
