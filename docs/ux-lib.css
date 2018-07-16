@@ -1,5 +1,5 @@
-@import url('https://static.scania.com/resources/logotype/group-brands.css');
-
+/*@import url('https://static.scania.com/resources/logotype/group-brands.css');
+*/
 body.CRStest {background:red !important}
 
 .text-left {text-align:left !important;}
@@ -126,6 +126,8 @@ p a {font-weight: bold}
 .ux-lib .collapsed .icon-info {
   color: #aaa;
 }
+
+/*
 .porsche .wordmark {
   display: block;
   float: left;
@@ -217,3 +219,4 @@ p a {font-weight: bold}
 
 
 
+*/
