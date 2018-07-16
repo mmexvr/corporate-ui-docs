@@ -36,7 +36,7 @@
   <body class="scania" ng-controller="Example as example">
 
     <c-corporate-header site-name="{{example.siteName}}" site-url="/" ng-attr-dealer-name="{{example.dealerName}}" ng-attr-dealer-logo="{{example.dealerLogo}}" ng-attr-dealer-url="{{example.dealerUrl}}">
-      <nav-item location="https://scania.com/se/sv/home.html">Scania i Sverige</nav-item>
+      <nav-item location="{{example.topLinkhRef}}">{{example.topLinkName}}</nav-item>
     </c-corporate-header>
 
     <c-main-content>
@@ -48,29 +48,40 @@
 
       <section class="light">
         <div class="container">
-          <h3>Corporate Header Simulator</h3>
+          <h3>Corporate Header Code Generator</h3>
           <p>Simulate the look of your page by entering a URL of a logotype picture or if you do not have a picture, just enter a name. As long as there is a logotype picture available, the dealer name will nog be shown as text.</p>
 
           <form class="app">
             <div class="form-group">
-              <label>Logo</label>
-              <input type="text" class="form-control" placeholder="dealer-logo" ng-model="example.dealerLogo">
+              <label>Dealer logotype</label>
+              <input type="text" class="form-control" placeholder="URL to logotype image" ng-model="example.dealerLogo">
             </div>
 
             <div class="form-group">
-              <label>Dealer Name</label>
-              <input type="text" class="form-control" placeholder="dealer-name" ng-model="example.dealerName">
+              <label>Logotype link</label>
+              <input type="text" class="form-control" placeholder="URL to visit when clicking the logotype" ng-model="example.dealerUrl">
+            </div>
+
+            <div class="form-group">
+              <label>Dealer name</label>
+              <input type="text" class="form-control" placeholder="Dealer name" ng-model="example.dealerName">
             </div>            
 
             <div class="form-group">
-              <label>Site Name</label>
-              <input type="text" class="form-control" placeholder="site-name" ng-model="example.siteName">
-            </div>   
+              <label>Site name</label>
+              <input type="text" class="form-control" placeholder="Name of the application or site" ng-model="example.siteName">
+            </div>
 
             <div class="form-group">
-              <label>Logotype Link</label>
-              <input type="text" class="form-control" placeholder="dealer-url" ng-model="example.dealerUrl">
+              <label>Top link name</label>
+              <input type="text" class="form-control" placeholder="Text of top link" ng-model="example.topLinkName">
             </div>
+
+            <div class="form-group">
+              <label>Top link URL</label>
+              <input type="text" class="form-control" placeholder="URL for top link" ng-model="example.topLinkHref">
+            </div>
+      
           </form>
         </div>
       </section>
@@ -87,7 +98,9 @@
 
       function Example() {
         this.dealerName = 'Bilmetro';
-        this.siteName = 'Lorem Ipsum';        
+        this.siteName = 'Lorem Ipsum';
+        this.topLinkName = 'Scania i Sverige'; 
+        this.topLinkHref = 'https://scania.com/se/sv/home.html';
         this.dealerLogo = 'https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png';
         this.dealerUrl = 'https://www.scania.com/se/sv/bilmetro';
       }
