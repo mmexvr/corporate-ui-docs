@@ -14,13 +14,17 @@
 
     <style>
 
-        .header-is-sticky c-corporate-header .navbar-symbol.should-stick, c-corporate-header.header-is-sticky .navbar-symbol.should-stick  {
+        .header-is-sticky .is-dealer c-corporate-header .navbar-symbol.should-stick, c-corporate-header.header-is-sticky .navbar-symbol.should-stick  {
             width: 41px !important;
             height: 37px !important;
         }
-        
-        .header-is-sticky c-corporate-header .navbar-symbol.should-stick, c-corporate-header.header-is-sticky .navbar-symbol.should-stick {
+
+        .header-is-sticky .is-dealer c-corporate-header .navbar-symbol.should-stick, c-corporate-header.header-is-sticky .navbar-symbol.should-stick {
             background-image: transparent !important;
+        }
+
+        .container {
+            min-height: 1100px;
         }
 
     </style>
@@ -44,8 +48,8 @@
 
       <section class="light">
         <div class="container">
-          <h1>Dealer page</h1>
-          <p>A dealer dome page for testing corporate-header with dealer configuration.</p>
+          <h1>Corporate Header Simulator</h1>
+          <p>Simulate the look of your page by entering a URL of a logotype picture or if you do not have a picture, just enter a name. As long as there is a logotype picture available, the dealer name will nog be shown as text.</p>
 
           <form class="app">
             <div class="form-group">
