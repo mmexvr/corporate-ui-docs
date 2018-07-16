@@ -3,7 +3,7 @@
 
 /* Styles for the Components Page */
 
-iron-doc-viewer .code.iron-doc-viewer {
+/*iron-doc-viewer .code.iron-doc-viewer {
     color: #041442;
     background-color: #fff;
     font-size: 30px;
@@ -16,7 +16,7 @@ section#summary p {
     color: #041442;
     font-size: 24px;
 }
-
+*/
 .codeheader {
     cursor: pointer;
 }
