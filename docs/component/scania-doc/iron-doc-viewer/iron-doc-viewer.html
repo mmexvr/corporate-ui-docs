@@ -95,25 +95,48 @@ property.
         cursor: pointer;
       }
     </style>
-
     <template is="dom-if" if="{{!forIs}}">
-    <section id="summary" class$="{{for}}" hidden$="[[!descriptor.desc]]">
-    <template is="dom-repeat" items="[[_desc]]" as="_descitems">
+      <ul class="nav nav-tabs container">
+        <li><a data-toggle="tab" href="/corporate-ui-docs/component/"><i class="icon-arrow-left"></i> Back</a></li>
+        <li><a data-toggle="tab" href="#example" class="active">Example</a></li>
+        <li><a data-toggle="tab" href="#about">About</a></li> 
+        <li><a data-toggle="tab" href="#code">Code</a></li>     
+      </ul>
+      
+      <div class="tab-content">
 
-      <div class="container">
-      <marked-element class="markdown jesper1" markdown="[[_descitems.markdown]]">
-        <div class="markdown-html"></div>
-      </marked-element>
+        <div id="example" class="tab-pane fade in active">
+
+        </div>
+
+        <div id="about" class="tab-pane fade in active">
+          <section id="summary" class$="{{for}}" hidden$="[[!descriptor.desc]]">
+          <template is="dom-repeat" items="[[_desc]]" as="_descitems">
+
+            <div class="container">
+            <marked-element class="markdown" markdown="[[_descitems.markdown]]">
+              <div class="markdown-html"></div>
+            </marked-element>
+            </div>
+            <template is="dom-if" if="[[_descitems.demo]]">
+              <demo-component data="[[_descitems.demo]]">
+              </demo-component>
+            </template>
+            
+          </template>
+            
+          </section>
+          </template>
+        </div>
+
+        <div id="code" class="tab-pane fade in active">
+          
+        </div> 
       </div>
-      <template is="dom-if" if="[[_descitems.demo]]">
-        <demo-component data="[[_descitems.demo]]">
-        </demo-component>
-      </template>
-      
-    </template>
-      
-    </section>
-    </template>
+        
+
+
+
 
     <template is="dom-if" if="{{forIs}}">
       <div class="descriptorTitle">
