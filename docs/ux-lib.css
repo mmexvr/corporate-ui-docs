@@ -1,24 +1,28 @@
 /*@import url('https://static.scania.com/resources/logotype/group-brands.css');
 */
 
-iron-doc-viewer .component-name.code.iron-doc-viewer {
-    color: #555555;
+/* Styles for the Components Page */
+
+iron-doc-viewer .code.iron-doc-viewer {
+    color: #041442;
     background-color: #fff;
-    font-size: 40px;
+    font-size: 30px;
     display: block;
 }
 
-section#summary p:first-child {
+section#summary p {
     padding-top: 30px;
     font-family: 'Scania Sans Semi Condensed';
     color: #041442;
     font-size: 24px;
 }
 
-section#summary h3:first-child {
-    font-family: "Scania Sans Semi Condensed";
-    font-weight: normal;
+.codeheader {
+    cursor: pointer;
 }
+
+/* End styles Components Page */
+
 
 body.CRStest {background:red !important}
 
