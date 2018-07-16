@@ -35,8 +35,8 @@
 
   <body class="scania" ng-controller="Example as example">
 
-    <c-corporate-header site-name="{{example.siteName}}" site-url="/" ng-attr-dealer-name="{{example.dealerName}}" ng-attr-dealer-logo="{{example.dealerLogo}}" ng-attr-dealer-url="{{example.dealerUrl}}">
-      <nav-item location="{{example.topLinkhRef}}">{{example.topLinkName}}</nav-item>
+    <c-corporate-header site-name="Developers" site-url="/" ng-attr-dealer-name="{{example.dealerName}}" ng-attr-dealer-logo="{{example.dealerLogo}}" ng-attr-dealer-url="{{example.dealerUrl}}">
+      <nav-item location="https://scania.com/se/sv/home.html">Scania i Sverige</nav-item>
     </c-corporate-header>
 
     <c-main-content>
@@ -50,6 +50,89 @@
         <div class="container">
           <h3>Corporate Header Code Generator</h3>
           <p>Simulate the look of your page by entering a URL of a logotype picture or if you do not have a picture, just enter a name. As long as there is a logotype picture available, the dealer name will nog be shown as text.</p>
+
+          <form class="app">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" class="form-control" placeholder="dealer-name" ng-model="example.dealerName">
+            </div>
+
+            <div class="form-group">
+              <label>Logo</label>
+              <input type="text" class="form-control" placeholder="dealer-logo" ng-model="example.dealerLogo">
+            </div>
+
+            <div class="form-group">
+              <label>URL</label>
+              <input type="text" class="form-control" placeholder="dealer-url" ng-model="example.dealerUrl">
+            </div>
+          </form>
+        </div>
+      </section>
+    </c-main-content>
+
+    <c-corporate-footer></c-corporate-footer>
+
+    <script src="https://static.scania.com/vendors/frameworks/angular/1.5.5/angular.min.js"></script>
+
+    <script>
+      angular
+        .module('CorporateUI', [])
+        .controller('Example', [Example])
+
+      function Example() {
+        this.dealerName = 'Bilmetro';
+        this.dealerLogo = 'https://www.scania.com/content/dam/scanianoe/dealer-content-assets/sverige/bilmetro/bilmetro-logo.png';
+        this.dealerUrl = 'https://www.scania.com/se/sv/bilmetro';
+      }
+    </script>
+  </body>
+</html>
+
+
+
+<!DOCTYPE html>
+
+<html lang="en-GB" ng-app="CorporateUI">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta charset="utf-8">
+    <noscript>
+      <meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html">
+    </noscript>
+
+    <title>Corporate UI</title>
+
+    <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.1.0-CF/js/corporate-ui.js"></script>
+
+    <style>
+
+        .header-is-sticky c-corporate-header .is-dealer .navbar-symbol.should-stick, c-corporate-header.header-is-sticky .navbar-symbol.should-stick  {
+            width: 41px !important;
+            height: 37px !important;
+        }
+
+        .header-is-sticky c-corporate-header .is-dealer .navbar-symbol.should-stick:before, c-corporate-header.header-is-sticky .navbar-symbol.should-stick:before {
+            background-image: url('https://d31jnweo1ynb8u.cloudfront.net/resources/logotype/scania/scania-symbol.svg') !important;
+            background-size: 40px !important;  
+        }
+
+        .container {
+            min-height: 1100px;
+        }
+
+    </style>
+  </head>
+
+
+
+<!--     Additional Fields added below
+
+    <c-corporate-header site-name="{{example.siteName}}" site-url="/" ng-attr-dealer-name="{{example.dealerName}}" ng-attr-dealer-logo="{{example.dealerLogo}}" ng-attr-dealer-url="{{example.dealerUrl}}">
+      <nav-item location="{{example.topLinkhRef}}">{{example.topLinkName}}</nav-item>
+    </c-corporate-header>
+
+
 
           <form class="app">
             <div class="form-group">
@@ -83,13 +166,6 @@
             </div>
       
           </form>
-        </div>
-      </section>
-    </c-main-content>
-
-    <c-corporate-footer></c-corporate-footer>
-
-    <script src="https://static.scania.com/vendors/frameworks/angular/1.5.5/angular.min.js"></script>
 
     <script>
       angular
@@ -104,6 +180,4 @@
         this.dealerLogo = 'https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png';
         this.dealerUrl = 'https://www.scania.com/se/sv/bilmetro';
       }
-    </script>
-  </body>
-</html>
+    </script> -->
