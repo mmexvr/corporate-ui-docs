@@ -3,6 +3,7 @@
 	Displays a demo with a code-example.
 -->
 <dom-module id="demo-component">
+	<script src="/vendors/frameworks/jQuery/3.0.0/dist/jquery.min.js"></script>	
 	<template>
 		<style>
 			:host {
@@ -79,7 +80,7 @@
         	    var elements = this.querySelectorAll('pre'),
         	                   $this = this;
 	
-        	    $(elements).wrap('<div id="code" class="prewrapper tab-pane fade"></div>');
+        	    $(elements).wrap('<div class="prewrapper"></div>');
 
         	    $('code', elements)[0].textContent = '  <link rel="import" href="' + path + '">\n' + $('code', elements)[0].textContent;
 	
