@@ -14,7 +14,7 @@
 <dom-module id="scania-doc">
 	<template>
       <div class="tab-content">
-        <div id="example" class="tab-pane fade in active">
+
     	   <template is="dom-repeat" items="{{descriptor}}" as="descitem">
 
             <template is="dom-if" if="{{!template}}">
@@ -26,17 +26,12 @@
             </template>
 
           </template>
-        </div>
 
-        <div id="about" class="tab-pane fade">
            <hydrolysis-analyzer id="analyzer" src="{{src}}" analyzer="{{_hydroDesc}}" loading="{{_hydroLoading}}"></hydrolysis-analyzer>
-        </div>
 
-        <div id="code" class="tab-pane fade">
            <hydrolysis-analyzer id="analyzer" src="{{src}}" analyzer="{{_hydroDesc}}" loading="{{_hydroLoading}}"></hydrolysis-analyzer>
-        </div>  
 
-     </div>      
+      </div>      
   </template>
 </template>
 
