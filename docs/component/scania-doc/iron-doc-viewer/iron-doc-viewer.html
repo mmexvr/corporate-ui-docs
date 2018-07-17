@@ -118,7 +118,7 @@ property.
 
     <template is="dom-if" if="{{forIs}}">
       <div class="descriptorTitle">
-        <div class="container">
+        <div class="container variation">
           <h1>{{_replaceTitle(for)}}</h1>
           <marked-element markdown="{{header}}">
             <div class="markdown-html"></div>
@@ -128,7 +128,7 @@ property.
     </template>
 
     <template is="dom-if" if="{{forIs}}">
-      <div class="container">
+      <div class="container api-reference">
     <nav id="api">
       <div class="text-center"><h3 on-tap="_handleTap"><i class="icon-gears"></i> API Reference <i id="apiicon" class="icon-angle-down"></i></h3></div>
     </nav>
