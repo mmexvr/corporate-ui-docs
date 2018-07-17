@@ -99,13 +99,13 @@ property.
     <template is="dom-if" if="{{!forIs}}">
       <section id="summary" class$="{{for}}" hidden$="[[!descriptor.desc]]">
           <template is="dom-repeat" items="[[_desc]]" as="_descitems">
-          <div id="about" class="tab-pane fade">
             <div class="container-fluid">
             <marked-element class="markdown" markdown="[[_descitems.markdown]]">
-              <div class="markdown-html"></div>
+              <div id="about" class="tab-pane fade">
+                <div class="markdown-html">
+              </div>    
             </marked-element>
-            </div>
-          </div>  
+            </div> 
           <template is="dom-if" if="[[_descitems.demo]]">
             <div id="example" class="tab-pane fade in active">
               <demo-component data="[[_descitems.demo]]">
