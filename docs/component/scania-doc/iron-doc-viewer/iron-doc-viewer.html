@@ -97,27 +97,22 @@ property.
     </style>
 
     <template is="dom-if" if="{{!forIs}}">
-      <div id="about" class="tab-pane fade">
-        <section id="summary" class$="{{for}}" hidden$="[[!descriptor.desc]]">
-              <marked-element class="markdown" markdown="[[_descitems.markdown]]">
-                  <div class="markdown-html">  
-              </marked-element>
-        </section>
-      </div> 
+    <section id="summary" class$="{{for}}" hidden$="[[!descriptor.desc]]">
+    <template is="dom-repeat" items="[[_desc]]" as="_descitems">
 
-      <div id="example" class="tab-pane fade in active">
-        <section id="examples" class$="{{for}}" hidden$="[[!descriptor.desc]]">
-          <div class="container public">
-            <template is="dom-repeat" items="[[_desc]]" as="_descitems">
-           
-              <template is="dom-if" if="[[_descitems.demo]]">
-                <demo-component data="[[_descitems.demo]]"></demo-component>
-              </template>
-            </template>  
-          </div>
-        </section>    
+      <div class="container-fluid">
+      <marked-element class="markdown" markdown="[[_descitems.markdown]]">
+        <div class="markdown-html"></div>
+      </marked-element>
       </div>
-       
+      <template is="dom-if" if="[[_descitems.demo]]">
+        <demo-component data="[[_descitems.demo]]" class="public">
+        </demo-component>
+      </template>
+      
+    </template>
+      
+    </section>
     </template>
 
     <template is="dom-if" if="{{forIs}}">

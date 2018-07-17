@@ -3,7 +3,6 @@
 	Displays a demo with a code-example.
 -->
 <dom-module id="demo-component">
-	<script src="https://static.scania.com/vendors/frameworks/jQuery/3.0.0/dist/jquery.min.js"></script>
 	<template>
 		<style>
 			:host {
@@ -42,8 +41,8 @@
 				}
 			}
 		</style>
-		<div class$="{{demoActive}} public">
-			<div id="demotemplate" class="demo-template public">
+		<div class$="{{demoActive}}">
+			<div id="demotemplate" class="demo-template">
 			</div>
 			<div class="container code-template">
 				<marked-element class="markdown" on-marked-render-complete="_markedproc" markdown="[[democode]]">
