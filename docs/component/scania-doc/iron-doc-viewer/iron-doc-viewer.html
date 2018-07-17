@@ -100,13 +100,13 @@ property.
     <section id="summary" class$="{{for}}" hidden$="[[!descriptor.desc]]">
     <template is="dom-repeat" items="[[_desc]]" as="_descitems">
 
-      <div class="container">
+      <div class="container-fluid">
       <marked-element class="markdown" markdown="[[_descitems.markdown]]">
         <div class="markdown-html"></div>
       </marked-element>
       </div>
       <template is="dom-if" if="[[_descitems.demo]]">
-        <demo-component data="[[_descitems.demo]]">
+        <demo-component data="[[_descitems.demo]] public">
         </demo-component>
       </template>
       
@@ -117,7 +117,7 @@ property.
 
     <template is="dom-if" if="{{forIs}}">
       <div class="descriptorTitle">
-        <div class="container-fluid">
+        <div class="container">
           <h1>{{_replaceTitle(for)}}</h1>
           <marked-element markdown="{{header}}">
             <div class="markdown-html"></div>
@@ -127,7 +127,7 @@ property.
     </template>
 
     <template is="dom-if" if="{{forIs}}">
-      <div class="container-fluid">
+      <div class="container">
     <nav id="api">
       <div class="text-center"><h3 on-tap="_handleTap"><i class="icon-gears"></i> API Reference <i id="apiicon" class="icon-angle-down"></i></h3></div>
     </nav>
@@ -171,7 +171,7 @@ property.
     <section id="summary" class$="{{for}}" hidden$="[[!descriptor.desc]]">
     <template is="dom-repeat" items="[[mainDesc]]" as="maindescitems">
 
-      <div class="container-fluid">
+      <div class="container">
       <marked-element class="markdown" markdown="[[maindescitems.markdown]]">
         <div class="markdown-html"></div>
       </marked-element>
