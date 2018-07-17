@@ -28,7 +28,6 @@
 
        $("marked-element .code-template").appendTo("#usage");
 
-      });  
 
     </script>
 
@@ -37,6 +36,12 @@
         padding: 0;
         font-size: 14px;
       }
+
+      h3[id^="variation-"] + p,
+      h3[id^="variation-"] {
+        display:none;
+      }
+
     </style>  
 
   </head>
