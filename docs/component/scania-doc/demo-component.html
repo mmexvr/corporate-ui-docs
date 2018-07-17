@@ -42,15 +42,13 @@
 				}
 			}
 		</style>
-        <div id="example" class="tab-pane fade in active">
-			<div class$="{{demoActive}}">
-				<div id="demotemplate" class="demo-template">
-				</div>
-				<div class="container code-template">
-					<marked-element class="markdown" on-marked-render-complete="_markedproc" markdown="[[democode]]">
-	        			<div class="markdown-html"></div>
-	      			</marked-element>
-				</div>
+		<div class$="{{demoActive}}">
+			<div id="demotemplate" class="demo-template">
+			</div>
+			<div class="container code-template">
+				<marked-element class="markdown" on-marked-render-complete="_markedproc" markdown="[[democode]]">
+        			<div class="markdown-html"></div>
+      			</marked-element>
 			</div>
 		</div>	
 	</template>
