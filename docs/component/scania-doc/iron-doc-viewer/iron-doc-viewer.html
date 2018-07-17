@@ -116,77 +116,81 @@ property.
     </template>
 
     <template is="dom-if" if="{{forIs}}">
-      <div class="descriptorTitle">
-        <div class="container">
-          <h1>{{_replaceTitle(for)}}</h1>
-          <marked-element markdown="{{header}}">
-            <div class="markdown-html"></div>
-          </marked-element> 
+      <div id="example" class="tab-pane fade in active">
+        <div class="descriptorTitle">
+          <div class="container">
+            <h1>{{_replaceTitle(for)}}</h1>
+            <marked-element markdown="{{header}}">
+              <div class="markdown-html"></div>
+            </marked-element> 
+          </div>
         </div>
-      </div>
+      </div>  
     </template>
 
     <template is="dom-if" if="{{forIs}}">
+      <div id="example" class="tab-pane fade in active">
       <div class="container">
-    <nav id="api">
-      <div class="text-center"><h3 on-tap="_handleTap"><i class="icon-gears"></i> API Reference <i id="apiicon" class="icon-angle-down"></i></h3></div>
-    </nav>
-    <div id="apidesc" class="api-hidden">
-      <section id$="[[_formatAnchor(prefix,'properties')]]" class="api" hidden$="{{_noneToShow(_showPrivate,_properties)}}">
-        <a href$="#[[_formatAnchor(prefix,'properties')]]" class="deeplink api-title">Properties</a>
-        <template is="dom-repeat" items="{{_properties}}" hidden$="{{!_properties.length}}">
-          <iron-doc-property anchor-id="[[_formatAnchor(prefix,'property',item.name)]]" descriptor="{{item}}"></iron-doc-property>
-        </template>
-      </section>
+        <nav id="api">
+          <div class="text-center"><h3 on-tap="_handleTap"><i class="icon-gears"></i> API Reference <i id="apiicon" class="icon-angle-down"></i></h3></div>
+        </nav>
+        <div id="apidesc" class="api-hidden">
+          <section id$="[[_formatAnchor(prefix,'properties')]]" class="api" hidden$="{{_noneToShow(_showPrivate,_properties)}}">
+            <a href$="#[[_formatAnchor(prefix,'properties')]]" class="deeplink api-title">Properties</a>
+            <template is="dom-repeat" items="{{_properties}}" hidden$="{{!_properties.length}}">
+              <iron-doc-property anchor-id="[[_formatAnchor(prefix,'property',item.name)]]" descriptor="{{item}}"></iron-doc-property>
+            </template>
+          </section>
   
-      <section id$="[[_formatAnchor(prefix,'methods')]]" class="api" hidden$="{{_noneToShow(_showPrivate,_methods)}}">
-        <a href$="#[[_formatAnchor(prefix,'methods')]]" class="deeplink api-title">Methods</a>
-        <template is="dom-repeat" items="{{_methods}}">
-          <iron-doc-property anchor-id="[[_formatAnchor(prefix,'method',item.name)]]" descriptor="{{item}}"></iron-doc-property>
-        </template>
-      </section>
+          <section id$="[[_formatAnchor(prefix,'methods')]]" class="api" hidden$="{{_noneToShow(_showPrivate,_methods)}}">
+            <a href$="#[[_formatAnchor(prefix,'methods')]]" class="deeplink api-title">Methods</a>
+            <template is="dom-repeat" items="{{_methods}}">
+              <iron-doc-property anchor-id="[[_formatAnchor(prefix,'method',item.name)]]" descriptor="{{item}}"></iron-doc-property>
+            </template>
+          </section>
   
-      <section id$="[[_formatAnchor(prefix,'events')]]" class="api" hidden$="{{_noneToShow(_showPrivate,_events)}}">
-       <a href$="#[[_formatAnchor(prefix,'events')]]" class="deeplink api-title">Events</a>
-        <template is="dom-repeat" items="{{_events}}">
-          <iron-doc-property anchor-id="[[_formatAnchor(prefix,'event',item.name)]]" descriptor="{{item}}"></iron-doc-property>
-        </template>
-      </section>
+          <section id$="[[_formatAnchor(prefix,'events')]]" class="api" hidden$="{{_noneToShow(_showPrivate,_events)}}">
+           <a href$="#[[_formatAnchor(prefix,'events')]]" class="deeplink api-title">Events</a>
+            <template is="dom-repeat" items="{{_events}}">
+              <iron-doc-property anchor-id="[[_formatAnchor(prefix,'event',item.name)]]" descriptor="{{item}}"></iron-doc-property>
+            </template>
+          </section>
   
-      <section id$="[[_formatAnchor(prefix,'behaviors')]]" class="api" hidden$="{{_hideBehaviors(_behaviors)}}">
-       <a href$="#[[_formatAnchor(prefix,'behaviors')]]" class="deeplink api-title">Behaviors</a>
-        <template is="dom-repeat" items="{{_behaviors}}">
-          <p on-click="_broadcastBehavior">{{item}}</p>
-        </template>
-      </section>
+          <section id$="[[_formatAnchor(prefix,'behaviors')]]" class="api" hidden$="{{_hideBehaviors(_behaviors)}}">
+           <a href$="#[[_formatAnchor(prefix,'behaviors')]]" class="deeplink api-title">Behaviors</a>
+            <template is="dom-repeat" items="{{_behaviors}}">
+              <p on-click="_broadcastBehavior">{{item}}</p>
+            </template>
+          </section>
   
-      <section>
-        <div class="toggle-btn">
-        <button class="btn btn-primary" id="togglePrivate"
-          on-tap="_togglePrivate">{{_privateToggleLabel}}</button>
+          <section>
+            <div class="toggle-btn">
+            <button class="btn btn-primary" id="togglePrivate"
+              on-tap="_togglePrivate">{{_privateToggleLabel}}</button>
+              </div>
+          </section>
+         </div>
+      </div>   
+
+      <section id="summary" class$="{{for}}" hidden$="[[!descriptor.desc]]">
+        <template is="dom-repeat" items="[[mainDesc]]" as="maindescitems">
+
+          <div class="container">
+            Summary by Jes
+          <marked-element class="markdown" markdown="[[maindescitems.markdown]]">
+            <div class="markdown-html"></div>
+          </marked-element>
           </div>
+          <template is="dom-if" if="[[maindescitems.demo]]">
+            <demo-component data="[[maindescitems.demo]]">
+            </demo-component>
+          </template>
+          
+        </template>
+        
       </section>
-    </div>
-    </div>
-    <section id="summary" class$="{{for}}" hidden$="[[!descriptor.desc]]">
-    <template is="dom-repeat" items="[[mainDesc]]" as="maindescitems">
-
-      <div class="container">
-      <marked-element class="markdown" markdown="[[maindescitems.markdown]]">
-        <div class="markdown-html"></div>
-      </marked-element>
-      </div>
-      <template is="dom-if" if="[[maindescitems.demo]]">
-        <demo-component data="[[maindescitems.demo]]">
-        </demo-component>
-      </template>
-      
     </template>
-      
-    </section>
-    </template>
-    
-
+  </div>
   </template>
 
   <script>
