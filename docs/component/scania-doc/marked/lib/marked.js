@@ -771,7 +771,7 @@ Renderer.prototype.code = function(code, lang, escaped) {
   }
 
   if (!lang) {
-    return '<pre><code>'
+    return '<pre><code class="html">'
       + (escaped ? code : escape(code, true))
       + '\n</code></pre>';
   }
