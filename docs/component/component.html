@@ -34,20 +34,24 @@
           $(".codeheader").remove();
 
 
-          $("#example section#summary .container-fluid marked-element .markdown-html:first-child > p:first-child").appendTo("#usage .jQueryAppendToContainer");
+          $("#example section#summary .container-fluid marked-element .markdown-html:first-child > p").appendTo("#usage .jQueryAppendToContainer");
 
           $("#example section#summary .container-fluid marked-element .markdown-html > h3#combinations + p").appendTo("#usage .jQueryAppendToContainer");
 
+          $("#example section#summary .container-fluid marked-element .markdown-html p").appendTo("#usage .jQueryAppendToContainer");
+
           $("#example section#summary .container-fluid marked-element .markdown-html > h3#combinations ").remove();
+
+          $("#example section#summary").css("display","block");
 
         }, 500);
 
     </script>
 
     <style>
-      pre code {
-        padding: 0;
-        font-size: 14px;
+
+      #example section#summary {
+        display:none;
       }
 
       #example h3[id^='variation-'] {
