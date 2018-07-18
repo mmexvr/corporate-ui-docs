@@ -34,10 +34,11 @@
           $(".codeheader").remove();
 
 
-          $("section#summary .container-fluid marked-element .markdown-html:first-child > p:first-child").appendTo("#usage .jQueryAppendToContainer");
+          $("#example section#summary .container-fluid marked-element .markdown-html:first-child > p:first-child").appendTo("#usage .jQueryAppendToContainer");
 
+          $("#example section#summary .container-fluid marked-element .markdown-html > h3#combinations + p").appendTo("#usage .jQueryAppendToContainer");
 
-
+          $("#example section#summary .container-fluid marked-element .markdown-html > h3#combinations ").remove();
 
         }, 500);
 
@@ -47,6 +48,13 @@
       pre code {
         padding: 0;
         font-size: 14px;
+      }
+
+      #example h3[id^='variation-'] {
+        font-size: 20px;
+        border-bottom: 2px solid #041e42;
+        padding-bottom: 5px;
+        text-align: left;
       }
 
     </style>  
@@ -95,7 +103,9 @@
             </div>
 
             <div id="usage" class="tab-pane fade app">
-              <div class="jQueryAppendToContainer"></div>
+              <section class="margin-top">
+                <div class="jQueryAppendToContainer"></div>
+              </section>  
             </div>
 
             <div id="html-code" class="tab-pane fade app">
