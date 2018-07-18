@@ -24,17 +24,22 @@
          new Tab(tabs[i])
       }
 
-      $(function(){
 
-      $("pre.demo-component").appendTo("#html-code .jQueryAppendToContainer");
-      $("pre.demo-component").css("display","block");
+        setTimeout(function(){  
+          $("pre.demo-component").appendTo("#html-code .jQueryAppendToContainer");
+          $("pre.demo-component").css("display","block");
 
-      $("h3[id^='variation-']").remove();
-      $("h3[id^=variation-] + p").remove();
-      $(".codeheader").remove();
+          // $("h3[id^='variation-']").remove();
+          $("h3[id^=variation-] + p").remove();
+          $(".codeheader").remove();
 
 
-      $("section#summary .container-fluid marked-element .markdown-html:first-child > p:first-child").appendTo("#usage .jQueryAppendToContainer");
+          $("section#summary .container-fluid marked-element .markdown-html:first-child > p:first-child").appendTo("#usage .jQueryAppendToContainer");
+
+
+
+
+        }, 500);
 
     </script>
 
