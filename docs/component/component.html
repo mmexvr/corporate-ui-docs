@@ -26,16 +26,15 @@
 
       $(function(){
 
-      $(".demo-component code").appendTo("#html-code pre.demo-component");
+      $("pre.demo-component").appendTo("#html-code .jQueryAppendToContainer");
+      $("pre.demo-component").css("display","block");
 
       $("h3[id^='variation-']").remove();
       $("h3[id^=variation-] + p").remove();
       $(".codeheader").remove();
 
 
-      $("section#summary marked-element p").appendTo("#usage p");
-
-
+      $("section#summary .container-fluid marked-element .markdown-html:first-child > p:first-child").appendTo("#usage .jQueryAppendToContainer");
 
     </script>
 
@@ -91,15 +90,13 @@
             </div>
 
             <div id="usage" class="tab-pane fade app">
-              <h2>Scania Components</h2>
-              <p class="jQueryAppendTo"><p>
-              <p>Use this component where applicable. If you do need for example a main navigation in your application, use the one found among these components. These are all signed of by the Scania Headquarters and there is no reason to create something similar. Do not re-invent the wheel.</p>
+              <div class="jQueryAppendToContainer"></div>
             </div>
 
             <div id="html-code" class="tab-pane fade app">
-              <h2>Copy and Paste the code</h2>
-              <p>In connection to each variation of a component there is a code snippet. Copy the code below and paste it in your <a href="/corporate-ui-docs/template/basic-template-app.html" download>basic template for applications</a> or the <a href="/corporate-ui-docs/template/basic-template.html" download>this basic template for public sites</a>.</p>
-              <pre class="demo-component"></pre>
+              <h2>Code Sample</h2>
+              <div class="jQueryAppendToContainer"></div>
+              <p>Copy the code and paste it in your <a href="/corporate-ui-docs/template/basic-template-app.html" download>basic template for applications</a> or the <a href="/corporate-ui-docs/template/basic-template.html" download>this basic template for public sites</a>. Depending on what template you're using, the component will get different styling applied to it.</p>
             </div>
 
           </div>
