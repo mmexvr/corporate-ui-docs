@@ -77,12 +77,22 @@ p a {font-weight: bold}
     margin: 10% 5% 0;
 }
 
+.panel .panel-body, .panel .portlet-application {
+    padding: 20px 30px;
+}  
+
 @media (max-width: 991px) {
   .ux-lib .ux-sections img {
     width: 40%;
     margin-top: 0;
   }
+
+  .panel .panel-body, .panel .portlet-application {
+      padding: 15px;
+  }  
+
 }
+
 .ux-lib .panel-group a {
   color: #d6001c;
 }
