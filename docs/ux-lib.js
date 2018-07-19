@@ -1,22 +1,21 @@
 
-$(function(){
+  $(function(){
+    $(".public-styling").click(function() {
+      $('.zone').removeClass("app");
+      $('.zone').addClass("public");  
+      $('.app-styling').removeClass("active"); 
+      $('.public-styling').addClass("active");   
 
-	$(".public-styling").click(function() {
-	    $('body').removeClass("app");
-	    $('body').addClass("public");  
-	    $('.app-styling').removeClass("active"); 
-	    $('.public-styling').addClass("active");   
-	    
-	});
+    });
 
-	$(".app-styling").click(function() {
-	    $('body').removeClass("public");
-	    $('body').addClass("app");        
-	    $('.app-styling').addClass("active"); 
-	    $('.public-styling').removeClass("active");     
-	});  
+    $(".app-styling").click(function() {
+      $('.zone').removeClass("public");
+      $('.zone').addClass("app");        
+      $('.app-styling').addClass("active"); 
+      $('.public-styling').removeClass("active");     
+    });  
 
-});        
+  });   
 
     
 
