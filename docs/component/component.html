@@ -151,7 +151,27 @@
 
     <c-corporate-footer></c-corporate-footer>
   
-    <script>
+<script>
+
+      $(function(){
+        $(".public-styling").click(function() {
+          $('.zone').removeClass("app");
+          $('.zone').addClass("public");  
+          $('.app-styling').removeClass("active"); 
+          $('.public-styling').addClass("active");   
+
+        });
+
+        $(".app-styling").click(function() {
+          $('.zone').removeClass("public");
+          $('.zone').addClass("app");        
+          $('.app-styling').addClass("active"); 
+          $('.public-styling').removeClass("active");     
+        });  
+
+      });
+
+
       var html_root = 'https://d31jnweo1ynb8u.cloudfront.net/build/global/' + window['CorporateUi'].version + '/components',
       component = CorporateUi.getUrlParameter('c'),
       path = [html_root, component, component].join('/') + '.html';
