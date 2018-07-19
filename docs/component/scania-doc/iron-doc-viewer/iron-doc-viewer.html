@@ -67,7 +67,7 @@ property.
       :host .descriptorTitle main-hero p {
         font-size: 0.8em;
       }
-      :host #summary {
+      :host .summary {
         margin:0 0 40px 0;
       }
       :host.show-private iron-doc-property[private] {
@@ -97,7 +97,7 @@ property.
     </style>
 
     <template is="dom-if" if="{{!forIs}}">
-    <section id="summary" class$="{{for}}" hidden$="[[!descriptor.desc]]">
+    <section class$="summary {{for}}" hidden$="[[!descriptor.desc]]">
     <template is="dom-repeat" items="[[_desc]]" as="_descitems">
 
       <div class="container-fluid">
@@ -169,22 +169,7 @@ property.
       </section>
     </div>
     </div>
-    <section id="summary" class$="{{for}}" hidden$="[[!descriptor.desc]]">
-    <template is="dom-repeat" items="[[mainDesc]]" as="maindescitems">
 
-      <div class="container">
-      <marked-element class="markdown" markdown="[[maindescitems.markdown]]">
-        <div class="markdown-html"></div>
-      </marked-element>
-      </div>
-      <template is="dom-if" if="[[maindescitems.demo]]">
-        <demo-component data="[[maindescitems.demo]]">
-        </demo-component>
-      </template>
-      
-    </template>
-      
-    </section>
     </template>
     
 
