@@ -46,6 +46,12 @@
 
           $("#example section.summary").css("display","block");
 
+
+          $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+          });
+
+
         }, 700);
 
     </script>
@@ -162,9 +168,21 @@
       docElm.setAttribute('for', CorporateUi.getUrlParameter('c'));
       docElm.setAttribute('src', path);
 
+
+
+
     </script>
 
     <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.1.0-CF/js/ux-library.js"></script>
-    <script src="/corporate-ui-docs/ux-lib.js"></script>    
+    <script src="/corporate-ui-docs/ux-lib.js"></script>   
+
+    <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet"
+        href="https://highlightjs.org/static/demo/styles/github.css">        
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
   </body>
 </html>
