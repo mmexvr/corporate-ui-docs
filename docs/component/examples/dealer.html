@@ -41,7 +41,7 @@
   <body class="scania" ng-controller="Example as example">
 
     <c-corporate-header site-name="{{example.siteName}}" site-url="{{example.dealerUrl}}" ng-attr-dealer-name="{{example.dealerName}}" ng-attr-dealer-logo="{{example.dealerLogo}}" ng-attr-dealer-url="{{example.dealerUrl}}">
-      <nav-item ng-attr-location="{{example.topLinkhRef}}" ng-bind="example.topLinkName"></nav-item>
+      <nav-item ng-attr-location="{{example.topLinkHref}}" ng-bind="example.topLinkName"></nav-item>
     </c-corporate-header>
 
     <c-main-content>
@@ -94,14 +94,17 @@
           <div id="html-code" class="app">
             <h2>Code Sample</h2>
             <pre>
-              <code class="html">
+              <code class="htmlbars">
 
-&lt;c-corporate-header site-name="{{example.siteName}}" site-url="{{example.dealerUrl}}" dealer-name="{{example.dealerName}}" dealer-logo="{{example.dealerLogo}}" dealer-url="{{example.dealerUrl}}"&gt;
-  &lt;nav-item location="{{example.topLinkhRef}}"&gt;{{example.topLinkName}}&lt;/nav-item&gt;
+&lt;c-corporate-header site-name=&quot;{{example.siteName}}&quot; site-url=&quot;{{example.dealerUrl}}&quot; dealer-name=&quot;{{example.dealerName}}&quot; dealer-logo=&quot;{{example.dealerLogo}}&quot; dealer-url=&quot;{{example.dealerUrl}}&quot;&gt;
+  &lt;nav-item location=&quot;{{example.topLinkhRef}}&quot;&gt;{{example.topLinkName}}&lt;/nav-item&gt;
 &lt;/c-corporate-header&gt;
 
               </code>
             </pre>
+
+
+
             <p>Copy the code and paste it in your <a href="/corporate-ui-docs/template/basic-template-app.html" download="">basic template for applications</a> or the <a href="/corporate-ui-docs/template/basic-template.html" download="">this basic template for public sites</a>. Depending on what template you're using, the component will get different styling applied to it.</p>
         </div>
       </div>
@@ -130,7 +133,7 @@
           hljs.highlightBlock(block);
         });
       });
-      
+
     </script>
   </body>
 </html>
