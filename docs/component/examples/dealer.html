@@ -35,7 +35,7 @@
 
   <body class="scania" ng-controller="Example as example">
 
-    <c-corporate-header site-name="{{example.siteName}}" site-url="/" ng-attr-dealer-name="{{example.dealerName}}" ng-attr-dealer-logo="{{example.dealerLogo}}" ng-attr-dealer-url="{{example.dealerUrl}}">
+    <c-corporate-header site-name="{{example.siteName}}" site-url="{{example.dealerUrl}}" ng-attr-dealer-name="{{example.dealerName}}" ng-attr-dealer-logo="{{example.dealerLogo}}" ng-attr-dealer-url="{{example.dealerUrl}}">
       <nav-item location="{{example.topLinkhRef}}">{{example.topLinkName}}</nav-item>
     </c-corporate-header>
 
@@ -70,7 +70,7 @@
             <div class="form-group">
               <label>Site name</label>
               <input type="text" class="form-control" placeholder="Name of the application or site" ng-model="example.siteName">
-            </div>
+            </div>       
 
             <div class="form-group">
               <label>Top link name</label>
@@ -84,17 +84,16 @@
       
           </form>
         </div>
-      </section>
-      <section>
+
         <div id="html-code" class="app">
           <h2>Code Sample</h2>
           <pre>
             <code class="html">
 
-              &lt;c-corporate-header site-name="{{example.siteName}}" site-url="/" ng-attr-dealer-name="{{example.dealerName}}" ng-attr-dealer-logo="{{example.dealerLogo}}" ng-attr-dealer-url="{{example.dealerUrl}}"&gt;
+              &lt;c-corporate-header site-name="{{example.siteName}}" site-url="{{example.dealerUrl}}" ng-attr-dealer-name="{{example.dealerName}}" ng-attr-dealer-logo="{{example.dealerLogo}}" ng-attr-dealer-url="{{example.dealerUrl}}"&gt;
                 &lt;nav-item location="{{example.topLinkhRef}}">{{example.topLinkName}}&lt;/nav-item&gt;
               &lt;/c-corporate-header&gt;
-              
+
             </code>
           </pre>
           <p>Copy the code and paste it in your <a href="/corporate-ui-docs/template/basic-template-app.html" download="">basic template for applications</a> or the <a href="/corporate-ui-docs/template/basic-template.html" download="">this basic template for public sites</a>. Depending on what template you're using, the component will get different styling applied to it.</p>
