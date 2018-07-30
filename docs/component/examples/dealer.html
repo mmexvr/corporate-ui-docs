@@ -36,7 +36,7 @@
   <body class="scania" ng-controller="Example as example">
 
     <c-corporate-header site-name="{{example.siteName}}" site-url="{{example.dealerUrl}}" ng-attr-dealer-name="{{example.dealerName}}" ng-attr-dealer-logo="{{example.dealerLogo}}" ng-attr-dealer-url="{{example.dealerUrl}}">
-      <nav-item location="{{example.topLinkhRef}}">{{example.topLinkName}}</nav-item>
+      <nav-item ng-attr-location="{{example.topLinkhRef}}" ng-bind="example.topLinkName"></nav-item>
     </c-corporate-header>
 
     <c-main-content>
@@ -90,9 +90,9 @@
             <pre>
               <code class="html">
 
-                &lt;c-corporate-header site-name="{{example.siteName}}" site-url="{{example.dealerUrl}}" dealer-name="{{example.dealerName}}" ng-attr-dealer-logo="{{example.dealerLogo}}" dealer-url="{{example.dealerUrl}}"&gt;
-                  &lt;nav-item location="{{example.topLinkhRef}}"&gt;{{example.topLinkName}}&lt;/nav-item&gt;
-                &lt;/c-corporate-header&gt;
+&lt;c-corporate-header site-name="{{example.siteName}}" site-url="{{example.dealerUrl}}" dealer-name="{{example.dealerName}}" dealer-logo="{{example.dealerLogo}}" dealer-url="{{example.dealerUrl}}"&gt;
+  &lt;nav-item location="{{example.topLinkhRef}}"&gt;{{example.topLinkName}}&lt;/nav-item&gt;
+&lt;/c-corporate-header&gt;
 
               </code>
             </pre>
