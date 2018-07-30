@@ -111,7 +111,9 @@
 
     <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script> 
     <link rel="stylesheet"
-        href="https://highlightjs.org/static/demo/styles/github.css">
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet"
+        href="https://highlightjs.org/static/demo/styles/github.css">        
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
     <script>
@@ -128,11 +130,11 @@
         this.dealerUrl = 'https://www.scania.com/se/sv/bilmetro';
       }
 
-      $(document).ready(function() {
-        $('pre code').each(function(i, block) {
-          hljs.highlightBlock(block);
-        });
-      });
+      // $(document).ready(function() {
+      //   $('pre code').each(function(i, block) {
+      //     hljs.highlightBlock(block);
+      //   });
+      // });
 
     </script>
   </body>
