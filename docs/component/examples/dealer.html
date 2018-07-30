@@ -35,9 +35,9 @@
 
   <body class="scania" ng-controller="Example as example">
 
-<c-corporate-header site-name="Lorem Ipsum" site-url="https://www.scania.com/se/sv/bilmetro" dealer-name="Bilmetro" dealer-logo="https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png" dealer-url="https://www.scania.com/se/sv/bilmetro">
-  <nav-item location="https://scania.com/se/sv/home.html">Scania i Sverige</nav-item>
-</c-corporate-header>
+    <c-corporate-header site-name="{{example.siteName}}" site-url="{{example.dealerUrl}}" ng-attr-dealer-name="{{example.dealerName}}" ng-attr-dealer-logo="{{example.dealerLogo}}" ng-attr-dealer-url="{{example.dealerUrl}}">
+      <nav-item ng-attr-location="{{example.topLinkHref}}" ng-bind="example.topLinkName"></nav-item>
+    </c-corporate-header>
 
     <c-main-content>
       <c-main-navigation>
