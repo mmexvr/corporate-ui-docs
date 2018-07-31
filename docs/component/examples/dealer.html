@@ -113,35 +113,26 @@
         .controller('Example', [Example])
 
       function Example() {
-        this.dealerName = 'Bilmetro';
-        this.siteName = 'Sverige';
-        this.topLinkName = 'Scania i Sverige'; 
-        this.topLinkHref = 'https://scania.com/se/sv/home.html';
-        this.dealerLogo = 'https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png';
-        this.dealerUrl = 'https://www.scania.com/se/sv/bilmetro';
-        this.apa = apa;
+        var vm = this;
+        vm.dealerName = 'Bilmetro';
+        vm.siteName = 'Sverige';
+        vm.topLinkName = 'Scania i Sverige'; 
+        vm.topLinkHref = 'https://scania.com/se/sv/home.html';
+        vm.dealerLogo = 'https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png';
+        vm.dealerUrl = 'https://www.scania.com/se/sv/bilmetro';
+        vm.apa = apa;
+
+        function apa() {
+          if (vm.siteName) {
+            // This checks if there is a Site Name provided, if not, it removes the left border.
+            $(".navbar-default .navbar-header .navbar-brand").removeClass("border-none");
+          } else {
+            $(".navbar-default .navbar-header .navbar-brand").addClass("border-none");
+          }
+        }
+
+        apa()
       }
-
-      // This checks if there is a Site Name provided, if not, it removes the left border.
-
-function apa() {
-        var SitenameText = $(".navbar-header")
-            .clone()    //clone the element
-            .children() //select all the children
-            .remove()   //remove all the children
-            .end()  //again go back to selected element
-            .text();
-
-      if (SitenameText.trim() == '') {
-
-        $(".navbar-default .navbar-header .navbar-brand").addClass("border-none");
-
-      };
-}
-
-apa()
-
-
 
     </script>
 
