@@ -120,16 +120,7 @@
         this.dealerUrl = 'https://www.scania.com/se/sv/bilmetro';
       }
 
-      $(.navbar-default .navbar-header .navbar-brand:after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    border-left: 1px solid #e2e2e2;
-    margin: 0 -20px 0 15px;
-    height: 20px;
-    cursor: default;
-}
-
+      // This checks if there is a Site Name provided, if not, it removes the left border.
 
       var SitenameText = $(".navbar-header")
             .clone()    //clone the element
