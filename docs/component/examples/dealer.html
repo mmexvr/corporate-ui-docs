@@ -97,24 +97,18 @@
 
               </code>
             </pre>
-
-
+        </div>
 
             <p>Copy the code and paste it in your <a href="/corporate-ui-docs/template/basic-template-app.html" download="">basic template for applications</a> or the <a href="/corporate-ui-docs/template/basic-template.html" download="">this basic template for public sites</a>. Depending on what template you're using, the component will get different styling applied to it.</p>
-        </div>
+            <p>To build your application, please use the appropriate elements from the <a href="/corporate-ui-docs/">UX Library</a> and the <a href="/corporate-ui-docs/developer/scania-bootstrap.html">Scania Bootstrap HTML Collection</a></p>.
+
       </div>
     </c-main-content>
 
     <c-corporate-footer></c-corporate-footer>
 
     <script src="https://static.scania.com/vendors/frameworks/angular/1.5.5/angular.min.js"></script>
-
     <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script> 
-    <link rel="stylesheet"
-        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <link rel="stylesheet"
-        href="https://highlightjs.org/static/demo/styles/github.css">        
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
     <script>
       angular
@@ -130,14 +124,10 @@
         this.dealerUrl = 'https://www.scania.com/se/sv/bilmetro';
       }
 
-      // $(document).ready(function() {
-      //   $('pre code').each(function(i, block) {
-      //     hljs.highlightBlock(block);
-      //   });
-      // });
-
     </script>
     <style>
+
+
       nav.nav.navbar-nav.navbar-right.style-scope.c-corporate-header > nav-item {
           font-family: "Scania Sans";
           font-weight: normal;
@@ -146,14 +136,16 @@
           text-transform: uppercase;
         }
 
-        c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header {
+      c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header {
           display: inline-block;
-          margin: 20px -15px 20px 15px;
+          margin: 18px -16px 18px 15px;
           text-transform: none;
-          font-size: 2.2rem;
+          font-size: 2.6rem;
           vertical-align: middle;
-          color: #fff;
-        }
+          font-family: 'Scania Sans Condensed';
+          color: #000;
+          letter-spacing: -0.05rem;
+      }
 
     </style>
 
