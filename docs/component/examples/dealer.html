@@ -66,7 +66,7 @@
 
             <div class="form-group">
               <label>Site name</label>
-              <input type="text" class="form-control" placeholder="Name of the application or site" ng-model="example.siteName">
+              <input type="text" class="form-control" placeholder="Name of the application or site" ng-model="example.siteName" ng-change="example.apa()">
             </div>       
 
             <div class="form-group">
@@ -119,11 +119,13 @@
         this.topLinkHref = 'https://scania.com/se/sv/home.html';
         this.dealerLogo = 'https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png';
         this.dealerUrl = 'https://www.scania.com/se/sv/bilmetro';
+        this.apa = apa;
       }
 
       // This checks if there is a Site Name provided, if not, it removes the left border.
 
-      var SitenameText = $(".navbar-header")
+function apa() {
+        var SitenameText = $(".navbar-header")
             .clone()    //clone the element
             .children() //select all the children
             .remove()   //remove all the children
@@ -135,6 +137,10 @@
         $(".navbar-default .navbar-header .navbar-brand").addClass("border-none");
 
       };
+}
+
+apa()
+
 
 
     </script>
