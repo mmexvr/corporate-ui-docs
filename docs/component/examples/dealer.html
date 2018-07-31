@@ -31,7 +31,7 @@
 
   <body class="scania" ng-controller="Example as example">
 
-    <c-corporate-header site-name="{{example.siteName}}" site-url="{{example.dealerUrl}}" ng-attr-dealer-name="{{example.dealerName}}" ng-attr-dealer-logo="{{example.dealerLogo}}" ng-attr-dealer-url="{{example.dealerUrl}}">
+    <c-corporate-header site-name="{{example.siteName}}" short-name="{{example.mobileName}}" site-url="{{example.dealerUrl}}" ng-attr-dealer-name="{{example.dealerName}}" ng-attr-dealer-logo="{{example.dealerLogo}}" ng-attr-dealer-url="{{example.dealerUrl}}">
       <nav-item ng-attr-location="{{example.topLinkHref}}" ng-bind="example.topLinkName"></nav-item>
     </c-corporate-header>
 
@@ -63,6 +63,11 @@
               <label>Dealer logotype</label>
               <input type="text" class="form-control" placeholder="URL to logotype image" ng-model="example.dealerLogo">
             </div>
+
+            <div class="form-group">
+              <label>Mobile header</label>
+              <input type="text" class="form-control" placeholder="Name of the application for display on mobile units" ng-model="example.mobileName">
+            </div> 
 
             <div class="form-group">
               <label>Site name</label>
@@ -115,7 +120,8 @@
       function Example() {
         var vm = this;
         vm.dealerName = 'Bilmetro';
-        vm.siteName = 'Sverige';
+        vm.mobileName = 'BM';          
+        vm.siteName = 'Sverige';      
         vm.topLinkName = 'Scania i Sverige'; 
         vm.topLinkHref = 'https://scania.com/se/sv/home.html';
         vm.dealerLogo = 'https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png';
@@ -160,6 +166,16 @@
       }
 
       p a {font-weight: bold}
+
+      @media (max-width: 992) {
+        .dealer span {display:none;}
+
+        c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header .navbar-symbol.c-corporate-header:before {
+            background-image: url(https://d31jnweo1ynb8u.cloudfront.net/resources/logotype/scania/scania-symbol.svg);
+            background-position: center right;
+            background-size: 46px 46px;
+            }
+      }
 
     </style>
 
