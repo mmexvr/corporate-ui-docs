@@ -115,11 +115,67 @@
                   </div>            
                     <pre>
                       <code class="html">
-&lt;DOCTYPE html&gt;
-&lt;c-corporate-header site-name=&quot;{{example.siteName}}&quot; short-name=&quot;{{example.mobileName}}&quot; site-url=&quot;{{example.dealerUrl}}&quot; dealer-name=&quot;{{example.dealerName}}&quot; dealer-logo=&quot;{{example.dealerLogo}}&quot; dealer-url=&quot;{{example.dealerUrl}}&quot;&gt;
-  &lt;nav-item location=&quot;{{example.topLinkHref}}&quot;&gt;{{example.topLinkName}}&lt;/nav-item&gt;
-&lt;/c-corporate-header&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en-GB&quot;&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt; 
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;noscript&gt;&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html&quot;&gt;&lt;/noscript&gt;
 
+  &lt;title&gt;Name of your page&lt;/title&gt;
+  &lt;script src=&quot;https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js&quot;&gt;&lt;/script&gt;
+  
+  &lt;script src=&quot;https://d31jnweo1ynb8u.cloudfront.net/build/global/3.1.0-CF/js/corporate-ui.js&quot;&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+
+&lt;body class=&quot;scania app&quot;&gt;
+
+  &lt;c-corporate-header site-name=&quot;{{example.siteName}}&quot; short-name=&quot;{{example.mobileName}}&quot; site-url=&quot;{{example.dealerUrl}}&quot; dealer-name=&quot;{{example.dealerName}}&quot; dealer-logo=&quot;{{example.dealerLogo}}&quot; dealer-url=&quot;{{example.dealerUrl}}&quot;&gt;
+    &lt;nav-item location=&quot;{{example.topLinkHref}}&quot;&gt;{{example.topLinkName}}&lt;/nav-item&gt;
+  &lt;/c-corporate-header&gt;
+
+  &lt;c-main-content&gt;
+
+    &lt;c-main-navigation show-search&gt;
+      &lt;primary-items&gt;
+        &lt;nav-item location=&quot;#&quot;&gt;Sample Item&lt;/nav-item&gt;
+        &lt;nav-item location=&quot;#&quot;&gt;Sample Item&lt;/nav-item&gt;            
+        &lt;nav-item location=&quot;#&quot; class=&quot;active&quot;&gt;Sample Item
+          &lt;sub-navigation caption=&quot;Scania Bootstrap&quot;&gt;
+            &lt;nav-item location=&quot;/corporate-ui-docs/developer/bootstrap-original-docs.html&quot; class=&quot;active&quot;&gt;Bootstrap Documentation&lt;/nav-item&gt;
+            &lt;nav-item location=&quot;/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html&quot;&gt;HTML Copy Paste&lt;/nav-item&gt;
+          &lt;/sub-navigation&gt;  
+        &lt;/nav-item&gt;
+        &lt;nav-item location=&quot;#&quot;&gt;Sample Item&lt;/nav-item&gt;
+        &lt;nav-item location=&quot;#&quot;&gt;Sample Item&lt;/nav-item&gt;
+        &lt;nav-item location=&quot;#&quot;&gt;Sample Item&lt;/nav-item&gt;
+      &lt;/primary-items&gt;
+    &lt;/c-main-navigation&gt;
+
+    &lt;section&gt;
+      &lt;div class=&quot;container&quot;&gt;
+        &lt;h3&gt;Your application code&lt;/h3&gt;
+        &lt;p&gt;Build your application here, preferable using Bootstrap Classes and Scania Components.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;  
+
+  &lt;/c-main-content&gt;
+
+  &lt;c-corporate-footer&gt;
+    &lt;nav-item location=&quot;#&quot;&gt;
+      &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Legal notice&lt;/a&gt;
+      &lt;/nav-item&gt;
+    &lt;nav-item location=&quot;#&quot;&gt;
+      &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Privacy statement&lt;/a&gt;
+      &lt;/nav-item&gt;
+    &lt;nav-item location=&quot;#&quot;&gt;
+      &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Cookies&lt;/a&gt;
+    &lt;/nav-item&gt;
+    &lt;nav-item location=&quot;mailto:corporate-ui@scania.com&quot;&gt;Contact us&lt;/a&gt;&lt;/nav-item&gt;    
+  &lt;/c-corporate-footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
                     </code>
                   </pre>
                 </div>
