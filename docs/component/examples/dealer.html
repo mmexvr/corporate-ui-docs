@@ -88,20 +88,43 @@
 
 
           <div id="html-code" class="app">
-            <h2>Code to copy</h2>
-            <pre>
-              <code class="html">
+            <ul class="nav nav-tabs container">
+              <li class="active"><a data-toggle="tab" href="#component-code"><span class="hidden-xs">Code for </span>Corporate Header</a></li>
+              <li><a data-toggle="tab" href="#page-code"><span class="hidden-xs">Code for  </span>Complete Page</a></li>  
+            </ul>
+
+            <div class="tab-content app zone">
+                <div id="component-code" class="tab-pane fade in active">
+                  <div class="page-header">
+                    <h3>HTML for {{example.dealerName}}</h1>
+                  </div>            
+                    <pre>
+                      <code class="html">
 
 &lt;c-corporate-header site-name=&quot;{{example.siteName}}&quot; short-name=&quot;{{example.mobileName}}&quot; site-url=&quot;{{example.dealerUrl}}&quot; dealer-name=&quot;{{example.dealerName}}&quot; dealer-logo=&quot;{{example.dealerLogo}}&quot; dealer-url=&quot;{{example.dealerUrl}}&quot;&gt;
   &lt;nav-item location=&quot;{{example.topLinkHref}}&quot;&gt;{{example.topLinkName}}&lt;/nav-item&gt;
 &lt;/c-corporate-header&gt;
 
-              </code>
-            </pre>
-          </div>
+                    </code>
+                  </pre>
+                  <p class="mt-5">Copy the code above and replace the same element it in the <a href="/corporate-ui-docs/template/basic-template-app.html" download="">basic template for applications</a> or the <a href="/corporate-ui-docs/template/basic-template.html" download="">basic template for public sites</a>. Depending on what template you're using, the component will get different styling applied to it.</p>                  
+                </div>
+                <div id="page-code" class="tab-pane fade">
+                  <div class="page-header">
+                    <h3>HTML for {{example.dealerName}}</h1>
+                  </div>            
+                    <pre>
+                      <code class="html">
+&lt;DOCTYPE html&gt;
+&lt;c-corporate-header site-name=&quot;{{example.siteName}}&quot; short-name=&quot;{{example.mobileName}}&quot; site-url=&quot;{{example.dealerUrl}}&quot; dealer-name=&quot;{{example.dealerName}}&quot; dealer-logo=&quot;{{example.dealerLogo}}&quot; dealer-url=&quot;{{example.dealerUrl}}&quot;&gt;
+  &lt;nav-item location=&quot;{{example.topLinkHref}}&quot;&gt;{{example.topLinkName}}&lt;/nav-item&gt;
+&lt;/c-corporate-header&gt;
 
-            <p class="mt-5">Copy the code above and replace the same element it in the <a href="/corporate-ui-docs/template/basic-template-app.html" download="">basic template for applications</a> or the <a href="/corporate-ui-docs/template/basic-template.html" download="">basic template for public sites</a>. Depending on what template you're using, the component will get different styling applied to it.</p>
-            <p>To build your application, please use the appropriate elements from the <a href="/corporate-ui-docs/">UX Library</a> and the <a href="/corporate-ui-docs/developer/bootstrap-original-docs.html">Scania Bootstrap HTML Collection</a></p>.
+                    </code>
+                  </pre>
+                </div>
+
+            <p class="mt-5">To build your application, please use the appropriate elements from the <a href="/corporate-ui-docs/">UX Library</a> and the <a href="/corporate-ui-docs/developer/bootstrap-original-docs.html">Scania Bootstrap HTML Collection</a></p>.
 
       </div>
     </section>
