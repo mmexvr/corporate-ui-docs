@@ -154,6 +154,13 @@
           text-transform: uppercase;
         }
 
+        .navbar-default .navbar-header .navbar-nav a {
+            padding: 0;
+            vertical-align: middle;
+            margin: 9px 0;
+            display: inline-block;
+        }
+
       c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header {
           display: inline-block;
           margin: 14px -16px 17px 15px;
@@ -176,8 +183,15 @@
         c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header .navbar-symbol.c-corporate-header:before {
             background-image: url(https://d31jnweo1ynb8u.cloudfront.net/resources/logotype/scania/scania-symbol.svg);
             background-position: center right;
-            background-size: 40px 40px;
+            background-size: 41px 37px;
+            width: 41px !important;
+            height: 37px !important;
             }
+
+          c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header .navbar-symbol.c-corporate-header {
+              width: 41px;
+          } 
+                     
       }
 
     </style>
