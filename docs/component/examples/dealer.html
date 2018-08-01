@@ -71,7 +71,7 @@
 
             <div class="form-group">
               <label>Site name</label>
-              <input type="text" class="form-control" placeholder="Name of the application or site" ng-model="example.siteName" ng-change="example.apa()">
+              <input type="text" class="form-control" placeholder="Name of the application or site" ng-model="example.siteName" ng-change="example.appInput()">
             </div>       
 
             <div class="form-group">
@@ -111,10 +111,10 @@
                 </div>
                 <div id="page-code" class="tab-pane fade">
                   <div class="page-header">
-                    <h3>HTML for {{example.dealerName}}</h1>
+                    <h3>Suggested page code for {{example.dealerName}}</h1>
                   </div>            
                     <pre>
-                      <code class="html">
+                      <code class="page html">
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en-GB&quot;&gt;
 &lt;head&gt;
@@ -142,9 +142,9 @@
         &lt;nav-item location=&quot;#&quot;&gt;Sample Item&lt;/nav-item&gt;
         &lt;nav-item location=&quot;#&quot;&gt;Sample Item&lt;/nav-item&gt;            
         &lt;nav-item location=&quot;#&quot; class=&quot;active&quot;&gt;Sample Item
-          &lt;sub-navigation caption=&quot;Scania Bootstrap&quot;&gt;
-            &lt;nav-item location=&quot;/corporate-ui-docs/developer/bootstrap-original-docs.html&quot; class=&quot;active&quot;&gt;Bootstrap Documentation&lt;/nav-item&gt;
-            &lt;nav-item location=&quot;/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html&quot;&gt;HTML Copy Paste&lt;/nav-item&gt;
+          &lt;sub-navigation caption=&quot;Sample Sub Nav&quot;&gt;
+            &lt;nav-item location=&quot;#&quot; class=&quot;active&quot;&gt;Sub Nav Item&lt;/nav-item&gt;
+            &lt;nav-item location=&quot;#&quot;&gt;Sub Nav Item&lt;/nav-item&gt;
           &lt;/sub-navigation&gt;  
         &lt;/nav-item&gt;
         &lt;nav-item location=&quot;#&quot;&gt;Sample Item&lt;/nav-item&gt;
@@ -216,9 +216,9 @@
         vm.topLinkHref = 'https://configurator.scania.com/index.aspx?etel_market=5141&etel_language=5237';
         vm.dealerLogo = 'https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png';
         vm.dealerUrl = 'https://www.scania.com/se/sv/bilmetro';
-        vm.apa = apa;
+        vm.appInput = appInput;
 
-        function apa() {
+        function appInput() {
           if (vm.siteName) {
             // This checks if there is a Site Name provided, if not, it removes the left border.
             $(".navbar-default .navbar-header .navbar-brand").removeClass("border-none");
@@ -227,10 +227,17 @@
           }
         }
 
-        apa()
+        appInput()
       }
 
-    </script>
+
+      $(function(){
+                $('pre code.page.html').each(function(i, block) {
+            hljs.highlightBlock(block);
+          });
+      }        
+
+     </script>  
 
     <style>
 
@@ -285,6 +292,12 @@
       }
 
     </style>
+
+    <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet"
+        href="https://highlightjs.org/static/demo/styles/github.css">        
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
   </body>
 </html>
