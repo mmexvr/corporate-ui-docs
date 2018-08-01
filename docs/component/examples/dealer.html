@@ -107,7 +107,7 @@
             <div class="tab-content app zone">
                 <div id="component-code" class="tab-pane fade in active">
                   <div class="page-header">
-                    <h3>HTML for {{example.dealerName}}</h1>
+                    <h3>HTML for {{example.dealerName}} Header</h1>
                   </div>            
                     <pre>
                       <code class="html">
@@ -122,7 +122,7 @@
                 </div>
                 <div id="page-code" class="tab-pane fade">
                   <div class="page-header">
-                    <h3>Suggested page code for {{example.dealerName}}</h1>
+                    <h3>Suggested code for {{example.dealerName}} Complete Page</h1>
                   </div>            
                     <pre>
                       <code class="page html">
@@ -281,6 +281,11 @@
       }
 
       p a {font-weight: bold}
+
+      .page-header {
+          padding-bottom: 9px;
+          margin: 40px 0 0;
+      }
 
       @media (max-width: 992px) {
 
