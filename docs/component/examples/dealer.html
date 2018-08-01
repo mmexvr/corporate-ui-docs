@@ -44,8 +44,8 @@
 
       <section class="light">
         <div class="container">
-          <h3>Corporate Header Code Generator</h3>
-          <p>Simulate the look of your page by entering a URL of a logotype picture or if you do not have a picture, just enter a name. As long as there is a logotype picture available, the dealer name will nog be shown as text.</p>
+          <h3>Dealer Header Code Generator</h3>
+          <p>Simulate the look of your page by entering a URL of a logotype picture or if you do not have a picture, just enter a name. As long as there is a logotype picture available, the dealer name will nog be shown as text. Replace the data below with your particluar needs and discover how the header on the top of the page changes.</p>
           <form class="app">
             <div class="row">  
               <div class="col-md-6 col-sm-12">
@@ -62,31 +62,35 @@
               </div>
               <div class="col-md-6 col-sm-12">
                 <div class="form-group">
-                  <label>Dealer logotype</label>
+                  <label>Dealer logotype (optional)</label>
                   <input type="text" class="form-control" placeholder="URL to logotype image" ng-model="example.dealerLogo">
                 </div>
               </div>
+            </div>  
+            <div class="row"> 
               <div class="col-md-6 col-sm-12">
                 <div class="form-group">
-                  <label>Mobile header</label>
-                  <input type="text" class="form-control" placeholder="Name of the application for display on mobile units" ng-model="example.mobileName">
-                </div> 
-              </div>
-              <div class="col-md-6 col-sm-12">
-                <div class="form-group">
-                  <label>Site name</label>
+                  <label>Site name (optional)</label>
                   <input type="text" class="form-control" placeholder="Name of the application or site" ng-model="example.siteName" ng-change="example.appInput()">
                 </div>       
               </div>
               <div class="col-md-6 col-sm-12">
                 <div class="form-group">
-                  <label>Top link name</label>
+                  <label>Mobile Site Header</label>
+                  <input type="text" class="form-control" placeholder="Name of the application for display on mobile units" ng-model="example.mobileName">
+                </div> 
+              </div>
+            </div>
+            <div class="row">   
+              <div class="col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label>Top link name (optional)</label>
                   <input type="text" class="form-control" placeholder="Text of top link" ng-model="example.topLinkName">
                 </div>
               </div>
               <div class="col-md-6 col-sm-12">
                 <div class="form-group">
-                  <label>Top link URL</label>
+                  <label>Top link URL (optional)</label>
                   <input type="text" class="form-control" placeholder="URL for top link" ng-model="example.topLinkHref">
                 </div>
               </div>      
@@ -94,7 +98,7 @@
         </form>
 
 
-          <div id="html-code" class="app">
+          <div id="html-code" class="app mt-5">
             <ul class="nav nav-tabs container">
               <li class="active"><a data-toggle="tab" href="#component-code"><span class="hidden-xs">Code for </span>Corporate Header</a></li>
               <li><a data-toggle="tab" href="#page-code"><span class="hidden-xs">Code for  </span>Complete Page</a></li>  
@@ -170,16 +174,10 @@
   &lt;/c-main-content&gt;
 
   &lt;c-corporate-footer&gt;
-    &lt;nav-item location=&quot;#&quot;&gt;
-      &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Legal notice&lt;/a&gt;
-      &lt;/nav-item&gt;
-    &lt;nav-item location=&quot;#&quot;&gt;
-      &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Privacy statement&lt;/a&gt;
-      &lt;/nav-item&gt;
-    &lt;nav-item location=&quot;#&quot;&gt;
-      &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Cookies&lt;/a&gt;
-    &lt;/nav-item&gt;
-    &lt;nav-item location=&quot;mailto:corporate-ui@scania.com&quot;&gt;Contact us&lt;/a&gt;&lt;/nav-item&gt;    
+    &lt;nav-item location=&quot;#&quot;&gt;Legal notice&lt;/nav-item&gt;
+    &lt;nav-item location=&quot;#&quot;&gt;Privacy statement&lt;/nav-item&gt;
+    &lt;nav-item location=&quot;#&quot;&gt;Cookies&lt;/nav-item&gt;
+    &lt;nav-item location=&quot;#&quot;&gt;Contact us&lt;/nav-item&gt;    
   &lt;/c-corporate-footer&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -249,6 +247,9 @@
      </script>  
 
     <style>
+
+       pre code {font-size: 16px}
+       pre code.page.html {font-size: 14px}
 
       .navbar-default .navbar-header .navbar-brand.border-none:after {border:none;}
 
