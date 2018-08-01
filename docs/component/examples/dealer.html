@@ -45,8 +45,8 @@
 
       <section class="light">
         <div class="container">
-          <h1>Dealer Header Code Generator</h1>
-          <p>Simulate the look of your page by entering a URL of a logotype picture or if you do not have a picture, just enter a name. As long as there is a logotype picture available, the dealer name will nog be shown as text. Replace the data below with your particluar needs and discover how the header on the top of the page changes.</p>
+          <h1>Dealer Header : Code Generator</h1>
+          <p>Simulate the look of your page by entering a URL of a logotype picture, or if you do not have a picture, remove the logotype URL and just enter a Dealer name. As long as there is a logotype picture available, the dealer name will nog be shown as text. Replace the data below with your particluar needs and discover how the header on the top of the page changes.</p>
           <form class="app">
             <div class="row">  
               <div class="col-md-6 col-sm-12">
@@ -108,7 +108,7 @@
             <div class="tab-content app zone">
                 <div id="component-code" class="tab-pane fade in active">
                   <div class="page-header">
-                    <h4>HTML for {{example.dealerName}} Header</h4>
+                    <h4>HTML for {{example.dealerName}} Corporate Header</h4>
                   </div>            
                     <pre>
                       <code class="html">
@@ -123,7 +123,7 @@
                 </div>
                 <div id="page-code" class="tab-pane fade">
                   <div class="page-header">
-                    <h4>Suggested code for {{example.dealerName}} Complete Page</h4>
+                    <h4>Suggested code for {{example.dealerName}} HTML page template</h4>
                   </div>            
                     <pre>
                       <code class="page html">
@@ -141,7 +141,7 @@
 
 &lt;/head&gt;
 
-&lt;body class=&quot;scania app&quot;&gt;
+&lt;body class=&quot;scania&quot;&gt;
 
   &lt;c-corporate-header site-name=&quot;{{example.siteName}}&quot; short-name=&quot;{{example.mobileName}}&quot; site-url=&quot;{{example.dealerUrl}}&quot; dealer-name=&quot;{{example.dealerName}}&quot; dealer-logo=&quot;{{example.dealerLogo}}&quot; dealer-url=&quot;{{example.dealerUrl}}&quot;&gt;
     &lt;nav-item location=&quot;{{example.topLinkHref}}&quot;&gt;{{example.topLinkName}}&lt;/nav-item&gt;
