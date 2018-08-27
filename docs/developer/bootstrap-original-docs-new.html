@@ -21,16 +21,18 @@
   <script>
 
        setTimeout(function(){  
-          $(".bs-docs-sidebar-01").clone().appendTo("#all-sections .sec1");
-          $(".bs-docs-sidebar-02").clone().appendTo("#all-sections .sec2");          
-          $(".bs-docs-sidebar-03").clone().appendTo("#all-sections .sec3");          
 
           $(".bootstrap-css-section").clone().appendTo("#all-sections .sec4");
           $(".bootstrap-components-section").clone().appendTo("#all-sections .sec4");          
           $(".bootstrap-javascript-section").clone().appendTo("#all-sections .sec4"); 
-          $("#all-sections ul li:first-child").remove();
-          $("#all-sections ul li a").css('font-size','18px');
-          $(".back-to-top").remove();
+
+          $("#all-sections .bs-docs-sidebar-01").appendTo("#all-sections .sec1");
+          $("#all-sections .bs-docs-sidebar-02").appendTo("#all-sections .sec2");          
+          $("#all-sections .bs-docs-sidebar-03").appendTo("#all-sections .sec3");
+
+          $("#all-sections .sec1 ul li:first-child").remove();
+          $("#all-sections .sec1 ul li a").css('font-size','18px');
+          $("#all-sections .back-to-top").remove();
 
         }, 100);
 
