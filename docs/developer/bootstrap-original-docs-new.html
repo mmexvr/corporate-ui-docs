@@ -21,29 +21,17 @@
   <script>
 
        setTimeout(function(){  
-          $("#all-sections.sec1").appendTo(".bs-docs-sidebar-01");
-          $("pre.demo-component").css("display","block");
-
-          // $("h3[id^='variation-']").remove();
-          $("h3[id^=variation-] + p").remove();
-          $(".codeheader").remove();
+          $(".bs-docs-sidebar-01").appendTo("#all-sections .sec1");
+          $(".bs-docs-sidebar-02").appendTo("#all-sections .sec2");          
+          $(".bs-docs-sidebar-03").appendTo("#all-sections .sec3");          
 
 
-          $("#example section.summary .container-fluid marked-element .markdown-html:first-child > p").appendTo("#usage .jQueryAppendToContainer");
-
-          $("#example section.summary .container-fluid marked-element .markdown-html > h3#combinations + p").appendTo("#usage .jQueryAppendToContainer");
-
-          $("#example section.summary .container-fluid marked-element .markdown-html p").appendTo("#usage .jQueryAppendToContainer");
-
-          $("#example section.summary .container-fluid marked-element .markdown-html > h3#combinations ").remove();
 
           $("#example section.summary").css("display","block");
 
 
 
         }, 100);
-
-    
 
   </script> 
 </head>
@@ -103,9 +91,9 @@
             <div class="col-md-4 sec1"></div>
             <div class="col-md-4 sec2"></div>
             <div class="col-md-4 sec3"></div>
-            <div class="col-md-12 sec4"></div>
-
-        </div>  
+            <div class="col-md-12 sec3"></div>
+          </div>  
+        </div>
 
         <!-- CSS TAB CONTENT STARTS HERE -->
 
