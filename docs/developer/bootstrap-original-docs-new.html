@@ -32,13 +32,22 @@
 
           $("#all-sections .sec1 ul li:first-child").remove();
           $("#all-sections .sec1 ul li a").css('font-size','18px');
-          $("#all-sections .affix").remove();          
+          $("#all-sections .affix").css('position','relative');
+          $("#all-sections .affix").css('top','0');          
           $("#all-sections .back-to-top").remove();
           $("#all-sections .fade").css('opacity','1');
 
-        }, 500);
+        }, 700);
 
   </script> 
+  
+  <style>
+  .bs-docs-sidebar.affix {
+    position: relative !important;
+    top: 0 !important;
+  }
+  </style>
+
 </head>
 
 <body class="scania app" id="top">
