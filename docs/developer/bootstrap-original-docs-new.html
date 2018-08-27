@@ -18,7 +18,34 @@
   <link rel="import" href="/corporate-ui-docs/developer/c-bootstrap-original-docs.html">
   <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">  
   <script src="holder.js"></script>
+  <script>
 
+       setTimeout(function(){  
+          $("#all-sections.sec1").appendTo(".bs-docs-sidebar-01");
+          $("pre.demo-component").css("display","block");
+
+          // $("h3[id^='variation-']").remove();
+          $("h3[id^=variation-] + p").remove();
+          $(".codeheader").remove();
+
+
+          $("#example section.summary .container-fluid marked-element .markdown-html:first-child > p").appendTo("#usage .jQueryAppendToContainer");
+
+          $("#example section.summary .container-fluid marked-element .markdown-html > h3#combinations + p").appendTo("#usage .jQueryAppendToContainer");
+
+          $("#example section.summary .container-fluid marked-element .markdown-html p").appendTo("#usage .jQueryAppendToContainer");
+
+          $("#example section.summary .container-fluid marked-element .markdown-html > h3#combinations ").remove();
+
+          $("#example section.summary").css("display","block");
+
+
+
+        }, 100);
+
+    
+
+  </script> 
 </head>
 
 <body class="scania app" id="top">
@@ -70,7 +97,14 @@
 
 
       <div class="tab-content app zone">
+
         <div id="all-sections" class="tab-pane fade in active">
+          <div class="row">
+            <div class="col-md-4 sec1"></div>
+            <div class="col-md-4 sec2"></div>
+            <div class="col-md-4 sec3"></div>
+            <div class="col-md-12 sec4"></div>
+
         </div>  
 
         <!-- CSS TAB CONTENT STARTS HERE -->
