@@ -25,9 +25,9 @@
           $(".bs-docs-sidebar-02").clone().appendTo("#all-sections .sec2");          
           $(".bs-docs-sidebar-03").clone().appendTo("#all-sections .sec3");          
 
-          $("#bootstrap-css-section").clone().appendTo("#all-sections .sec4");
-          $("#bootstrap-components-section").clone().appendTo("#all-sections .sec4");          
-          $("#bootstrap-javasript-section").clone().appendTo("#all-sections .sec4"); 
+          $(".bootstrap-css-section").clone().appendTo("#all-sections .sec4");
+          $(".bootstrap-components-section").clone().appendTo("#all-sections .sec4");          
+          $(".bootstrap-javascript-section").clone().appendTo("#all-sections .sec4"); 
           $("#all-sections ul li:first-child").remove();
           $("#all-sections ul li a").css('font-size','18px');
           $(".back-to-top").remove();
@@ -73,9 +73,9 @@
 
       <ul class="nav nav-tabs container">
         <li class="active"><a data-toggle="tab" href="#all-sections">All<span class="hidden-xs"> Elements</span></a></li>
-        <li><a data-toggle="tab" href="#bootstrap-css-section"><span class="hidden-xs">Boostrap </span>CSS</a></li>
-        <li><a data-toggle="tab" href="#bootstrap-components-section"><span class="hidden-xs">Boostrap </span>Components</a></li>
-        <li><a data-toggle="tab" href="#bootstrap-javascript-section"><span class="hidden-xs">Boostrap </span>Javascript</a></li>      
+        <li><a data-toggle="tab" href=".bootstrap-css-section"><span class="hidden-xs">Boostrap </span>CSS</a></li>
+        <li><a data-toggle="tab" href=".bootstrap-components-section"><span class="hidden-xs">Boostrap </span>Components</a></li>
+        <li><a data-toggle="tab" href=".bootstrap-javascript-section"><span class="hidden-xs">Boostrap </span>Javascript</a></li>      
       </ul>
 
       <ul class="nav nav-tabs nav-tabs-light container">
@@ -98,7 +98,7 @@
 
         <!-- CSS TAB CONTENT STARTS HERE -->
 
-        <div id="bootstrap-css-section" class="tab-pane fade">
+        <div class="bootstrap-css-section tab-pane fade">
          <div class="bs-docs-section panel-x">
           <div class="panel-body-x">
             <div class="row">
@@ -2609,7 +2609,7 @@
 
       <!-- COMPONENTS TAB CONTENT STARTS HERE -->
 
-      <div id="bootstrap-components-section" class="tab-pane fade">
+      <div class="bootstrap-components-section tab-pane fade">
        <div class="panel-x">
         <div class="panel-body-x">
           <div class="row">
@@ -5476,7 +5476,7 @@
 
       <!-- JAVASCRIPT TAB CONTENT STARTS HERE -->
 
-      <div id="bootstrap-javascript-section" class="tab-pane fade">
+      <div class="bootstrap-javascript-section tab-pane fade">
        <div class="panel-x">
         <div class="panel-body-x">
           <div class="row">
