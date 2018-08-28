@@ -30,8 +30,8 @@
           $("#all-sections .bs-docs-sidebar-02").appendTo("#all-sections .sec2");          
           $("#all-sections .bs-docs-sidebar-03").appendTo("#all-sections .sec3");
 
-          $("#all-sections .sec1 ul li:first-child").remove();
-          $("#all-sections .sec1 ul li a").css('font-size','18px');
+          $("#all-sections [class^="sec"] ul li:first-child").remove();
+          $("#all-sections [class^="sec"] ul li a").css('font-size','18px');
           $("#all-sections .affix").css('position','relative');
           $("#all-sections .affix").css('top','0');          
           $("#all-sections .back-to-top").remove();
@@ -40,7 +40,7 @@
         }, 700);
 
   </script> 
-  
+
   <style>
   .bs-docs-sidebar.affix {
     position: relative !important;
