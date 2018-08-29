@@ -29,17 +29,17 @@
     <c-main-navigation show-search>
       <primary-items>
         <nav-item location="/corporate-ui-docs/">Home</nav-item>
-        <nav-item location="/corporate-ui-docs/styleguide/">Style Guide
+        <nav-item location="/corporate-ui-docs/styleguide/" class="active">Style Guide
           <sub-navigation caption="Style Guide">
             <nav-item location="/corporate-ui-docs/logotype/">Logotype</nav-item>
             <nav-item location="/corporate-ui-docs/icons/">Icons</nav-item>
             <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
-            <nav-item location="/corporate-ui-docs/typography/">Typography</nav-item>
+            <nav-item location="/corporate-ui-docs/typography/" class="active">Typography</nav-item>
           </sub-navigation>
         </nav-item>            
-        <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
+        <nav-item location="/corporate-ui-docs/developer/">Web Applications
           <sub-navigation caption="Web Applications">
-            <nav-item location="/corporate-ui-docs/developer/" class="active">Corporate UI</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/">Corporate UI</nav-item>
             <nav-item location="/corporate-ui-docs/developer/corporate-ui-for-frameworks.html">JS Frameworks</nav-item>
             <nav-item location="/corporate-ui-docs/developer/scania-bootstrap.html">Scania Bootstrap</nav-item>            
             <nav-item location="/corporate-ui-docs/developer/uiaas.html">UIaaS</nav-item>
@@ -68,7 +68,7 @@
         <div class="container">
           <h1>Corporate UI</h1>
           <h2 style="margin-top: 0 !important">Scania's Web Components Collection</h2>
-          <p>The new Scania user interface is now largely supplied as ready to run web components. This means that you no longer has to develop common elements like the header, main navigation or the page footer. Filtered and sortable tables are available to use straight of the shelf as well as a lot of other components as well.</p>
+          <p class="lead">The new Scania user interface is now largely supplied as ready to run web components. This means that you no longer has to develop common elements like the header, main navigation or the page footer. Filtered and sortable tables are available to use straight of the shelf as well as a lot of other components as well.</p>
 
           <p>Web Components consists of several separate technologies. You can think of Web Components as reusable user interface widgets that are created using open Web technology. An existing Web Component can be used without writing much of the code, simply by adding an import statement to an HTML page. Since Web Components use new or still-developing standard browser capabilities, we are currently using Google Polymer to package the Scania components in a smart way and use their polyfills to make the components more browser independent.</p>
 
@@ -80,12 +80,12 @@
   <ul class="Grid Grid--guttersLg Grid--justifyCenter"><li class="Grid-cell Grid-cell--autoSize"><div class="Browser Browser--chrome" title="Since 2012-07-31"><figure class="Browser-image"></figure>Chrome<br>21+</div></li><li class="Grid-cell Grid-cell--autoSize"><div class="Browser Browser--opera" title="Since 2012-11-05"><figure class="Browser-image"></figure>Opera<br>12.1+</div></li><li class="Grid-cell Grid-cell--autoSize"><div class="Browser Browser--firefox" title="Since 2013-06-25"><figure class="Browser-image"></figure>Firefox<br>22+</div></li><li class="Grid-cell Grid-cell--autoSize"><div class="Browser Browser--safari" title="Since 2013-06-11"><figure class="Browser-image"></figure>Safari<br>6.1+</div></li><li class="Grid-cell Grid-cell--autoSize"><div class="Browser Browser--ie" title="Since 2012-09-04"><figure class="Browser-image"></figure>IE<br>10+</div></li><li class="Grid-cell Grid-cell--autoSize"><div class="Browser Browser--edge" title="Since 2015-03-15"><figure class="Browser-image"></figure>Edge<br>All</div></li></ul><h3 class="Section-heading">Caveats and Known Issues</h3><ul class="Section-list"><li>IE 10 has Flexbox support but for a <a href="http://www.w3.org/TR/2012/WD-css3-flexbox-20120322/">draft version</a> of the current spec: (<code>display:flexbox</code>).</li><li>Safari 6 and earlier support the <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">original</a> Flexbox syntax, which is now obsolete: (<code>display:box</code>).</li><li>Firefox 27 and earlier do not support multi-line flexboxes. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=702508">this bug</a> for more details.</li><li>For a full browser support comparison, check out <a href="http://caniuse.com/flexbox">caniuse.com/flexbox</a></li></ul>
 </div> -->
 
-          <h2>Ground-breaking improvement in Scania's reuse approach</h2>
-          <p>With Custom Elements (a part of the Web Components standard) Scania developers and partner companies can use functionality "off the shelf", create new HTML tags or extend the components other developers have created.</p>
+          <h1>Ground-breaking improvement in Scania's reuse approach</h1>
+          <p class="lead">With Custom Elements (a part of the Web Components standard) Scania developers and partner companies can use functionality "off the shelf", create new HTML tags or extend the components other developers have created.</p>
           <p>Google Polymer is the foundation of our web components and it brings a web standards-based way to create reusable components using nothing more than JS/HTML/CSS as well as, possibly, using libraries or frameworks like Angular and React to improve them even more. The result is less code, modular code, and higher grade of reuse in our applications. Now, you can totally focus on the user experience that you actually are here to develop.</p>
 
-          <h2>A single code base</h2>
-          <p>Scania stores its custom elements and Web Components in one single master repository. This gives us a unique opportunity to make continues improvements to shared elements. If for example a date picker is improved in one place, that one will immediately be available for other applications using the Scania standard. The economic effect is that much of our IT investments within this area automatically is shared and used for improvements and core UX rather than re-inventing the wheel from scratch every single time.</p>
+          <h1>A single code base</h1>
+          <p class="lead">Scania stores its custom elements and Web Components in one single master repository. This gives us a unique opportunity to make continues improvements to shared elements. If for example a date picker is improved in one place, that one will immediately be available for other applications using the Scania standard. The economic effect is that much of our IT investments within this area automatically is shared and used for improvements and core UX rather than re-inventing the wheel from scratch every single time.</p>
 
           <h2>Getting started</h2>
           <p>In the UX Library you'll find a lot of ready to use elements and components ranging from a standalone Scania Corporate Header including our wordmark and logotype, to advanced Product Carousels and Tables with sorting, filtering and responsive utilities. </p>
