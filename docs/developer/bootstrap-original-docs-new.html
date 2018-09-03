@@ -35,7 +35,7 @@
           $("#all-sections .affix").css('position','relative');
           // $("#all-sections .affix").css('top','0');          
           $("#all-sections .back-to-top").appendTo("#all-sections .sec5");
-          $("#all-sections .sec5 .back-to-top:nth-child(2,#all-sections .sec5 .back-to-top:nth-child(3)").remove();
+          $("#all-sections .sec5 .back-to-top:nth-child(2),#all-sections .sec5 .back-to-top:nth-child(3)").remove();
           $("#all-sections .fade").css('opacity','1');
           
         }, 700);
@@ -118,12 +118,10 @@
             <div class="col-md-4 sec2"></div>
             <div class="col-md-4 sec3"></div>
           </div>  
-          <div class="container-flex"> 
           <div class="row">            
             <div class="col-md-9 sec4"></div>
             <div class="col-md-3 sec5"></div>
           </div>  
-        </div>
         </div>
 
         <!-- CSS TAB CONTENT STARTS HERE -->
