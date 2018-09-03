@@ -34,7 +34,8 @@
           $(".sec1 ul li a,.sec2 ul li a,.sec3 ul li a").css('font-size','18px');
           $("#all-sections .affix").css('position','relative');
           // $("#all-sections .affix").css('top','0');          
-
+          $("#all-sections .back-to-top").insertAfter("c-main-navigation");
+          $(".back-to-top:nth-child(2),.back-to-top:nth-child(3)").remove();
           $("#all-sections .fade").css('opacity','1');
           
         }, 700);
@@ -58,10 +59,11 @@
       font-size: 16px;
       float: right;
       font-weight: bold;
+      margin-right: 200px;
   }
 
-     .back-to-top::before {
-      content: #67a3ba;
+     .back-to-top:before {
+      content: 'Hej';
       font-size: 20px;
   }
 
