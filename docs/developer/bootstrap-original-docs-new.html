@@ -35,6 +35,7 @@
           $("#all-sections .affix").css('position','relative');
           // $("#all-sections .affix").css('top','0');          
           $("#all-sections .back-to-top").insertAfter("c-main-navigation");
+          $(".back-to-top").prepend("<i class='icon-chevron-sign-up'></i>")
           $(".back-to-top:nth-child(2),.back-to-top:nth-child(3)").remove();
           $("#all-sections .fade").css('opacity','1');
           
@@ -62,10 +63,10 @@
       margin-right: 200px;
   }
 
-     .back-to-top:before {
-      content: 'f0aa';
-      font-size: 20px;
-      font-family: 'corporate-icons'
+     .back-to-top i {
+          font-size: 45px;
+        display: block;
+        text-align: center;
   }
 
   </style>
