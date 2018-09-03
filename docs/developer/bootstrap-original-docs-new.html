@@ -34,8 +34,8 @@
           $(".sec1 ul li a,.sec2 ul li a,.sec3 ul li a").css('font-size','18px');
           $("#all-sections .affix").css('position','relative');
           // $("#all-sections .affix").css('top','0');          
-          $("#all-sections .back-to-top").appendTo("#all-sections .sec5");
-          $("#all-sections .sec5 .back-to-top:nth-child(2),#all-sections .sec5 .back-to-top:nth-child(3)").remove();
+          $("#all-sections .back-to-top").appendTo("#all-sections");
+          $("#all-sections .back-to-top:nth-child(2),#all-sections .back-to-top:nth-child(3)").remove();
           $("#all-sections .fade").css('opacity','1');
           
         }, 700);
@@ -49,7 +49,7 @@
     top: 0 !important;
   }
 
-  #all-sections .back-to-top {
+  .back-to-top {
       color: #999;
       position: sticky;
       top: 90px;
