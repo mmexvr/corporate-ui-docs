@@ -30,12 +30,12 @@
           $("#all-sections .bs-docs-sidebar-02").appendTo("#all-sections .sec2");          
           $("#all-sections .bs-docs-sidebar-03").appendTo("#all-sections .sec3");
 
-          // $("[href='#top']").remove();
+          $(".nav.bs-docs-sidenav > li:first-child").remove();
           $(".sec1 ul li a,.sec2 ul li a,.sec3 ul li a").css('font-size','18px');
           $("#all-sections .affix").css('position','relative');
           // $("#all-sections .affix").css('top','0');          
           $("#all-sections .back-to-top").appendTo("#all-sections .sec5");
-          $("#all-sections .sec5 .back-to-top:nth-child(2)").remove();
+          $("#all-sections .sec5 .back-to-top:nth-child(2,#all-sections .sec5 .back-to-top:nth-child(3)").remove();
           $("#all-sections .fade").css('opacity','1');
           
         }, 700);
