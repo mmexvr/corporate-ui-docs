@@ -1,6 +1,14 @@
 /*@import url('https://static.scania.com/resources/logotype/group-brands.css');
 */
 
+.app p a {
+    font-weight: bold;
+    font-size: inherit;
+}
+article p a {
+    font-family: inherit;
+}
+
 /* Styles for the Components Page */
 
 
@@ -17,10 +25,6 @@ body.CRStest {background:red !important}
     margin: 15px 16px 13px 7px;
 }
 
-
-.text-left {text-align:left !important;}
-.text-center {text-align:center !important;}
-.text-right {text-align:right !important;}
 
 
 @media (max-width: 991px) {
@@ -43,8 +47,6 @@ a[href="/corporate-ui-docs/template/"],
 a[href="/corporate-ui-docs/component/"] { 
   display: none;
 }
-
-p a {font-weight: bold}
 
 .ux-lib[version-notfound]:after {
   content: "Version '" attr(version-notfound) "' was not found. Fallback to '" attr(data-env) "'";
