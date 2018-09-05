@@ -235,8 +235,8 @@
 
       function Example() {
         var vm = this;
-        vm.dealerName = 'Brand name';
-        vm.mobileName = 'Brand name';          
+        vm.dealerName = 'Bilmetro';
+        vm.mobileName = 'Bilmetro';          
         // vm.siteName = 'Stockholm';      
         vm.topLinkName = 'Sample Link'; 
         vm.topLinkHref = 'https://configurator.scania.com/index.aspx?etel_market=5141&etel_language=5237';
@@ -290,15 +290,20 @@
           display: inline-block;
       }
 
+      c-corporate-header .is-dealer.c-corporate-header .navbar-default .navbar-header {
+          font-family: 'Scania Sans Condensed';
+          padding: 12px 15px 3px;
+          font-size: 1.8rem;
+      }      
+
       c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header {
           display: inline-block;
-          margin: 14px -16px 17px 15px;
-          text-transform: none;
-          font-size: 2.6rem;
+/*          margin: 14px -16px 17px 15px;*/
+          text-transform: uppercase;
+          font-family: 'Scania Sans Headline';
+          padding: 12px 15px 3px;
+          font-size: 1.8rem;
           vertical-align: middle;
-          font-family: 'Scania Sans Condensed';
-          color: #000;
-          letter-spacing: -0.05rem;
       }
 
       p a {font-weight: bold}
