@@ -57,7 +57,7 @@
               </div>
               <div class="col-md-6 col-sm-12">
                 <div class="form-group">
-                  <label>Dealer logotype (optional) | Should be 28px heigh</label>
+                  <label>Dealer logotype (optional) | Should be 28px tall</label>
                   <input type="text" class="form-control" placeholder="URL to logotype image" ng-model="example.dealerLogo">
                 </div>
               </div>
@@ -270,7 +270,7 @@
         .navbar-default .navbar-header .navbar-symbol {
             margin-left: 35px;
         } 
-        
+
 
        pre code {font-size: 16px}
        pre code.page.html {font-size: 14px}
@@ -293,18 +293,17 @@
           display: inline-block;
       }
 
-      c-corporate-header .is-dealer.c-corporate-header .navbar-default .navbar-header {
+      .navbar.navbar-default.is-dealer .navbar-header {
           font-family: 'Scania Sans Condensed';
-          padding: 12px 15px 3px;
-          font-size: 1.8rem;
-      }      
+          font-size: 2rem;
+          font-weight: bold;
+      }   
 
       c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header {
           display: inline-block;
-/*          margin: 14px -16px 17px 15px;*/
           text-transform: uppercase;
           font-family: 'Scania Sans Headline';
-          padding: 12px 15px 3px;
+          font-weight: normal;
           font-size: 1.8rem;
           vertical-align: middle;
       }
