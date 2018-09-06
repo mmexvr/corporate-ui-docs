@@ -1,4 +1,4 @@
-<h1>The Corporate UI Framework</h1>
+<h1>The Corporate UI Design System</h1>
 
 <p>In this repository you'll find all documentation of the components contained in <a href="https://github.com/Scania/corporate-ui">the Corporate UI repository.</a>.</p>
 
