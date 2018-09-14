@@ -17,7 +17,28 @@
       color: #555;
       background-color: transparent;
   }
+
+  sub-navigation nav-item a:hover:after {
+    border-bottom: none;
+  }
+
 </style>
+
+  <script>
+    setTimeout(function(){
+        var items = document.querySelectorAll('nav-item');
+
+        for(var i=0; i<items.length; i++) {
+            var item = items[i];
+            if (!((item.attributes.location && item.attributes.location.value) || item.querySelector('a').href)) {
+                item.onclick = function(event) {
+                    event.preventDefault();
+                }
+            }
+        }
+    }, 300);
+  </script>
+
 
 </head>
 
