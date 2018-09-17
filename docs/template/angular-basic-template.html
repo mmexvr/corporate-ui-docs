@@ -19,7 +19,7 @@
     box-shadow: 0 9px 12px rgba(0, 0, 0, .175);
     overflow-y: auto;
   }
-  
+
   sub-navigation nav-item ul.dropdown-menu a:after {
     border-bottom: none;
   }
@@ -60,12 +60,33 @@
 
   <c-corporate-header site-name="UX Library" site-url="/corporate-ui/">
     <nav-item location="/corporate-ui/">UX Library</nav-item>
+     <nav-item>
+          <div class="dropdown">
+          <a data-toggle="dropdown" href="#">Jesper Karlsson</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li><a href="">Home</a></li>
+              <li><a href="">Home2</a></li>            
+              <li><a href="">Home4</a></li>
+            </ul>
+          </div>
+      </nav-item>  
   </c-corporate-header>
     
   <c-main-content>
     <c-main-navigation ng-cloak>
       <primary-items>
         <nav-item ng-repeat="item in thissite.items" location="{{item.url}}" nav-item="item" active="{{item.active}}" ng-click="thissite.changeView($event, item)"></nav-item>
+         <nav-item>
+                <div class="dropdown">
+                <a data-toggle="dropdown" href="#">Dropdown</a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Home2</a></li>            
+                    <li><a href="">Home4</a></li>
+                  </ul>
+                </div>
+            </nav-item>  
+
         <nav-item location="#" class="active">Sub menu
             <sub-navigation caption="Style Guide">
               <nav-item location="/corporate-ui-docs/logotype/">Logotype</nav-item>
@@ -80,7 +101,7 @@
                     <li><a href="">Home4</a></li>
                   </ul>
                 </div>
-          </nav-item>  
+            </nav-item>  
       </primary-items>
       <secondary-items>
           <nav-item class="active">
