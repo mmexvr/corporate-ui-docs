@@ -66,32 +66,33 @@
     <c-main-navigation ng-cloak>
       <primary-items>
         <nav-item ng-repeat="item in thissite.items" location="{{item.url}}" nav-item="item" active="{{item.active}}" ng-click="thissite.changeView($event, item)"></nav-item>
-         <nav-item>
-                <div class="dropdown">
-                <a data-toggle="dropdown" href="#">Dropdown</a>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Home2</a></li>            
-                    <li><a href="">Home4</a></li>
-                  </ul>
-                </div>
-            </nav-item>  
-
+        <nav-item>
+          <div class="dropdown">
+          <a data-toggle="dropdown" href="#">Dropdown</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li><a href="">Home</a></li>
+              <li><a href="">Home2</a></li>            
+              <li><a href="">Home4</a></li>
+            </ul>
+          </div>
+        </nav-item>  
         <nav-item location="#" class="active">Sub menu
             <sub-navigation caption="Style Guide">
               <nav-item location="/corporate-ui-docs/logotype/">Logotype</nav-item>
               <nav-item location="/corporate-ui-docs/icons/">Icons</nav-item>
               <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
               <nav-item>
-                <div class="dropdown">
-                <a data-toggle="dropdown" href="#">Dropdown</a>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Home2</a></li>            
-                    <li><a href="">Home4</a></li>
-                  </ul>
-                </div>
-            </nav-item>  
+                  <div class="dropdown">
+                  <a data-toggle="dropdown" href="#">Dropdown</a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                      <li><a href="">Home</a></li>
+                      <li><a href="">Home2</a></li>            
+                      <li><a href="">Home4</a></li>
+                    </ul>
+                  </div>
+              </nav-item>
+            </sub-navigation>  
+        </nav-item>  
       </primary-items>
       <secondary-items>
           <nav-item class="active">
