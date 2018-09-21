@@ -1,3 +1,43 @@
+
+/* Coming in > 3.2.0  */
+.btn + .btn {
+    margin-left: 9px;
+}
+
+.btn + .btn-group {
+    margin-left: 9px;
+}
+
+.btn-group + .btn-group,
+.btn-group + .btn {
+    margin-left: 9px;
+    float: none;
+}
+
+.btn-group .btn + .btn,
+.btn-group .btn + .btn-group,
+.btn-group .btn-group + .btn,
+.btn-group .btn-group + .btn-group {
+    margin-left: -1px;
+    float: left;
+}
+
+.btn-toolbar {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.btn-toolbar > .btn,
+.btn-toolbar > .btn-group,
+.btn-toolbar > .input-group {
+    margin-left: 9px;
+}
+
+/* End of > 3.2.0  */
+
+
+
+
 /*@import url('https://static.scania.com/resources/logotype/group-brands.css');
 */
 
