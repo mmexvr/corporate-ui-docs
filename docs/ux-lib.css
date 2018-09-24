@@ -33,7 +33,62 @@
     margin-left: 9px;
 }
 
+
+
+
+
+
+.btn-default:hover,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: #033a6a;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #05295a;
+  border-color: #05295a;
+}
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
+  color: #fff;
+  background-color: #4eb785;
+  border-color: #4eb785;
+}
+.btn-info:hover,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+  color: #fff;
+  background-color: #5598b2;
+  border-color: #5598b2;
+}
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning.active,
+.open .dropdown-toggle.btn-warning {
+  color: #fff;
+  background-color: #f49777;
+  border-color: #f49777;
+}
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger {
+  color: #fff;
+  background-color: #e41247;
+  border-color: #e41247;
+}
+
 /* End of > 3.2.0  */
+
 
 
 
