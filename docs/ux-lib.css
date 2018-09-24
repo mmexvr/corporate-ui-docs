@@ -51,9 +51,11 @@
 .app .btn-primary.active,
 .app .open .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #05295a;
-  border-color: #05295a;
+  background-color: #044883;
+  border-color: #044883;
 }
+
+
 .app .btn-success:hover,
 .app .btn-success:active,
 .app .btn-success.active,
