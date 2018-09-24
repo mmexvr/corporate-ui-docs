@@ -2077,7 +2077,7 @@
                     <h1 id="buttons">Buttons</h1>
                   </div>
 
-                  <h2 id="buttons-options">Options</h2>
+    <h2 id="buttons-options">Options</h2>
                   <p>Use any of the available button classes to quickly create a styled button.</p>
                   <div class="bs-example">
                     <button type="button" class="btn btn-default">Default</button>
@@ -2086,8 +2086,9 @@
                     <button type="button" class="btn btn-info">Info</button>
                     <button type="button" class="btn btn-warning">Warning</button>
                     <button type="button" class="btn btn-danger">Danger</button>
+                    <span class="photo-background"><button type="button" class="btn btn-transparent">Transparent</button></span>
                     <button type="button" class="btn btn-link">Link</button>
-                    <button type="button" class="btn btn-link btn-info"><i class="icon-circle-arrow-right fa fa-arrow-circle-right"></i>Info Link</button>
+                   <button type="button" class="btn btn-link btn-info"><i class="icon-circle-arrow-right fa fa-arrow-circle-right"></i>Info Link</button>
                   </div>
                   <div class="highlight"><pre><code class="html">
 <span class="c">&lt;!-- Standard gray button with gradient --&gt;</span>
@@ -2108,6 +2109,10 @@
   <span class="c">&lt;!-- Indicates a dangerous or potentially negative action --&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
 
+  <span class="c">&lt;!-- Transparent button to be used when overlayed on photographs --&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-transparent"</span><span class="nt">&gt;</span>Transparent<span class="nt">&lt;/button&gt;</span>
+
+
   <span class="c">&lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span>
 
@@ -2116,6 +2121,7 @@
   <span class="nt">&lt;i </span><span class="na">class=</span><span class="s">"icon-circle-arrow-right fa fa-arrow-circle-right"</span><span class="nt">&gt;</span><span class="nt">&lt;/i&gt;</span>
   Info link<span class="nt">&lt;/button&gt;</span>  
                   </code></pre></div>
+
 
                   <h2 id="buttons-sizes">Sizes</h2>
                   <p>Fancy larger or smaller buttons? Add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code> for additional sizes.</p>
@@ -7546,6 +7552,15 @@ table {word-break: normal}
 .public .page-header h1 {
     font-size: 9rem;
     line-height: 0.98;
+}
+
+span.photo-background {
+    background-image: url(https://scania.github.io/corporate-ui-docs/images/background-sample.jpg);
+    display: inline-block;
+    background-position: 40% 40%;
+    margin-left: 9px;
+    background-origin: inherit;
+    background-size: cover;
 }
 
 </style>
