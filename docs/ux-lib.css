@@ -38,14 +38,6 @@
 
 
 
-/*.app .btn-default:hover,
-.app .btn-default:active,
-.app .btn-default.active,
-.app .open .dropdown-toggle.btn-default {
-  color: #033a6a;
-  background-color: #ffffff;
-  border-color: #ffffff;
-}*/
 .app .btn-primary:hover,
 .app .btn-primary:active,
 .app .btn-primary.active,
