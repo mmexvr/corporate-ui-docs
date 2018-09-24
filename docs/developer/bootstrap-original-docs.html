@@ -1988,6 +1988,7 @@
                     <button type="button" class="btn btn-info">Info</button>
                     <button type="button" class="btn btn-warning">Warning</button>
                     <button type="button" class="btn btn-danger">Danger</button>
+                    <button type="button" class="btn btn-transparent">Transparent</button>
                     <button type="button" class="btn btn-link">Link</button>
                    <button type="button" class="btn btn-link btn-info"><i class="icon-circle-arrow-right fa fa-arrow-circle-right"></i>Info Link</button>
                   </div>
@@ -2009,6 +2010,10 @@
 
   <span class="c">&lt;!-- Indicates a dangerous or potentially negative action --&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+
+  <span class="c">&lt;!-- Transparent button to be used when overlayed on photographs --&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-transparent"</span><span class="nt">&gt;</span>Transparent<span class="nt">&lt;/button&gt;</span>
+
 
   <span class="c">&lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span>
@@ -7460,6 +7465,11 @@ body.app c-main-content > section, c-main-content.app > section, .light > sectio
     padding-right: 3px;
     vertical-align: text-bottom;
 }*/
+
+.btn.btn-transparent {
+  background-image: url("../images/background-sample.jpg");
+  background-size: cover;
+}
 
 
 </style>
