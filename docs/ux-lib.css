@@ -38,50 +38,50 @@
 
 
 
-.btn-default:hover,
-.btn-default:active,
-.btn-default.active,
-.open .dropdown-toggle.btn-default {
+.app .btn-default:hover,
+.app .btn-default:active,
+.app .btn-default.active,
+.app .open .dropdown-toggle.btn-default {
   color: #033a6a;
   background-color: #ffffff;
   border-color: #ffffff;
 }
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary.active,
-.open .dropdown-toggle.btn-primary {
+.app .btn-primary:hover,
+.app .btn-primary:active,
+.app .btn-primary.active,
+.app .open .dropdown-toggle.btn-primary {
   color: #fff;
   background-color: #05295a;
   border-color: #05295a;
 }
-.btn-success:hover,
-.btn-success:active,
-.btn-success.active,
-.open .dropdown-toggle.btn-success {
+.app .btn-success:hover,
+.app .btn-success:active,
+.app .btn-success.active,
+.app .open .dropdown-toggle.btn-success {
   color: #fff;
   background-color: #4eb785;
   border-color: #4eb785;
 }
-.btn-info:hover,
-.btn-info:active,
-.btn-info.active,
-.open .dropdown-toggle.btn-info {
+.app .btn-info:hover,
+.app .btn-info:active,
+.app .btn-info.active,
+.app .open .dropdown-toggle.btn-info {
   color: #fff;
   background-color: #5598b2;
   border-color: #5598b2;
 }
-.btn-warning:hover,
-.btn-warning:active,
-.btn-warning.active,
-.open .dropdown-toggle.btn-warning {
+.app .btn-warning:hover,
+.app .btn-warning:active,
+.app .btn-warning.active,
+.app .open .dropdown-toggle.btn-warning {
   color: #fff;
   background-color: #f49777;
   border-color: #f49777;
 }
-.btn-danger:hover,
-.btn-danger:active,
-.btn-danger.active,
-.open .dropdown-toggle.btn-danger {
+.app .btn-danger:hover,
+.app .btn-danger:active,
+.app .btn-danger.active,
+.app .open .dropdown-toggle.btn-danger {
   color: #fff;
   background-color: #e41247;
   border-color: #e41247;
