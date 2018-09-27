@@ -1,5 +1,7 @@
-.app .btn-link.btn-info {
-    font-weight: normal;
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 .app .btn {
