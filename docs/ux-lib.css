@@ -5,13 +5,9 @@ html {
 }
 
 .app .btn {
-    font-family: "Scania Sans Semi Condensed";
-    padding: 10px 18px;
-    text-transform: none;
-    font-size: 1.4rem;
-    font-weight: bold;
+   font-family: "Scania Sans Semi Condensed";
+   font-weight: bold;
 }
-
 
 
 /* Coming in > 3.2.0  */
