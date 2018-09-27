@@ -1,8 +1,3 @@
-html {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-}
 
 .app .btn {
    font-family: "Scania Sans Semi Condensed";
@@ -11,7 +6,7 @@ html {
 
 
 /* Coming in > 3.2.0  */
-.btn + .btn {
+/*.btn + .btn {
     margin-left: 9px;
 }
 
@@ -86,7 +81,7 @@ html {
   background-color: #e41247;
   border-color: #e41247;
 }
-
+*/
 /* End of > 3.2.0  */
 
 
