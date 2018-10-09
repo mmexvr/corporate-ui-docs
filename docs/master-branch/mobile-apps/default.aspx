@@ -8,8 +8,6 @@
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
   <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/master/js/corporate-ui.js"></script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
-  <script src="/corporate-ui-docs/master-branch/js/google-analytics.js"></script>  
 
 
 </head>
@@ -54,6 +52,6 @@
   </section>  
 </c-main-content>  
 <c-corporate-footer></c-corporate-footer>
-  <script src="/corporate-ui-docs/master-branch/ux-lib.js"></script>
+  <script src="/corporate-ui-docs/ux-lib.js"></script>
 </body>
 </html>
