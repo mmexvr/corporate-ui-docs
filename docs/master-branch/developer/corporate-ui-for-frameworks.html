@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="corporate-ui">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8">
+  <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+
+
+  <title>UX Library - Developers</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/master/js/corporate-ui.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
+  <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
+
+
+  <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">
+</head>
+<body unresolved class="scania">
+
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </c-corporate-header>
+  
+  <c-main-content>
+    <c-main-navigation show-search>
+      <primary-items>
+        <nav-item location="/corporate-ui-docs/">Home</nav-item>
+        <nav-item location="/corporate-ui-docs/styleguide/">Style Guide
+          <sub-navigation caption="Style Guide">
+            <nav-item location="/corporate-ui-docs/logotype/">Logotype</nav-item>
+            <nav-item location="/corporate-ui-docs/icons/">Icons</nav-item>
+            <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
+            <nav-item location="/corporate-ui-docs/typography/">Typography</nav-item>
+          </sub-navigation>
+        </nav-item>          
+        <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
+          <sub-navigation caption="Web Applications">
+            <nav-item location="/corporate-ui-docs/developer/">Corporate UI</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/corporate-ui-for-frameworks.html" class="active">JS Frameworks</nav-item>   
+            <nav-item location="/corporate-ui-docs/component/">Available Components</nav-item>
+            <nav-item location="/corporate-ui-docs/template/">Templates</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/scania-bootstrap.html">Scania Bootstrap</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/uiaas.html">UIaaS</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+          </sub-navigation>
+        </nav-item>
+        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
+      </primary-items>
+    </c-main-navigation>
+
+    <style>
+     article p a {font-family: 'Scania Sans Bold'}
+     xmp {
+          font-size: 2.2rem;
+          color: #1a58e2;
+          line-height: normal;
+          margin-bottom: 34px;
+      }
+
+    </style>
+
+    <section class="light">
+      <article>
+        <div class="container">
+          <h1>Corporate UI & Front End Apps</h1>
+          <h2 style="margin-top: 0 !important">Using Corporate UI with Angular, React or an equivalent framework</h2>
+          <p>Using the Corporate UI library with standard HTML pages is a very straight forward procedure. Although, when using it in a JS intense application based on any of the modern JS frameworks, you'll need to consider a few things.</p>
+
+          <h2>What's happening in corporate-ui.js?</h2>
+
+          <p>When calling the <a href="https://d31jnweo1ynb8u.cloudfront.net/build/global/master/js/corporate-ui.js" target="_blank">corporate-ui.js</a> file a lot of things happens. The latest versions of the Scania fonts, logotype, favicons and the basic CSS and HTML framework (Scania Bootstrap) is loaded as well as the Polymer library. We also load the basic Web Components used by almost all applications; the Corporate Header, the Main Navigation, the Main Content element and the Corporate Footer. This doesn't work very well when an application is about to be initiated further on.</p>
+
+          <div class="alert alert-info"><strong>Angular 5 Sample files</strong> are now available. Check out the few lines that has to be added or altered in you application. <br/>
+          <a href="../template/Angular5/src.zip" class="btn btn-default btn-sm margin-top" download>Download Angular 5 Sample Files</a> </div>
+
+          <h2>Wait for the application!</h2>
+          <p>All you have to do to make the Corporate UI work in your application is to avoid loading the basic components right away and instead include them after your application is completely initiated. You simply load the Corporate UI with the <strong>?preload=false</strong> parameter as you would load it in any HTML page header.</p>
+          <xmp>
+<script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/master/js/corporate-ui.js?preload=false"></script></xmp>
+          <p>Then, after your app has started, you can easily include the basic components by using the <strong>window.CorporateUi.baseComponents();</strong> method. This will then load the components listed above and you're now ready to use those custom elements from wherever you need to apply them. In Angular, you could do it this way (or attached it to any other late event):
+          <xmp>
+export class AppComponent {
+  constructor(){
+    window.CorporateUi.baseComponents();
+  }
+} 
+          </xmp>
+
+          <p><a href="../template/Angular5/src.zip" class="btn btn-default" download>Download Angular 5 Sample Files</a>
+           <a href="/corporate-ui-docs/template/angular-basic-template.html" class="btn btn-default">View Angular JS Demo</a><p>
+          <p>So, that is basically that you'll need to know. There might of course be additional questions that you'll have and they will be swiftly answered in the <a href="https://corporate-ui.slack.com" target="_blank">corporate-ui.slack.com</a> channel, or perhaps not as quick, using standard <a href="mailto:corporate-ui@scania.com">e-mail</a>.</p>
+          <h2>Next step: Developing your application</h2>
+          <p>Now you're good to go and you'll have pretty much everything you'll need at your disposal. Developing your app using additional Web Component from the library or design your user interface with the <a href="bootstrap-original-docs.html">Scania standard CSS classes from Scania Bootstrap</a>.</p>
+
+          </article>
+        </section>
+      </c-main-content>
+
+      <c-corporate-footer></c-corporate-footer>
+
+      <script src="/corporate-ui-docs/ux-lib.js"></script>
+
+    </body>
+    </html>
+

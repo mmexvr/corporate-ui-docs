@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8">
+
+  <!-- Handling for browsers that are JS disabled -->
+  <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+
+  <title>Scania</title>
+  
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+
+  <!-- corporate-ui.js includes Bootstrap, handling for old browsers, corporate header, main menu and footer as well as Web Components polyfills, if needed -->
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/master/js/corporate-ui.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
+  <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
+
+
+
+</head>
+
+  <!-- In the body you'll applying the brand identity for Scania as well as UX adjustment for either a public web or an internal app. The app appearance are in develpement and might be shakey --> 
+
+<body unresolved class="scania public">
+
+
+  <!-- The header main menu and footer we hope are quite self explainatory :-) --> 
+    
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </c-corporate-header>
+    
+  <!-- c-main-content tag should be placed here, it is setting the layout meassures of the page -->     
+  <c-main-content>
+
+    <c-main-navigation>
+      <primary-items>
+        <nav-item location="/corporate-ui-docs/index.html">Home</nav-item>
+        <nav-item location="/corporate-ui-docs/logotype/">Logotype</nav-item>
+        <nav-item location="/corporate-ui-docs/icons/">Icons</nav-item>
+        <nav-item location="/corporate-ui-docs/typography/">Typography</nav-item>
+        <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
+          <sub-navigation caption="Web Applications">
+            <nav-item location="/corporate-ui-docs/developer/">Corporate UI</nav-item>          
+            <nav-item location="/corporate-ui-docs/component/">Available Components</nav-item>
+            <nav-item location="/corporate-ui-docs/template/">Templates</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/caching.html">Caching stategies</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/support.html">Request support</nav-item>            
+          </sub-navigation>
+        </nav-item>
+      </primary-items>
+
+    </c-main-navigation>
+
+
+
+    <!-- And here is the attached component that you can play with from localhost.
+    Yes, components HTML files needs to be included from a web server -->
+    <link rel="import" href="new-component.html">    
+    <c-new-component image="https://static.scania.com/resources/images/demo/c-quote-full.jpg">
+      <h2>1337</h2>
+      <p>Leet (or "1337"), also known as eleet or leetspeak, is an alternative alphabet for many languages that is used primarily on the Internet. For example, leet spellings of the word leet include 1337 and l33t; eleet may be spelled 31337 or 3l33t.<br> 
+      <b>The term leet is derived from the word elite.</b></p>
+    </c-new-component>    
+
+
+    <!-- When using other components than corporate header, main menu and footer we need to import those components individually, in this case main hero --> 
+    <link rel="import" href="https://static.scania.com/build/global/2.0.0/html/component/Navigation/main-hero/main-hero.html">
+    <!-- And now we can use the c-main-hero element stored centrally at static --> 
+    <c-main-hero image="https://static.scania.com/resources/images/demo/default-image.jpg">
+      <h1>Your headline</h1>
+      <p>Thanks for a good day yesterday!</p>
+    </c-main-hero>
+
+    <!-- You can mix in your own HTML anywhere -->
+    <section class="light">
+      <div class="container">
+          <h2>Here goes your application</h2>
+          <p>Using Standard Bootstrap.</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- The main content ends right before the footer starts -->     
+  </c-main-content>
+
+    <!-- Complex footer described below, minimalistic footer looks like this: 
+    <c-corporate-footer></c-corporate-footer> -->  
+
+  <c-corporate-footer></c-corporate-footer>
+
+</body>
+</html>

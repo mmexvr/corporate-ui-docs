@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+
+<html lang="en-GB" class="corporate-ui">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html">
+  </noscript>
+
+  <title>UX Library - Table match any column</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script> 
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/master/js/corporate-ui.js"></script>
+	<!-- jQuery -->
+	<script src="https://mottie.github.io/tablesorter/docs/js/jquery-latest.min.js"></script>
+
+
+	<!-- Tablesorter: required -->
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>
+  <script src="https://static.scania.com/vendors/components/jQuery/table-sorter/2.30.3/js/jquery.tablesorter.combined.js"></script>
+  <link rel="stylesheet" href="https://static.scania.com/vendors/components/jQuery/table-sorter/2.30.3/css/theme.bootstrap.css" />
+
+
+
+
+<script id="js">$(function() {
+
+	var $table = $('table').tablesorter({
+		theme: 'bootstrap',
+		widgets: ["zebra", "filter","output"],
+		widgetOptions : {
+			// filter_anyMatch replaced! Instead use the filter_external option
+			// Set to use a jQuery selector (or jQuery object) pointing to the
+			// external filter (column specific or any match)
+			filter_external : '.search',
+			// add a default type search to the first name column
+			filter_defaultFilter: { 1 : '~{query}' },
+			// include column filters
+			filter_columnFilters: false,
+			filter_placeholder: { search : 'Search...' },
+			filter_saveFilters : true,
+			filter_reset: '.reset'
+		}
+	});
+
+
+    $('.download').click(function() {
+        // tell the output widget do it's thing
+        $table.trigger('outputTable');
+    });
+
+
+});
+
+
+
+
+
+
+</script>
+
+</head>
+
+<body class="scania app">
+
+<div id="main">
+
+
+<button class="download">Get CSV</button>
+	<div id="demo"><input class="search" type="search" data-column="all"> (Match any column)<br>
+<input class="search" type="search" data-column="1"> (First Name; fuzzy search... try "be")<br>
+
+<!-- targeted by the "filter_reset" option -->
+<button type="button" class="btn btn-primary reset">Reset Search</button>
+
+<table class="table tablesorter">
+	<thead>
+		<tr>
+			<th>Rank</th>
+			<th data-placeholder="Fuzzy search">First Name</th>
+			<th>Last Name</th>
+			<th>Age</th>
+			<th>Total</th>
+			<th>Discount</th>
+			<th>Date</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr><td>1</td><td>Philip Aaron</td><td>Johnson Sr Esq</td><td>25</td><td>$5.95</td><td>22%</td><td>Jun 26, 2004 7:22 AM</td></tr>
+		<tr><td>11</td><td>Aaron</td><td>Hibert</td><td>12</td><td>$2.99</td><td>5%</td><td>Aug 21, 2009 12:21 PM</td></tr>
+		<tr><td>12</td><td>Brandon Clark</td><td>Henry Jr</td><td>51</td><td>$42.29</td><td>18%</td><td>Oct 13, 2000 1:15 PM</td></tr>
+		<tr><td>111</td><td>Peter</td><td>Parker</td><td>28</td><td>$9.99</td><td>20%</td><td>Jul 6, 2006 8:14 AM</td></tr>
+		<tr><td>21</td><td>John</td><td>Hood</td><td>33</td><td>$19.99</td><td>25%</td><td>Dec 10, 2002 5:14 AM</td></tr>
+		<tr><td>013</td><td>Clark</td><td>Kent Sr.</td><td>18</td><td>$15.89</td><td>44%</td><td>Jan 12, 2003 11:14 AM</td></tr>
+		<tr><td>005</td><td>Bruce</td><td>Almighty Esq</td><td>45</td><td>$153.19</td><td>44%</td><td>Jan 18, 2021 9:12 AM</td></tr>
+		<tr><td>10</td><td>Alex</td><td>Dumass</td><td>13</td><td>$5.29</td><td>4%</td><td>Jan 8, 2012 5:11 PM</td></tr>
+		<tr><td>16</td><td>Jim</td><td>Franco</td><td>24</td><td>$14.19</td><td>14%</td><td>Jan 14, 2004 11:23 AM</td></tr>
+		<tr><td>166</td><td>Bruce Lee</td><td>Evans</td><td>22</td><td>$13.19</td><td>11%</td><td>Jan 18, 2007 9:12 AM</td></tr>
+		<tr><td>100</td><td>Brenda Lee</td><td>McMasters</td><td>18</td><td>$55.20</td><td>15%</td><td>Feb 12, 2010 7:23 PM</td></tr>
+		<tr><td>55</td><td>Dennis</td><td>Bronson</td><td>65</td><td>$123.00</td><td>32%</td><td>Jan 20, 2001 1:12 PM</td></tr>
+		<tr><td>9</td><td>Martha</td><td>delFuego</td><td>25</td><td>$22.09</td><td>17%</td><td>Jun 11, 2011 10:55 AM</td></tr>
+	</tbody>
+</table></div>
+
+
+</div>
+
+</body>
+</html>
+

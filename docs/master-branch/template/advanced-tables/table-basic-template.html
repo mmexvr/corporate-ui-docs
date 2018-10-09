@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8">
+  <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+
+
+  <title>Basic Table</title>
+  <script src="https://static.scania.com/vendors/frameworks/jquery/1.11.3/jquery-1.11.3.min.js"></script>   
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/master/js/corporate-ui.js"></script>
+
+</head>
+
+<body class="scania app" data-env="proto">
+
+<c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+    <nav-item location="https://www.scania.com/world/#/">World Entry</nav-item>
+    <nav-item location="https://www.scania.com/group/en/">Scania Group</nav-item>
+</c-corporate-header>
+
+<c-main-content>
+
+    <c-main-navigation show-search>
+        <primary-items>
+            <nav-item location="table-basic-template.html" class="active">Tables
+                <sub-navigation caption="Standard Tables">
+                    <nav-item location="table-basic-template.html" class="active">Basic Table</nav-item>
+                    <nav-item location="table-basic-template.html">Bordered</nav-item>
+                </sub-navigation>
+            </nav-item>        
+            <nav-item location="table-match-any-column.htm">Filtered
+                <sub-navigation caption="Filtered Tables">
+                    <nav-item location="table-match-any-column.htm">Match Any Column</nav-item>
+                    <nav-item location="table-filtered-app.html">Filtered Columns</nav-item>
+                </sub-navigation>
+            </nav-item>
+            <nav-item location="table-column-selector-widget.html">Responsive
+                <sub-navigation caption="Responsive Tables">
+                    <nav-item location="table-column-selector-widget.html">Columns Selector</nav-item>
+                    <nav-item location="responsive-cards/table-responsive-cards.html">Responsive Cards</nav-item>
+              </sub-navigation>
+            </nav-item>
+            <nav-item location="table-pagination.html">Paginated</nav-item>               
+            <nav-item location="table-tree-view.html">Apple Tree View</nav-item>                   
+        </primary-items>
+    </c-main-navigation>
+
+
+
+    <section class="light">
+      <div class="container-fluid margin-bottom">
+
+      <ul class="nav nav-tabs nav-tabs-light">
+        <li class="active app-styling"><a href="#">Application Styling</a></li>
+        <li class="public-styling"><a href="#">Public Site Styling</a></li>   
+      </ul>
+
+      <h2>Basic Corporate UI Table</h2>
+      <p style="margin:20px 0 40px">The basic table with no plugins.</p>  
+
+      <table class="table">
+        <caption>Just a basic table</caption>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Business Team</th>
+            <th>Backend Team</th>
+            <th>Front End Team</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1st</th>
+            <td>Facts check</td>
+            <td>Sanity check</td>
+            <td>Sanity check</td>
+          </tr>
+          <tr>
+            <th>2nd</th>
+            <td>Spell check</td>
+            <td>Regression test light</td>
+            <td>Broken links</td>
+          </tr>      
+          <tr>
+            <th>3rd</th>
+            <td>Market specific information</td>
+            <td>Sample markets (Italy/Ireland)</td>
+            <td>Device and screen tests</td>
+          </tr>
+          <tr>
+            <th>4th</th>
+            <td>Slides & content</td>
+            <td>Performance test</td>
+            <td>Code Quality</td>
+          </tr>
+          <tr>
+            <th>5th</th>
+            <td>Internal & public versions</td>
+            <td>Internal and external access</td>
+            <td>Internal & public versions</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="light">
+    <div class="container margin-bottom">
+      <h2>Borderless Table</h2>
+      <p style="margin:20px 0 40px">The defalt table with the table-borderless class added.</p>  
+
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Business Team</th>
+            <th>Backend Team</th>
+            <th>Front End Team</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1st</th>
+            <td>Facts check</td>
+            <td>Sanity check</td>
+            <td>Sanity check</td>
+          </tr>
+          <tr>
+            <th>2nd</th>
+            <td>Spell check</td>
+            <td>Regression test light</td>
+            <td>Broken links</td>
+          </tr>      
+          <tr>
+            <th>3rd</th>
+            <td>Market specific information</td>
+            <td>Sample markets (Italy/Ireland)</td>
+            <td>Device and screen tests</td>
+          </tr>
+          <tr>
+            <th>4th</th>
+            <td>Slides & content</td>
+            <td>Performance test</td>
+            <td>Code Quality</td>
+          </tr>
+          <tr>
+            <th>5th</th>
+            <td>Internal & public versions</td>
+            <td>Internal and external access</td>
+            <td>Internal & public versions</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>  
+</c-main-content>
+<script src="/corporate-ui-docs/ux-lib.js"></script>
+</body>
+</html>

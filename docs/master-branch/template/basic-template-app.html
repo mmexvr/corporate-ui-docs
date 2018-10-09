@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta charset="utf-8">
+	<noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+
+	<title>Corporate UI - Minimum Template</title>
+	<script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+
+	<script src="https://static.scania.com/vendors/frameworks/jQuery/2.2.2/jquery.min.js"></script>
+	<script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/master/js/corporate-ui.js"></script>
+
+</head>
+
+<body class="scania app">
+
+	<c-corporate-header site-name="My New Application" site-url="/corporate-ui-docs/">
+		<nav-item location="https://www.scania.com">Sample Link</nav-item>
+	</c-corporate-header>
+
+	<c-main-content>
+
+		<c-main-navigation>
+			<primary-items>
+				<nav-item location="https://www.scania.com/ux-library">Home</nav-item>
+				<nav-item location="https://scania.github.io/corporate-ui-docs/developer/" class="active">Web Applications
+					<sub-navigation caption="Templates">
+						<nav-item location="https://scania.github.io/corporate-ui-docs/template/basic-template-app.html" class="active">Application Template</nav-item>
+						<nav-item location="https://scania.github.io/corporate-ui-docs/template/basic-template.html">Public site Template</nav-item>
+						<nav-item location="https://scania.github.io/corporate-ui-docs/template/angular-basic-template.html">Angular Template</nav-item>
+						<nav-item location="https://scania.github.io/corporate-ui-docs/developer/extended-tables.html">Tables Demos</nav-item>			
+					</sub-navigation>
+				</nav-item>
+			</primary-items>
+		</c-main-navigation>
+
+		<section class="dark">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<header class="c-page-header">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="page-header">
+										<h3>Page Design</h3>
+										<h4>For Scania Applications</h4>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="btn-toolbar pull-right">
+										<button class="btn btn-default">Print</button>
+										<button class="btn btn-success">Save</button>                            
+										<div class="btn-group">
+											<button type="button" class="btn btn-primary">Create
+												<i class="icon-caret-down"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<ul class="nav nav-pills">
+										<li class="active"><a href="#">Nav pills navigation</a></li>
+										<li><a href="#">Is a way of navigating</a></li>
+										<li><a href="#">Within a page</a></li>
+										<li><a href="#">Badges fits well<span class="badge badge-danger">98</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</header>
+					</div>
+					<div class="col-md-6 margin-bottom">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">Using H3 in a  panel heading</h3>
+							</div>    
+							<div class="panel-body"> 
+								<h3>Using H3 in a panel body gives a different look</h3>
+								<h4>So do Header 4</h4>
+								<p>A paragraph in a application will be using Scania Sans Semi Condensed for increased readability without beeing to space consuming. These few options togheter forms the base of how the Scania app design is shaped, when using Bootstrap Panels.</p>
+							</div>
+						</div>
+						<div class="panel panel-default"> 
+							<div class="panel-body"> 
+								<c-highcharts type="spline" data="[[0,0],[1,7],[2,1],[3,6],[4,8],[5,6]]" title="Lowered fuel consumption during one week" x-label="Iterations" y-label="Awesomeness Index" height="400px"></c-highcharts>
+
+								<link rel="import" href="https://static.scania.com/build/global/2.5.0/html/component/Data%20Visualization/highcharts/highcharts.html">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="panel panel-default"> 
+							<div class="panel-body"> 
+								<h3>Removing the panel heading</h3>
+								<p>Removing the panel heading will give a just a white panel with increased margins.</p>
+								<h4>A table are smaller and more delicate when placed inside a panel</h4>
+								<div class="table-responsive">
+									<table class="table table-striped table-sm">
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Position</th>
+												<th>Office</th>
+												<th>Age</th>
+												<th>Start date</th>
+												<th>Salary</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-danger">Tiger Nixon</td>
+												<td class="text-danger">System Architect</td>
+												<td class="text-danger">Edinburgh</td>
+												<td class="text-danger">61</td>
+												<td class="text-danger">2011/04/25</td>
+												<td class="text-danger">$320,800</td>
+											</tr>
+											<tr>
+												<td class="text-warning">Garrett Winters</td>
+												<td class="text-warning">Accountant</td>
+												<td class="text-warning">Tokyo</td>
+												<td class="text-warning">63</td>
+												<td class="text-warning">2011/07/25</td>
+												<td class="text-warning">$170,750</td>
+											</tr>
+											<tr>
+												<td class="text-danger">Ashton Cox</td>
+												<td class="text-danger">Junior Technical Author</td>
+												<td class="text-danger">San Francisco</td>
+												<td class="text-danger">66</td>
+												<td class="text-danger">2009/01/12</td>
+												<td class="text-danger">$86,000</td>
+											</tr>
+											<tr>
+												<td class="text-danger">Cedric Kelly</td>
+												<td class="text-danger">Senior Javascript Developer</td>
+												<td class="text-danger">Edinburgh</td>
+												<td class="text-danger">22</td>
+												<td class="text-danger">2012/03/29</td>
+												<td class="text-danger">$433,060</td>
+											</tr>
+											<tr>
+												<td class="text-danger">Airi Satou</td>
+												<td class="text-danger">Accountant</td>
+												<td class="text-danger">Tokyo</td>
+												<td class="text-danger">33</td>
+												<td class="text-danger">2008/11/28</td>
+												<td class="text-danger">$162,700</td>
+											</tr>
+											<tr>
+												<td class="text-warning">Brielle Williamson</td>
+												<td class="text-warning">Integration Specialist</td>
+												<td class="text-warning">New York</td>
+												<td class="text-warning">61</td>
+												<td class="text-warning">2012/12/02</td>
+												<td class="text-warning">$372,000</td>
+											</tr>
+											<tr>
+												<td class="text-danger">Herrod Chandler</td>
+												<td class="text-danger">Sales Assistant</td>
+												<td class="text-danger">San Francisco</td>
+												<td class="text-danger">59</td>
+												<td class="text-danger">2012/08/06</td>
+												<td class="text-danger">$137,500</td>
+											</tr>
+											<tr>
+												<td class="text-danger">Rhona Davidson</td>
+												<td class="text-danger">Integration Specialist</td>
+												<td class="text-danger">Tokyo</td>
+												<td class="text-danger">55</td>
+												<td class="text-danger">2010/10/14</td>
+												<td class="text-danger">$327,900</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="nav nav-pills nav-stacked">
+							<li class="active"><a href="#">Nav pills stacked navigation</a></li>
+							<li><a href="#">Menu option 2</a></li>
+							<li><a href="#">Menu option 3</a></li>
+							<li><a href="#">Badges fits well<span class="badge badge-danger">98</span></a></li>
+						</ul>
+					</div>
+					<div class="col-md-9">
+						<div class="table-responsive">
+							<table class="table table-striped table-clickable table-panel">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Position</th>
+										<th>Office</th>
+										<th>Age</th>
+										<th>Start date</th>
+										<th>Salary</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Tiger Nixon</td>
+										<td>System Architect</td>
+										<td>Edinburgh</td>
+										<td>61</td>
+										<td>2011/04/25</td>
+										<td>$320,800</td>
+									</tr>
+									<tr>
+										<td class="text-warning">Garrett Winters</td>
+										<td class="text-warning">Accountant</td>
+										<td class="text-warning">Tokyo</td>
+										<td class="text-warning">63</td>
+										<td class="text-warning">2011/07/25</td>
+										<td class="text-warning">$170,750</td>
+									</tr>
+									<tr>
+										<td>Ashton Cox</td>
+										<td>Junior Technical Author</td>
+										<td>San Francisco</td>
+										<td>66</td>
+										<td>2009/01/12</td>
+										<td>$86,000</td>
+									</tr>
+									<tr>
+										<td>Cedric Kelly</td>
+										<td>Senior Javascript Developer</td>
+										<td>Edinburgh</td>
+										<td>22</td>
+										<td>2012/03/29</td>
+										<td>$433,060</td>
+									</tr>
+									<tr>
+										<td>Airi Satou</td>
+										<td>Accountant</td>
+										<td>Tokyo</td>
+										<td>33</td>
+										<td>2008/11/28</td>
+										<td>$162,700</td>
+									</tr>
+									<tr>
+										<td class="text-danger">Brielle Williamson</td>
+										<td class="text-danger">Integration Specialist</td>
+										<td class="text-danger">New York</td>
+										<td class="text-danger">61</td>
+										<td class="text-danger">2012/12/02</td>
+										<td class="text-danger">$372,000</td>
+									</tr>
+									<tr>
+										<td>Herrod Chandler</td>
+										<td>Sales Assistant</td>
+										<td>San Francisco</td>
+										<td>59</td>
+										<td>2012/08/06</td>
+										<td>$137,500</td>
+									</tr>
+									<tr>
+										<td>Rhona Davidson</td>
+										<td>Integration Specialist</td>
+										<td>Tokyo</td>
+										<td>55</td>
+										<td>2010/10/14</td>
+										<td>$327,900</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>	  	
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="light">
+			<div class="container-fluid">	
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<ul class="nav nav-tabs">
+									<li class="active"><a href="#">Standard Tabs</a></li>
+									<li><a href="#">Option 2</a></li>
+									<li><a href="#">Option 3</a></li>
+								</ul>
+								<ul class="nav nav-tabs nav-tabs-light">
+									<li><a href="#">Option 1</a></li>
+									<li class="active"><a href="#">Tabs Light</a></li>
+									<li><a href="#">Option 3</a></li>
+								</ul>
+								<p class="text-center">Tabs comes as standard and in a light version. They are also suitable to nest, as above.</p>
+							</div>
+						</div>
+						<div class="panel panel-primary panel-inverse">
+							<div class="panel-heading">
+								<h3 class="panel-title">Edit job</h3>
+								<span>Brödleverans, ICA Åtvidaberg</span>
+							</div>
+							<div class="panel-body">
+								<form id="form" action="" method="get">
+									<div class="row">
+										<div class="col-xs-12 col-md-5">
+											<div class="form-group">
+												<label class="control-label">Name of job
+												</label>
+												<input type="text" value="" class="form-control" placeholder="Brödleverans">
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-8">
+											<div class="form-group">
+												<label class="control-label">Equipment
+												</label>
+												<input type="text" value="" class="form-control" placeholder="Select or click in map" disabled="true">
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-5">
+											<div class="form-group">
+												<label class="control-label">Current driver</label>
+												<input type="text" value="" class="form-control" readonly="" placeholder="n/d">
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-12">
+											<div class="form-group">
+												<h4>Locations</h4>
+											</div>
+										</div>
+									</div>
+									<fieldset>
+										<div class="form-group col-xs-12 col-md-6">
+											<div class="form-group">
+												<label class="control-label">Location 1</label>
+												<input type="text" value="" class="form-control" placeholder="Start from current position of truck">
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-3">
+											<div class="form-group">
+												<label class="control-label interest-label">Time</label>
+												<input type="text" value="" class="form-control" placeholder="Start now">
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-3">
+											<div class="form-group">
+												<label class="control-label nowrap">Added time (min)*</label>
+												<input type="text" value="" class="form-control" placeholder="35">
+											</div>
+										</div>
+									</fieldset>
+									<fieldset>
+										<div class="col-xs-12 col-md-6">
+											<div class="form-group">
+												<label class="control-label">Location 2</label>
+												<input type="text" value="" class="form-control" placeholder="Search or click map">
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-3">
+											<div class="form-group">
+												<label class="control-label interest-label">Time</label>
+												<input type="text" value="" class="form-control" placeholder="Arriving">
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-3">
+											<div class="form-group">
+												<label class="control-label nowrap">Time in advance (min)*</label>
+												<input type="text" value="" class="form-control" placeholder="30">
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-9">
+											<div class="form-group">
+												<label class="control-label">Notify on arrival
+												</label>
+												<input type="text" value="" class="form-control" placeholder="">
+											</div>
+										</div>
+										<div class="fcol-xs-12 col-md-3">
+											<div class="form-group">
+												<label class="control-label nowrap">Time in advance (min)</label>
+												<input type="text" value="" class="form-control" placeholder="30">
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-9">
+											<div class="form-group">
+												<label class="control-label nowrap">Notify expected delays</label>
+												<input type="text" value="" class="form-control" placeholder="">
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-3">
+											<div class="form-group">
+												<label class="control-label nowrap">Longer than (min)</label>
+												<input type="text" value="" class="form-control" placeholder="60">
+											</div>
+										</div>
+									</fieldset>
+									<div class="col-md-6">
+										<div class="form-group">
+											<span>+ Add location</span>
+										</div>
+									</div>
+									<div class="col-md-6 text-right">
+										<div class="form-group">
+											<span>+ Added time for loading, unloading, break etc</span>
+										</div>
+									</div>
+									<div class="col-md-12 text-right">
+										<div class="form-group">
+											<button class="btn btn-success" type="reset">Save changes</button>
+											<button class="btn btn-default" type="submit">Cancel</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</section>
+	</c-main-content>
+	<c-corporate-footer></c-corporate-footer>
+</body>
+</html>
+
