@@ -133,8 +133,8 @@ body.CRStest {background:red !important}
 
 html {opacity:1;}
 
-a[href="/corporate-ui-docs/template/"],
-a[href="/corporate-ui-docs/component/"] { 
+a[href="/corporate-ui-docs/master-branch/template/"],
+a[href="/corporate-ui-docs/master-branch/component/"] { 
   display: none;
 }
 
