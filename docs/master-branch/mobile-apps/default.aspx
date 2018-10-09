@@ -13,7 +13,7 @@
 
 
 </head>
-<body unresolved class="scania">  
+<body class="scania ux-lib" data-env="Test">  
   <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/master-branch/">
     <nav-item location="/corporate-ui-docs/master-branch/developer/support.html">Support</nav-item>
     <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
