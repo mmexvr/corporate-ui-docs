@@ -17,6 +17,17 @@
   <script src="https://static.scania.com/vendors/components/jQuery/table-sorter/2.30.3/js/jquery.tablesorter.combined.js"></script>
   <link rel="stylesheet" href="https://static.scania.com/vendors/components/jQuery/table-sorter/2.30.3/css/theme.bootstrap.css" />
 
+<style>
+  .thead-light th {
+    color: #b7b7b7;
+    background-color: #fff;
+    border-top: none !important;
+    border-right: none;
+    border-bottom: 1px solid #d0cece;
+    border-left: none;    
+  } 
+</style>
+  
   <script type="text/javascript">
     $(function() {
       $('.tablesorter').tablesorter({
@@ -195,6 +206,20 @@
                             <input type="text" class="form-control" readonly placeholder="Text input">
                         </td>
                       </tr>
+                       <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>
+                          <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </td>
+                      </tr>                      
                     </tbody>
                 </table>
               </div>
@@ -211,13 +236,17 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>
-                            <input type="text" class="form-control" readonly placeholder="Text input">
-                        </td>
+                       <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                       <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
                       </tr>
                       <tr>
                         <td>2</td>
@@ -225,13 +254,17 @@
                         <td>Thornton</td>
                         <td>@fat</td>
                       </tr>
-                      <tr>
+                       <tr>
                         <td>3</td>
                         <td>Larry</td>
                         <td>the Bird</td>
-                        <td>
-                            <input type="text" class="form-control" disabled="disabled" placeholder="Text input">
-                        </td>
+                        <td>@twitter</td>
+                      </tr>
+                       <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
                       </tr>
                        <tr>
                         <td>3</td>
@@ -249,9 +282,13 @@
                         <td>3</td>
                         <td>Larry</td>
                         <td>the Bird</td>
-                        <td>
-                          <input type="text" class="form-control has-error" id="inputError">             
-                        </td>
+                        <td>@twitter</td>
+                      </tr>
+                       <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
                       </tr>
                        <tr>
                         <td>3</td>
