@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8">
+  <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+
+  <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
+
+  <title>UX Library - Bootstrap CSS for Applications</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
+  <script src="https://static.scania.com/build/global/2.5.0/js/corporate-ui.js"></script>
+  <link rel="stylesheet" href="css/scania-bootstrap-docs.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
+  <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
+
+  <link rel="import" href="/corporate-ui-docs/developer/c-bootstrap-original-docs.html">
+
+  <style>
+ /*   c-main-navigation nav-item a:before, nav-itemc-main-navigation a:before, c-main-navigation nav-item a:after, nav-itemc-main-navigation a:after {
+        padding: 0 5px;
+      }*/
+  </style>
+</head>
+
+<body class="scania app" id="top">
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </c-corporate-header>
+
+  <c-main-content>
+
+    <c-main-navigation show-search>
+      <primary-items>
+        <nav-item location="/corporate-ui-docs/">Home</nav-item>
+        <nav-item location="/corporate-ui-docs/styleguide/">Style Guide</nav-item>            
+        <nav-item location="/corporate-ui-docs/developer/scania-bootstrap.html" class="active">Web Applications
+          <sub-navigation caption="Scania Bootstrap">
+            <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html" class="active">Bootstrap Documentation</nav-item>
+            <nav-item location="/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html">HTML Copy Paste</nav-item>
+          </sub-navigation>  
+        </nav-item>
+        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
+        <nav-item location="https://github.com/scania/corporate-ui/issues">Report an Issue</nav-item>
+        <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+        <nav-item location="https://github.com/scania/corporate-ui/issues">Another Item</nav-item>
+        <nav-item location="/corporate-ui-docs/developer/support.html">Keep on adding another item</nav-item>
+        <nav-item location="https://github.com/scania/corporate-ui/issues">There could be many</nav-item>
+        <nav-item location="/corporate-ui-docs/developer/support.html">As we know at Scania</nav-item>
+        <nav-item location="https://www.google.com">Linking to Google as well</nav-item>              
+      </primary-items>
+    </c-main-navigation>
+
+    <section class="light">
+      <div class="container-fluid">
+        <article>
+          <section class="light">
+
+            <a href="bootstrap-original-docs-new.html#css-overview">Bootstrap CSS</a><br/>
+            <a href="bootstrap-original-docs-new.html#overview-doctype">HTML5 doctype</a><br/>
+            <a href="bootstrap-original-docs-new.html#overview-mobile">Mobile first</a><br/>
+            <a href="bootstrap-original-docs-new.html#overview-responsive-images">Responsive images</a><br/>
+            <a href="bootstrap-original-docs-new.html#overview-type-links">Typography and links</a><br/>
+            <a href="bootstrap-original-docs-new.html#overview-normalize">Normalize</a><br/>
+            <a href="bootstrap-original-docs-new.html#overview-container">Containers</a><br/>
+            <a href="bootstrap-original-docs-new.html#grid">Grid system</a><br/>
+            <a href="bootstrap-original-docs-new.html#grid-media-queries">Media queries</a><br/>
+            <a href="bootstrap-original-docs-new.html#grid-options">Grid options</a><br/>
+            <a href="bootstrap-original-docs-new.html#grid-example-basic">Example: Stacked-to-horizontal</a><br/>
+            <a href="bootstrap-original-docs-new.html#grid-example-mixed">Example: Mobile and desktop</a><br/>
+            <a href="bootstrap-original-docs-new.html#grid-example-mixed-complete">Example: Mobile, tablet, desktops</a><br/>
+            <a href="bootstrap-original-docs-new.html#grid-responsive-resets">Responsive column resets</a><br/>
+            <a href="bootstrap-original-docs-new.html#grid-offsetting">Offsetting columns</a><br/>
+            <a href="bootstrap-original-docs-new.html#grid-nesting">Nesting columns</a><br/>
+            <a href="bootstrap-original-docs-new.html#grid-column-ordering">Column ordering</a><br/>
+            <a href="bootstrap-original-docs-new.html#grid-less">LESS mixins and variables</a><br/>
+            <a href="bootstrap-original-docs-new.html#type">Typography</a><br/>
+            <a href="bootstrap-original-docs-new.html#type-body-copy">Body copy</a><br/>
+            <a href="bootstrap-original-docs-new.html#type-emphasis">Emphasis</a><br/>
+            <a href="bootstrap-original-docs-new.html#type-abbreviations">Abbreviations</a><br/>
+            <a href="bootstrap-original-docs-new.html#type-addresses">Addresses</a><br/>
+            <a href="bootstrap-original-docs-new.html#type-blockquotes">Blockquotes</a><br/>
+            <a href="bootstrap-original-docs-new.html#type-lists">Lists</a><br/>
+            <a href="bootstrap-original-docs-new.html#code">Code</a><br/>
+            <a href="bootstrap-original-docs-new.html#tables">Tables</a><br/>
+            <a href="bootstrap-original-docs-new.html#tables-example">Basic example</a><br/>
+            <a href="bootstrap-original-docs-new.html#tables-striped">Striped rows</a><br/>
+            <a href="bootstrap-original-docs-new.html#tables-bordered">Bordered table</a><br/>
+            <a href="bootstrap-original-docs-new.html#tables-hover-rows">Hover rows</a><br/>
+            <a href="bootstrap-original-docs-new.html#tables-condensed">Condensed table</a><br/>
+            <a href="bootstrap-original-docs-new.html#tables-contextual-classes">Contextual classes</a><br/>
+            <a href="bootstrap-original-docs-new.html#tables-responsive">Responsive tables</a><br/>
+            <a href="bootstrap-original-docs-new.html#forms">Forms</a><br/>
+            <a href="bootstrap-original-docs-new.html#forms-example">Basic example</a><br/>
+            <a href="bootstrap-original-docs-new.html#forms-inline">Inline form</a><br/>
+            <a href="bootstrap-original-docs-new.html#forms-horizontal">Horizontal form</a><br/>
+            <a href="bootstrap-original-docs-new.html#forms-controls">Supported controls</a><br/>
+            <a href="bootstrap-original-docs-new.html#forms-controls-static">Static control</a><br/>
+            <a href="bootstrap-original-docs-new.html#forms-control-states">Form states</a><br/>
+            <a href="bootstrap-original-docs-new.html#forms-input-focus">Input focus</a><br/>
+            <a href="bootstrap-original-docs-new.html#forms-disabled-inputs">Disabled inputs</a><br/>
+            <a href="bootstrap-original-docs-new.html#forms-disabled-fieldsets">Disabled fieldsets</a><br/>
+            <a href="bootstrap-original-docs-new.html#forms-validation">Validation states</a><br/>
+            <a href="bootstrap-original-docs-new.html#forms-control-sizes">Control sizing</a><br/>
+            <a href="bootstrap-original-docs-new.html#forms-help-text">Help text</a><br/>
+            <a href="bootstrap-original-docs-new.html#buttons">Buttons</a><br/>
+            <a href="bootstrap-original-docs-new.html#buttons-options">Options</a><br/>
+            <a href="bootstrap-original-docs-new.html#buttons-sizes">Sizes</a><br/>
+            <a href="bootstrap-original-docs-new.html#buttons-disabled">Disabled state</a><br/>
+            <a href="bootstrap-original-docs-new.html#buttons-tags">Button tags</a><br/>
+            <a href="bootstrap-original-docs-new.html#images">Images</a><br/>
+            <a href="bootstrap-original-docs-new.html#helper-classes">Helper classes</a><br/>
+            <a href="bootstrap-original-docs-new.html#responsive-utilities">Responsive utilities</a><br/>
+            <a href="bootstrap-original-docs-new.html#responsive-utilities-classes">Available classes</a><br/>
+            <a href="bootstrap-original-docs-new.html#responsive-utilities-print">Print classes</a><br/>
+            <a href="bootstrap-original-docs-new.html#responsive-utilities-tests">Test cases</a><br/>
+            <a href="bootstrap-original-docs-new.html#components-overview">Bootstrap Components</a><br/>
+            <a href="bootstrap-original-docs-new.html#dropdowns">Dropdowns</a><br/>
+            <a href="bootstrap-original-docs-new.html#dropdowns-example">Dropdowns Example</a><br/>
+            <a href="bootstrap-original-docs-new.html#dropdowns-alignment">Aligninment options</a><br/>
+            <a href="bootstrap-original-docs-new.html#dropdowns-headers">Headers</a><br/>
+            <a href="bootstrap-original-docs-new.html#dropdowns-disabled">Disabled menu items</a><br/>
+            <a href="bootstrap-original-docs-new.html#btn-groups">Button groups</a><br/>
+            <a href="bootstrap-original-docs-new.html#btn-groups-single">Basic example</a><br/>
+            <a href="bootstrap-original-docs-new.html#btn-groups-toolbar">Button toolbar</a><br/>
+            <a href="bootstrap-original-docs-new.html#btn-groups-sizing">Sizing</a><br/>
+            <a href="bootstrap-original-docs-new.html#btn-groups-nested">Nesting</a><br/>
+            <a href="bootstrap-original-docs-new.html#btn-groups-vertical">Vertical variation</a><br/>
+            <a href="bootstrap-original-docs-new.html#btn-groups-justified">Justified link variation</a><br/>
+            <a href="bootstrap-original-docs-new.html#btn-dropdowns">Button dropdowns</a><br/>
+            <a href="bootstrap-original-docs-new.html#btn-dropdowns-single">Single button dropdowns</a><br/>
+            <a href="bootstrap-original-docs-new.html#btn-dropdowns-split">Split button dropdowns</a><br/>
+            <a href="bootstrap-original-docs-new.html#btn-dropdowns-sizing">Sizing</a><br/>
+            <a href="bootstrap-original-docs-new.html#btn-dropdowns-dropup">Dropup variation</a><br/>
+            <a href="bootstrap-original-docs-new.html#input-groups">Input groups</a><br/>
+            <a href="bootstrap-original-docs-new.html#input-groups-basic">Basic example</a><br/>
+            <a href="bootstrap-original-docs-new.html#input-groups-sizing">Sizing</a><br/>
+            <a href="bootstrap-original-docs-new.html#input-groups-checkboxes-radios">Checkboxes and radio addons</a><br/>
+            <a href="bootstrap-original-docs-new.html#input-groups-buttons">Button addons</a><br/>
+
+            <a class="back-to-top" href="#top">
+              Back to top
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container portal-footer"></div> <!-- FOOTER -->
+
+<script src="/corporate-ui-docs/ux-lib.js"></script> 
+<script src="//static.scania.com/cds/cds-site/js/bs-docs.js"></script>    
+</div>
+</section>  
+<style>
+/*
+body.app c-main-content > section, c-main-content.app > section, .light > section, section:nth-child(odd).light {
+    background-color: #fff;
+}*/
+
+table {word-break: normal}
+
+.public .page-header h1, .public .page-header h2, .public .page-header h3 {
+    text-align: center;
+}
+.public .page-header h1 {
+    font-size: 9rem;
+    line-height: 0.98;
+}
+
+span.photo-background {
+    background-image: url(https://scania.github.io/corporate-ui-docs/images/background-sample.jpg);
+    display: inline-block;
+    background-position: 40% 40%;
+    margin-left: 9px;
+    background-origin: inherit;
+    background-size: cover;
+}
+
+</style>
+
+</body>
+</html>
