@@ -20,142 +20,27 @@
   <script src="holder.js"></script>
   <script>
 
-       setTimeout(function(){  
 
-          $(".bootstrap-css-section").appendTo("#all-sections .sec4");
-          $(".bootstrap-components-section").appendTo("#all-sections .sec4");          
-          $(".bootstrap-javascript-section").appendTo("#all-sections .sec4"); 
-
-          $("#all-sections .bs-docs-sidebar-01").appendTo("#all-sections .sec1");
-          $("#all-sections .bs-docs-sidebar-02").appendTo("#all-sections .sec2");          
-          $("#all-sections .bs-docs-sidebar-03").appendTo("#all-sections .sec3");
-
-          $(".nav.bs-docs-sidenav > li:first-child").remove();
-          $(".sec1 ul li a,.sec2 ul li a,.sec3 ul li a").css('font-size','18px');
-          $("#all-sections .affix").css('position','relative');
-          // $("#all-sections .affix").css('top','0');          
-          $("#all-sections .back-to-top").insertAfter("c-main-navigation");
-          $(".back-to-top").prepend("<i class='icon-chevron-sign-up'></i>")
-          $(".back-to-top:nth-child(2),.back-to-top:nth-child(3)").remove();
-          $("#all-sections .fade").css('opacity','1');
-          
-        }, 700);
 
   </script> 
 
   <style>
 
 
-  #all-sections .bs-docs-sidebar.affix {
-    position: relative !important;
-    top: 0 !important;
+  .highlight {
+    display: none;
   }
-
-   .back-to-top {
-      color: #67a3ba;
-      position: sticky;
-      top: 90px;
-      display: inline-block;
-      z-index: 2000;
-      top: 200px;
-      font-size: 16px;
-      float: right;
-      font-weight: bold;
-      margin-right: 150px;
-  }
-
-  .back-to-top:hover {
-      text-decoration: none;
-      color: #67a3ba;
-  }
-
-  .back-to-top i {
-      font-size: 45px;
-      display: block;
-      text-align: center;
-  }
-
-
-  @media screen and (max-width: 991px) {
-      .back-to-top {
-          display: none;
-      }
-
-  }
-
 
   </style>
 
 </head>
 
-<body class="scania app" id="top">
-  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
-    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
-    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
-  </c-corporate-header>
+<body class="scania app">
 
-  <c-main-content>
-
-    <c-main-navigation show-search>
-      <primary-items>
-        <nav-item location="/corporate-ui-docs/">Home</nav-item>
-        <nav-item location="/corporate-ui-docs/styleguide/">Style Guide
-          <sub-navigation caption="Style Guide">
-            <nav-item location="/corporate-ui-docs/logotype/">Logotype</nav-item>
-            <nav-item location="/corporate-ui-docs/icons/">Icons</nav-item>
-            <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
-            <nav-item location="/corporate-ui-docs/typography/">Typography</nav-item>
-          </sub-navigation>
-        </nav-item>            
-        <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
-          <sub-navigation caption="Scania Bootstrap">
-            <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html" class="active">Bootstrap Documentation</nav-item>
-            <nav-item location="/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html">HTML Copy Paste</nav-item>
-          </sub-navigation>  
-        </nav-item>
-        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
-        <nav-item location="https://github.com/scania/corporate-ui/issues">Report an Issue</nav-item>
-        <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
-      </primary-items>
-    </c-main-navigation>
 
     <section class="light">
       <div class="container-fluid">
-<!-- 
-      <ul class="nav nav-tabs container">
-        <li class="active"><a data-toggle="tab" href="#all-sections">All<span class="hidden-xs"> Elements</span></a></li>
-        <li><a data-toggle="tab" href=".bootstrap-css-section"><span class="hidden-xs">Bootstrap </span>CSS</a></li>
-        <li><a data-toggle="tab" href=".bootstrap-components-section"><span class="hidden-xs">Bootstrap </span>Components</a></li>
-        <li><a data-toggle="tab" href=".bootstrap-javascript-section"><span class="hidden-xs">Bootstrap </span>Javascript</a></li>      
-      </ul> -->
-      <div class="page-header">
-        <h1>All Elements & CSS</h1>
-      </div>
 
-      <ul class="nav nav-tabs nav-tabs-light container">
-        <li class="active app-styling"><a href="#">Application Styling</a></li>
-        <li class="public-styling"><a href="#">Public Site Styling</a></li>   
-      </ul>    
-
-
-
-      <div class="tab-content app zone">
-
-        <div id="all-sections" class="tab-pane fade in active">
-          <div class="row">
-            <div class="col-md-4 sec1"></div>
-            <div class="col-md-4 sec2"></div>
-            <div class="col-md-4 sec3"></div>
-          </div>  
-          <div class="row">            
-            <div class="col-md-9 sec4"></div>
-            <div class="col-md-3 sec5"></div>
-          </div>  
-        </div>
-
-        <!-- CSS TAB CONTENT STARTS HERE -->
-
-        <div class="bootstrap-css-section tab-pane fade">
          <div class="bs-docs-section panel-x">
           <div class="panel-body-x">
             <div class="row">
@@ -2545,140 +2430,9 @@
                   </div>
                 </div>
               </div>
-
-              <div class="col-md-3">
-                <div class="bs-docs-sidebar bs-docs-sidebar-01 hidden-xs hidden-sm hidden-print" role="complementary"  data-spy="affix" data-offset-top="150">
-                  <ul class="nav bs-docs-sidenav">
-
-                    <li>
-                      <a href="#top">Overview</a>
-                      <ul class="nav">
-                        <li><a href="#overview-doctype">HTML5 doctype</a></li>
-                        <li><a href="#overview-mobile">Mobile first</a></li>
-                        <li><a href="#overview-type-links">Typography and links</a></li>
-                        <li><a href="#overview-normalize">Normalize.css</a></li>
-                        <li><a href="#overview-container">Containers</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#grid">Grid system</a>
-                      <ul class="nav">
-                        <li><a href="#grid-intro">Introduction</a></li>
-                        <li><a href="#grid-media-queries">Media queries</a></li>
-                        <li><a href="#grid-options">Grid options</a></li>
-                        <li><a href="#grid-example-basic">Ex: Stacked-to-horizontal</a></li>
-                        <li><a href="#grid-example-fluid">Ex: Fluid container</a></li>
-                        <li><a href="#grid-example-mixed">Ex: Mobile and desktops</a></li>
-                        <li><a href="#grid-example-mixed-complete">Ex: Mobile, tablet, desktops</a></li>
-                        <li><a href="#grid-responsive-resets">Responsive column resets</a></li>
-                        <li><a href="#grid-offsetting">Offsetting columns</a></li>
-                        <li><a href="#grid-nesting">Nesting columns</a></li>
-                        <li><a href="#grid-column-ordering">Column ordering</a></li>
-                        <li><a href="#grid-less">Less mixins and variables</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#type">Typography</a>
-                      <ul class="nav">
-                        <li><a href="#type-headings">Headings</a></li>
-                        <li><a href="#type-body-copy">Body copy</a></li>
-                        <li><a href="#type-emphasis">Emphasis</a></li>
-                        <li><a href="#type-abbreviations">Abbreviations</a></li>
-                        <li><a href="#type-addresses">Addresses</a></li>
-                        <li><a href="#type-blockquotes">Blockquotes</a></li>
-                        <li><a href="#type-lists">Lists</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#code">Code</a>
-                      <ul class="nav">
-                        <li><a href="#code-inline">Inline code</a></li>
-                        <li><a href="#code-user-input">User input</a></li>
-                        <li><a href="#code-block">Blocks of code</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#tables">Tables</a>
-                      <ul class="nav">
-                        <li><a href="#tables-example">Basic example</a></li>
-                        <li><a href="#tables-striped">Striped rows</a></li>
-                        <li><a href="#tables-bordered">Bordered table</a></li>
-                        <li><a href="#tables-hover-rows">Hover rows</a></li>
-                        <li><a href="#tables-condensed">Condensed table</a></li>
-                        <li><a href="#tables-contextual-classes">Contextual classes</a></li>
-                        <li><a href="#tables-responsive">Responsive tables</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#forms">Forms</a>
-                      <ul class="nav">
-                        <li><a href="#forms-example">Basic example</a></li>
-                        <li><a href="#forms-inline">Inline form</a></li>
-                        <li><a href="#forms-horizontal">Horizontal form</a></li>
-                        <li><a href="#forms-controls">Supported controls</a></li>
-                        <li><a href="#forms-controls-static">Static control</a></li>
-                        <li><a href="#forms-control-focus">Focus state</a></li>
-                        <li><a href="#forms-control-disabled">Disabled state</a></li>
-                        <li><a href="#forms-control-validation">Validation states</a></li>
-                        <li><a href="#forms-control-sizes">Control sizing</a></li>
-                        <li><a href="#forms-help-text">Help text</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#buttons">Buttons</a>
-                      <ul class="nav">
-                        <li><a href="#buttons-options">Options</a></li>
-                        <li><a href="#buttons-sizes">Sizes</a></li>
-                        <li><a href="#buttons-active">Active state</a></li>
-                        <li><a href="#buttons-disabled">Disabled state</a></li>
-                        <li><a href="#buttons-tags">Button tags</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#images">Images</a>
-                      <ul class="nav">
-                        <li><a href="#images-responsive">Responsive images</a></li>
-                        <li><a href="#images-shapes">Image shapes</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#helper-classes">Helper classes</a>
-                      <ul class="nav">
-                        <li><a href="#helper-classes-colors">Contextual colors</a></li>
-                        <li><a href="#helper-classes-backgrounds">Contextual backgrounds</a></li>
-                        <li><a href="#helper-classes-close">Close icon</a></li>
-                        <li><a href="#helper-classes-carets">Carets</a></li>
-                        <li><a href="#helper-classes-floats">Quick floats</a></li>
-                        <li><a href="#helper-classes-center">Center content blocks</a></li>
-                        <li><a href="#helper-classes-clearfix">Clearfix</a></li>
-                        <li><a href="#helper-classes-show-hide">Showing and hiding content</a></li>
-                        <li><a href="#helper-classes-screen-readers">Screen reader content</a></li>
-                        <li><a href="#helper-classes-image-replacement">Image replacement</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#responsive-utilities">Responsive utilities</a>
-                      <ul class="nav">
-                        <li><a href="#responsive-utilities-classes">Available classes</a></li>
-                        <li><a href="#responsive-utilities-print">Print classes</a></li>
-                        <li><a href="#responsive-utilities-tests">Test cases</a></li>
-                      </ul>
-                    </li>
-
-                  </ul>
-                  <a class="back-to-top" href="#top">
-                    Back to top
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- COMPONENTS TAB CONTENT STARTS HERE -->
-
-      <div class="bootstrap-components-section tab-pane fade">
        <div class="panel-x">
         <div class="panel-body-x">
           <div class="row">
@@ -5393,159 +5147,9 @@
                 </code></pre></div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="bs-docs-sidebar bs-docs-sidebar-02 hidden-xs hidden-sm hidden-print" role="complementary" data-spy="affix" data-offset-top="150">
-                <ul class="nav bs-docs-sidenav">
-
-                  <li>
-                    <a href="#top">Overview</a>
-                    <a href="#dropdowns">Dropdowns</a>
-                    <ul class="nav">
-                      <li><a href="#dropdowns-example">Example</a></li>
-                      <li><a href="#dropdowns-alignment">Alignment options</a></li>
-                      <li><a href="#dropdowns-headers">Headers</a></li>
-                      <li><a href="#dropdowns-disabled">Disabled menu items</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#btn-groups">Button groups</a>
-                    <ul class="nav">
-                      <li><a href="#btn-groups-single">Basic example</a></li>
-                      <li><a href="#btn-groups-toolbar">Button toolbar</a></li>
-                      <li><a href="#btn-groups-sizing">Sizing</a></li>
-                      <li><a href="#btn-groups-nested">Nesting</a></li>
-                      <li><a href="#btn-groups-vertical">Vertical variation</a></li>
-                      <li><a href="#btn-groups-justified">Justified link variation</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#btn-dropdowns">Button dropdowns</a>
-                    <ul class="nav">
-                      <li><a href="#btn-dropdowns-single">Single button dropdowns</a></li>
-                      <li><a href="#btn-dropdowns-split">Split button dropdowns</a></li>
-                      <li><a href="#btn-dropdowns-sizing">Sizing</a></li>
-                      <li><a href="#btn-dropdowns-dropup">Dropup variation</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#input-groups">Input groups</a>
-                    <ul class="nav">
-                      <li><a href="#input-groups-basic">Basic example</a></li>
-                      <li><a href="#input-groups-sizing">Sizing</a></li>
-                      <li><a href="#input-groups-checkboxes-radios">Checkbox and radios addons</a></li>
-                      <li><a href="#input-groups-buttons">Button addons</a></li>
-                      <li><a href="#input-groups-buttons-dropdowns">Buttons with dropdowns</a></li>
-                      <li><a href="#input-groups-buttons-segmented">Segmented buttons</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#nav">Navs</a>
-                    <ul class="nav">
-                      <li><a href="#nav-tabs">Tabs</a></li>
-                      <li><a href="#nav-pills">Pills</a></li>
-                      <li><a href="#nav-justified">Justified nav</a></li>
-                      <li><a href="#nav-disabled-links">Disabled links</a></li>
-                      <li><a href="#nav-dropdowns">Using dropdowns</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#navbar">Navbar</a>
-                    <ul class="nav">
-                      <li><a href="#navbar-default">Default navbar</a></li>
-                      <li><a href="#navbar-forms">Forms</a></li>
-                      <li><a href="#navbar-buttons">Buttons</a></li>
-                      <li><a href="#navbar-text">Text</a></li>
-                      <li><a href="#navbar-links">Non-nav links</a></li>
-                      <li><a href="#navbar-component-alignment">Component alignment</a></li>
-                      <li><a href="#navbar-fixed-top">Fixed to top</a></li>
-                      <li><a href="#navbar-fixed-bottom">Fixed to bottom</a></li>
-                      <li><a href="#navbar-static-top">Static top</a></li>
-                      <li><a href="#navbar-inverted">Inverted navbar</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#breadcrumbs">Breadcrumbs</a></li>
-                  <li>
-                    <a href="#pagination">Pagination</a>
-                    <ul class="nav">
-                      <li><a href="#pagination-default">Default pagination</a></li>
-                      <li><a href="#pagination-pager">Pager</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#labels">Labels</a></li>
-                  <li><a href="#badges">Badges</a></li>
-                  <li><a href="#jumbotron">Jumbotron</a></li>
-                  <li><a href="#page-header">Page header</a></li>
-                  <li>
-                    <a href="#thumbnails">Thumbnails</a>
-                    <ul class="nav">
-                      <li><a href="#thumbnails-default">Default example</a></li>
-                      <li><a href="#thumbnails-custom-content">Custom content</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#alerts">Alerts</a>
-                    <ul class="nav">
-                      <li><a href="#alerts-examples">Examples</a></li>
-                      <li><a href="#alerts-dismissable">Dismissable alerts</a></li>
-                      <li><a href="#alerts-links">Links in alerts</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#progress">Progress bars</a>
-                    <ul class="nav">
-                      <li><a href="#progress-basic">Basic example</a></li>
-                      <li><a href="#progress-label">With label</a></li>
-                      <li><a href="#progress-alternatives">Contextual alternatives</a></li>
-                      <li><a href="#progress-striped">Striped</a></li>
-                      <li><a href="#progress-animated">Animated</a></li>
-                      <li><a href="#progress-stacked">Stacked</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#media">Media object</a>
-                    <ul class="nav">
-                      <li><a href="#media-default">Default media</a></li>
-                      <li><a href="#media-list">Media list</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#list-group">List group</a>
-                    <ul class="nav">
-                      <li><a href="#list-group-basic">Basic example</a></li>
-                      <li><a href="#list-group-badges">Badges</a></li>
-                      <li><a href="#list-group-linked">Linked items</a></li>
-                      <li><a href="#list-group-contextual-classes">Contextual classes</a></li>
-                      <li><a href="#list-group-custom-content">Custom content</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#panels">Panels</a>
-                    <ul class="nav">
-                      <li><a href="#panels-basic">Basic example</a></li>
-                      <li><a href="#panels-heading">Panel with heading</a></li>
-                      <li><a href="#panels-alternatives">Contextual alternatives</a></li>
-                      <li><a href="#panels-tables">With tables</a>
-                      </li><li><a href="#panels-list-group">With list groups</a>
-                      </li></ul>
-                    </li>
-                    <li><a href="#wells">Wells</a></li>
-
-
-                  </ul>
-                  <a class="back-to-top" href="#top">
-                    Back to top
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-      </div>
 
-
-      <!-- JAVASCRIPT TAB CONTENT STARTS HERE -->
-
-      <div class="bootstrap-javascript-section tab-pane fade">
        <div class="panel-x">
         <div class="panel-body-x">
           <div class="row">
@@ -7426,136 +7030,10 @@
 
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="bs-docs-sidebar bs-docs-sidebar-03 hidden-xs hidden-sm hidden-print" role="complementary" data-spy="affix" data-offset-top="150">
-            <ul class="nav bs-docs-sidenav">
-
-              <li>
-                <a href="#top">Overview</a>
-                <ul class="nav">
-                  <li><a href="#js-individual-compiled">Individual or compiled</a></li>
-                  <li><a href="#js-data-attrs">Data attributes</a></li>
-                  <li><a href="#js-programmatic-api">Programmatic API</a></li>
-                  <li><a href="#js-noconflict">No conflict</a></li>
-                  <li><a href="#js-events">Events</a></li>
-                </ul>
-              </li>
-              <li><a href="#transitions">Transitions</a></li>
-              <li>
-                <a href="#modals">Modal</a>
-                <ul class="nav">
-                  <li><a href="#modals-examples">Examples</a></li>
-                  <li><a href="#modals-sizes">Sizes</a></li>
-                  <li><a href="#modals-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#js-dropdowns">Dropdown</a>
-                <ul class="nav">
-                  <li><a href="#js-dropdowns-examples">Examples</a></li>
-                  <li><a href="#js-dropdowns-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#scrollspy">Scrollspy</a>
-                <ul class="nav">
-                  <li><a href="#scrollspy-examples">Examples</a></li>
-                  <li><a href="#scrollspy-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#tabs">Tab</a>
-                <ul class="nav">
-                  <li><a href="#tabs-examples">Examples</a></li>
-                  <li><a href="#tabs-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#tooltips">Tooltip</a>
-                <ul class="nav">
-                  <li><a href="#tooltips-examples">Examples</a></li>
-                  <li><a href="#tooltips-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#popovers">Popover</a>
-                <ul class="nav">
-                  <li><a href="#popovers-examples">Examples</a></li>
-                  <li><a href="#popovers-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#js-alerts">Alert</a>
-                <ul class="nav">
-                  <li><a href="#alerts-examples">Examples</a></li>
-                  <li><a href="#alerts-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#js-buttons">Button</a>
-                <ul class="nav">
-                  <li><a href="#js-buttons-examples">Examples</a></li>
-                  <li><a href="#js-buttons-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#collapse">Collapse</a>
-                <ul class="nav">
-                  <li><a href="#collapse-examples">Examples</a></li>
-                  <li><a href="#collapse-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#affix">Affix</a>
-                <ul class="nav">
-                  <li><a href="#affix-examples">Examples</a></li>
-                  <li><a href="#affix-usage">Usage</a></li>
-                </ul>
-              </li>
-            </ul>
-            <a class="back-to-top" href="#top">
-              Back to top
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </div>
-
-
-<div class="container portal-footer"></div> <!-- FOOTER -->
-
-<script src="/corporate-ui-docs/ux-lib.js"></script> 
-<script src="//static.scania.com/cds/cds-site/js/bs-docs.js"></script>    
-</div>
 </section>  
-<style>
-/*
-body.app c-main-content > section, c-main-content.app > section, .light > section, section:nth-child(odd).light {
-    background-color: #fff;
-}*/
-
-table {word-break: normal}
-
-.public .page-header h1, .public .page-header h2, .public .page-header h3 {
-    text-align: center;
-}
-.public .page-header h1 {
-    font-size: 9rem;
-    line-height: 0.98;
-}
-
-span.photo-background {
-    background-image: url(https://scania.github.io/corporate-ui-docs/images/background-sample.jpg);
-    display: inline-block;
-    background-position: 40% 40%;
-    margin-left: 9px;
-    background-origin: inherit;
-    background-size: cover;
-}
-
-</style>
-
 </body>
 </html>
