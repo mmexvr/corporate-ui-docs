@@ -26,6 +26,20 @@
     border-bottom: 1px solid #d0cece;
     border-left: none;    
   } 
+
+  .form-control[readonly]:focus {
+        background-color: #f0f0f0;
+    border: 1px solid #e2e2e2;        
+  }
+
+.table.table-lg .form-control {
+    padding: 5px 14px;
+    font-size: 14px;
+    border-radius: 3px;
+    border-radius: 0;
+    height: 42px;
+    margin: 0;
+}  
 </style>
 
   <script type="text/javascript">
@@ -101,7 +115,7 @@
             <div class="row">
               <!-- Table -->
               <div class="col-md-4 col-sm-6">
-                <h2>.table</h2>
+                <h2>.table (with thead.thead-light)</h2>
                 <table class="table table-condensed table-striped">
                     <thead class="thead-light">
                       <tr>
