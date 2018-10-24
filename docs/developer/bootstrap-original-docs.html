@@ -5669,8 +5669,12 @@
                 <h2 id="modals-sizes">Optional sizes</h2>
                 <p>Modals have two optional sizes, available via modifier classes to be placed on a <code>.modal-dialog</code>.</p>
                 <div class="bs-example">
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>                  
                   <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-xl">XL modal</button>
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-xxl">XXL modal</button>
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-fullscreen">Fullscreen modal</button>
+
                 </div>
                 <div class="highlight"><pre><code class="html">
 <span class="c">&lt;!-- Large modal --&gt;</span>
@@ -5697,6 +5701,84 @@
                 </code></pre></div>
 
                 <!--  Modal content for the above example -->
+
+                <div class="modal fade bs-example-modal-scroll" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+                      </div>
+                      <div class="modal-body">
+    ...
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+
+                <div class="modal fade bs-example-modal-xl modal-xl" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+                      </div>
+                      <div class="modal-body scroll-y">
+    ...
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="modal fade bs-example-modal-fullscreen  modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+                      </div>
+                      <div class="modal-body">
+    ...
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+
+                <div class="modal fade bs-example-modal-xxl modal-xxl" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xxl">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+                      </div>
+                      <div class="modal-body">
+    ...
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="modal fade bs-example-modal-xl modal-xl" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+                      </div>
+                      <div class="modal-body">
+    ...
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
                 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
