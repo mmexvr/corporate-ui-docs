@@ -11,7 +11,7 @@
   <!-- Table Sorter Plugin -->
   <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>
 
-  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.3.0-CF/js/corporate-ui.js?monitoring=true"></script>
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/master/js/corporate-ui.js?monitoring=true"></script>
   <link rel="stylesheet" href="css/scania-bootstrap-docs.css">
 
   <script src="https://static.scania.com/vendors/components/jQuery/table-sorter/2.30.3/js/jquery.tablesorter.combined.js"></script>
@@ -27,50 +27,43 @@
     border-left: none;    
   } 
 
-  .form-control[readonly] {
-    background-color: transparent;
-    border: none;
-    color: #a8a8a8;
-    border-bottom: 1px solid #dadcde;
-    border-radius:0 !important; 
-    cursor: not-allowed;
-  }
-
-  .form-control[disabled] {
-    color: #a8a8a8;
+  .table .form-control[disabled] {
+    color: #757575;
   }  
 
-
-
+  .table .form-control[readonly],
+  .table .form-control[readonly]:focus,
+  .table .form-control[readonly]:active,
+  .table .form-control[readonly]:focus,
+  .form-control[readonly],
   .form-control[readonly]:focus,
   .form-control[readonly]:active,
   .form-control[readonly]:focus
     {
-    background-color: transparent;      
+    background-color: transparent;
     border: none;
     border-bottom: 1px solid #dadcde;
+    border-radius:0 !important; 
+    cursor: not-allowed;
+    color: #757575;
   }
 
 .table.table-lg .form-control {
-    padding: 5px 14px;
+    padding: 3px 8px;
     font-size: 14px;
     border-radius: 4px;
-    border-radius: 0;
     height: 42px;
     margin: 0;
 }  
 
-select.form-control,
-.form-control {
-    background-color: #fff;
-    border-radius: 4px !important;
+.table .form-control {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    height: 30px;
+    border-radius: 0;
 }
-
-  .form-control[readonly] {
-    background-color: #fff;
-    border: none;
-    border-bottom: 1px solid #dadcde;
-  }
 
 </style>
 
