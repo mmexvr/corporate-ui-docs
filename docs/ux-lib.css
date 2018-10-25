@@ -196,9 +196,7 @@ a[href="/corporate-ui-docs/component/"] {
 
 }
 
-.ux-lib .panel-group a {
-  color: #d6001c;
-}
+
 .ux-lib .main-item {
   margin: 30px 0 50px 0;
 }
@@ -253,97 +251,3 @@ a[href="/corporate-ui-docs/component/"] {
 .ux-lib .collapsed .icon-info {
   color: #aaa;
 }
-
-/*
-.porsche .wordmark {
-  display: block;
-  float: left;
-  background: url('https://static.scania.com/resources/logotype/porsche/porsche-wordmark.png');
-  background: url('https://static.scania.com/resources/logotype/porsche/porsche-wordmark.svg');
-  background-repeat: no-repeat;
-  background-size: 200px 14px;
-  width: 200px !important;
-  height: 14px !important;
-  margin: 7px 5px 10px 20px;
-  padding: 5px;
-}
-.porsche .symbol {
-  display: block;
-  float: right;
-  background: url('https://static.scania.com/resources/logotype/porsche/porsche-symbol.png');
-  background-repeat: no-repeat;
-  background-size: 42px 46px;
-  width: 42px;
-  height: 46px;
-  margin: -2px 20px 10px 20px;
-}
-.porsche .symbol-small {
-  opacity: 1;
-  display: block;
-  float: right;
-  background: url('https://static.scania.com/resources/logotype/porsche/porsche-symbol.png');
-  background-repeat: no-repeat;
-  background-size: 40px 43px;
-  width: 40px;
-  height: 43px;
-  margin: 20px 20px 10px 1px;
-}
-.porsche .footer .wordmark {
-  background: url('https://static.scania.com/resources/logotype/porsche/porsche-wordmark-white.png');
-  background: url('https://static.scania.com/resources/logotype/porsche/porsche-wordmark-white.svg');
-  background-repeat: no-repeat;
-  background-size: 200px auto;
-  margin-top: -14px;
-  width: 280px;
-  height: 20px;
-}
-.porsche .footer .footer-copy-text {
-  display: none;
-}
-.bentley .wordmark {
-  display: block;
-  float: left;
-  background: url('https://static.scania.com/resources/logotype/bentley/wordmark.png');
-  background-repeat: no-repeat;
-  background-size: 136px auto;
-  width: 157px !important;
-  height: 63px !important;
-  margin: -22px -40px 0 -13px;
-}
-.bentley .symbol {
-  display: block;
-  float: right;
-  background: url('https://static.scania.com/resources/logotype/bentley/symbol.png');
-  background-repeat: no-repeat;
-  background-size: 129px 49px !important;
-  width: 120px !important;
-  height: 49px !important;
-  margin: -2px 2px 10px 20px;
-}
-.bentley .symbol-small {
-  opacity: 1;
-  display: block;
-  float: right;
-  background: url('https://static.scania.com/resources/logotype/bentley/symbol.png');
-  background-repeat: no-repeat;
-  background-size: 40px 43px;
-  width: 40px;
-  height: 43px;
-  margin: 20px 20px 10px 1px;
-}
-.bentley .footer .wordmark {
-  background: url('https://static.scania.com/resources/logotype/bentley/wordmark-white.png');
-  background-repeat: no-repeat;
-  background-size: 200px auto;
-  margin-top: -14px;
-  width: 280px;
-  height: 20px;
-}
-.bentley .footer .footer-copy-text {
-  display: none;
-}
-
-
-
-
-*/
