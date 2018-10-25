@@ -7,22 +7,48 @@
 
   <title>UX Library - Progress Tracker</title>
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
-  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.3.0-CF/js/corporate-ui.js?monitoring=true"></script>
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.3.0-CF/js/corporate-ui.js"></script>
   <link rel="stylesheet" href="css/scania-bootstrap-docs.css">
+  
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
-  <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
-
-  <link rel="stylesheet" rel="import" href="https://getbootstrap.com/docs/4.0/assets/css/docs.min.css">
   <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">  
 
 
   <link rel="stylesheet" href="http://static.scania.com/vendors/components/pure-js/progress-tracker/1.4.0/styles/site.css">
   <link rel="stylesheet" href="http://static.scania.com/vendors/components/pure-js/progress-tracker/1.4.0/styles/progress-tracker.css">
 
+
+  <style>
+    .progress-step:not(:last-child)::after {
+      z-index: 10;
+    }
+
+    .progress-step.is-active .progress-title {
+      font-weight: bold;
+    }
+
+    .progress-text {
+      display: block;
+      padding: 0 25px 20px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .progress-step.is-complete .progress-marker {
+      background-color: #041e42;
+    }
+
+    .progress-step.is-active .progress-marker {
+      background-color: #D6001C;
+    }    
+
+    
+
+  </style>
+
 </head>
 
-<body class="scania app bs4">
+<body class="scania app">
 
   <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
     <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
@@ -58,29 +84,54 @@
                 <h4>Its written in SASS using flexbox to be flexible and responsive. It can be easily customized, includes many possible layouts and works in all major browsers from IE10 up.</h4>
               </div>
 
-              <ul class="progress-tracker anim-ripple">
+
+              <ul class="progress-tracker progress-tracker--text progress-tracker--text-top anim-path anim-ripple-splash">
                 <li class="progress-step is-complete">
+                  <span class="progress-text">
+                    <h4 class="progress-title">Step 1</h4>
+                    <a href="https://www.cnn.com" target="_blank">Go to CNN and read news</a><br>
+                    <a href="https://www.google.com" target="_blank">Google something fun</a><br>
+                    <a href="https://www.spotify.com" target="_blank">Turn on some music</a><br>
+
+                  </span>
                   <span class="progress-marker"></span>
                 </li>
 
                 <li class="progress-step is-complete">
+                  <span class="progress-text">
+                    <h4 class="progress-title">Step 2</h4>
+                    Summary text explaining this step to the user
+                  </span>
                   <span class="progress-marker"></span>
                 </li>
 
                 <li class="progress-step is-active">
+                  <span class="progress-text">
+                    <h4 class="progress-title">Step 3</h4>
+                    Summary text explaining this step to the user
+                  </span>
                   <span class="progress-marker"></span>
                 </li>
 
                 <li class="progress-step">
+                  <span class="progress-text">
+                    <h4 class="progress-title">Step 4</h4>
+                    Shorter summary text
+                  </span>
                   <span class="progress-marker"></span>
                 </li>
 
                 <li class="progress-step">
+                  <span class="progress-text">
+                    <h4 class="progress-title">Step 5</h4>
+                    Shorter summary text
+                  </span>
                   <span class="progress-marker"></span>
                 </li>
               </ul>
 
             </div>
+
 
 
 
@@ -117,7 +168,6 @@
       </pre>
 
             </div>
-
 
 
             <div class="demo">
