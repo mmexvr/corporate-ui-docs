@@ -13,8 +13,6 @@
 
   <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">  
 
-
-  <link rel="stylesheet" href="http://static.scania.com/vendors/components/pure-js/progress-tracker/1.4.0/styles/site.css">
   <link rel="stylesheet" href="http://static.scania.com/vendors/components/pure-js/progress-tracker/1.4.0/styles/progress-tracker.css">
 
 
@@ -42,6 +40,58 @@
       background-color: #D6001C;
     }    
 
+
+
+@-webkit-keyframes linefill {
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes linefill {
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes circleactive {
+  to {
+    fill: #fff;
+  }
+}
+
+@keyframes circleactive {
+  to {
+    fill: #fff;
+  }
+}
+
+.demo {
+  margin: 40px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+pre {
+  display: block;
+  padding: 10px 15px;
+  margin: 0 0 20px 0;
+  overflow: auto;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 14px;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f3f3f3;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+
+.usage {
+  font-size: 18px;
+}
+
+
     
 
   </style>
@@ -63,7 +113,7 @@
         <nav-item location="/corporate-ui-docs/styleguide/">Style Guide</nav-item>            
         <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
           <sub-navigation caption="Scania Bootstrap">
-            <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html" class="active">Bootstrap Documentation</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html">Bootstrap Documentation</nav-item>
             <nav-item location="/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html">HTML Copy Paste</nav-item>
           </sub-navigation>  
         </nav-item>
