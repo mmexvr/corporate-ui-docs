@@ -50,6 +50,26 @@ $(document).keypress(function(e) {
         <nav-item location="/corporate-ui-docs/developer/">Web Applications</nav-item>
         <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
       </primary-items>
+
+      </primary-items>
+      <secondary-items>
+        <div class="dropdown">
+          <div id="user-menu" role="button" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="staff-badge" background-image="url()">
+              <div class="user-name hidden-md">
+                <span>Jesper Karlsson</span>
+                <small class="hidden-md">Company name</small>
+              </div>
+            </div>
+          </div>  
+          <ul class="dropdown-menu" role="menu" aria-labelledby="user-menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/">Twitter</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://google.com/">Google</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://facebook.com/">Facebook</a></li>
+          </ul>
+        </div>
+      </secondary-items>
+
     </c-main-navigation>
 
     <script>
