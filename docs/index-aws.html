@@ -53,9 +53,9 @@ $(document).keypress(function(e) {
 
       </primary-items>
       <secondary-items>
-        <div class="dropdown">
+        <div id="user-account-menu" class="dropdown">
           <div id="user-menu" role="button" class="dropdown-toggle" data-toggle="dropdown">
-            <div class="staff-badge" background-image="url()">
+            <div class="user-profile-picture" background-image="url(/corporate-ui/images/sample-user-image.jpg)">
               <div class="user-name hidden-md">
                 <span>Jesper Karlsson</span>
                 <small class="hidden-md">Company name</small>
@@ -69,6 +69,34 @@ $(document).keypress(function(e) {
           </ul>
         </div>
       </secondary-items>
+<style>
+#user-account-menu .user-profile-picture {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 6px 0;
+    color: #041e42;
+    background: #fafafa;
+    background-size: 32px;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    float: right;
+}
+
+#user-account-menu .user-name {
+    color: #fafafa;
+    text-transform: initial;
+    word-break: initial;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 10px;
+    text-align: right;
+}
+
+</style>
+
 
     </c-main-navigation>
 
