@@ -11,30 +11,12 @@
   <title>UX Library - UI Guidelines - Corporate UI</title>
   <script src="https://d31jnweo1ynb8u.cloudfront.net/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
   <script src="https://d31jnweo1ynb8u.cloudfront.net/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script> 
-  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.3.0-CF/js/corporate-ui.js?monitoring=true"></script>
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.2.0-CF/js/corporate-ui.js?monitoring=true"></script>
   <!--   <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/2.5.0-CF/js/corporate-ui.js"></script> -->
-
-  <script>
-    $(function(){
-$(document).keypress(function(e) {
-    if (e.which == 119 && !$(':focus').length) {
-            alert('M A C K A N')
-    }
-});
-;
-
-
-    })
-
-
-  </script>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
-  <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
 
   <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">
 </head>
-<body unresolved class="scania ux-lib app" data-env="">
+<body class="scania ux-lib app" data-env="">
 
   <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
     <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
@@ -55,7 +37,7 @@ $(document).keypress(function(e) {
       <secondary-items>
         <div id="user-account-menu" class="dropdown">
           <div id="user-menu" role="button" class="dropdown-toggle" data-toggle="dropdown">
-            <div class="user-profile-picture" background-image=url("/corporate-ui/images/sample-user-image.jpg")>
+            <div class="user-profile-picture" style="background-image: url('https://scania.github.io/corporate-ui-docs/images/sample-user-image.jpg')>
               <div class="user-name hidden-md">
                 <span>Jesper Karlsson</span>
                 <small class="hidden-md">Company name</small>
@@ -72,6 +54,13 @@ $(document).keypress(function(e) {
     </c-main-navigation>
 
 <style>
+
+div#user-account-menu {
+    padding: 14px;
+    background: #041e42;
+    overflow: hidden;
+}
+
 #user-account-menu .user-profile-picture {
     width: 32px;
     height: 32px;
