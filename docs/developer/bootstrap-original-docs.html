@@ -5711,6 +5711,17 @@
 
                 <!--  Modal content for the above example -->
 
+<style>
+.scroll-y .modal-content {
+    top: 0;
+}
+
+.modal-fullscreen {
+    margin-left: -17px;
+    width: calc (100vw + 17px);
+}
+
+</style>
                 <div class="modal fade bs-example-modal-scroll" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog scroll-y">
                     <div class="modal-content">
@@ -5740,6 +5751,10 @@
                         <h3>How to block and/or delete cookies</h3> 
                         <p>If you do not wish to accept cookies you can change your web browser settings to automatically block the storage of cookies or to inform you when a website wants to store cookies on your computer. Previously stored cookies can also be deleted through your web browser. More information can be found through your web browser’s support pages. If you use several different devices to access our website (computer, tablet or smartphone), you will have to change the browser settings on all devices.</p>
                       </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">I Accept</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+                      </div>  
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
