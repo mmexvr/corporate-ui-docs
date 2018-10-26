@@ -36,7 +36,7 @@
       </primary-items>
       <secondary-items>
         <div id="user-account-menu" class="dropdown">
-          <div id="user-menu" role="button" class="dropdown-toggle" data-toggle="dropdown">
+          <div id="user-menu" role="button" class="dropdown-toggle" data-toggle="dropdown" href="#">
             <div class="user-name hidden-md">
                 <span>Jesper Karlsson</span>
                 <small class="hidden-md">Company name</small>
@@ -44,7 +44,7 @@
             <div class="user-profile-picture" style="background-image: url('https://scania.github.io/corporate-ui-docs/images/sample-user-image.jpg')">
             </div>
           </div>  
-          <ul class="dropdown-menu" role="menu" aria-labelledby="user-menu">
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/">Twitter</a></li>
             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://google.com/">Google</a></li>
             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://facebook.com/">Facebook</a></li>
@@ -102,7 +102,14 @@ small, .small {
 
 </style>
 
+<!--     <script>
 
+    var dropdowns = document.querySelectorAll('.dropdown a')
+      for(var i=0; i<dropdowns.length; i++) {
+        new Dropdown(dropdowns[i])
+      }
+
+    </script> -->
 
     <style>
       .btn.custom-select {
@@ -116,7 +123,7 @@ small, .small {
   <section class="light ux-sections">
     <div class="container text-center page-header">
 
-<!--       <div class="dropdown" style="display: inline-block;">
+<div class="dropdown" style="display: inline-block;">
         <a class="btn custom-select" data-toggle="dropdown" href="#">Scania Data Access user</a>
         <table class="table table-selectable dropdown-menu m-0 p-0" role="menu" aria-labelledby="dLabel">
           <tbody>
