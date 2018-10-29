@@ -11,30 +11,12 @@
   <title>UX Library - UI Guidelines - Corporate UI</title>
   <script src="https://d31jnweo1ynb8u.cloudfront.net/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
   <script src="https://d31jnweo1ynb8u.cloudfront.net/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script> 
-  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.3.0-CF/js/corporate-ui.js?monitoring=true"></script>
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.2.0-CF/js/corporate-ui.js?monitoring=true"></script>
   <!--   <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/2.5.0-CF/js/corporate-ui.js"></script> -->
-
-  <script>
-    $(function(){
-$(document).keypress(function(e) {
-    if (e.which == 119 && !$(':focus').length) {
-            alert('M A C K A N')
-    }
-});
-;
-
-
-    })
-
-
-  </script>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
-  <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
 
   <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">
 </head>
-<body unresolved class="scania ux-lib app" data-env="">
+<body class="scania ux-lib app" data-env="">
 
   <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
     <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
@@ -50,16 +32,84 @@ $(document).keypress(function(e) {
         <nav-item location="/corporate-ui-docs/developer/">Web Applications</nav-item>
         <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
       </primary-items>
+
+      </primary-items>
+      <secondary-items>
+        <div id="user-account-menu" class="dropdown">
+          <button type="button" id="dLabel" role="button" class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <div class="user-name hidden-md">
+                <span>Jesper Karlsson</span>
+                <small class="hidden-md">Company name</small>
+            </div>
+            <div class="user-profile-picture" style="background-image: url('https://scania.github.io/corporate-ui-docs/images/sample-user-image.jpg')">
+            </div>
+          </button>  
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/">Twitter</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://google.com/">Google</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://facebook.com/">Facebook</a></li>
+          </ul>
+        </div>
+      </secondary-items>
     </c-main-navigation>
 
-    <script>
+<style>
+
+#user-account-menu {
+    padding: 10px;
+    background: #041e42;
+    overflow: hidden;
+}
+
+#user-account-menu .user-profile-picture {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 6px 0;
+    color: #041e42;
+    background: #fafafa;
+    background-size: 32px;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    float: right;
+    background-position: center center;
+}
+
+#user-account-menu .user-name {
+    font-size: 12px;
+    font-weight: bold;    
+    color: #fafafa;
+    text-transform: initial;
+    word-break: initial;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 10px;
+    text-align: right;
+    float: left;
+}
+
+#user-account-menu small {
+    display: block;
+    font-weight: normal;
+}
+
+small, .small {
+    font-size: 85%;
+}
+
+
+</style>
+
+<!--     <script>
 
     var dropdowns = document.querySelectorAll('.dropdown a')
       for(var i=0; i<dropdowns.length; i++) {
         new Dropdown(dropdowns[i])
       }
 
-    </script>
+    </script> -->
 
     <style>
       .btn.custom-select {
@@ -72,9 +122,18 @@ $(document).keypress(function(e) {
 
   <section class="light ux-sections">
     <div class="container text-center page-header">
+<!-- 
+<div class="dropdown" style="display: inline-block;">
+        <a data-toggle="dropdown" href="#">
 
-      <div class="dropdown" style="display: inline-block;">
-        <a class="btn custom-select" data-toggle="dropdown" href="#">Scania Data Access user</a>
+   <div class="user-name hidden-md">
+                <span>Jesper Karlsson</span>
+                <small class="hidden-md">Company name</small>
+            </div>
+            <div class="user-profile-picture" style="background-image: url('https://scania.github.io/corporate-ui-docs/images/sample-user-image.jpg')">
+            </div>
+
+        </a>
         <table class="table table-selectable dropdown-menu m-0 p-0" role="menu" aria-labelledby="dLabel">
           <tbody>
             <tr class="active">
@@ -134,9 +193,90 @@ $(document).keypress(function(e) {
             </tr>
           </tbody>
         </table>
-      </div>      
+      </div>    -->
 
 
+
+        <table class="table table-selectable dropdown-menu m-0 p-0">
+          <tbody>
+            <tr class="active">
+              <td>Icon goes here</td>
+              <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+            </tr>
+            <tr>
+              <td>Icon goes here</td>
+              <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+                <table class="table table-selectable m-0 p-0">
+          <tbody>
+            <tr class="active">
+              <td>Icon goes here</td>
+              <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+            </tr>
+            <tr>
+              <td>Icon goes here</td>
+              <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+                <table class="table table-selectable m-0 p-0">
+          <tbody>
+            <tr class="active">
+              <td>Icon goes here</td>
+              <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+            </tr>
+            <tr>
+              <td>Icon goes here</td>
+              <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+            </tr>
+          </tbody>
+        </table>
+
+                <table class="table table-selectable m-0 p-0">
+          <tbody>
+            <tr class="active">
+              <td>Icon goes here</td>
+              <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+            </tr>
+            <tr>
+              <td>Icon goes here</td>
+              <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+                <table class="table table-selectable m-0 p-0">
+          <tbody>
+            <tr class="active">
+              <td>Icon goes here</td>
+              <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+            </tr>
+            <tr>
+              <td>Icon goes here</td>
+              <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+            </tr>
+          </tbody>
+        </table>
+
+                <table class="table table-selectable m-0 p-0">
+          <tbody>
+            <tr class="active">
+              <td>Icon goes here</td>
+              <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+            </tr>
+            <tr>
+              <td>Icon goes here</td>
+              <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+            </tr>
+          </tbody>
+        </table>
     </div>
   </section>
 </c-main-content>
@@ -168,8 +308,6 @@ c-corporate-footer c-social-media nav-item a, c-social-mediac-corporate-footer n
   <nav-item location="#">another link</nav-item>
 </c-corporate-footer>
 <script src="/corporate-ui-docs/ux-lib.js"></script>
-
-<script type="text/javascript" src="https://jira.scania.com/s/ef8bf6ebd61eb9a9eb0920bd53f90dc0-T/sk5z0b/78000/62a4a2e9505449c7b6935d4ede07c3bc/2.0.26/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-UK&collectorId=651aced4"></script>
 
 
 </body>
