@@ -27,23 +27,7 @@
 
   <style>
 
-    input[type=radio][checked] + span:before {
-        background-color: #041e42 !important;
-    }
 
-    input[type=radio]:disabled.radio-checkbox-inverse + span:before,
-    input[type=radio]:disabled + span:before {
-        background-color: transparent;
-        cursor: not-allowed;
-    }
-
-    input[type=radio]:disabled + span:hover:before {
-        background-color: transparent;
-    }
-
-    input[type=radio]:disabled:checked + span:before {
-        background-color: #cacaca;
-    }
 
   </style>  
 
@@ -191,7 +175,7 @@
           </div> 
           <div class="col-xs-6 col-lg-3">
             <div class="form-group">
-              <h4>Bad Example - Radio Buttons</h4>
+              <h4>Bad Example - Only one can be selected</h4>
               <div class="radio">
                 <label class="radio">
                   <input type="radio" name="group1">
@@ -285,6 +269,7 @@
       </div>  
     </section>  
     <section class="light">
+      <div class="container">
         <div class="row">
           <div class="col-md-12">
           <table class="table table-primary">
