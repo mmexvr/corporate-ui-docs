@@ -50,6 +50,19 @@
         background-color: #cacaca;
     }
 
+
+
+    .table > thead:first-child > tr:first-child th {
+        padding-bottom: 0;
+
+    }
+
+    .table > thead:first-child > tr:nth-child(2) th,
+    .table > thead:first-child > tr:nth-child(3) th {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
   </style>  
 
 </head>
@@ -114,7 +127,7 @@
                 <label class="radio">
                   <input type="radio" checked name="group1">
                   <span></span>
-                  Option 2 - Checked
+                  Option 2 - Pre Checked
                 </label>
               </div> 
               <div class="radio">
@@ -161,7 +174,7 @@
                 <label class="radio">
                   <input type="radio" checked name="group2" disabled>
                   <span></span>
-                  Option 2 - Checked
+                  Option 2 - Pre Checked
                 </label>
               </div> 
               <div class="radio">
@@ -236,7 +249,7 @@
                 <label class="radio">
                   <input type="radio" name="group3" checked disabled>
                   <span></span>
-                  Option 6 - Checked and Disabled
+                  Option 6 - Pre Checked and Disabled
                 </label>
               </div>                    
             </div>
@@ -262,7 +275,7 @@
                 <label>
                   <input type="checkbox" checked disabled name="group5">
                   <span></span>
-                  Option 3 - Checked and Disabled
+                  Option 3 - Pre Checked and Disabled
                 </label>
               </div>              
               <div class="checkbox">
@@ -275,7 +288,7 @@
               <div class="checkbox">
                 <label>
                   <input type="checkbox" checked name="group5"><span></span>
-                  Option 5 - Checked
+                  Option 5 - Pre Checked
                 </label>
               </div>
               <div class="checkbox">
@@ -296,41 +309,37 @@
           <table class="table table-primary">
             <thead>
               <tr>
+                <th colspan="5">Inverted Radios and Checkboxes
+                </th>
+              </tr>
+              <tr>
                 <th>
-                  <div class="form-group">
-                    <label class="radio">
-                      <input type="radio" class="radio-checkbox-inverse" name="group6">
-                      <span></span>
-                      Unchecked
-                    </label>
-                  </div>
+                  <label class="radio">
+                    <input type="radio" class="radio-checkbox-inverse" name="group6">
+                    <span></span>
+                    Unchecked
+                  </label>
                 </th>
                 <th>
-                  <div class="form-group">
-                    <label class="radio">
-                      <input type="radio" class="radio-checkbox-inverse" checked name="group6">
-                      <span></span>
-                      Checked
-                    </label>
-                  </div>
+                  <label class="radio">
+                    <input type="radio" class="radio-checkbox-inverse" checked name="group6">
+                    <span></span>
+                    Checked
+                  </label>
                 </th>
                 <th>
-                  <div class="form-group">
-                    <label class="radio">
-                      <input type="radio" class="radio-checkbox-inverse" disabled name="group6">
-                      <span></span>
-                      Unchecked and Disabled
-                    </label>
-                  </div>
+                  <label class="radio">
+                    <input type="radio" class="radio-checkbox-inverse" disabled name="group6">
+                    <span></span>
+                    Unchecked and Disabled
+                  </label>
                 </th>
                 <th>
-                  <div class="form-group">
-                    <label class="radio">
-                      <input type="radio" class="radio-checkbox-inverse" disabled name="group6">
-                      <span></span>
-                      Unchecked and Disabled
-                    </label>
-                  </div>
+                  <label class="radio">
+                    <input type="radio" class="radio-checkbox-inverse" disabled name="group6">
+                    <span></span>
+                    Unchecked and Disabled
+                  </label>
                 </th>
               </tr>
               <tr>
