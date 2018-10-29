@@ -41,6 +41,10 @@
         background-color: #cacaca;
     }
 
+    input[type=radio]:checked + span:before {
+        background-color: #041e42 !important;
+    }
+
   </style>  
 
 </head>
@@ -125,14 +129,14 @@
               </div> 
               <div class="radio">
                 <label class="radio">
-                  <input type="radio" name="group1" disabled>
+                  <input type="radio" name="group1">
                   <span></span>
                   Option 5 - Disabled
                 </label>
               </div> 
               <div class="radio">
                 <label class="radio">
-                  <input type="radio" name="group1" disabled>
+                  <input type="radio" name="group1">
                   <span></span>
                   Option 6 - Disabled
                 </label>
