@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="en-GB" class="corporate-ui">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html">
+  </noscript>
+
+  <title>UX Library - UI Guidelines - Corporate UI</title>
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script> 
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.2.0-CF/js/corporate-ui.js?monitoring=true"></script>
+  <!--   <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/2.5.0-CF/js/corporate-ui.js"></script> -->
+
+  <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">
+</head>
+<body class="scania ux-lib app" data-env="">
+
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </c-corporate-header>
+
+  <c-main-content>
+
+    <c-main-navigation show-search>
+      <primary-items>
+        <nav-item location="/corporate-ui-docs/">Home</nav-item>
+        <nav-item location="/corporate-ui-docs/styleguide/" class="active">Style Guide</nav-item>
+        <nav-item location="/corporate-ui-docs/developer/">Web Applications</nav-item>
+        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
+      </primary-items>
+
+      </primary-items>
+      <secondary-items>
+
+        <div class="dropdown">
+          <div role="button" class="user-account-menu dropdown-toggle" data-toggle="dropdown">
+            <div class="user-name hidden-md">
+                <span>Jesper Karlsson</span>
+                <small class="hidden-md">Company name</small>
+            </div>
+            <div class="user-profile-picture" style="background-image: url('https://scania.github.io/corporate-ui-docs/images/sample-user-image.jpg')">
+            </div>
+          </div>  
+          <ul class="dropdown-menu" aria-labelledby="myDropdown">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/">Twitter</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://google.com/">Google</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://facebook.com/">Facebook</a></li>
+          </ul>
+        </div>
+ 
+      </secondary-items>
+    </c-main-navigation>
+
+
+
+
+<style>
+
+.user-account-menu {
+    padding: 10px;
+    background: #041e42;
+}
+
+.user-account-menu .user-profile-picture {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 6px 0;
+    color: #041e42;
+    background: #fafafa;
+    background-size: 32px;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    float: right;
+    background-position: center center;
+}
+
+.user-account-menu .user-name {
+    font-size: 12px;
+    font-weight: bold;    
+    color: #fafafa;
+    text-transform: initial;
+    word-break: initial;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 10px;
+    text-align: right;
+    float: left;
+}
+
+.user-account-menu small {
+    display: block;
+    font-weight: normal;
+    font-size: 85%;
+}
+
+
+</style>
+
+<!--     <script>
+
+    var dropdowns = document.querySelectorAll('.dropdown a')
+      for(var i=0; i<dropdowns.length; i++) {
+        new Dropdown(dropdowns[i])
+      }
+
+    </script> -->
+
+    <style>
+      .btn.custom-select {
+          padding: 12px;
+          height: 46px;
+          padding-right: 38px;
+          font-family: 'Scania Sans Semi Condensed';
+      }
+    </style>
+
+  <section class="light ux-sections">
+    <div class="container">
+          <h1>Corporate UI</h1>
+          <h2 style="margin-top: 0 !important">Scania's Web Components Collection</h2>
+          <p>The new Scania user interface is now largely supplied as ready to run web components. This means that you no longer has to develop common elements like the header, main navigation or the page footer. Filtered and sortable tables are available to use straight of the shelf as well as a lot of other components as well.</p>
+
+          <p>Web Components consists of several separate technologies. You can think of Web Components as reusable user interface widgets that are created using open Web technology. An existing Web Component can be used without writing much of the code, simply by adding an import statement to an HTML page. Since Web Components use new or still-developing standard browser capabilities, we are currently using Google Polymer to package the Scania components in a smart way and use their polyfills to make the components more browser independent.</p>
+
+          <h2>Latest Version</h2>
+          <p>We're aiming at doing weekley releases and usually the UX Library is the first site to run the latest stable version. Currently, you'll get all the latest updates by including this file on your page:</p>
+          <p class="text-info">https://d31jnweo1ynb8u.cloudfront.net/build/global/3.3.0-CF/js/corporate-ui.js?monitoring=true</p>
+          <h2>Ground-breaking improvement in Scania's reuse approach</h2>
+          <p>With Custom Elements (a part of the Web Components standard) Scania developers and partner companies can use functionality "off the shelf", create new HTML tags or extend the components other developers have created.</p>
+          <p>Google Polymer is the foundation of our web components and it brings a web standards-based way to create reusable components using nothing more than JS/HTML/CSS as well as, possibly, using libraries or frameworks like Angular and React to improve them even more. The result is less code, modular code, and higher grade of reuse in our applications. Now, you can totally focus on the user experience that you actually are here to develop.</p>
+
+          <h2>A single code base</h2>
+          <p>Scania stores its custom elements and Web Components in one single master repository. This gives us a unique opportunity to make continues improvements to shared elements. If for example a date picker is improved in one place, that one will immediately be available for other applications using the Scania standard. The economic effect is that much of our IT investments within this area automatically is shared and used for improvements and core UX rather than re-inventing the wheel from scratch every single time.</p>
+
+          <h2>Getting started</h2>
+          <p>In the UX Library you'll find a lot of ready to use elements and components ranging from a standalone Scania Corporate Header including our wordmark and logotype, to advanced Product Carousels and Tables with sorting, filtering and responsive utilities. </p>
+          <p>You'll find many components in the <a href="https://github.com/scania/corporate-ui">Corporate UI GitHub Repository</a>.</p>
+          <h3>Standard HTML Template</h3>
+          <p>If your solution is a traditional website it is very straight forward to start using Corporate UI. Download <a href="../template/basic-template-app.html" target="_blank">this basic template for applications</a> or this <a href="../template/basic-template.html" target="_blank">this basic template for public sites</a>. Then open it in your browser to explore our custom and standard HTML elements. Then reuse code samples from Scania Bootstrap to create the user interface.</p>
+
+          <h3>Using Corporate UI with frameworks</h3>
+          <p>If you're creating an application using Angular, React or equivalent - you basically will use the same code as on the templates shown above. But there are <a href="corporate-ui-for-frameworks.html">a few things to that you must do differently</a>.</p>
+
+          <h3>Strong skills in Bootstrap</h3>
+          <p>Since we won't be able to standardize each and every component made at Scania, you'll need to develop your core UX within your project. As we’re using the Bootstrap Grid within our components, you'll highly benefit from using it in your custom development as well. Here's a few good starting points:</p>
+          <ul>
+            <li><a href="scania-bootstrap.html">Bootstrap Documentation</a></li>
+            <li><a href="https://www.youtube.com/playlist?list=PL7029EEFC21D2DC58" target="_blank">An introduction to Standard Bootstrap (YouTube videos)</a></li>
+          </ul>
+
+
+            <h3>Basic knowledge of Web Components and Google Polymer</h3>
+            <p>Using Web Components is so easy it is almost beyond imagination. Although, you will benefit from spending some time reading up on the basic ideas. Here's a few links to start out at:</p>
+            <ul>
+              <li><a href="https://meowni.ca/posts/polymer-cheatsheet/">Polymer Cheatsheet</a></li>
+              <!--             <li><a href="https://meowni.ca/posts/polymer-2-cheatsheet/">Polymer2 Cheatsheet</a></li>     -->        
+              <li><a href="https://blog.revillweb.com/why-web-components-are-so-important-66ad0bd4807a#.dyerfqvci" target="_blank">Why Web Components are so important</a></li>
+              <li><a href="https://developers.google.com/web/fundamentals/getting-started/primers/customelements" target="_blank">Custom Elements v1: Reusable Web Components</a></li>
+              <li><a href="https://www.polymer-project.org/1.0/start/" target="_blank">Get started with Google Polymer</a></li>
+            </ul>
+          </div>
+  </section>
+</c-main-content>
+
+
+<!-- <link rel="import" href="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.2.1-CF/components/social-media/social-media.html">
+<style>
+
+.app c-social-media, c-social-media.app {
+  display: inline-block;
+}
+
+c-corporate-footer c-social-media nav-item a, c-social-mediac-corporate-footer nav-item a {
+  border-radius: 50%;
+}
+
+</style> -->
+  
+<link rel="import" href="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.1.4/components/social-media/social-media.html">
+<c-corporate-footer>
+  <c-social-media>
+    <nav-item location="#" icon="facebook"></nav-item>
+    <nav-item location="#" icon="twitter"></nav-item>
+    <nav-item location="#" icon="youtube"></nav-item>
+    <nav-item location="#" icon="linkedin"></nav-item>
+  </c-social-media>
+
+  <nav-item location="#">a link</nav-item>
+  <nav-item location="#">another link</nav-item>
+</c-corporate-footer>
+<script src="/corporate-ui-docs/ux-lib.js"></script>
+
+
+</body>
+</html>
