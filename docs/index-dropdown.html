@@ -37,7 +37,7 @@
       <secondary-items>
 
         <div class="dropdown">
-          <div role="button" class="user-account-menu dropdown-toggle" data-toggle="dropdown">
+          <div role="button" class="user-profile user-menu dropdown-toggle" data-toggle="dropdown">
             <div class="user-name hidden-md">
                 <span>Jesper Karlsson</span>
                 <small class="hidden-md">Company name</small>
@@ -60,12 +60,15 @@
 
 <style>
 
-.user-account-menu {
+.user-profile.user-menu {
     padding: 10px;
     background: #041e42;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.user-account-menu .user-profile-picture {
+
+.user-profile.user-menu .user-profile-picture {
     width: 32px;
     height: 32px;
     font-size: 16px;
@@ -81,7 +84,7 @@
     background-position: center center;
 }
 
-.user-account-menu .user-name {
+.user-profile.user-menu .user-name {
     font-size: 12px;
     font-weight: bold;    
     color: #fafafa;
@@ -94,7 +97,7 @@
     float: left;
 }
 
-.user-account-menu small {
+.user-profile.user-menu small {
     display: block;
     font-weight: normal;
     font-size: 85%;
@@ -123,8 +126,8 @@
 
   <section class="light ux-sections">
     <div class="container">
-          <h1>Corporate UI</h1>
-          <h2 style="margin-top: 0 !important">Scania's Web Components Collection</h2>
+          <h1>Demo page for User Profile Component when used in Main Navigation.</h1>
+          <h2 style="margin-top: 0 !important">A part of Scania's Web Components Collection</h2>
           <p>The new Scania user interface is now largely supplied as ready to run web components. This means that you no longer has to develop common elements like the header, main navigation or the page footer. Filtered and sortable tables are available to use straight of the shelf as well as a lot of other components as well.</p>
 
           <p>Web Components consists of several separate technologies. You can think of Web Components as reusable user interface widgets that are created using open Web technology. An existing Web Component can be used without writing much of the code, simply by adding an import statement to an HTML page. Since Web Components use new or still-developing standard browser capabilities, we are currently using Google Polymer to package the Scania components in a smart way and use their polyfills to make the components more browser independent.</p>
