@@ -52,14 +52,23 @@
 
 
 
+   table.table > thead  > tr > th {
+        padding-left: 18px !important;
+    }
+ 
     .table > thead:first-child > tr:first-child th {
         padding-bottom: 0;
+        padding-top: 18px;
 
     }
 
-    .table > thead:first-child > tr:nth-child(2) th,
-    .table > thead:first-child > tr:nth-child(3) th {
+    .table > thead:first-child > tr:nth-child(2) {
         padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .table > thead:first-child > tr:nth-child(3) th {
+        padding-bottom: 12px;
         padding-top: 0;
     }
 
