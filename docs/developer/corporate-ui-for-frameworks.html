@@ -10,7 +10,7 @@
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
 
   <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
-  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.3.0-CF/js/corporate-ui.js?monitoring=true"></script>
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/corporate-ui.js?monitoring=true"></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
   <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
@@ -72,7 +72,7 @@
 
           <h2>What's happening in corporate-ui.js?</h2>
 
-          <p>When calling the <a href="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.3.0-CF/js/corporate-ui.js?monitoring=true" target="_blank">corporate-ui.js</a> file a lot of things happens. The latest versions of the Scania fonts, logotype, favicons and the basic CSS and HTML framework (Scania Bootstrap) is loaded as well as the Polymer library. We also load the basic Web Components used by almost all applications; the Corporate Header, the Main Navigation, the Main Content element and the Corporate Footer. This doesn't work very well when an application is about to be initiated further on.</p>
+          <p>When calling the <a href="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/corporate-ui.js?monitoring=true" target="_blank">corporate-ui.js</a> file a lot of things happens. The latest versions of the Scania fonts, logotype, favicons and the basic CSS and HTML framework (Scania Bootstrap) is loaded as well as the Polymer library. We also load the basic Web Components used by almost all applications; the Corporate Header, the Main Navigation, the Main Content element and the Corporate Footer. This doesn't work very well when an application is about to be initiated further on.</p>
 
           <div class="alert alert-info"><strong>Angular 5 Sample files</strong> are now available. Check out the few lines that has to be added or altered in you application. <br/>
           <a href="../template/Angular5/src.zip" class="btn btn-default btn-sm margin-top" download>Download Angular 5 Sample Files</a> </div>
@@ -80,7 +80,7 @@
           <h2>Wait for the application!</h2>
           <p>All you have to do to make the Corporate UI work in your application is to avoid loading the basic components right away and instead include them after your application is completely initiated. You simply load the Corporate UI with the <strong>?preload=false</strong> parameter as you would load it in any HTML page header.</p>
           <xmp>
-<script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.3.0-CF/js/corporate-ui.js?monitoring=true?preload=false"></script></xmp>
+<script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/corporate-ui.js?monitoring=true?preload=false"></script></xmp>
           <p>Then, after your app has started, you can easily include the basic components by using the <strong>window.CorporateUi.baseComponents();</strong> method. This will then load the components listed above and you're now ready to use those custom elements from wherever you need to apply them. In Angular, you could do it this way (or attached it to any other late event):
           <xmp>
 export class AppComponent {
