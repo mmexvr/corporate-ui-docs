@@ -126,7 +126,7 @@ pre {
 
             <p>We don’t encourage customization of these individual values; should you change one, you likely need to change them all.</p>
 
-          <h3 id="z-index-scales">Z-index scale</h3>
+          <h2 id="z-index-scales">Z-index scale</h2>
 
           <ul class="progress-tracker progress-tracker--vertical progress-tracker--text progress-tracker--text-top anim-path anim-ripple-splash">
             <li class="progress-step is-complete">
@@ -152,21 +152,21 @@ pre {
                 1070: Tooltip, all viewport sizes.<br>
               </span>
             </li>
-            <li class="progress-step is-active">
+            <li class="progress-step is-complete">
               <span class="progress-marker"></span>
               <span class="progress-text">
                 <h4 class="progress-title">Z-index 2000-3000</h4>
 
               </span>
             </li>
-            <li class="progress-step">
+            <li class="progress-step is-complete">
               <span class="progress-marker"></span>
               <span class="progress-text">
                 <h4 class="progress-title">Z-index 3000-4000</h4>
 
               </span>
             </li>
-            <li class="progress-step">
+            <li class="progress-step is-complete">
               <span class="progress-marker"></span>
               <span class="progress-text">
                 <h4 class="progress-title">Z-index 5000-9999</h4>
@@ -174,6 +174,7 @@ pre {
               </span>
             </li>
           </ul>
+          <p>To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit <code class="highlighter-rouge">z-index</code> values of <code class="highlighter-rouge">1</code>, <code class="highlighter-rouge">2</code>, and <code class="highlighter-rouge">3</code> for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher <code class="highlighter-rouge">z-index</code> value to show their border over the sibling elements.</p>
         </div>
       </div>
     </div>
