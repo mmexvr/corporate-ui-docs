@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8">
+  <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+
+  <title>UX Library - Progress Tracker</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/corporate-ui.js"></script>
+  <link rel="stylesheet" href="css/scania-bootstrap-docs.css">
+  
+
+  <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">  
+
+  <link rel="stylesheet" href="https://static.scania.com/vendors/components/pure-js/progress-tracker/1.4.0/styles/progress-tracker.css">
+
+
+  <style>
+    .progress-step:not(:last-child)::after {
+      z-index: 10;
+    }
+
+    .progress-step.is-active .progress-title {
+      font-weight: bold;
+    }
+
+    .progress-text {
+      display: block;
+      padding: 0 25px 20px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }  
+
+
+
+@-webkit-keyframes linefill {
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes linefill {
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes circleactive {
+  to {
+    fill: #fff;
+  }
+}
+
+@keyframes circleactive {
+  to {
+    fill: #fff;
+  }
+}
+
+.demo {
+  margin: 40px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+pre {
+  display: block;
+  padding: 10px 15px;
+  margin: 0 0 20px 0;
+  overflow: auto;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 14px;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f3f3f3;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+
+.usage {
+  font-size: 18px;
+}
+
+
+    
+
+  </style>
+
+</head>
+
+<body class="scania app">
+
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </c-corporate-header>
+
+  <c-main-content>
+
+    <c-main-navigation show-search>
+      <primary-items>
+        <nav-item location="/corporate-ui-docs/">Home</nav-item>
+        <nav-item location="/corporate-ui-docs/styleguide/">Style Guide</nav-item>            
+        <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
+          <sub-navigation caption="Scania Bootstrap">
+            <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html">Bootstrap Documentation</nav-item>
+            <nav-item location="/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html">HTML Copy Paste</nav-item>
+          </sub-navigation>  
+        </nav-item>
+        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
+        <nav-item location="https://github.com/scania/corporate-ui/issues">Report an Issue</nav-item>
+        <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+      </primary-items>
+    </c-main-navigation>
+
+    <section class="light">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Corporate UI Z-index</h1>
+            <p class="lead">Several Corporate UI components utilize <code class="highlighter-rouge">z-index</code>, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in similar to Bootstrap, that’s been designed to properly layer navigation, tooltips and popovers, modals, and more.</p>
+
+            <p>These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There’s no reason we couldn’t have used <code class="highlighter-rouge">100</code>+ or <code class="highlighter-rouge">500</code>+.</p>
+
+            <p>We don’t encourage customization of these individual values; should you change one, you likely need to change them all.</p>
+
+          <h3 id="z-index-scales">Z-index scale</h3>
+
+          <ul class="progress-tracker progress-tracker--vertical progress-tracker--text progress-tracker--text-top anim-path anim-ripple-splash">
+            <li class="progress-step is-complete">
+              <span class="progress-marker"></span>
+              <span class="progress-text">
+                <h4 class="progress-title">Z-index 0-1000</h4>
+                0: Default z-index for HTML standard elements.
+                1-3: Button groups Input groups and Pagination that sometimes uses z-index.
+              </span>
+            </li>
+            <li class="progress-step is-complete">
+              <span class="progress-marker"></span>
+              <span class="progress-text">
+                <h4 class="progress-title">Z-index 1000-2000</h4>
+                1000: Main navigation, all viewport sizes.<br>
+                1000: Dropdowns
+                1010: Corporate Header when viewport is wider than 991px
+                1020: Bootstrap Sticky
+                1030: Bootstrap Fixed and Corporate Header when viewport is narrower than 992px<br>
+                1040: modal-backdrop, all viewport sizes.<br>
+                1050: Modal, all viewport sizes.<br>
+                1060: Popovers, all viewport sizes.<br>
+                1070: Tooltip, all viewport sizes.<br>
+              </span>
+            </li>
+            <li class="progress-step is-active">
+              <span class="progress-marker"></span>
+              <span class="progress-text">
+                <h4 class="progress-title">Z-index 2000-3000</h4>
+
+              </span>
+            </li>
+            <li class="progress-step">
+              <span class="progress-marker"></span>
+              <span class="progress-text">
+                <h4 class="progress-title">Z-index 3000-4000</h4>
+
+              </span>
+            </li>
+            <li class="progress-step">
+              <span class="progress-marker"></span>
+              <span class="progress-text">
+                <h4 class="progress-title">Z-index 5000-9999</h4>
+                9999: Mutiple Select Drop Down menu.<br>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</c-main-content>
+
+<c-corporate-footer></c-corporate-footer>
+
+</body>
+
+<script src="/corporate-ui-docs/ux-lib.js"></script> 
+
+<script src="https://static.scania.com/vendors/components/pure-js/progress-tracker/1.4.0/scripts/site.js"></script>
+
+</html>
