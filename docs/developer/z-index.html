@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
 
-  <title>UX Library - Progress Tracker</title>
+  <title>Scania UX Library - Z-index Scale</title>
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
   <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/corporate-ui.js"></script>
   <link rel="stylesheet" href="css/scania-bootstrap-docs.css">
@@ -136,15 +136,6 @@ pre {
             <li class="progress-step is-complete">
               <span class="progress-marker"></span>
               <span class="progress-text">
-                <h4 class="progress-title">Z-index 0-1000</h4>
-                0: Default z-index for HTML standard elements<br>
-                0: Corporate Footer and Main Content<br>
-                1-3: Button groups Input groups and Pagination that sometimes uses z-index<br>
-              </span>
-            </li>
-            <li class="progress-step is-complete">
-              <span class="progress-marker"></span>
-              <span class="progress-text">
                 <h4 class="progress-title">Z-index 5001-9999</h4>
                 9999: Angular JS Select 2 Drop Down menu (FMP)<br>
                 9999: Sticky Table Header (FMP)
@@ -180,6 +171,15 @@ pre {
                 1070: Tooltip, all viewport sizes<br>
               </span>
             </li>
+            <li class="progress-step is-complete">
+              <span class="progress-marker"></span>
+              <span class="progress-text">
+                <h4 class="progress-title">Z-index 0-1000</h4>
+                0: Default z-index for HTML standard elements<br>
+                0: Corporate Footer and Main Content<br>
+                1-3: Button groups Input groups and Pagination that sometimes uses z-index<br>
+              </span>
+            </li>            
           </ul>
           <p>To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit <code class="highlighter-rouge">z-index</code> values of <code class="highlighter-rouge">1</code>, <code class="highlighter-rouge">2</code>, and <code class="highlighter-rouge">3</code> for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher <code class="highlighter-rouge">z-index</code> value to show their border over the sibling elements.</p>
         </div>
