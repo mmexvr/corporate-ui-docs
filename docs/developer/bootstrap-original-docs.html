@@ -4549,9 +4549,10 @@
                 <h2 id="alerts-dismissable">Dismissable alerts</h2>
                 <p>Build on any alert by adding an optional <code>.alert-dismissable</code> and close button.</p>
                 <div class="bs-example">
-                  <div class="alert alert-dismissable">
+                  <div class="alert alert-primary alert-sm  alert-dismissable text-center">
+                    <strong class="text-warning">DISRUPTION</strong>
+                    <span class="pull-right"><button class="btn-close">x</button></span> Update of Scania Connected Services will be done on January 20th to January 21st. Click here to learn more.
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <strong>Warning!</strong> Best check yo self, you're not looking too good.
                   </div>
                 </div>
                 <div class="highlight"><pre><code class="html">
@@ -7684,6 +7685,15 @@ span.photo-background {
     background-origin: inherit;
     background-size: cover;
 }
+
+  .alert-primary {
+    background-color: #041e42;
+    color: #fff;
+  }
+
+  .alert-sm {
+      padding: 6px 14px;
+  }
 
 </style>
   
