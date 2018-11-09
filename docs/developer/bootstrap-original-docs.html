@@ -87,11 +87,11 @@
 
                   <h2>Bootstrap 4 versus Bootstrap 3</h2>
                   <p>We've haven't done a complete upgrade to Bootstrap 4, rather than keeping some key classes from Bootstrap 3 and gradually adding things from Bootstrap 4. Currently, you'll be able to use Cards and Utilities from Bootstrap 4 as well as the Bootstrap 4 Grid. If you want to use the Bootstrap 4 Grid, please add the class .bs4 to your body element. If you need something else from Bootstrap 4, please add it as a <a href="https://github.com/scania/corporate-ui/issues/new/choose">feature request</a>. Read more about it in the <a href="#bootstrap-4">Bootstrap 4 section</a></p>                  
-                  <h2>App versus Public</h2>
+                  <h2>Application versus Public</h2>
                   <p>When designing applications for Scania, you can either use the App layout or the Public layout. App will give you a much more compact layout than the Public mode. Typically, the Public mode is used for external communication that is primarily text based, while App is used for applications that contains a lot of form fields, tables and overall, a lot more user interaction. The only thing a developer has to do to switch between those modes are to add a CSS class to the <code>&lt;body&gt;</code> tag. Like this: <code>&lt;body class="scania app"&gt;</code> or <code>&lt;body class="scania public"&gt;</code>. The Public mode is default, so if the App class isn't specified, the Public mode will be set. You can use the two tabs above to switch between the App and Public layouts.</p>
 
                   <h2>Custom CSS</h2>
-                  <p>All the CSS that you'll need should be available using the Bootstrap Classes and Components described in this section. From a maintainance perspective it's important that you do avoid creating custom CSS classes. If you have a need that is not covered in Bootstrap, please <a href="/corporate-ui-docs/support/">contact us</a> and we'll find a solution for you.</p>
+                  <p>All the CSS that you'll need should be available using the Bootstrap Classes and Components described in this section. From a maintainance perspective it's important that you do avoid creating custom CSS classes. If you have a need that is not covered in Bootstrap, please <a href="/corporate-ui-docs/developer/support/">contact us</a> and we'll find a solution for you.</p>
                 </article>  
 
 
@@ -4020,12 +4020,11 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
 <span class="nt">&lt;/nav&gt;</span>
                 </code></pre></div>
 
-
+<!-- 
                 <h2 id="navbar-inverted">Inverted navbar</h2>
                 <p>Modify the look of the navbar by adding <code>.navbar-inverse</code>.</p>
                 <div class="bs-example">
                   <nav class="navbar navbar-inverse" role="navigation">
-                    <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex8-collapse">
   <span class="sr-only">Toggle navigation</span>
@@ -4035,23 +4034,21 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                       </button>
                       <a class="navbar-brand" href="#">Brand</a>
                     </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-ex8-collapse">
                       <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="#">Link</a></li>
                         <li><a href="#">Link</a></li>
                       </ul>
-                    </div><!-- /.navbar-collapse -->
+                    </div>
                   </nav>
-                </div><!-- /example -->
+                </div><
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-inverse&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
                   ...
                   <span class="nt">&lt;/nav&gt;</span>
                 </code></pre></div>
-              </div>
+              </div> -->
 
               <div class="bs-docs-section">
                 <div class="page-header">
@@ -7824,12 +7821,21 @@ span.photo-background {
     font-size: 14px;
     font-weight: normal;
     color: #999;
-    padding: 4px 17px;
+    padding: 4px 15px;
   }  
 
 .back-to-top {
     font-size: 16px;
     padding: 4px 6px;    
+}
+
+.app article p.lead {
+    font-size: 1.8rem;
+    line-height: 30px;
+}
+
+.app article h1 {
+    line-height: 0.98;navbar navbar-inverse
 }
 
 @media (max-width: 585px)  {
