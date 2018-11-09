@@ -7726,13 +7726,16 @@ span.photo-background {
     line-height: 2.2rem;
   }     
 
-  .highlight  {
-      overflow-x: scroll;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-  } 
 
   @media (max-width: 991px)  {
+
+    .highlight pre  {
+        word-break: keep-all;
+        white-space: pre;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
   .bs-example-modal .scroll-y {
     width: 84vw;
     max-width: 84vw;
