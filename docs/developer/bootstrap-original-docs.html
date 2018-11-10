@@ -7799,25 +7799,29 @@ span.photo-background {
   }    
 
   .highlight pre  {
+    overflow-x: scroll;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
   } 
+
+  .highlight pre  {
+    white-space: nowrap;
+  }   
 
   .highlight pre code {
     white-space: pre;
     -webkit-overflow-scrolling: touch;
     display: block;
-    overflow-x: scroll;
-    overflow-y: hidden;
   }
 
-  .highlight pre code::-webkit-scrollbar {
+  .highlight pre::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 7px;
     height: 6px;
     background-color:transparent;
   }
 
-  .highlight pre code::-webkit-scrollbar-thumb {
+  .highlight pre::-webkit-scrollbar-thumb {
     border-radius: 4px;
     background-color: rgba(0,0,0,.5);
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
