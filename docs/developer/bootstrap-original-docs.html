@@ -5556,39 +5556,47 @@ Cras justo odio
                 <p>You can use all Bootstrap plugins purely through the markup API without writing a single line of JavaScript. This is Bootstrap's first-class API and should be your first consideration when using a plugin.</p>
 
                 <p>That said, in some situations it may be desirable to turn this functionality off. Therefore, we also provide the ability to disable the data attribute API by unbinding all events on the document namespaced with <code>data-api</code>. This looks like this:</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">'.data-api'</span><span class="p">)</span>
+                <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">'.data-api'</span><span class="p">)</span>
                 </code></pre></div>
 
                 <p>Alternatively, to target a specific plugin, just include the plugin's name as a namespace along with the data-api namespace like this:</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">'.alert.data-api'</span><span class="p">)</span>
+                <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">'.alert.data-api'</span><span class="p">)</span>
                 </code></pre></div>
 
                 <h3 id="js-programmatic-api">Programmatic API</h3>
                 <p>We also believe you should be able to use all Bootstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.btn.danger'</span><span class="p">).</span><span class="nx">button</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'fat'</span><span class="p">)</span>
+                <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.btn.danger'</span><span class="p">).</span><span class="nx">button</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'fat'</span><span class="p">)</span>
                 </code></pre></div>
 
                 <p>All methods should accept an optional options object, a string which targets a particular method, or nothing (which initiates a plugin with default behavior):</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">()</span><span class="c1">// initialized with defaults</span>
-                  <span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">({</span> <span class="nx">keyboard</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})</span>   <span class="c1">// initialized with no keyboard</span>
-                  <span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>                <span class="c1">// initializes and invokes show immediately</span>
+                <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">()</span><span class="c1">// initialized with defaults</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">({</span> <span class="nx">keyboard</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">})</span>   <span class="c1">// initialized with no keyboard</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>                <span class="c1">// initializes and invokes show immediately</span>
                 </code></pre></div>
 
                 <p>Each plugin also exposes its raw constructor on a <code>Constructor</code> property: <code>$.fn.popover.Constructor</code>. If you'd like to get a particular plugin instance, retrieve it directly from an element: <code>$('[rel=popover]').data('popover')</code>.</p>
 
                 <h3 id="js-noconflict">No conflict</h3>
                 <p>Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call <code>.noConflict</code> on the plugin you wish to revert the value of.</p>
-                <div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">bootstrapButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button to previously assigned value</span>
-                  <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span>            <span class="c1">// give $().bootstrapBtn the Bootstrap functionality</span>
+                <div class="highlight"><pre><code class="js">
+<span class="kd">var</span> <span class="nx">bootstrapButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button to previously assigned value</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span>            <span class="c1">// give $().bootstrapBtn the Bootstrap functionality</span>
                 </code></pre></div>
 
                 <h3 id="js-events">Events</h3>
                 <p>Bootstrap provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is trigger on the completion of an action.</p>
                 <p>As of 3.0.0, all Bootstrap events are namespaced.</p>
                 <p>All infinitive events provide <code>preventDefault</code> functionality. This provides the ability to stop the execution of an action before it starts.</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'show.bs.modal'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+                <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'show.bs.modal'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
                   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> <span class="c1">// stops modal from being shown</span>
-                  <span class="p">})</span>
+                 
+<span class="p">})</span>
                 </code></pre></div>
 
                 <div class="bs-callout bs-callout-warning" id="callout-third-party-libs">
@@ -5980,7 +5988,8 @@ Cras justo odio
 
                 <h3>Via JavaScript</h3>
                 <p>Call a modal with id <code>myModal</code> with a single line of JavaScript:</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+                <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
                 </code></pre></div>
 
                 <h3>Options</h3>
@@ -6032,24 +6041,29 @@ Cras justo odio
 
               <h4>.modal(options)</h4>
               <p>Activates your content as a modal. Accepts an optional options <code>object</code>.</p>
-              <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">({</span>
+              <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">({</span>
                 <span class="nx">keyboard</span><span class="o">:</span> <span class="kc">false</span>
-                <span class="p">})</span>
+               
+<span class="p">})</span>
               </code></pre></div>
 
               <h4>.modal('toggle')</h4>
               <p>Manually toggles a modal. <strong>Returns to the caller before the modal has actually been shown or hidden</strong> (i.e. before the <code>shown.bs.modal</code> or <code>hidden.bs.modal</code> event occurs).</p>
-              <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">)</span>
+              <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">)</span>
               </code></pre></div>
 
               <h4>.modal('show')</h4>
               <p>Manually opens a modal. <strong>Returns to the caller before the modal has actually been shown</strong> (i.e. before the <code>shown.bs.modal</code> event occurs).</p>
-              <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>
+              <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>
               </code></pre></div>
 
               <h4>.modal('hide')</h4>
               <p>Manually hides a modal. <strong>Returns to the caller before the modal has actually been hidden</strong> (i.e. before the <code>hidden.bs.modal</code> event occurs).</p>
-              <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span>
+              <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span>
               </code></pre></div>
 
               <h3>Events</h3>
@@ -6086,9 +6100,11 @@ Cras justo odio
                  </tbody>
                </table>
              </div><!-- /.table-responsive -->
-             <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hidden.bs.modal'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+             <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hidden.bs.modal'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
               <span class="c1">// do something...</span>
-              <span class="p">})</span>
+             
+<span class="p">})</span>
             </code></pre></div>
           </div>
 
@@ -6221,7 +6237,8 @@ Cras justo odio
 
             <h3>Via JavaScript</h3>
             <p>Call the dropdowns via JavaScript:</p>
-            <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.dropdown-toggle'</span><span class="p">).</span><span class="nx">dropdown</span><span class="p">()</span>
+            <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.dropdown-toggle'</span><span class="p">).</span><span class="nx">dropdown</span><span class="p">()</span>
             </code></pre></div>
             <div class="bs-callout bs-callout-info">
               <h4><code>data-toggle="dropdown"</code> still required</h4>
@@ -6345,7 +6362,9 @@ Cras justo odio
 
                     <h3>Via JavaScript</h3>
                     <p>Call the scrollspy via JavaScript:</p>
-                    <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">scrollspy</span><span class="p">({</span> <span class="nx">target</span><span class="o">:</span> <span class="s1">'.navbar-example'</span> <span class="p">})</span>
+                    <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">scrollspy</span><span class="p">({</span> <span class="nx">target</span><span class="o">:</span> <span class="s1">'.navbar-example'</span>
+<span class="p">})</span>
                     </code></pre></div>
 
                     <div class="bs-callout bs-callout-danger">
@@ -6356,7 +6375,8 @@ Cras justo odio
                     <h3>Methods</h3>
                     <h4>.scrollspy('refresh')</h4>
                     <p>When using scrollspy in conjunction with adding or removing of elements from the DOM, you'll need to call the refresh method like so:</p>
-                    <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'[data-spy="scroll"]'</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+                    <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'[data-spy="scroll"]'</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">$spy</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">scrollspy</span><span class="p">(</span><span class="s1">'refresh'</span><span class="p">)</span>
 <span class="p">})</span>
                     </code></pre></div>
@@ -6402,9 +6422,11 @@ Cras justo odio
                      </tbody>
                    </table>
                  </div><!-- ./bs-table-responsive -->
-                 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myScrollspy'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'activate.bs.scrollspy'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+                 <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myScrollspy'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'activate.bs.scrollspy'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
                   <span class="c1">// do something…</span>
-                  <span class="p">})</span>
+                 
+<span class="p">})</span>
                 </code></pre></div>
               </div>
 
@@ -6455,7 +6477,8 @@ Cras justo odio
                     <h2 id="tabs-usage">Usage</h2>
                     <p>Enable tabbable tabs via JavaScript (each tab needs to be activated individually):</p>
 
-                    <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab a'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+                    <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab a'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
 <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
 <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>
 <span class="p">})</span>
@@ -6463,7 +6486,8 @@ Cras justo odio
 
                     <p>You can activate individual tabs in several ways:</p>
 
-                    <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab a[href="#profile"]'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span> <span class="c1">// Select tab by name</span>
+                    <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab a[href="#profile"]'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span> <span class="c1">// Select tab by name</span>
 <span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab a:first'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span> <span class="c1">// Select first tab</span>
 <span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab a:last'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span> <span class="c1">// Select last tab</span>
 <span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab li:eq(2) a'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span> <span class="c1">// Select third tab (0-indexed)</span>
@@ -6548,10 +6572,12 @@ Cras justo odio
                        </tbody>
                      </table>
                    </div><!-- /.table-responsive -->
-                   <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'a[data-toggle="tab"]'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'shown.bs.tab'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+                   <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'a[data-toggle="tab"]'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'shown.bs.tab'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">e</span><span class="p">.</span><span class="nx">target</span> <span class="c1">// activated tab</span>
   <span class="nx">e</span><span class="p">.</span><span class="nx">relatedTarget</span> <span class="c1">// previous tab</span>
-  <span class="p">})</span>
+ 
+<span class="p">})</span>
                   </code></pre></div>
                 </div>
 
@@ -6606,7 +6632,8 @@ Cras justo odio
                     <h2 id="tooltips-usage">Usage</h2>
                     <p>The tooltip plugin generates content and markup on demand, and by default places tooltips after their trigger element.</p>
                     <p>Trigger the tooltip via JavaScript:</p>
-                    <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#example'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+                    <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#example'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
                     </code></pre></div>
 
                     <h3>Markup</h3>
@@ -6709,22 +6736,26 @@ Cras justo odio
 
                 <h4>.tooltip('show')</h4>
                 <p>Reveals an element's tooltip.</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>
+                <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>
                 </code></pre></div>
 
                 <h4>.tooltip('hide')</h4>
                 <p>Hides an element's tooltip.</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span>
+                <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span>
                 </code></pre></div>
 
                 <h4>.tooltip('toggle')</h4>
                 <p>Toggles an element's tooltip.</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">)</span>
+                <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">)</span>
                 </code></pre></div>
 
                 <h4>.tooltip('destroy')</h4>
                 <p>Hides and destroys an element's tooltip.</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'destroy'</span><span class="p">)</span>
+                <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'destroy'</span><span class="p">)</span>
                 </code></pre></div>
 
                 <h3>Events</h3>
@@ -6756,9 +6787,11 @@ Cras justo odio
                    </tbody>
                  </table>
                </div><!-- /.table-responsive -->
-               <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTooltip'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hidden.bs.tooltip'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+               <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myTooltip'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hidden.bs.tooltip'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
                 <span class="c1">// do something…</span>
-                <span class="p">})</span>
+               
+<span class="p">})</span>
               </code></pre></div>
             </div>
 
@@ -6876,7 +6909,8 @@ Cras justo odio
 
                     <h2 id="popovers-usage">Usage</h2>
                     <p>Enable popovers via JavaScript:</p>
-                    <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#example'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+                    <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#example'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
                     </code></pre></div>
 
                     <h3>Options</h3>
@@ -6966,22 +7000,26 @@ Cras justo odio
 
                 <h4>.popover('show')</h4>
                 <p>Reveals an elements popover.</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>
+                <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>
                 </code></pre></div>
 
                 <h4>.popover('hide')</h4>
                 <p>Hides an elements popover.</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span>
+                <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span>
                 </code></pre></div>
 
                 <h4>.popover('toggle')</h4>
                 <p>Toggles an elements popover.</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">)</span>
+                <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">)</span>
                 </code></pre></div>
 
                 <h4>.popover('destroy')</h4>
                 <p>Hides and destroys an element's popover.</p>
-                <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'destroy'</span><span class="p">)</span>
+                <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'destroy'</span><span class="p">)</span>
                 </code></pre></div>
                 <h3>Events</h3>
                 <div class="table-responsive">
@@ -7012,9 +7050,11 @@ Cras justo odio
                    </tbody>
                  </table>
                </div><!-- /.table-responsive -->
-               <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myPopover'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hidden.bs.popover'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+               <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myPopover'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hidden.bs.popover'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
                 <span class="c1">// do something…</span>
-                <span class="p">})</span>
+               
+<span class="p">})</span>
               </code></pre></div>
             </div>
 
@@ -7050,7 +7090,8 @@ Cras justo odio
 
                     <h2 id="alerts-usage">Usage</h2>
                     <p>Enable dismissal of an alert via JavaScript:</p>
-                    <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s2">".alert"</span><span class="p">).</span><span class="nx">alert</span><span class="p">()</span>
+                    <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s2">".alert"</span><span class="p">).</span><span class="nx">alert</span><span class="p">()</span>
                     </code></pre></div>
 
                     <h3>Markup</h3>
@@ -7066,7 +7107,8 @@ Cras justo odio
 
                     <h4>.alert('close')</h4>
                     <p>Closes an alert.</p>
-                    <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s2">".alert"</span><span class="p">).</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'close'</span><span class="p">)</span>
+                    <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s2">".alert"</span><span class="p">).</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'close'</span><span class="p">)</span>
                     </code></pre></div>
 
 
@@ -7092,7 +7134,8 @@ Cras justo odio
                         </tbody>
                       </table>
                     </div><!-- /.table-responsive -->
-                    <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#my-alert'</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">'closed.bs.alert'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+                    <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#my-alert'</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">'closed.bs.alert'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
 <span class="c1">// do something…</span>
 <span class="p">})</span>
                     </code></pre></div>
@@ -7201,7 +7244,8 @@ Cras justo odio
 
                     <h2 id="js-buttons-usage">Usage</h2>
                     <p>Enable buttons via JavaScript:</p>
-                    <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.btn'</span><span class="p">).</span><span class="nx">button</span><span class="p">()</span>
+                    <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.btn'</span><span class="p">).</span><span class="nx">button</span><span class="p">()</span>
                     </code></pre></div>
 
                     <h3>Markup</h3>
@@ -7389,7 +7433,8 @@ Cras justo odio
 
                     <h3>Via JavaScript</h3>
                     <p>Enable manually with:</p>
-                    <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.collapse'</span><span class="p">).</span><span class="nx">collapse</span><span class="p">()</span>
+                    <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.collapse'</span><span class="p">).</span><span class="nx">collapse</span><span class="p">()</span>
                     </code></pre></div>
 
                     <h3>Options</h3>
@@ -7425,9 +7470,11 @@ Cras justo odio
 
                    <h4>.collapse(options)</h4>
                    <p>Activates your content as a collapsible element. Accepts an optional options <code>object</code>.
-                   </p><div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myCollapsible'</span><span class="p">).</span><span class="nx">collapse</span><span class="p">({</span>
+                   </p><div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myCollapsible'</span><span class="p">).</span><span class="nx">collapse</span><span class="p">({</span>
   <span class="nx">toggle</span><span class="o">:</span> <span class="kc">false</span>
-  <span class="p">})</span>
+ 
+<span class="p">})</span>
                   </code></pre></div>
 
                   <h4>.collapse('toggle')</h4>
@@ -7471,9 +7518,11 @@ Cras justo odio
                    </tbody>
                  </table>
                </div><!-- /.table-responsive -->
-               <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myCollapsible'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hidden.bs.collapse'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+               <div class="highlight"><pre><code class="js">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myCollapsible'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hidden.bs.collapse'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
                 <span class="c1">// do something…</span>
-                <span class="p">})</span>
+               
+<span class="p">})</span>
               </code></pre></div>
             </div>
 
@@ -7517,7 +7566,8 @@ Cras justo odio
                 <span class="k">return</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">bottom</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'.footer'</span><span class="p">).</span><span class="nx">outerHeight</span><span class="p">(</span><span class="kc">true</span><span class="p">))</span>
                 <span class="p">}</span>
                 <span class="p">}</span>
-                <span class="p">})</span>
+               
+<span class="p">})</span>
               </code></pre></div>
 
 
