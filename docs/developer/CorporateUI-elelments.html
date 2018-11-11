@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8">
+  <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+
+  <title>UX Library - Bootstrap CSS for Applications</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
+  <!--   3.4.0-CF   -->
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/master/js/corporate-ui.js?monitoring=true"></script>
+  <link rel="stylesheet" href="css/scania-bootstrap-docs.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
+  <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
+
+  <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">  
+  <script src="holder.js"></script>
+</head>
+
+<body class="scania app" id="top">
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </c-corporate-header>
+
+  <c-main-content>
+
+    <c-main-navigation>
+      <primary-items>
+        <nav-item location="/corporate-ui-docs/">Home</nav-item>
+        <nav-item location="/corporate-ui-docs/styleguide/">Style Guide
+          <sub-navigation caption="Style Guide">
+            <nav-item location="/corporate-ui-docs/logotype/">Logotype</nav-item>
+            <nav-item location="/corporate-ui-docs/icons/">Icons</nav-item>
+            <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
+            <nav-item location="/corporate-ui-docs/typography/">Typography</nav-item>
+          </sub-navigation>
+        </nav-item>          
+        <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
+          <sub-navigation caption="Web Applications">
+            <nav-item location="/corporate-ui-docs/developer/">Corporate UI</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/corporate-ui-for-frameworks.html">JS Frameworks</nav-item>   
+            <nav-item location="/corporate-ui-docs/component/">Available Components</nav-item>
+            <nav-item location="/corporate-ui-docs/template/">Templates</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html" class="active">Scania Bootstrap</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/uiaas.html">UIaaS</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+          </sub-navigation>
+        </nav-item>
+        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
+      </primary-items>
+      <secondary-items>
+        <div class="dropdown">
+          <div role="button" class="user-profile user-menu dropdown-toggle" data-toggle="dropdown">
+            <div class="user-name hidden-md">
+                <span>Demo User</span>
+                <small class="hidden-md">Company name</small>
+            </div>
+            <div class="user-profile-picture" style="background-image: url('https://scania.github.io/corporate-ui-docs/images/sample-user-image.jpg');background-image: url(https://d31jnweo1ynb8u.cloudfront.net/resources/icons/scania/SVG_POS/08_My_scania_Mobile-24-48px.svg);background-size: 106%;">
+            </div>
+          </div>  
+          <ul class="dropdown-menu" aria-labelledby="myDropdown">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://idm.scania.com">IDM</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://passwordkiosk.scania.com/">Change Password</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
+          </ul>
+        </div>        
+
+      </secondary-items>  
+    </c-main-navigation>
+
+    <section class="light">
+      <div class="container-fluid">
+
+
+
+
+
+
+
+
+
+
+     <!-- CORPORATE UI COMPONENTS TAB CONTENT STARTS HERE -->
+
+      <div id="bootstrap-components-section" class="tab-pane fade in">
+       <div class="panel-x">
+        <div class="panel-body-x">
+          <div class="row">
+            <div class="col-md-9 bs-docs-section">
+              <div class="page-header">
+                <h1 id="corporate-ui-components-overview">Corporate UI Components</h1>
+              </div>
+
+              <div class="bs-docs-section panel-x">
+                <div class="page-header">
+                  <h2 id="corporate-header">Corporate Header</h2>
+                </div>
+               <h3 id="corporate-header-example">Example</h3>
+                <p></p>
+
+
+                <div class="bs-example">
+                  <c-corporate-header site-name="My application name"  short-name="My app" site-url="/">
+                    <nav-item location="#">Optional</nav-item>
+                    <nav-item location="#">User Menu</nav-item>
+                  </c-corporate-header>
+                </div>
+
+
+                <div class="highlight"><pre><code class="html">
+<span class="nt">&lt;c-corporate-header</span> <span class="na">site-name=</span><span class="s">&quot;My application name&quot;</span> <span class="na">short-name=</span><span class="s">&quot;My app&quot;</span><span class="na"> site-url=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Optional<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>User Menu<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+<span class="nt">&lt;/c-corporate-header<span class="nt">&gt;</span>
+                </code></pre></div>
+
+
+
+                <h3 id="corporate-header-site-name">Site name and Short name</h3>
+                <p>Add a <code>site-name</code> and a <code>short-name</code> that will be displayed in mobile mode. The site name will be displayed on the right hand side of the logotype on desktop mode and top centered in mobile mode.</p>
+
+                <h3 id="corporate-header-headers">Header links</h3>
+                <p>You can add one or several <code>nav-item</code> to the Corporate Header. Typically these are used to link away from the site, to for example Scania.Com. This location is also used for language selectors and user menus.</p>
+
+                <h3 id="corporate-header-dealer-variation">Dealer variation</h3>
+                <p>Dealers have a slightly different header setup as they need to include their name and/or their logotype.</p>
+
+                <div class="bs-example">
+                  <c-corporate-header short-name="Bilmetro" site-url="https://www.scania.com/se/sv/bilmetro" dealer-name="Bilmetro" dealer-logo="https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png" dealer-url="https://www.scania.com/se/sv/bilmetro">
+                    <nav-item location="https://configurator.scania.com/index.aspx?etel_market=5141&etel_language=5237">Configurator</nav-item>
+                  </c-corporate-header>
+                </div>
+
+
+                <div class="highlight"><pre><code class="html">
+<span class="nt">&lt;c-corporate-header</span> <span class="na">dealer-name=</span><span class="s">&quot;Bilmetro&quot;</span> <span class="na">short-name=</span><span class="s">&quot;Bilmetro&quot;</span>  <span class="na">dealer-url=</span></span><span class="s">&quot;/&quot;</span> <span class="na">dealer-logo=</span><span class="s">&quot;https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Configurator<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+<span class="nt">&lt;/c-corporate-header<span class="nt">&gt;</span>
+                </code></pre></div>
+
+              </div><!--  end of bs-docs-section -->
+
+
+
+
+
+
+
+              <div class="bs-docs-section">
+                <div class="page-header">
+                  <h2 id="main-content">Main Content</h2>
+                </div>
+                <p>The sole purpose of the <code><span class="nt">&lt;c-main-content<span class="nt">&gt;</span></code> element is to calculate the distance between the Corporate Header and the Corporate Footer. Using <code><span class="nt">&lt;c-main-content<span class="nt">&gt;</span></code>  on your page will ensure you that the footer never slides up the page. If the acutal content on a page is not tall enough to push the footer down and out of the browser viewport, it will be "hanging" on the page with whitespace underneath. </p>
+
+
+                <div class="highlight"><pre><code class="html">
+<span class="nt">&lt;c-main-content</span><span class="nt">&gt;</span> 
+  <span class="nt">&lt;section</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container OR container-fluid&quot;<span class="nt">&gt;</span>
+
+    Your application goes here. If you are using .container-fluid,<br>
+    your page will take the whole browser width. <br>
+    Using .container, it will give you margins on wider screens.
+
+    <span class="nt">&lt;/div</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/section</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/c-main-content<span class="nt">&gt;</span>
+                </code></pre></div>
+
+
+                <h3 id="main-navigation-section-container">Sections and Containers</h3>
+                <p>While c-main-content is calculating the distance between header and footer, you'll need additional elements to set margins and padding. The <code><span class="nt">&lt;section<span class="nt">&gt;</span></code> element is setting both the background colour as well as top and bottom margins. You can override the standard background colour by using the classes <code>.light</code> or <code>.dark</code>. To set boxed left and right margins, use the <code>.container</code> class. For a fluid design use <code>.container-fluid</code> class. A page can be built using several sections with a variety of containers.</p>
+
+              </div><!--  end of bs-docs-section -->
+
+
+
+
+
+
+
+              <div class="bs-docs-section">
+                <div class="page-header">
+                  <h2 id="main-nav">Main Navigation</h2>
+                </div>
+                <p>The main navigation is the element that's located on the very top of this browser window (we can't show another example as you naturally only can have one main navigation a page). It has a desktop mode and a mobile mode where the break point for desktop/mobile is at 992px. If you make your browser window narrower or wider you'll see how the navigation changes its appearance. Below you'll find the code needed for incorporating the navigation.</p>
+
+                <div class="highlight"><pre><code class="html">
+<span class="nt">&lt;c-main-navigation<span class="nt">&gt;</span>
+  <span class="nt">&lt;primary-items<span class="nt">&gt;</span>
+    <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Home<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+    <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Style Guide<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+      <span class="nt">&lt;sub-navigation</span> <span class="na">caption=</span><span class="s">&quot;Style Guide&quot;<span class="nt">&gt;</span>
+        <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Logotype<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+        <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Icons<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+      <span class="nt">&lt;/sub-navigation<span class="nt">&gt;</span>
+  <span class="nt">&lt;/primary-items<span class="nt">&gt;</span>
+  <span class="nt">&lt;secondary-items<span class="nt">&gt;</span>
+     Secondary items are optional, more information below.
+  <span class="nt">&lt;/secondary-items<span class="nt">&gt;</span>
+<span class="nt">&lt;/c-main-navigation<span class="nt">&gt;</span>
+
+                </code></pre></div>
+
+
+
+                <h3 id="main-navigation-primary-items">Primary items</h3>
+                <p></p>
+
+
+                <h3 id="main-navigation-nav-item">Nav items</h3>
+                <p></p>
+
+                <h3 id="main-navigation-more-transformation">The &quot;More&quot; transformation</h3>
+                <p></p>                                
+
+                <h3 id="main-navigation-sub-navigation">Sub navigation</h3>
+                <p></p>
+
+                <h3 id="main-navigation-secondary-items">Secondary items (optional)</h3>
+                <p>In the  <code><span class="nt">&lt;secondary-items<span class="nt">&gt;</span></code> element you can place any custom markup that your solution demands. A common example is the user profile drop down exampled below. In desktop mode, on this page's main navigation, it's the blue box in the upper right hand side of the browser window. If you're in mobile mode, the user profile menu is avaiable among the navigation items on the mobile menu. </p>
+
+                <div class="highlight"><pre><code class="html">
+
+<span class="nt">&lt;secondary-items<span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span> 
+    <span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">&quot;button&quot;</span><span class="nt">&gt;</span>                 
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;user-profile user-menu dropdown-toggle&quot; <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;user-name hidden-md&quot;</span><span class="nt">&gt;</span>   
+          <span class="nt">&lt;span<span class="nt">&gt;</span>Jesper Karlsson<span class="nt">&lt;span<span class="nt">&gt;</span>
+          <span class="nt">&lt;small<span class="nt">&gt;</span>Company name<span class="nt">&lt;small<span class="nt">&gt;</span>
+        <span class="nt">&lt;/div<span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;user-profile-picture&quot;</span> <span class="na">style=</span><span class="s">&quot;background-image: url('https://scania.github.io/corporate-ui-docs/images/sample-user-image.jpg')&quot;</span><span class="nt">&gt;</span> 
+      <span class="nt">&lt;/div<span class="nt">&gt;</span>  
+    <span class="nt">&lt;/div<span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="na">aria-labelledby=</span><span class="s">&quot;myDropdown&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">&quot;presentation&quot;</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">role=</span><span class="s">&quot;menuitem&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span><span class="nt">&gt;</span> <span class="na">href=</span><span class="s">&quot;https://idm.scania.com&quot;</span><span class="nt">&gt;</span> Change Password<span class="nt">&lt;/a<span class="nt">&gt;</span><span class="nt">&lt;/li<span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">&quot;presentation&quot;</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">role=</span><span class="s">&quot;menuitem&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span><span class="nt">&gt;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span> Logout<span class="nt">&lt;/a<span class="nt">&gt;</span><span class="nt">&lt;/li<span class="nt">&gt;</span>
+    <span class="nt">&lt;/ul<span class="nt">&gt;</span>        
+  <span class="nt">&lt;/div<span class="nt">&gt;</span>
+<span class="nt">&lt;/secondary-items<span class="nt">&gt;</span>          
+
+
+                </code></pre></div>
+
+
+                <h3 id="main-navigation-mobile-navigation">Mobile navigation</h3>
+                <p></p>    
+
+                <h3 id="main-navigation-show-search">Show search</h3>
+                <p></p>   
+
+              </div><!--  end of bs-docs-section -->
+
+
+
+              <div class="bs-docs-section panel-x">
+                <div class="page-header">
+                  <h2 id="corporate-footer">Corporate Footer</h2>
+                </div>
+                <h3 id="corporate-footer-basic-example">Basic Example</h3>
+                <p>By default, the <span class="nt">&lt;c-corporate-footer</span><span class="nt">&gt;</span> element renders with a copyright text and a wordmark. All you have to do is to include the element as shown in the example.</p>
+
+
+                <div class="bs-example">
+                  <c-corporate-footer></c-corporate-footer>
+                </div>
+
+
+                <div class="highlight"><pre><code class="html">
+<span class="nt">&lt;c-corporate-footer</span><span class="nt">&gt;</span><span class="nt">&lt;/c-corporate-footer</span><span class="nt">&gt;</span>
+                </code></pre></div>
+
+
+
+                <h3 id="corporate-footer-site-name">Corporate Footer with Links and Social Icons</h3>
+                <p>By including the <code>social-icons</code> component in the footer you'll be able to promote your local social channels. Add nav-items if you're in need of footer links.</p>
+
+                <div class="bs-example">
+                  <c-corporate-footer site-name="My application name"  short-name="My app" site-url="/">
+                      <c-social-media>
+                       <nav-item location="#" icon="facebook" onclick="window.open('https://www.facebook.com/scaniagroup/')"></nav-item>
+                       <nav-item location="#" icon="twitter"></nav-item>
+                       <nav-item location="#" icon="youtube"></nav-item>
+                       <nav-item location="#" icon="linkedin"></nav-item>
+                      </c-social-media>
+                    <nav-item location="#">Legal notice</nav-item>
+                    <nav-item location="#">Privacy statement</nav-item>
+                    <nav-item location="#">Cookies</nav-item>
+                    <nav-item location="#">Contact us</nav-item>
+                  </c-corporate-footer>
+                </div>
+
+
+
+
+ 
+
+                <div class="highlight"><pre><code class="html">
+<span class="nt">&lt;c-corporate-footer</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;c-social-media</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;facebook&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot; <span class="na">onclick=</span><span class="s">&quot;window.open('https://www.facebook.com/scaniagroup/')&quot;<span class="nt"><span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+   <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;twitter&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+   <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;youtube&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+   <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;linkedin&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>         
+  <span class="nt">&lt;/c-social-media</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Legal notice<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Privacy statement<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Cookies<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Contact us<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>  
+<span class="nt">&lt;/c-corporate-footer</span><span class="nt">&gt;</span>
+                </code></pre></div>
+
+                <h3 id="corporate-footer-site-name">Opening a link in a new browser window or tab</h3>
+                <p>If you prefere to open a nav-item in a new window, please use the JS event <code>onclick="window.open('https://wherever.com')"</code> to do the trick. It's included in the above code sample.</p>
+              </div>  
+
+
+
+
+
+
+              <div class="bs-docs-section panel-x">
+                <div class="page-header">
+                  <h2 id="sample-page">Sample Page</h2>
+                </div>
+                <p>OK, so that's the basic components that most projects start out with. So, how does they all fit togheter? Copy the code sample below or <a href="sample-page.html" download>download it as a raw html file</a>. Then you're all set to go ahead with implementing the core needs of your requirements.
+                  NOTE: Using a JS Framework like Angular, Vue or React <a href="corporate-ui-for-frameworks.html">might take a little tweaking</a>.</p>
+
+
+
+                <div class="highlight"><pre><code class="html">
+  <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;scania app&quot;<span class="nt">&gt;</span>   
+    <span class="nt">&lt;c-corporate-header</span> <span class="na">site-name=</span><span class="s">&quot;My application name&quot;</span> <span class="na">short-name=</span><span class="s">&quot;My app&quot;</span><span class="na"> site-url=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Optional<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>User Menu<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+    <span class="nt">&lt;/c-corporate-header<span class="nt">&gt;</span>
+
+    <span class="nt">&lt;c-main-content</span><span class="nt">&gt;</span> 
+
+      <span class="nt">&lt;c-main-navigation<span class="nt">&gt;</span>
+        <span class="nt">&lt;primary-items<span class="nt">&gt;</span>
+          <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Home<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+          <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Style Guide<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+            <span class="nt">&lt;sub-navigation</span> <span class="na">caption=</span><span class="s">&quot;Style Guide&quot;<span class="nt">&gt;</span>
+              <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Logotype<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+              <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Icons<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+            <span class="nt">&lt;/sub-navigation<span class="nt">&gt;</span>
+        <span class="nt">&lt;/primary-items<span class="nt">&gt;</span>
+        <span class="nt">&lt;secondary-items<span class="nt">&gt;</span>
+           Secondary items are optional, more information below.
+        <span class="nt">&lt;/secondary-items<span class="nt">&gt;</span>
+      <span class="nt">&lt;/c-main-navigation<span class="nt">&gt;</span>
+
+      <span class="nt">&lt;section</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;<span class="nt">&gt;</span>
+
+        Your application goes here. If you are using .container-fluid,<br>
+        your page will take the whole browser width. <br>
+        Using .container, it will give you margins on wider screens.
+
+        <span class="nt">&lt;/div</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/section</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/c-main-content<span class="nt">&gt;</span>
+
+    <span class="nt">&lt;c-corporate-footer</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;c-social-media</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;facebook&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot; <span class="na">onclick=</span><span class="s">&quot;window.open('https://www.facebook.com/scaniagroup/')&quot;<span class="nt"><span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;twitter&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;youtube&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;linkedin&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>         
+      <span class="nt">&lt;/c-social-media</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Legal notice<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Privacy statement<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Cookies<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Contact us<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>  
+    <span class="nt">&lt;/c-corporate-footer</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/body</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/html</span><span class="nt">&gt;</span>
+                </code></pre></div>
+
+
+
+                <h3 id="sample-page-app-public">Application vs. Public</h3>
+                <p>You can always toogle between the layout zones by altering between the .app and .public classes on the body tag.</p>
+
+
+
+
+
+
+              </div><!--  end of bs-docs-section -->
+
+
+
+          </div><!-- col-9 -->
+
+
+
+
+
+
+
+
+
+
+            <div class="col-md-3">
+                <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
+                  <ul class="nav bs-docs-sidenav">
+                  <li>
+                    <a href="#top">Overview</a>
+                  </li>                                     
+                  <li>
+                    <a href="#corporate-header">Corporate Header</a>
+                  </li>
+                  <li>
+                    <a href="#main-content">Main Content</a>
+                  </li>
+                  <li>
+                    <a href="#main-nav">Main Navigation</a>
+                  </li>
+                  <li>
+                    <a href="#corporate-footer">Corporate Footer</a>
+                  </li>
+                  <li>
+                    <a href="#sample-page">Sample Page</a>
+                  </li>                                    
+                  <li>
+                    <a class="back-to-top" href="#top"> Back to top</a>
+                  </li> 
+                  </ul>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" class="code-sample"><span></span> Hide code samples
+                    </label>
+                  </div>                 
+                </nav>
+              </div>
+            </div>        
+          </div>
+        </div>
+      </div>
+    </div>
+  </main-content>
+
+<c-corporate-footer></c-corporate-footer> 
+
+<script src="/corporate-ui-docs/ux-lib.js"></script> 
+
+<script>
+
+$(function(){ 
+  $('.code-sample').change(function(){
+    if($(this).is(":checked")) {
+        $('.highlight').addClass('hide');
+    } else {
+        $('.highlight').removeClass('hide');
+    }
+  });
+
+$('.bs-example nav-item a').click(function(event) {
+    event.preventDefault();
+    console.log('Yes');
+});
+
+})  
+</script>  
+</div>
+</section>  
+<style>
+
+c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header img.c-corporate-header {
+    vertical-align: super;
+    height: 28px;
+    width: 123px;
+}
+
+.navbar-default .navbar-header .navbar-brand:after {
+    border-left: none;
+}
+
+
+  
+  .highlight pre  {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  } 
+
+  .highlight pre  {
+    white-space: nowrap;
+  }   
+
+  .highlight pre code {
+    white-space: pre;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .highlight pre::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+    height: 6px;
+    background-color:transparent;
+  }
+
+  .highlight pre::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    cursor: pointer;
+  }
+
+  .modal .modal-body  {
+    font-size: inherit;
+  }
+
+
+  .bs-docs-sidebar.affix {
+      position: fixed;
+      top: 220px;
+      margin-left: 30px;
+  }
+
+  .bs-docs-sidebar .checkbox {
+      padding: 0px 15px;
+  } 
+
+  .bs-example c-corporate-header .navbar-default.c-corporate-header {
+    z-index: 900;
+  }
+    
+
+  .checkbox label {
+    font-family: Scania Sans Semi Condensed;
+    padding-left: 0px;
+    color: #999;
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+
+  .bs-docs-sidebar .nav > li > a:hover, .bs-docs-sidebar .nav > li > a:focus {
+    padding-left: 13px;
+    color: #041e42;
+    border-left: 2px solid #d6001c;
+  }
+
+  .bs-docs-sidebar .nav > li > a {
+      font-size: 14px;
+      font-weight: normal;
+      color: #999;
+      padding: 4px 15px;
+      text-transform: inherit;
+      font-family: 'Scania Sans Semi Condensed';
+  } 
+
+  .back-to-top {
+    margin-top: 8px;
+    margin-bottom: 8px;    
+    margin-left: 0;
+  }  
+
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    outline: 0;
+}
+
+.user-profile-picture {
+    background-image: url(https://d31jnweo1ynb8u.cloudfront.net/resources/icons/scania/SVG_POS/08_My_scania_Mobile-24-48px.svg);
+    background-size: 106%;
+}
+
+  .app article p.lead {
+      font-size: 1.8rem;
+      line-height: 30px;
+  }
+
+  .app article h1 {
+      line-height: 0.98;
+  }
+
+  @media (max-width: 585px)  {
+      .alert.alert-primary.alert-dismissible .close {
+          top: -20px;
+          right: -26px;
+      }
+
+      .highlight pre code {
+          width: 220vw;
+      }    
+    }
+
+  @media (max-width: 991px)  {
+
+    .bs-example-modal .scroll-y {
+      width: 84vw;
+      max-width: 84vw;
+      height: 550px;
+      }
+
+    .user-profile.user-menu .user-name {
+        padding-left: 15px;
+        text-align: left;
+    }
+
+  }
+
+
+
+
+</style>
+  
+</body>
+</html>
