@@ -44,8 +44,6 @@
           <sub-navigation caption="Web Applications">
             <nav-item location="/corporate-ui-docs/developer/">Corporate UI</nav-item>
             <nav-item location="/corporate-ui-docs/developer/corporate-ui-for-frameworks.html">JS Frameworks</nav-item>   
-            <nav-item location="/corporate-ui-docs/component/">Available Components</nav-item>
-            <nav-item location="/corporate-ui-docs/template/">Templates</nav-item>
             <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html" class="active">Scania Bootstrap</nav-item>
             <nav-item location="/corporate-ui-docs/developer/uiaas.html">UIaaS</nav-item>
             <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
@@ -184,8 +182,6 @@
                 </div>
                 <p>The main navigation is the element that's located on the very top of this browser window (we can't show another example as you naturally only can have one main navigation a page). It has a desktop mode and a mobile mode where the break point for desktop/mobile is at 992px. If you make your browser window narrower or wider you'll see how the navigation changes its appearance. Below you'll find the code needed for incorporating the navigation.</p>
 
-                
-
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;c-main-navigation<span class="nt">&gt;</span>
   <span class="nt">&lt;primary-items<span class="nt">&gt;</span>
@@ -206,11 +202,21 @@
 
 
                 <h3 id="main-navigation-primary-items">Primary items</h3>
-                <p></p>
+                <p>The primary items element is the host for your sites main navigation items. It can contain one or several levels of navigation items.</p>
 
 
                 <h3 id="main-navigation-nav-item">Nav items</h3>
-                <p></p>
+                <p>The nav items is where you specify what links you are going to have on your navigation and where they should link to. If you need to access the acutal anchor <code><span class="nt">&lt;a<span class="nt">&gt;</span></code> element, it is possible - but not necessary - to add them in the actuall nav-item. </p>
+
+                <div class="highlight"><pre><code class="html">
+ <span class="nt">&lt;nav-item</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://scania.com&quot;<span class="nt">&gt;</span>Scania.Com<span class="nt">&lt;/a<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+                </code></pre></div>
+
+                <h4 id="main-navigation-nav-item-props-attrs">Attributes and Properties</h4>
+                <p>The nav items supports both attributes and properties.</p>
+                <div class="highlight"><pre><code class="html">
+ <span class="nt">&lt;nav-item</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://scania.com&quot;<span class="nt">&gt;</span>Scania.Com<span class="nt">&lt;/a<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+                </code></pre></div>                
 
                 <h3 id="main-navigation-more-transformation">The &quot;More&quot; transformation</h3>
                 <p></p>                                
