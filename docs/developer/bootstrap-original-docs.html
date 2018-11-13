@@ -81,6 +81,7 @@
             <div class="row">
 
             <div class="col-md-9 bs-docs-section">
+            <article class="mt-5 mr-5">
 <!--               <div class="page-header">
                 <h1 id="corporate-ui-components-overview">Corporate UI Custom Elements</h1>
               </div> -->
@@ -175,7 +176,7 @@
                 <div class="page-header">
                   <h2 id="main-nav">Main Navigation</h2>
                 </div>
-                <p>The main navigation has a desktop mode and a mobile mode where the break point for is at 992px viewport width. If you make your browser window narrower or wider you'll see how the navigation changes its appearance. The main navigation is highly customizable as it can host both primary and secondary items.</p>
+                <p>The main navigation has a desktop mode and a mobile mode where the break point for is at 992px viewport width. If you make your browser window narrower or wider you'll see how the navigation changes its appearance. The main navigation is highly customizable as it can host both primary and secondary items as well as nav-items with properties and attributes.</p>
 
                <div class="bs-example">
 
@@ -214,7 +215,7 @@
                 <p>The nav items is where you specify what links you are going to have on your navigation and where they should link to. If you need to access the actual anchor <code><span class="nt">&lt;a<span class="nt">&gt;</span></code> element, it is possible - but not necessary - to add them in the actual nav-item. </p>
 
                 <div class="highlight"><pre><code class="html">
- <span class="nt">&lt;nav-item</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://scania.com&quot;<span class="nt">&gt;</span>Scania.Com<span class="nt">&lt;/a<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+ <span class="nt">&lt;nav-item</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://scania.com&quot;</span><span class="nt">&gt;</span>Scania.Com<span class="nt">&lt;/a<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
                 </code></pre></div>
 
                 <h4 id="main-navigation-nav-item-props-attrs">Attributes and Properties</h4>
@@ -222,7 +223,7 @@
 
 
                 <div class="highlight"><pre><code class="html">
- <span class="nt">&lt;nav-item</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">icon=</span><span class="s">&quot;facebook&quot;</span> <span class="na">location=</span><span class="s">&quot;https://www.facebook.com/scaniagroup/&quot;</span> <span class="na">props=</span><span class="s">&quot;{ spellcheck: false, onclick: function() { window.open('https://www.facebook.com/scaniagroup/')}}&quot;</span> <span class="na">attrs=</span><span class="s">&quot;{ target: '_blank'}&quot;</span>
+ <span class="nt">&lt;nav-item</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">icon=</span><span class="s">&quot;facebook&quot;</span> <span class="na">location=</span><span class="s">&quot;https://www.facebook.com/scaniagroup/&quot;</span> <span class="na">attrs=</span><span class="s">&quot;{ target: '_blank'}&quot; <span class="na">props=</span><span class="s">&quot;{ onclick: function() { window.open('https://www.facebook.com/scaniagroup/' )}}&quot;</span></span>
  <span class="nt">&gt;</span>Scania.Com<span class="nt">&lt;/a</span><span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
                 </code></pre></div>                
 
@@ -362,6 +363,7 @@
               <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Logotype<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
               <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Icons<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
             <span class="nt">&lt;/sub-navigation<span class="nt">&gt;</span>
+          <span class="nt">&lt;/nav-item<span class="nt">&gt;</span>    
         <span class="nt">&lt;/primary-items<span class="nt">&gt;</span>
         <span class="nt">&lt;secondary-items<span class="nt">&gt;</span>
            Secondary items are optional, more information below.
@@ -477,9 +479,7 @@
 
                   <h2>Custom CSS</h2>
                   <p>All the CSS that you'll need should be available using the Bootstrap Classes and Components described in this section. From a maintainance perspective it's important that you do avoid creating custom CSS classes. If you have a need that is not covered in Bootstrap, please <a href="/corporate-ui-docs/developer/support/">contact us</a> and we'll find a solution for you.</p>
-                </article>  
-
-
+ 
                 <div class="page-header">
                   <h2 id="css-overview">Bootstrap CSS</h1>
                 </div>
@@ -2874,6 +2874,7 @@
                     </ul>                                            
                   </p>
                 </div>
+              </article>
               </div>
 
               <div class="col-md-3">
@@ -3021,6 +3022,7 @@
         <div class="panel-body-x">
           <div class="row">
             <div class="col-md-9 bs-docs-section">
+              <article class="mt-5 mr-5">
 
               <div class="page-header">
                 <h2 id="components-overview">Bootstrap Components</h1>
@@ -5758,6 +5760,8 @@ Cras justo odio
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;well well-sm&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
                 </code></pre></div>
               </div>
+
+            </article>    
             </div>
             <div class="col-md-3">
               <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
@@ -5976,11 +5980,6 @@ Cras justo odio
                   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> <span class="c1">// stops modal from being shown</span>
 <span class="p">})</span>
                 </code></pre></div>
-
-                <div class="bs-callout bs-callout-warning" id="callout-third-party-libs">
-                  <h4>Third-party libraries</h4>
-                  <p><strong>Bootstrap does not officially support third-party JavaScript libraries</strong> like Prototype or jQuery UI. Despite <code>.noConflict</code> and namespaced events, there may be compatibility problems that you need to fix on your own.</p>
-                </div>
               </div>
 
               <div class="bs-docs-section">
@@ -5998,10 +5997,6 @@ Cras justo odio
                 <div class="bs-callout bs-callout-warning" id="callout-modal-markup-placement">
                   <h4>Modal markup placement</h4>
                   <p>Always try to place a modal's HTML code in a top-level position in your document to avoid other components affecting the modal's appearance and/or functionality.</p>
-                </div>
-                <div class="bs-callout bs-callout-warning">
-                  <h4>Mobile device caveats</h4>
-                  <p>There are some caveats regarding using modals on mobile devices. <a href="../getting-started/#support-fixed-position-keyboards">See our browser support docs</a> for details.</p>
                 </div>
 
                 <h3>Static example</h3>
@@ -6836,11 +6831,6 @@ Cras justo odio
                         </div>
                       </div>
                     </div><!-- /example -->
-
-                    <div class="bs-callout bs-callout-info">
-                      <h4>Extends tabbed navigation</h4>
-                      <p>This plugin extends the <a href="../components/#nav-tabs">tabbed navigation component</a> to add tabbable areas.</p>
-                    </div>
 
 
                     <h2 id="tabs-usage">Usage</h2>
@@ -8003,6 +7993,7 @@ Cras justo odio
                 </tbody>
               </table>
             </div><!-- /.table-responsive -->
+            </article>
           </div>
         </div>
         <div class="col-md-3">
@@ -8130,6 +8121,7 @@ $(function(){
 })  
 </script>  
 </div>
+</article>
 </section>  
 <style>
 
