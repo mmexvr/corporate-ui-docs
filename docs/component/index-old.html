@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+
+<html lang="en-GB" ng-app="CorporateUI">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8">
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html">
+  </noscript>
+
+  <title>Corporate UI - Developers</title>
+
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/corporate-ui.js"></script>
+
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+
+  <link rel="stylesheet" href="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.2.1-CF/css/ux-library.css">
+  <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">  
+</head>
+<body class="scania ux-lib" ng-controller="UxLib as uxlib">
+
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </c-corporate-header>
+  
+  <c-main-content>
+    <c-main-navigation>
+      <primary-items>
+        <nav-item location="/corporate-ui-docs/">Home</nav-item>
+        <nav-item location="/corporate-ui-docs/styleguide/">Style Guide</nav-item>            
+        <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
+          <sub-navigation caption="Web Applications">
+            <nav-item location="/corporate-ui-docs/developer/">Corporate UI</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/corporate-ui-for-frameworks.html">JS Frameworks</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html">Scania Bootstrap</nav-item>            
+            <nav-item location="/corporate-ui-docs/component/index.html" class="active">Components</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+          </sub-navigation>
+        </nav-item>
+        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
+      </primary-items>
+    </c-main-navigation>
+
+    <section class="light">
+      <div class="container" ng-cloak>
+        <h2>Scania<br />Components</h2>
+        <p>We're currently re-factoring many of our components (custom elements) and at the same time integrating them closer to the other design elements. They're now to be found under the "Custom Elements" Tab at this address:
+        <a href="https://scania.github.io/corporate-ui-docs/developer/bootstrap-original-docs.html">https://scania.github.io/corporate-ui-docs/developer/bootstrap-original-docs.html</a> </p>
+
+<!--         <div class="main-item">
+          <h5>
+            <i ng-class="'icon-' + category.name" class="outline md"></i>
+            All components
+          </h5>
+          <div class="row">
+           We ignore listing of main-content -->
+            <!--  <div ng-repeat="component in uxlib.components" class="col-sm-3 col-xs-6 component" ng-if="component.name !== 'main-content' && !component.extension">
+              <a href="component.html?c={{component.name}}">{{component.name}}</a>
+              <span>{{component.variations}} variations</span>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+  </c-main-content>
+
+  <c-corporate-footer></c-corporate-footer>
+
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/vendors/frameworks/angular/1.5.5/angular.min.js"></script>
+
+  <script>
+    angular.module('CorporateUI', [])
+      .controller('UxLib', [UxLib]);
+
+    function UxLib() {
+      var vm = this;
+      vm.components = window.CorporateUi.components;
+    }
+  </script>
+
+  <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/ux-library.js"></script>
+  <script src="/corporate-ui-docs/ux-lib.js"></script>      
+</body>
+</html>
