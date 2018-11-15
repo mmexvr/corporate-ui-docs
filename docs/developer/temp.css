@@ -27,6 +27,15 @@
 	    background-color: transparent;
 	    border-top: none;
 	}
+	
+	.app.used-vehicles .card h1,
+	.app.used-vehicles .card h2,
+	.app.used-vehicles .card h3,
+	.app.used-vehicles .card h4,	
+	.app.used-vehicles .card h5 {
+	    padding-top: 0px;
+	    margin-bottom: 5px;
+	}
 
 	
 	.app.used-vehicles .card .card-body h1 {
