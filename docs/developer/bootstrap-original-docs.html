@@ -85,7 +85,6 @@
                 <article class="mt-5 mr-5">
                   <h1 id="corporate-ui-installation-overview">Introduction</h1>
                   <p class="lead">Get started with Corporate UI, the design system based on the popular Bootstrap framework and that's extended with tailor made Corporate UI Custom Elements.</p>
-
                   <div>
                     <a href="https://github.com/scania/corporate-ui" target="_blank"><img src="img/github-logo.png" alt="" border="0" height="41" width="100" style="max-width: 100px; margin-left: 20px; margin-right: 8px;"></a><a href="https://github.com/scania/corporate-ui">Corporate UI is 100% open source, available at GitHub.</a>
                   </div>
@@ -110,6 +109,11 @@
                   <h3 id="js"><div>About our JavaScripts<a class="anchorjs-link " href="#js" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h3>
 
                   <p>All of our components and custom elements are using native JavaScripts to function. Therefore, there is no need to load extra libraries for it to work. We've replaced Bootstraps jQuery Components with the <a href="https://thednp.github.io/bootstrap.native/" target="_blank">Bootstrap Native JS Library</a>. Some features is triggered a little bit different but it's an easy upgrade.</p>
+
+                  <h3 id="redux"><div>Data bindings with Redux Store<a class="anchorjs-link " href="#js" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h3>
+
+                  <p>You'll be able to access any information that our custom elements via the Corporate UI
+                  Redux Store. If you want an easier handling of bindings overall, please contact us and we can walk you through the process.</p>
 
                   <h2 id="starter-template"><div>Starter template<a class="anchorjs-link " href="#starter-template" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
 
@@ -344,6 +348,8 @@
                   <h2 id="main-nav">Main Navigation</h2>
                 </div>
                 <p>The main navigation has a desktop mode and a mobile mode where the break point for is at 992px viewport width. If you make your browser window narrower or wider you'll see how the navigation changes its appearance. The main navigation is highly customizable as it can host both primary and secondary items as well as nav-items with properties and attributes.</p>
+                <h3 id="main-nav-json">Populate Main navigation via JSON</h3>
+                <p>The Main navigation also supports population of nav items using a JSON object. That's a good alternative when you need on the fly translation of not only your site but also your navigation. Check out <a href="main-navigation-more-demo.html">this sample page</a> and you'll get a hang of how it's done. </p>
 
                <div class="bs-example">
 
@@ -648,7 +654,7 @@
                   <p>When designing applications for Scania, you can either use the App layout or the Public layout. App will give you a much more compact layout than the Public mode. Typically, the Public mode is used for external communication that is primarily text based, while App is used for applications that contains a lot of form fields, tables and overall, a lot more user interaction. The only thing a developer has to do to switch between those modes are to add a CSS class to the <code>&lt;body&gt;</code> tag. Like this: <code>&lt;body class="scania app"&gt;</code> or <code>&lt;body class="scania public"&gt;</code>. The Public mode is default, so if the App class isn't specified, the Public mode will be set. You can use the two tabs above to switch between the App and Public layouts.</p>
 
                   <h2>Custom CSS</h2>
-                  <p>Most of the CSS that you'll need should be available using the Custom Elements togheter with the Corporate UI CSS that's described in this section. From a maintainance perspective it's important that you do avoid creating custom CSS classes. If you have a need that is not covered in our design system, please <a href="/corporate-ui-docs/developer/support/">contact us</a> and we'll find a solution for you.</p>
+                  <p>Most of the CSS that you'll need should be available using the Custom Elements togheter with the Corporate UI CSS that's described in this section. From a maintainance perspective it's important that you keep custom CSS classes to a minimum. If you have a need that is not covered in our design system, please <a href="/corporate-ui-docs/developer/support/">contact us</a> and we'll find a solution for you.</p>
  
                 <div class="page-header">
                   <h2 id="css-overview">Bootstrap CSS</h2>
@@ -657,10 +663,10 @@
                 <div class="bs-docs-section">
                   <div class="page-body">
                     <h2>Overview</h2>
-                    <p class="lead">Get the lowdown on the key pieces of Bootstrap's infrastructure, including our approach to better, faster, stronger web development.</p>
+                    <p class="lead">Get the lowdown on the key pieces of Corporate UI's infrastructure, including our approach to better, faster, stronger web development.</p>
 
                     <h3 id="overview-doctype">HTML5 doctype</h3>
-                    <p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+                    <p>Corporate UI makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
                     <div class="highlight"><pre><code class="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
   ...
@@ -668,7 +674,7 @@
                     </code></pre></div>
 
                     <h3 id="overview-mobile">Mobile first</h3>
-                    <p>With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, <strong>Bootstrap is mobile first</strong>. Mobile first styles can be found throughout the entire library instead of in separate files.</p>
+                    <p>Instead of adding on optional mobile styles, they're baked right into the core. In fact, <strong>Bootstrap is mobile first</strong>. Mobile first styles can be found throughout the entire library instead of in separate files.</p>
                     <p>To ensure proper rendering and touch zooming, <strong>add the viewport meta tag</strong> to your <code>&lt;head&gt;</code>.</p>
                     <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
