@@ -11,11 +11,27 @@
   <script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/corporate-ui.js"></script>
 
 <style>
-	i.scania-icon-search {
+
+	secondary-items .form-inline {
+	    margin-right: 40px;
+	}
+
+	secondary-items i.scania-icon-search {
 	    background-size: 40px;
 	    width: 40px;
 	    height: 40px;
 	}
+
+	secondary-items input.main-nav-search  {
+	    padding: 0px 12px;
+	    height: 30px;
+	    background: white;
+	    border: none;
+	    border-bottom: 1px solid #041e42;
+	    font-family: 'Scania Sans Semi Condensed';
+	    color: #7b7b7b;
+	}
+
 	</style>
 </head>
 
@@ -25,19 +41,23 @@
 	  <nav-item location="#">User Menu</nav-item>
 	</c-corporate-header>
 
-	<c-main-content>
+	<c-main-content class="light">
 		<c-main-navigation>
 		  <primary-items>
-			    <nav-item><a routerLink="/">1</a></nav-item>
-			    <nav-item><a routerLink="/">2</a></nav-item>
-			    <nav-item><a routerLink="/">3</a></nav-item>
-			    <nav-item><a routerLink="/">4</a></nav-item>
+		    <nav-item><a routerLink="/">1</a></nav-item>
+		    <nav-item><a routerLink="/">2</a></nav-item>
+		    <nav-item><a routerLink="/">3</a></nav-item>
+		    <nav-item><a routerLink="/">4</a></nav-item>		    
 		  </primary-items>
 		  <secondary-items>
-		  	<div>
-		     <input type="search" class="form-control bg-white mt-1 mr-3" placeholder="Search">
-		     <i class="scania-icon-search pull-right"></i>
-		    </div>
+			<form class="form-inline" role="form">
+			  <div class="form-group">
+			  	<input type="search" class="form-control main-nav-search" placeholder="Search">
+			  </div>
+			  <div class="form-group">
+			  <i class="scania-icon-search pull-right"></i>
+			  </div>
+			</form>
 		  </secondary-items>
 		</c-main-navigation>
 
