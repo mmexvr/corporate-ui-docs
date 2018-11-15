@@ -28,12 +28,25 @@
 	    border-top: none;
 	}
 
-	.app.used-vehicles .card h2,
-	.app.used-vehicles .card h3,
-	.app.used-vehicles .card h4,	
-	.app.used-vehicles .card h5 {
-	    padding-top: 0px;
-	    margin-bottom: 5px;
+	
+	.app.used-vehicles .card .card-body h1 {
+	    font-size: 2.0rem;
+	}
+	
+	.app.used-vehicles .card .card-body h2 {
+	    font-size: 1.8rem;
+	}
+
+	.app.used-vehicles .card .card-body h3	{
+	    font-size: 1.6rem;
+	}
+
+	.app.used-vehicles .card .card-body h4 {
+	    font-size: 1.4rem;
+	}
+	
+	.app.used-vehicles .card .card-body h5 {
+	    font-size: 1.2rem;
 	}
 
 	.app.used-vehicles  c-main-content > section, c-main-content.app > section {
