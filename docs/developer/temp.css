@@ -1,0 +1,79 @@
+	c-main-navigation .search.form-inline {
+		margin-right: 40px;
+	}
+
+	c-main-navigation .search.form-inline i.scania-icon-search {
+		background-size: 40px;
+		width: 40px;
+		height: 40px;
+	}
+
+	c-main-navigation .search.form-inline input.main-nav-search  {
+		padding: 3px 12px;
+		height: 30px;
+		background: white;
+		border: none;
+		border-bottom: 1px solid #d2d2d2;
+		font-family: 'Scania Sans Semi Condensed';
+		color: #7b7b7b;
+	}
+
+	.app.used-vehicles .card {
+	   margin-bottom: 30px;
+	}
+
+	.app.used-vehicles .card .card-footer {
+	    padding: 0.75rem 1.25rem;
+	    background-color: transparent;
+	    border-top: none;
+	}
+
+	.app.used-vehicles .card h2,
+	.app.used-vehicles .card h3,
+	.app.used-vehicles .card h4,	
+	.app.used-vehicles .card h5 {
+	    padding-top: 0px;
+	    margin-bottom: 5px;
+	}
+
+	.app.used-vehicles  c-main-content > section, c-main-content.app > section {
+	    background-color: #f7f7f7;
+	    padding: 45px 30px;
+	}
+
+	.app.used-vehicles  c-main-navigation .form-control {
+	    padding: 3px 12px;
+	    height: auto;
+	    border-bottom: 1px #cecece solid;
+	    color: #8a8a8a;
+	}
+
+	.used-vehicles input[type=checkbox] + span:before {
+	    margin-bottom: 2px;
+	    margin-right: 4px;
+	}
+
+	.used-vehicles span.price {
+	    font-size: 2.0rem;
+	    font-family: 'Scania Sans Semi Condensed';
+	    font-weight: bold;
+	    margin-right: 0.5rem;
+	}
+
+	.used-vehicles span.price small {
+		padding-left: 4px;
+
+	}
+
+	@media (max-width: 991px)  {
+		.used-vehicles .card-deck .card {
+		    -ms-flex: auto;
+		    flex: auto !important;
+		}
+	}
+
+	@media (max-width: 991px)  {
+		.filters {
+		    display: none;
+		}
+	}
