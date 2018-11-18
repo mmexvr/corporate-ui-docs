@@ -12,6 +12,17 @@
 	<link rel="stylesheet" type="text/css" href="https://static.scania.com/development/users/used-vehicles/css/used-vehicles-styles.css">
 	<link rel="stylesheet" type="text/css" href="https://scania.github.io/corporate-ui-docs/developer/temp.css">
 
+	<style>
+	.sticky-filter {
+		position: sticky;
+	    top: 62px;
+	    left: 0;
+	    margin: 0 -1px 0 -1px;
+	    width: 102vw;
+	    z-index: 1030;
+	}
+	</style>
+
 </head>
 
 <body class="scania app used-vehicles">
@@ -40,6 +51,98 @@
 				</form>
 			</secondary-items>
 		</c-main-navigation>
+
+		<div class="sticky-filter container bg-white">
+			<a class="btn btn-md btn-info btn-link btn-block hidden-md hidden-lg" data-toggle="collapse" data-target="#filter-panel" aria-expanded="false" aria-controls="filter-panel">
+			Filters <i class="fal fa-angle-down"></i>
+			</a>
+			<div class="collapse" id="filter-panel">
+				<div class="row">
+					<div class="filters-mobile col-xs-6 col-sm-6">
+						<div class="form-group">
+					    	<h5>Application</h5>								
+							<div class="checkbox">
+					    		<label>
+					    			<input type="checkbox" name="applications-mobile">
+					    			<span></span>
+									3-way tipper
+					    		</label>
+					    	</div>
+					    	<div class="checkbox">
+					    		<label>
+					    			<input type="checkbox" name="applications-mobile">
+					    			<span></span>
+					    			Box body
+					    		</label>
+					    	</div>
+							<div class="checkbox">
+					    		<label>
+					    			<input type="checkbox" name="applications-mobile">
+					    			<span></span>
+					    			Concrete mixer
+					    		</label>
+					    	</div>
+					    	<div class="checkbox">
+					    		<label>
+					    			<input type="checkbox" name="applications-mobile">
+					    			<span></span>
+					    			Grain tipper
+					    		</label>
+					    	</div>
+							<div class="checkbox">
+					    		<label>
+					    			<input type="checkbox" name="applications-mobile">
+					    			<span></span>
+					    			Hook loader
+					    		</label>
+					    	</div>
+					    </div>	
+					</div>
+					<div class="filters-mobile col-xs-6 col-sm-6">
+					    <div class="form-group">						    	
+					    	<h5>Axle configuration</h5>
+
+					    	<div class="checkbox">
+					    		<label>
+					    			<input type="checkbox" name="axle-config-mobile">
+					    			<span></span>
+					    			4x2 
+					    		</label>
+					    	</div>
+							<div class="checkbox">
+					    		<label>
+					    			<input type="checkbox" name="axle-config-mobile">
+					    			<span></span>
+					    			6x2
+					    		</label>
+					    	</div>
+					    	<div class="checkbox">
+					    		<label>
+					    			<input type="checkbox" name="axle-config-mobile">
+					    			<span></span>
+					    			6x2/4 
+					    		</label>
+					    	</div>
+							<div class="checkbox">
+					    		<label>
+					    			<input type="checkbox" name="axle-config-mobile">
+					    			<span></span>
+					    			6x4
+					    		</label>
+					    	</div>
+					    	<div class="checkbox">
+					    		<label>
+					    			<input type="checkbox" name="axle-config-mobile">
+					    			<span></span>
+					    			8x4*4
+					    		</label>
+					    	</div>   	
+					    </div>	
+					</div>		 
+				</div>
+		  	</div>
+			<hr>
+		</div>
 
 		<section>
 			<div class="container">
@@ -342,8 +445,6 @@
 			<nav-item location="#">Privacy statement</nav-item>
 			<nav-item location="#">Cookies</nav-item>
 			<nav-item location="#">Contact us</nav-item>  
-		</c-corporate-footer>
-
-	</body>
-
+		</c-corporate-footer>	
+</body>
 </html>
