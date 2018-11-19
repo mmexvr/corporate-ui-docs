@@ -18,6 +18,24 @@
 		color: #7b7b7b;
 	}
 
+
+	.sticky-filter {
+	    position: sticky;
+	    top: 62px;
+	    padding: 10px;
+	    z-index: 1030;
+		border-bottom: 1px solid #e2e2e2;
+	}
+
+	i.scania-icon.filter-icon.xs {
+    	background-image: url(https://static.scania.com/development/users/used-vehicles/img/filter.svg);
+	    background-size: 11px;
+	    width: 11px;
+	    height: 11px;
+	    margin-top: 2px;
+	}
+
+
 	.app.used-vehicles .card {
 	   margin-bottom: 30px;
 	}
