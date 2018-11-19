@@ -61,77 +61,92 @@
          <div class="col-md-9">
           <article>
           <h1 class="bd-title" id="content">Introduction</h1>
-          <p class="bd-lead">Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.</p>
-          <script async="" src="https://cdn.carbonads.com/carbon.js?serve=CKYIKKJL&amp;placement=getbootstrapcom" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="//srv.carbonads.net/ads/click/x/GTND42QWCVYI52QYCY74YKQMCE7DT5QYCW7DVZ3JCWBD6K3LFTAIV2QKC6BIVKJJCAADEK3EHJNCLSIZ?segment=placement:getbootstrapcom;" class="carbon-img" target="_blank" rel="noopener"><img src="https://cdn4.buysellads.net/uu/1/28316/1540301776-IBM_logo_260x200.jpg" alt="" border="0" height="100" width="130" style="max-width: 130px;"></a><a href="//srv.carbonads.net/ads/click/x/GTND42QWCVYI52QYCY74YKQMCE7DT5QYCW7DVZ3JCWBD6K3LFTAIV2QKC6BIVKJJCAADEK3EHJNCLSIZ?segment=placement:getbootstrapcom;" class="carbon-text" target="_blank" rel="noopener">IBM Cloud Private: Speed of public, control of private.</a></span><a href="http://carbonads.net/?utm_source=getbootstrapcom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener">ads via Carbon</a></span></div>
+          <p class="bd-lead">Get started with Corporate UI, based on the popular Bootstrap framework extended with tailor made Corporate UI Custom Elements.</p>
+          <div>
+            <a href="https://github.com/scania/corporate-ui" target="_blank"><img src="img/github-logo.png" alt="" border="0" height="41" width="100" style="max-width: 100px; margin-left: 20px; margin-right: 8px;"></a><a href="https://github.com/scania/corporate-ui">Corporate UI is 100% open source, available at GitHub.</a>
+          </div>
+          <div>
+          <a href="https://corporate-ui.slack.com" target="_blank"><img src="img/slack-white_logo.png" alt="" border="0" height="100" width="130" style="max-width: 130px;"></a><a href="https://corporate-ui.slack.com">Via Slack you'll reach the Corporate UI core team as well as many developers using and contributing to the framework.</a>
+          </div>
 
-          <h2 id="quick-start"><div>Quick start<a class="anchorjs-link " href="#quick-start" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
+          <h2 id="quick-start"><div>Quick start<a class="anchorjs-link" href="#quick-start" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
 
-<p>Looking to quickly add Bootstrap to your project? Use BootstrapCDN, provided for free by the folks at StackPath. Using a package manager or need to download the source files? <a href="/docs/4.1/getting-started/download/">Head to the downloads page.</a></p>
+<p>Looking to quickly add Corporate UI your project? Use our CloudFront CDN. Want to use a package manager? <a href="mailto:corporate-ui@scania.com">Contact us</a> to participate in the final tests of the NPM package.</p>
 
-<h3 id="css"><div>CSS<a class="anchorjs-link " href="#css" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h3>
+<h3 id="css"><div>Quick Install<a class="anchorjs-link " href="#css" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h3>
 
-<p>Copy-paste the stylesheet <code class="highlighter-rouge">&lt;link&gt;</code> into your <code class="highlighter-rouge">&lt;head&gt;</code> before all other stylesheets to load our CSS.</p>
+<p>Copy-paste the Corporate UI initializer <code class="highlighter-rouge">&lt;script&gt;</code> just before the <code class="highlighter-rouge">&lt;/head&gt;</code> tag.</p>
 
-<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre></figure>
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/corporate-ui.js"</span><span class="nt">&gt;</span></code></pre></figure>
 
-<h3 id="js"><div>JS<a class="anchorjs-link " href="#js" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h3>
+<h3 id="js"><div>About our JavaScripts<a class="anchorjs-link " href="#js" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h3>
 
-<p>Many of our components require the use of JavaScript to function. Specifically, they require <a href="https://jquery.com">jQuery</a>, <a href="https://popper.js.org/">Popper.js</a>, and our own JavaScript plugins. Place the following <code class="highlighter-rouge">&lt;script&gt;</code>s near the end of your pages, right before the closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.</p>
-
-<p>We use <a href="https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/">jQuery’s slim build</a>, but the full version is also supported.</p>
-
-<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
-
-<p>Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you’re at all unsure about the general page structure, keep reading for an example page template.</p>
-
-<p>Our <code class="highlighter-rouge">bootstrap.bundle.js</code> and <code class="highlighter-rouge">bootstrap.bundle.min.js</code> include <a href="https://popper.js.org/">Popper</a>, but not <a href="https://jquery.com/">jQuery</a>. For more information about what’s included in Bootstrap, please see our <a href="/docs/4.1/getting-started/contents/#precompiled-bootstrap">contents</a> section.</p>
-
-<details>
-<summary class="text-primary mb-3">Show components requiring JavaScript</summary>
-
-
-<ul>
-  <li>Alerts for dismissing</li>
-  <li>Buttons for toggling states and checkbox/radio functionality</li>
-  <li>Carousel for all slide behaviors, controls, and indicators</li>
-  <li>Collapse for toggling visibility of content</li>
-  <li>Dropdowns for displaying and positioning (also requires <a href="https://popper.js.org/">Popper.js</a>)</li>
-  <li>Modals for displaying, positioning, and scroll behavior</li>
-  <li>Navbar for extending our Collapse plugin to implement responsive behavior</li>
-  <li>Tooltips and popovers for displaying and positioning (also requires <a href="https://popper.js.org/">Popper.js</a>)</li>
-  <li>Scrollspy for scroll behavior and navigation updates</li>
-</ul>
-
-</details>
+<p>All of our components and custom elements are using native JavaScripts to function. Therefore, there is no need to load extra libraries for it to work. We've replaced much of Bootstraps jQuery dependent with the "Bootstrap Native" library.</p>
 
 <h2 id="starter-template"><div>Starter template<a class="anchorjs-link " href="#starter-template" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
 
-<p>Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:</p>
+<p>Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your basic Corporate UI page should look like this:</p>
 
-<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight">
+  <pre><code class="language-html" data-lang="html">
+<span class="cp">&lt;!doctype html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;head&gt;</span>
-    <span class="c">&lt;!-- Required meta tags --&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">content=</span><span class="s">"X-UA-Compatible"</span> <span class="na">http-equiv=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;scania app&quot;<span class="nt">&gt;</span> 
+    <span class="nt">&lt;noscript&gt;</span><span class="nt">&lt;meta</span> <span class="na">content=</span><span class="s">"0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"</span> <span class="na">http-equiv=</span><span class="s">"refresh"</span><span class="nt">&gt;</span><span class="nt">&lt;/noscript&gt;</span>
+    <span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span>
-
-    <span class="c">&lt;!-- Bootstrap CSS --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
-
-    <span class="nt">&lt;title&gt;</span>Hello, world!<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Corporate UI Sample Page<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/corporate-ui.js"</span><span class="nt">&gt;</span>    
   <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;scania app&quot;<span class="nt">&gt;</span>   
+    <span class="nt">&lt;c-corporate-header</span> <span class="na">site-name=</span><span class="s">&quot;My application name&quot;</span> <span class="na">short-name=</span><span class="s">&quot;My app&quot;</span><span class="na"> site-url=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Optional<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>User Menu<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+    <span class="nt">&lt;/c-corporate-header<span class="nt">&gt;</span>
+    <span class="nt">&lt;c-main-content</span><span class="nt">&gt;</span> 
+      <span class="nt">&lt;c-main-navigation<span class="nt">&gt;</span>
+        <span class="nt">&lt;primary-items<span class="nt">&gt;</span>
+          <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Home<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+          <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Style Guide<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+            <span class="nt">&lt;sub-navigation</span> <span class="na">caption=</span><span class="s">&quot;Style Guide&quot;<span class="nt">&gt;</span>
+              <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Logotype<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+              <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Icons<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+            <span class="nt">&lt;/sub-navigation<span class="nt">&gt;</span>
+          <span class="nt">&lt;/nav-item<span class="nt">&gt;</span>    
+        <span class="nt">&lt;/primary-items<span class="nt">&gt;</span>
+        <span class="nt">&lt;secondary-items<span class="nt">&gt;</span>
+           Secondary items are optional, more information below.
+        <span class="nt">&lt;/secondary-items<span class="nt">&gt;</span>
+      <span class="nt">&lt;/c-main-navigation<span class="nt">&gt;</span>
+      <span class="nt">&lt;section</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;<span class="nt">&gt;</span>
 
-    <span class="c">&lt;!-- Optional JavaScript --&gt;</span>
-    <span class="c">&lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+        Your application goes here. If you are using .container-fluid,<br>
+        your page will take the whole browser width. <br>
+        Using .container, it will give you margins on wider screens.
+
+        <span class="nt">&lt;/div</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/section</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/c-main-content<span class="nt">&gt;</span>
+
+    <span class="nt">&lt;c-corporate-footer</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;c-social-media</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;facebook&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot; <span class="na">onclick=</span><span class="s">&quot;window.open('https://www.facebook.com/scaniagroup/')&quot;<span class="nt"><span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;twitter&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;youtube&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;linkedin&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>         
+      <span class="nt">&lt;/c-social-media</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Legal notice<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Privacy statement<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Cookies<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Contact us<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>  
+    <span class="nt">&lt;/c-corporate-footer</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/body</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/html</span><span class="nt">&gt;</span>
+</code></pre></figure>
 
 <p>That’s all you need for overall page requirements. Visit the <a href="/docs/4.1/layout/overview/">Layout docs</a> or <a href="/docs/4.1/examples/">our official examples</a> to start laying out your site’s content and components.</p>
 
@@ -179,17 +194,10 @@
 <p>Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.</p>
 
 <ul>
-  <li>Follow <a href="https://twitter.com/getbootstrap">@getbootstrap on Twitter</a>.</li>
-  <li>Read and subscribe to <a href="https://blog.getbootstrap.com">The Official Bootstrap Blog</a>.</li>
-  <li>Join <a href="https://bootstrap-slack.herokuapp.com">the official Slack room</a>.</li>
-  <li>Chat with fellow Bootstrappers in IRC. On the <code class="highlighter-rouge">irc.freenode.net</code> server, in the <code class="highlighter-rouge">##bootstrap</code> channel.</li>
-  <li>Implementation help may be found at Stack Overflow (tagged <a href="https://stackoverflow.com/questions/tagged/bootstrap-4"><code class="highlighter-rouge">bootstrap-4</code></a>).</li>
-  <li>Developers should use the keyword <code class="highlighter-rouge">bootstrap</code> on packages which modify or add to the functionality of Bootstrap when distributing through <a href="https://www.npmjs.com/browse/keyword/bootstrap">npm</a> or similar delivery mechanisms for maximum discoverability.</li>
-</ul>
-
-<p>You can also follow <a href="https://twitter.com/getbootstrap">@getbootstrap on Twitter</a> for the latest gossip and awesome music videos.</p>
-
-        </main>            
+  <li>Found issues or want to suggest a feature? <a href="https://github.com/scania/corporate-ui/issues/new/choose">Report them at GitHub</a>.</li>
+  <li>Join <a href="https://corporate-ui.slack.com">the official Slack room</a>.</li>
+  <li>Implementation help of custom JavaScript can be found at <a href="https://thednp.github.io/bootstrap.native/index.html"><code class="highlighter-rouge">Bootstrap Native</code></a>).</li>
+</ul>       
       </article>
         </div>
         <div class="col-md-3">
@@ -319,7 +327,6 @@ $(function(){
 })  
 </script>  
 </div>
-</article>
 </section>  
 <style>
 
