@@ -9,19 +9,7 @@
 	<title>Scania Used Vehicles</title>
 
 	<script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/corporate-ui.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://static.scania.com/development/users/used-vehicles/css/used-vehicles-styles.css">
-	<link rel="stylesheet" type="text/css" href="https://scania.github.io/corporate-ui-docs/developer/temp.css">
-
-	<style>
-	.sticky-filter {
-		position: sticky;
-	    top: 62px;
-	    left: 0;
-	    margin: 0 -1px 0 -1px;
-	    width: 102vw;
-	    z-index: 1030;
-	}
-	</style>
+	<link rel="stylesheet" type="text/css" href="https://static.scania.com/development/users/used-vehicles/css/used-vehicles.css">
 
 </head>
 
@@ -52,13 +40,14 @@
 			</secondary-items>
 		</c-main-navigation>
 
-		<div class="sticky-filter container bg-white">
-			<a class="btn btn-md btn-info btn-link btn-block hidden-md hidden-lg" data-toggle="collapse" data-target="#filter-panel" aria-expanded="false" aria-controls="filter-panel">
-			Filters <i class="fal fa-angle-down"></i>
+		<div class="sticky-filter container bg-white hidden-md hidden-lg">
+			<a class="btn-info btn-link" data-toggle="collapse" data-target="#filter-panel" aria-expanded="false" aria-controls="filter-panel">
+				<i class="scania-icon filter-icon xs"></i>
+				Filters <i class="fal fa-angle-down"></i>
 			</a>
 			<div class="collapse" id="filter-panel">
-				<div class="row">
-					<div class="filters-mobile col-xs-6 col-sm-6">
+				<div class="row pl-5">
+					<div class="filters-mobile col-xs-4">
 						<div class="form-group">
 					    	<h5>Application</h5>								
 							<div class="checkbox">
@@ -98,10 +87,9 @@
 					    	</div>
 					    </div>	
 					</div>
-					<div class="filters-mobile col-xs-6 col-sm-6">
+					<div class="filters-mobile col-xs-4">
 					    <div class="form-group">						    	
 					    	<h5>Axle configuration</h5>
-
 					    	<div class="checkbox">
 					    		<label>
 					    			<input type="checkbox" name="axle-config-mobile">
@@ -138,10 +126,35 @@
 					    		</label>
 					    	</div>   	
 					    </div>	
-					</div>		 
+					</div>						
+					<div class="filters-mobile col-xs-4">
+						<div class="form-group">
+					    	<h5>Emission</h5>								
+							<div class="checkbox">
+					    		<label>
+					    			<input type="checkbox" name="applications-mobile">
+					    			<span></span>
+									Euro 5
+					    		</label>
+					    	</div>
+					    	<div class="checkbox">
+					    		<label>
+					    			<input type="checkbox" name="applications-mobile">
+					    			<span></span>
+					    			Euro 6
+					    		</label>
+					    	</div>
+							<div class="checkbox">
+					    		<label>
+					    			<input type="checkbox" name="applications-mobile">
+					    			<span></span>
+					    			Euro 6 DPF 
+					    		</label>
+					    	</div>
+					    </div>
+					</div>	 
 				</div>
 		  	</div>
-			<hr>
 		</div>
 
 		<section>
@@ -189,7 +202,6 @@
 						    </div>	
 						    <div class="form-group">						    	
 						    	<h5>Axle configuration</h5>
-
 						    	<div class="checkbox">
 						    		<label>
 						    			<input type="checkbox" name="axle-config">
@@ -225,7 +237,31 @@
 						    			8x4*4
 						    		</label>
 						    	</div>   	
-						    </div>	
+						    </div>
+							<div class="form-group">
+						    	<h5>Emission</h5>								
+								<div class="checkbox">
+						    		<label>
+						    			<input type="checkbox" name="applications-mobile">
+						    			<span></span>
+										Euro 5
+						    		</label>
+						    	</div>
+						    	<div class="checkbox">
+						    		<label>
+						    			<input type="checkbox" name="applications-mobile">
+						    			<span></span>
+						    			Euro 6
+						    		</label>
+						    	</div>
+								<div class="checkbox">
+						    		<label>
+						    			<input type="checkbox" name="applications-mobile">
+						    			<span></span>
+						    			Euro 6 DPF 
+						    		</label>
+						    	</div>
+						    </div>						    
 						</div>					
 						<div class="col-md-10">										
 							<div class="card-deck">
@@ -429,7 +465,6 @@
 								</div>
 							</div>												
 						</div>	
-					</article>
 				</div>								
 			</section>
 		</c-main-content>
