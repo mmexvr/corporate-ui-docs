@@ -21,22 +21,30 @@
   <script src="holder.js"></script>
 
   <style>
-.bs-docs-section h1[id], .bs-docs-section h2[id], .bs-docs-section h3[id] {
-    padding-top: 110px !important; 
-    margin-top: -110px !important;
-}
+    .bs-docs-section h1[id], .bs-docs-section h2[id], .bs-docs-section h3[id] {
+        padding-top: 110px !important; 
+        margin-top: -110px !important;
+    }
   </style>
 
 <script>
 
 $(function(){
+
   var hash = window.location.hash;
+
+  // var tabElementsAnchors = [];
+  // $('.nav.bs-docs-sidenav.corporate-ui-components-overview ul li').find('a').next('a').each(function(){
+  //     tabElementsAnchors.push($(this).attr('href'));
+  // });
 
   var tabInstallationAnchors =  [ "#corporate-ui-installation-overview"];
   var tabElementsAnchors =  [ "#corporate-header", "#main-content", "#main-nav", "#corporate-footer" ];
   var tabComponentsAnchors =  [ "#dropdowns","#btn-groups","#btn-dropdowns","#input-groups","#nav","#navbar","#pagination","#thumbnails","#alerts","#progress","#media","#list-group","#panels" ];
   var tabCSSAnchors =  [ "#type","#code","#tables","#forms","#buttons","#images","#helper-classes","#grid","#responsive-utilities","#bootstrap-4" ];
   var tabJavaScriptAnchors =  [ "#modals","#js-dropdowns","#scrollspy","#tabs","#tooltips","#popovers","#js-alerts","#js-buttons","#collapse","#affix" ];
+
+      console.dir(tabElementsAnchors);
 
   if ( jQuery.inArray( hash, tabInstallationAnchors ) >= 0 ) {
 
@@ -50,7 +58,7 @@ $(function(){
   $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
   $('.nav.nav-tabs.c-ui-tabs > li:nth-child(2)').addClass('active');
   $('.tab-pane').removeClass('fade active');
-  $('#corporate-ui-components-overview.tab-pane').addClass('active');
+  $('#custom-elements-section.tab-pane').addClass('active');
 
   } else if ( jQuery.inArray( hash, tabComponentsAnchors ) >= 0 ) {
 
@@ -329,11 +337,11 @@ if (location.hash) {
                 <h1 id="corporate-ui-components-overview">Custom Elements</h1>
                 <p class="lead">The most common interaction patterns at Scania are made into custom elements, to offer easy implementation of sometimes advanced features. They also make it possible to create a coherent user experience over different applications and platforms. Custom elements are similar to framework specific components, except that they're supported by the browsers and normally have no dependencies to other technologies. A custom element works like any other HTML element why they are so easy to adopt.</p>
               <div class="bs-docs-section panel-x">
+                <div class="page-header">
+                    <h2 id="corporate-header">Corporate Header</h2>
+                </div>
               
-              <h2 id="corporate-header">Corporate Header</h2>
-              <h3 id="corporate-header-example">Example</h3>
-              <p></p>
-
+                <h3 id="corporate-header-example">Example</h3>
 
                 <div class="bs-example">
 
@@ -663,7 +671,7 @@ if (location.hash) {
 
             <div class="col-md-3">
                 <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
-                  <ul class="nav bs-docs-sidenav">
+                  <ul class="nav bs-docs-sidenav corporate-ui-components-overview">
                   <li>
                     <a href="#corporate-ui-components-overview">Overview</a>
                   </li>                                     
@@ -3121,7 +3129,7 @@ if (location.hash) {
 
 
                   <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
-                    <ul class="nav bs-docs-sidenav"> 
+                    <ul class="nav bs-docs-sidenav core-css-overview"> 
                     <li>
                       <a href="#core-css-overview">Overview</a>
                       <ul class="nav">
@@ -5996,7 +6004,7 @@ Cras justo odio
             </div>
             <div class="col-md-3">
               <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
-                <ul class="nav bs-docs-sidenav">
+                <ul class="nav bs-docs-sidenav components-overview">
 
                   <li>
                     <a href="#components-overview">Overview</a>
