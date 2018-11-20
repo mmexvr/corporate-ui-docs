@@ -22,56 +22,69 @@
 
   <style>
 
-.modal-fullscreen {
-    position: fixed;
-    top: 0;
-    left: 0;    
-    width: 100vw;	
-    height: 100vh;
-    overflow: hidden;
-}
+	.modal-fullscreen {
+		display: none;
+	    height: 100vh;
+	    left: 0;
+	    position: fixed;
+	    top: 0;
+	    width: 100vw;
+	    z-index: 1050;
+	}
 
-.modal-fullscreen .modal-header {
-    height: 100px;
-}
+	.modal-fullscreen .modal-dialog {
+	    width: 100vw;
+	    margin: 0;
+		position: unset;
+		background-color: #fff;
+	}
 
-.modal-fullscreen .modal-body {
-    position: absolute;
-    top: 100px;	
-    bottom: 100px;
-    width: 100vw;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-}
+	.modal-content {
+    	position: unset;
+   	} 
 
-.modal-fullscreen .modal-footer {
-    height: 100px;
-}
+	.modal-fullscreen .modal-header {
+	    height: 60px;
+	}
 
-.modal-fullscreen {
-	-webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-}
+	.modal-fullscreen .modal-body {
+		background-color: #fff;
+	    bottom: 52px;
+	    position: absolute;
+	    top: 60px;
+	    overflow-y: auto;
+	    width: 100vw;
+	    -webkit-overflow-scrolling: touch;
+	}
 
-.modal-fullscreen {
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform: translateY(100%) rotateX(90deg);
-    -moz-transform: translateY(100%) rotateX(90deg);
-    -ms-transform: translateY(100%) rotateX(90deg);
-    transform: translateY(100%) rotateX(90deg);
-    -webkit-transform-origin: 0 100%;
-    -moz-transform-origin: 0 100%;
-    transform-origin: 0 100%;
-    opacity: 0;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-}
+	.modal-fullscreen .modal-footer {
+		background-color: #fff;
+	    bottom: 0px;
+	    position: absolute;
+	    width: 100vw;
+	}
 
+
+
+@media (max-width: 991px){
+
+	.modal-fullscreen .modal-body {
+    	margin: auto;
+    	padding: 20px 0;
+    	overflow-x: hidden;
+    	margin: 0px;
+   		height: calc(100vh - 140px) !important;
+	}
+
+	.modal-fullscreen .modal-footer {
+		background-color: #fff;
+	    bottom: 0px;
+	    position: absolute;
+	    width: 100vw;
+	}
+
+
+}
 </style>
 
 
@@ -6288,7 +6301,8 @@ Cras justo odio
                   <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
                   <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-xl">XL modal</button>
                   <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-xxl">XXL modal</button>
-                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-fullscreen">Fullscreen modal</button>
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-fullscreen">Fullscreen modal</button>                  
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-fullscreen-iframe">Fullscreen IFRAME</button>
                   <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-scroll">Article w. Scroll</button>                  
 
                 </div>
@@ -6370,8 +6384,8 @@ Cras justo odio
                   </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
 
-                <div class="modal fade bs-example-modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-fullscreen">
+                <div class="modal modal-fullscreen fade bs-example-modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
                     <div class="modal-content">
 
                       <div class="modal-header">
@@ -6379,18 +6393,54 @@ Cras justo odio
                         <h4 class="modal-title" id="myLargeModalLabel">Fullscreen modal</h4>
                       </div>
                       <div class="modal-body">
-    <style>
-       .modal-fullscreen .modal-body {margin:0px;padding:0px;height: calc(100vh - 53px);overflow:hidden;}
-       .modal-fullscreen .modal-content {
-          top: 0px;
-        }
-    </style>  
- <!--                          <div style="overflow:hidden !important; -webkit-overflow-scrolling:touch !important;position:fixed;top:0px;left:0px;right:0px;bottom:0px">
-                              <iframe src="https://traton.com" frameborder="0" style="overflow:scroll !important; -webkit-overflow-scrolling:touch !important;height:100%;width:100%;position:fixed;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
-                          </div>   -->  
+                      	<section class="pt-5 mt-5">
+                      		<div class="container-fluid">
 
-
+                        <p>Our website uses cookies. Below, you will find further information on these cookies; what they are, what cookies we use, what our purpose is for using them, and how you go about blocking or deleting cookies.</p> 
+                        <p>With the exception of cookies that are strictly necessary to enable you to move around the website and use its features, we will only use cookies if you have allowed us to do so by checking the box “Yes, I accept your use of cookies”. Please be advised that if you do not allow us to use cookies, it may negatively affect your browsing experience.</p> 
+                        <h3>What is a cookie?</h3> 
+                        <p>Cookies are text files containing small amounts of information, which are downloaded to your device when you visit a website. Cookies are then sent back to the originating website on each subsequent visit, or to another website that recognises that cookie. Cookies are useful because they allow a website to recognise a user’s device.</p> 
+                        <p>One type of cookie will save a file permanently on your computer. It can thereafter be used to customise this website based on your choices and interests. Another common type of cookie is the “session cookie”. When you visit a website, session cookies are sent between your computer and the server to collect information. Session cookies are not saved after you close your internet browser. You can find more information about cookies at <a href="http://www.allaboutcookies.org/">www.allaboutcookies.org</a>.</p> 
+                        <h3>What do we use cookies for?</h3> 
+                        <p>We use cookies to enhance the functionality of our website. For example, cookies help authenticate the user if the user logs in to a secure area of the website, to determine what information is made available on a particular webpage. Also, login information can be stored in a cookie, so the user can enter and leave the website without having to re-enter the same authentication information over and over. Cookies are also used to help you save certain information on the website, such as favourite products etc. They are also used for collecting anonymous statistics about user behaviour to enable us to improve the website experience.</p> 
+                        <h3>Cookies used on our website</h3> 
+                        <p>We use the following categories of cookies on this website:</p> 
+                        <ul> 
+                         <li>Permanent cookies. Permanent cookies remain on the user's computer/device for a pre-defined period of time. Permanent cookies are used to collect identifying information about the user, such as browsing behaviour or user preferences for a specific website.</li> 
+                         <li>Session cookies. Session cookies are temporarily stored in your internet browser, and are erased when the browser is closed.</li> 
+                         <li>Third party cookies: Third party cookies allow third parties to download cookies to your device. They may be used to track your browsing history, or allow you to send a page from our website to your social media account such as Facebook or Twitter.</li> 
+                        </ul> 
+                        <p>For more information regarding what cookies we use please see our detailed cookie-list (below).&nbsp;</p> 
+                        <h3>How to block and/or delete cookies</h3> 
+                        <p>If you do not wish to accept cookies you can change your web browser settings to automatically block the storage of cookies or to inform you when a website wants to store cookies on your computer. Previously stored cookies can also be deleted through your web browser. More information can be found through your web browser’s support pages. If you use several different devices to access our website (computer, tablet or smartphone), you will have to change the browser settings on all devices.</p>
                       </div>
+                      	</section>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+                      </div>                      
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->  
+
+
+                <div class="modal modal-fullscreen fade bs-example-modal-fullscreen-iframe" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel">Fullscreen modal</h4>
+                      </div>
+                      <div class="modal-body">
+
+ 					<div style="overflow:hidden !important; -webkit-overflow-scrolling:touch !important;">
+                              <iframe src="https://traton.com" frameborder="0" style="overflow:scroll !important; -webkit-overflow-scrolling:touch !important;height:100%;width:100%;" height="100%" width="100%"></iframe>
+						</div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+                      </div>                      
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->                
