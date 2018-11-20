@@ -1,0 +1,9 @@
+field-error.label.label-warning {
+    background-color: #ffffff;
+    color: #717171;
+    border-left: 3px solid #F2855F;
+    border-radius: 0;
+    position: relative;
+    z-index: 3;
+    top: 6px;
+}
