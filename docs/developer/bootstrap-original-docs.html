@@ -21,13 +21,15 @@
   <script src="holder.js"></script>
 
 <script>
+
+$(function(){
   var hash = window.location.hash;
 
 var tabInstallationAnchors =  [ "#corporate-ui-installation-overview"];
 var tabElementsAnchors =  [ "#corporate-header", "#main-content", "#main-nav", "#corporate-footer" ];
-var tabComponentsAnchors =  [ "#bootstrap-4"];
-var tabCSSAnchors =  [ "#type"];
-var tabJavaScriptAnchors =  [ "#modals" ];
+var tabComponentsAnchors =  [ "#dropdowns","#btn-groups","#btn-dropdowns","#input-groups","#nav","#navbar","#pagination","#thumbnails","#alerts","#progress","#media","#list-group","#panels" ];
+var tabCSSAnchors =  [ "#type","#code","#tables","#forms","#buttons","#images","#helper-classes","#grid","#responsive-utilities","#bootstrap-4" ];
+var tabJavaScriptAnchors =  [ "#modals","#js-dropdowns","#scrollspy","#tabs","#tooltips","#popovers","#js-alerts","#js-buttons","#collapse","#affix" ];
 
 if ( jQuery.inArray( hash, tabInstallationAnchors ) >= 0 ) {
 
@@ -65,6 +67,12 @@ $('.tab-pane').removeClass('fade active');
 $('#bootstrap-javascript-section.tab-pane').addClass('active');
 
 }
+
+if (location.hash) {
+        location.href = location.hash;
+}
+
+})
 
 </script>
 
