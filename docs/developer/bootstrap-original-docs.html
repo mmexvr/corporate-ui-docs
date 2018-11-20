@@ -438,14 +438,16 @@
 
 
                 <h3 id="main-navigation-mobile-navigation">Mobile navigation</h3>
-                <p>The desktop version will automaticly re-arrange and be displayed as a traditional mobile navigation with a hamburder icon. Any code included within the secondary items will be included in the mobile navigation but it might need some extra CSS to be displayed correctly below 992px viewport width. </p>     
-
-
-¨
+                <p>The desktop version will automaticly re-arrange and be displayed as a traditional mobile navigation with a hamburder icon. Any code included within the secondary items will be included in the mobile navigation but it might need some extra CSS to be displayed correctly below 992px viewport width. To limit the scope not only to mobile mode, but to the the mobile navigation only, please prefix your selector with <span class="nc">.navigation-open</span></p>     
 
 
                 <div class="highlight"><pre><code class="css">
 <span class="k">@media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="k">991px</span><span class="o">)</span> <span class="p">{</span> 
+<code class="css">
+<span class="nc">.navigation-open .your-selector</span> <span class="p">{</span>
+  <span class="o">.</span><span class="n">your-custom</span><span class="o">:</span><span class="n">declaration</span><span class="p">();</span>
+<span class="p">}</span> 
+
   <span class="o">Your custom CSS</span> 
 <span class="p">}</span>
                 </code></pre></div>
