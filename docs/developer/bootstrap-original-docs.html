@@ -20,53 +20,60 @@
   <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">  
   <script src="holder.js"></script>
 
+  <style>
+.bs-docs-section h1[id], .bs-docs-section h2[id], .bs-docs-section h3[id] {
+    padding-top: 110px !important; 
+    margin-top: -110px !important;
+}
+  </style>
+
 <script>
 
 $(function(){
   var hash = window.location.hash;
 
-var tabInstallationAnchors =  [ "#corporate-ui-installation-overview"];
-var tabElementsAnchors =  [ "#corporate-header", "#main-content", "#main-nav", "#corporate-footer" ];
-var tabComponentsAnchors =  [ "#dropdowns","#btn-groups","#btn-dropdowns","#input-groups","#nav","#navbar","#pagination","#thumbnails","#alerts","#progress","#media","#list-group","#panels" ];
-var tabCSSAnchors =  [ "#type","#code","#tables","#forms","#buttons","#images","#helper-classes","#grid","#responsive-utilities","#bootstrap-4" ];
-var tabJavaScriptAnchors =  [ "#modals","#js-dropdowns","#scrollspy","#tabs","#tooltips","#popovers","#js-alerts","#js-buttons","#collapse","#affix" ];
+  var tabInstallationAnchors =  [ "#corporate-ui-installation-overview"];
+  var tabElementsAnchors =  [ "#corporate-header", "#main-content", "#main-nav", "#corporate-footer" ];
+  var tabComponentsAnchors =  [ "#dropdowns","#btn-groups","#btn-dropdowns","#input-groups","#nav","#navbar","#pagination","#thumbnails","#alerts","#progress","#media","#list-group","#panels" ];
+  var tabCSSAnchors =  [ "#type","#code","#tables","#forms","#buttons","#images","#helper-classes","#grid","#responsive-utilities","#bootstrap-4" ];
+  var tabJavaScriptAnchors =  [ "#modals","#js-dropdowns","#scrollspy","#tabs","#tooltips","#popovers","#js-alerts","#js-buttons","#collapse","#affix" ];
 
-if ( jQuery.inArray( hash, tabInstallationAnchors ) >= 0 ) {
+  if ( jQuery.inArray( hash, tabInstallationAnchors ) >= 0 ) {
 
-$('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-$('.nav.nav-tabs.c-ui-tabs > li:nth-child(1)').addClass('active');
-$('.tab-pane').removeClass('fade active');
-$('#corporate-ui-installation-section.tab-pane').addClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(1)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#corporate-ui-installation-section.tab-pane').addClass('active');
 
-} else if ( jQuery.inArray( hash, tabElementsAnchors ) >= 0 ) {
+  } else if ( jQuery.inArray( hash, tabElementsAnchors ) >= 0 ) {
 
-$('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-$('.nav.nav-tabs.c-ui-tabs > li:nth-child(2)').addClass('active');
-$('.tab-pane').removeClass('fade active');
-$('#corporate-ui-components-overview.tab-pane').addClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(2)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#corporate-ui-components-overview.tab-pane').addClass('active');
 
-} else if ( jQuery.inArray( hash, tabComponentsAnchors ) >= 0 ) {
+  } else if ( jQuery.inArray( hash, tabComponentsAnchors ) >= 0 ) {
 
-$('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-$('.nav.nav-tabs.c-ui-tabs > li:nth-child(3)').addClass('active');
-$('.tab-pane').removeClass('fade active');
-$('#bootstrap-components-section.tab-pane').addClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(3)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#bootstrap-components-section.tab-pane').addClass('active');
 
-}  else if ( jQuery.inArray( hash, tabCSSAnchors ) >= 0 ) {
+  }  else if ( jQuery.inArray( hash, tabCSSAnchors ) >= 0 ) {
 
-$('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-$('.nav.nav-tabs.c-ui-tabs > li:nth-child(4)').addClass('active');
-$('.tab-pane').removeClass('fade active');
-$('#bootstrap-css-section.tab-pane').addClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(4)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#bootstrap-css-section.tab-pane').addClass('active');
 
-}  else if ( jQuery.inArray( hash, tabJavaScriptAnchors ) >= 0 ) {
+  }  else if ( jQuery.inArray( hash, tabJavaScriptAnchors ) >= 0 ) {
 
-$('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-$('.nav.nav-tabs.c-ui-tabs > li:nth-child(5)').addClass('active');
-$('.tab-pane').removeClass('fade active');
-$('#bootstrap-javascript-section.tab-pane').addClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(5)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#bootstrap-javascript-section.tab-pane').addClass('active');
 
-}
+  }
 
 if (location.hash) {
         location.href = location.hash;
@@ -658,7 +665,7 @@ if (location.hash) {
                 <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
                   <ul class="nav bs-docs-sidenav">
                   <li>
-                    <a href="#top">Overview</a>
+                    <a href="#corporate-ui-components-overview">Overview</a>
                   </li>                                     
                   <li>
                     <a href="#corporate-header">Corporate Header</a>
@@ -699,7 +706,7 @@ if (location.hash) {
             <div class="row">
               <div class="col-md-9" role="main">
                 <article class="mt-5 mr-5">
-                  <h1>Core CSS (Scania Bootstrap)</h1>
+                  <h1 id="core-css-overview">Core CSS (Scania Bootstrap)</h1>
                   <p class="lead">Scania Bootstrap is now a subset of the Corporate UI framework. Scania Bootstrap can still be used "stand alone" to tailor applications with the Corporate UI look and feel. Although, it will not fully take advantage of the easy uf use that our Custom Elements do offer. You'll simply have to develop and maintain a lot of the HTML and JavaScript code that's already availble in the components.</p>
                   <p class="lead">When it comes to designing your particular functionallity, please copy code snippets from the <a href="/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html">the HTML Copy Paste section</a> or from this code repository. The library is uppdated on a daily basis so make sure you'll visit it frequently.</p>
                   <p class="lead">All things that you'll need for your development, like icons, fonts. CSS and Custom Elements will become available for you once you're loading the <a href="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/corporate-ui.js">corporate-ui.js</a>.</p>
@@ -3116,7 +3123,7 @@ if (location.hash) {
                   <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
                     <ul class="nav bs-docs-sidenav"> 
                     <li>
-                      <a href="#top">Overview</a>
+                      <a href="#core-css-overview">Overview</a>
                       <ul class="nav">
                         <li><a href="#overview-doctype">HTML5 doctype</a></li>
                         <li><a href="#overview-mobile">Mobile first</a></li>
@@ -3260,7 +3267,7 @@ if (location.hash) {
               <h1 id="components-overview">HTML Components</h1>
               <p class="lead">In this section you'll find pre designed markup, many of them from Bootstrap although you'll find a fews custom made as well. They differ from our custom elements in the aspect that they are markup and CSS only, so they do not offer much interaction. That part you'll need to create within your project.
               <div class="bs-docs-section panel-x">
-                <div class="page-body-x">
+                <div class="page-header">
                   <h2 id="dropdowns">Dropdowns</h2>
                 </div>
                 <p class="lead">Toggleable, contextual menu for displaying lists of links. Made interactive with <a href="https://thednp.github.io/bootstrap.native/" target="_blank">Bootstrap Native JS</a>.</p>
@@ -5320,25 +5327,25 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                 </div>
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-success&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;40&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 40%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>40% Complete (success)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-info&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;20&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 20%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>20% Complete<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-warning&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;60&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 60%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>60% Complete (warning)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-danger&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;80&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 80%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>80% Complete<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-success&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;40&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 40%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>40% Complete (success)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-info&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;20&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 20%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>20% Complete<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-warning&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;60&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 60%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>60% Complete (warning)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-danger&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;80&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 80%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>80% Complete<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
                 </code></pre></div>
 
                 <h3 id="progress-striped">Striped</h3>
@@ -5367,25 +5374,25 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                 </div>
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-success&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;40&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 40%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>40% Complete (success)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-info&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;20&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 20%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>20% Complete<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-warning&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;60&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 60%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>60% Complete (warning)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-danger&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;80&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 80%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>80% Complete (danger)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-success&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;40&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 40%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>40% Complete (success)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-info&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;20&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 20%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>20% Complete<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-warning&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;60&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 60%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>60% Complete (warning)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-danger&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;80&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 80%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>80% Complete (danger)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
                 </code></pre></div>
 
                 <h3 id="progress-animated">Animated</h3>
@@ -5420,16 +5427,16 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                 </div>
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-success&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 35%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>35% Complete (success)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-warning&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 20%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>20% Complete (warning)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-danger&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 10%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>10% Complete (danger)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-success&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 35%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>35% Complete (success)<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-warning&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 20%&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>20% Complete (warning)<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-danger&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 10%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>10% Complete (danger)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
                 </code></pre></div>
               </div>
 
@@ -5472,14 +5479,14 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                 </div><!-- /.bs-example -->
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;media&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;media-object&quot;</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">alt=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;/a&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;media-body&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;media-heading&quot;</span><span class="nt">&gt;</span>Media heading<span class="nt">&lt;/h4&gt;</span>
-                  ...
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;media-object&quot;</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">alt=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;media-body&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;media-heading&quot;</span><span class="nt">&gt;</span>Media heading<span class="nt">&lt;/h4&gt;</span>
+        ...
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
                 </code></pre></div>
 
                 <h3 id="media-list">Media list</h3>
@@ -5538,15 +5545,15 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                 </div>
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;media-list&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;media&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;media-object&quot;</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">alt=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;media-body&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;media-heading&quot;</span><span class="nt">&gt;</span>Media heading<span class="nt">&lt;/h4&gt;</span>
-...
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;media&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;media-object&quot;</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">alt=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;media-body&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;media-heading&quot;</span><span class="nt">&gt;</span>Media heading<span class="nt">&lt;/h4&gt;</span>
+      ...
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span>
                 </code></pre></div>
               </div>
@@ -5992,7 +5999,7 @@ Cras justo odio
                 <ul class="nav bs-docs-sidenav">
 
                   <li>
-                    <a href="#top">Overview</a>
+                    <a href="#components-overview">Overview</a>
                     <a href="#dropdowns">Dropdowns</a>
                     <ul class="nav">
                       <li><a href="#dropdowns-example">Example</a></li>
@@ -8155,7 +8162,7 @@ Cras justo odio
             <ul class="nav bs-docs-sidenav">
 
               <li>
-                <a href="#top">Overview</a>
+                <a href="#js-overview">Overview</a>
                 <ul class="nav">
                   <li><a href="#js-individual-compiled">Individual or compiled</a></li>
                   <li><a href="#js-data-attrs">Data attributes</a></li>
