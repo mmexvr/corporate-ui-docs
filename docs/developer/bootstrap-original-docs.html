@@ -19,6 +19,56 @@
 
   <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">  
   <script src="holder.js"></script>
+
+<script>
+  var hash = window.location.hash;
+
+var tabInstallationAnchors =  [ "#corporate-ui-installation-overview"];
+var tabElementsAnchors =  [ "#corporate-header", "#main-content", "#main-nav", "#corporate-footer" ];
+var tabComponentsAnchors =  [ "#bootstrap-4"];
+var tabCSSAnchors =  [ "#type"];
+var tabJavaScriptAnchors =  [ "#modals" ];
+
+if ( jQuery.inArray( hash, tabInstallationAnchors ) >= 0 ) {
+
+$('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+$('.nav.nav-tabs.c-ui-tabs > li:nth-child(1)').addClass('active');
+$('.tab-pane').removeClass('fade active');
+$('#corporate-ui-installation-section.tab-pane').addClass('active');
+
+} else if ( jQuery.inArray( hash, tabElementsAnchors ) >= 0 ) {
+
+$('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+$('.nav.nav-tabs.c-ui-tabs > li:nth-child(2)').addClass('active');
+$('.tab-pane').removeClass('fade active');
+$('#corporate-ui-components-overview.tab-pane').addClass('active');
+
+} else if ( jQuery.inArray( hash, tabComponentsAnchors ) >= 0 ) {
+
+$('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+$('.nav.nav-tabs.c-ui-tabs > li:nth-child(3)').addClass('active');
+$('.tab-pane').removeClass('fade active');
+$('#bootstrap-components-section.tab-pane').addClass('active');
+
+}  else if ( jQuery.inArray( hash, tabCSSAnchors ) >= 0 ) {
+
+$('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+$('.nav.nav-tabs.c-ui-tabs > li:nth-child(4)').addClass('active');
+$('.tab-pane').removeClass('fade active');
+$('#bootstrap-css-section.tab-pane').addClass('active');
+
+}  else if ( jQuery.inArray( hash, tabJavaScriptAnchors ) >= 0 ) {
+
+$('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+$('.nav.nav-tabs.c-ui-tabs > li:nth-child(5)').addClass('active');
+$('.tab-pane').removeClass('fade active');
+$('#bootstrap-javascript-section.tab-pane').addClass('active');
+
+}
+
+</script>
+
+
 </head>
 
 <body class="scania app" id="top">
@@ -59,7 +109,7 @@
     <div class="container-fluid">
        <div class="row">
          <div class="col-md-9">
-          <ul class="nav nav-tabs">
+          <ul class="nav nav-tabs c-ui-tabs">
             <li class="active"><a data-toggle="tab" href="#corporate-ui-installation-section">Get Started</a></li>
             <li><a data-toggle="tab" href="#custom-elements-section">Custom Elements</a></li>
             <li><a data-toggle="tab" href="#bootstrap-components-section">HTML Components</a></li>
@@ -438,7 +488,7 @@
 
 
                 <h3 id="main-navigation-mobile-navigation">Mobile navigation</h3>
-                <p>The desktop version will automaticly re-arrange and be displayed as a traditional mobile navigation with a hamburder icon. Any code included within the secondary items will be included in the mobile navigation but it might need some extra CSS to be displayed correctly below 992px viewport width. To limit the scope not only to mobile mode, but to the the mobile navigation only, please prefix your selector with <span class="nc">.navigation-open</span></p>     
+                <p>The desktop version will automaticly re-arrange and be displayed as a traditional mobile navigation with a hamburder icon. Any code included within the secondary items will be included in the mobile navigation but it might need some extra CSS to be displayed correctly below a 992px viewport width. To limit the scope not only to mobile mode, but to the the mobile navigation only, please prefix your selector with <span class="nc">.navigation-open</span></p>     
 
 
                 <div class="highlight"><pre><code class="css">
