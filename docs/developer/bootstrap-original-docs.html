@@ -33,12 +33,35 @@
 
 $(function(){
 
-  var hash = window.location.hash;
+//  New solution
 
-  // var tabElementsAnchors = [];
-  // $('.nav.bs-docs-sidenav.corporate-ui-components-overview ul li').find('a').next('a').each(function(){
-  //     tabElementsAnchors.push($(this).attr('href'));
-  // });
+// $(function(){
+
+// var tabElementsAnchors = {};
+// var targetSection = '';
+
+// $('.tab-content.zone > .tab-pane').each(function(key, section) {
+//   tabElementsAnchors[section.id] = []
+//   $('.bs-docs-sidebar ul > li > a', section).each(function(key, link) {
+//     tabElementsAnchors[section.id].push($(link).attr('href'));
+//   });
+// })
+
+// Object.keys(tabElementsAnchors).map(function(sectionId) {
+//   var section = tabElementsAnchors[sectionId];
+//   if(section.indexOf(location.hash) > -1) {
+//     targetSection = sectionId;
+//   }
+// })
+
+// $('.c-ui-tabs > li > a[href=#' + targetSection + ']')[0].click();
+
+
+// }) 
+
+
+
+  var hash = window.location.hash;
 
   var tabInstallationAnchors =  [ "#corporate-ui-installation-overview", "#corporate-ui-installation-overview"];
   var tabElementsAnchors =  [ "#corporate-ui-components-overview", "#corporate-header", "#main-content", "#main-nav", "#corporate-footer" ];
@@ -46,11 +69,6 @@ $(function(){
   var tabCSSAnchors =  [ "#core-css-overview", "#type","#code","#tables","#forms","#buttons","#images","#helper-classes","#grid","#responsive-utilities","#bootstrap-4" ];
   var tabJavaScriptAnchors =  [ "#js-overview", "#modals","#js-dropdowns","#scrollspy","#tabs","#tooltips","#popovers","#js-alerts","#js-buttons","#collapse","#affix" ];
 
-  console.dir(tabInstallationAnchors);
-  console.dir(tabElementsAnchors);
-  console.dir(tabComponentsAnchors);
-  console.dir(tabCSSAnchors);
-  console.dir(tabJavaScriptAnchors);       
 
   if ( jQuery.inArray( hash, tabInstallationAnchors ) >= 0 ) {
 
