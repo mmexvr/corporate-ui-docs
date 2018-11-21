@@ -33,83 +33,33 @@
 
 $(function(){
 
-//  New solution
+  if(location.hash) {
+    var tabElementsAnchors = {};
+    var targetSection = '';
 
-// $(function(){
+    $('.tab-content.zone > .tab-pane').each(function(key, section) {
+      tabElementsAnchors[section.id] = []
+      $('.bs-docs-sidebar ul > li > a', section).each(function(key, link) {
+        tabElementsAnchors[section.id].push($(link).attr('href'));
+      });
+    })
 
-// var tabElementsAnchors = {};
-// var targetSection = '';
+    Object.keys(tabElementsAnchors).map(function(sectionId) {
+      var section = tabElementsAnchors[sectionId];
+      if(section.indexOf(location.hash) > -1) {
+        targetSection = sectionId;
+      }
+    })
 
-// $('.tab-content.zone > .tab-pane').each(function(key, section) {
-//   tabElementsAnchors[section.id] = []
-//   $('.bs-docs-sidebar ul > li > a', section).each(function(key, link) {
-//     tabElementsAnchors[section.id].push($(link).attr('href'));
-//   });
-// })
+    $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+    $('.c-ui-tabs > li > a[href=#' + targetSection + ']').parent().addClass('active');
+    $('.tab-pane').removeClass('fade active');
+    $('#' + targetSection + '.tab-pane').addClass('active');
 
-// Object.keys(tabElementsAnchors).map(function(sectionId) {
-//   var section = tabElementsAnchors[sectionId];
-//   if(section.indexOf(location.hash) > -1) {
-//     targetSection = sectionId;
-//   }
-// })
-
-// $('.c-ui-tabs > li > a[href=#' + targetSection + ']')[0].click();
-
-
-// }) 
-
-
-
-  var hash = window.location.hash;
-
-  var tabInstallationAnchors =  [ "#corporate-ui-installation-overview", "#corporate-ui-installation-overview"];
-  var tabElementsAnchors =  [ "#corporate-ui-components-overview", "#corporate-header", "#main-content", "#main-nav", "#corporate-footer" ];
-  var tabComponentsAnchors =  [ "#components-overview", "#dropdowns","#btn-groups","#btn-dropdowns","#input-groups","#nav","#navbar", "#breadcrumbs","#pagination", "#labels", "#badges", "#jumbotron", "#page-header", "#thumbnails","#alerts","#progress","#media","#list-group","#panels", "#wells" ];
-  var tabCSSAnchors =  [ "#core-css-overview", "#type","#code","#tables","#forms","#buttons","#images","#helper-classes","#grid","#responsive-utilities","#bootstrap-4" ];
-  var tabJavaScriptAnchors =  [ "#js-overview", "#modals","#js-dropdowns","#scrollspy","#tabs","#tooltips","#popovers","#js-alerts","#js-buttons","#collapse","#affix" ];
-
-
-  if ( jQuery.inArray( hash, tabInstallationAnchors ) >= 0 ) {
-
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(1)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#corporate-ui-installation-section.tab-pane').addClass('active');
-
-  } else if ( jQuery.inArray( hash, tabElementsAnchors ) >= 0 ) {
-
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(2)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#custom-elements-section.tab-pane').addClass('active');
-
-  } else if ( jQuery.inArray( hash, tabComponentsAnchors ) >= 0 ) {
-
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(3)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#bootstrap-components-section.tab-pane').addClass('active');
-
-  }  else if ( jQuery.inArray( hash, tabCSSAnchors ) >= 0 ) {
-
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(4)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#bootstrap-css-section.tab-pane').addClass('active');
-
-  }  else if ( jQuery.inArray( hash, tabJavaScriptAnchors ) >= 0 ) {
-
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(5)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#bootstrap-javascript-section.tab-pane').addClass('active');
-
+    if (location.hash) {
+      location.href = location.hash;
+    }
   }
-
-if (location.hash) {
-        location.href = location.hash;
-}
 
 })
 
