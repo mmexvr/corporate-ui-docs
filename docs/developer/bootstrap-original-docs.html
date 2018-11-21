@@ -21,10 +21,9 @@
   <script src="holder.js"></script>
 
   <style>
-    .bs-docs-section h1[id] {
-        padding-top: 110px !important; 
-    }  
-    .bs-docs-section h2[id], .bs-docs-section h3[id] {
+    .bs-docs-section h1[id],
+    .bs-docs-section h2[id], 
+    .bs-docs-section h3[id] {
         padding-top: 110px !important; 
         margin-top: -110px !important;
     }
@@ -137,7 +136,7 @@ if (location.hash) {
 
   <section class="light">
     <div class="container-fluid">
-       <div class="row">
+       <div class="row" style="position: relative; z-index: 900;">
          <div class="col-md-9">
           <ul class="nav nav-tabs c-ui-tabs">
             <li class="active"><a data-toggle="tab" href="#corporate-ui-installation-section">Get Started</a></li>
@@ -4387,9 +4386,9 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                 </div>
 
 
-                <div class="bs-callout bs-callout-warning">
+                <div class="bs-callout bs-callout-success">
                   <h4>Scania Main Navigation</h4>
-                  <p>To be sure that the site navigation is displayed correct we've pagackaged the navbar as a custom element and it should be used as such. Please use the <a href="/corporate-ui-docs/developer/bootstrap-original-docs.html#main-nav">Main Navigation</a> to swiftly create both the desktop and mobile versions just by attaching the navigation items that you're in need of.</p>
+                  <p>To be sure that the site navigation is displayed as defined in the Scania Identity Manual, we've pagackaged the navbar as a custom element, and it should be used as such. Please use the <a href="#main-nav">Main Navigation Element</a> to swiftly create both the desktop and mobile versions by attaching the navigation items that you're in need of.</p>
                 </div>                
 
                 <div class="bs-example">
@@ -4411,9 +4410,7 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
       <span class="nt">&lt;/sub-navigation</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/nav-item</span><span class="nt">&gt;</span>  
   <span class="nt">&lt;/primary-items</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;secondary-items</span><span class="nt">&gt;</span>
-     Secondary items are optional, more information below.
-  <span class="nt">&lt;/secondary-items</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;secondary-items</span><span class="nt">&gt;</span><span class="nt">&lt;/secondary-items</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/c-main-navigation</span><span class="nt">&gt;</span>
                     </code></pre>
                   </div>
@@ -4421,7 +4418,7 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
 
               <div class="bs-docs-section">
                 <div class="page-header">
-                  <h2 id="breadcrumbs">Breadcrumbs <small></small></h2>
+                  <h2 id="breadcrumbs">Breadcrumbs</h2>
                 </div>
                 <p class="lead">Indicate the current page's location within a navigational hierarchy.</p>
                 <p>Separators are automatically added in CSS through <code>:before</code> and <code>content</code>.</p>
