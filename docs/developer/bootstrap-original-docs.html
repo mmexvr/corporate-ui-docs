@@ -31,7 +31,7 @@
 
 <script>
 
-
+$(function(){
 
   if(location.hash) {
     var tabElementsAnchors = {};
@@ -50,9 +50,7 @@
         targetSection = sectionId;
       }
     })
-  }  
 
-$(function(){
     $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
     $('.c-ui-tabs > li > a[href=#' + targetSection + ']').parent().addClass('active');
     $('.tab-pane').removeClass('fade active');
@@ -61,8 +59,9 @@ $(function(){
     if (location.hash) {
       location.href = location.hash;
     }
-  })
+  }
 
+})
 
 </script>
 
