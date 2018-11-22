@@ -53,6 +53,8 @@ setTimeout(function(){
       }
     })
 
+    console.log(tabElementsAnchors);
+
     $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
     $('.c-ui-tabs > li > a[href=#' + targetSection + ']').parent().addClass('active');
     $('.tab-pane').removeClass('fade active');
@@ -63,7 +65,7 @@ setTimeout(function(){
     }
   }
 
- }, 3000);
+ }, 100);
 
 
 })
