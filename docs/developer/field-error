@@ -1,23 +1,9 @@
-.has-success .help-block {
-    position: relative;
-    z-index: 0;
-    top: 6px;
+field-error.label.label-warning {
     background-color: #ffffff;
-    color: #53565a;
+    color: #717171;
+    border-left: 3px solid #F2855F;
     border-radius: 0;
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
-    text-align: left;
-    width: 100%;
-    margin-bottom: 3px;
-    font-size: 1.2rem;
-    font-weight: normal;
-    padding: 8px;
-    margin-top: 2px;
-    border: 1px solid #f0f0f0;
-    border-left: 4px solid #F2855F;
-}
-
-.has-warning .help-block {
-    border-left: 4px solid #F2855F;
+    position: relative;
+    z-index: 3;
+    top: 6px;
 }
