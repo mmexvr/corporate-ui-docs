@@ -17,9 +17,6 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
   <script src="/corporate-ui-docs/js/google-analytics.js"></script>
 
-  <script src="js/clipboard.js"></script>
-
-
   <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">  
   <script src="holder.js"></script>
 
@@ -7855,12 +7852,9 @@ Cras justo odio
               <h3>Via JavaScript</h3>
               <p>Call the affix plugin via JavaScript:</p>
 
+              <div class="bd-clipboard"><button class="btn-clipboard">Copy</button></div>
 
-
-
-              <div class="bd-clipboard"><button class="btn-clipboard" title="" data-clipboard-action="cut" data-clipboard-target="#affix-examples" data-original-title="Copy to clipboard">Copy</button></div>
-
-              <div class="highlight"><pre><code class="js">  <span class="nx">$</span><span class="p">(</span><span class="s1">'#my-affix'</span><span class="p">).</span><span class="nx">affix</span><span class="p">({</span>
+              <div class="highlight"><pre><code id="clipboard-test" class="js">  <span class="nx">$</span><span class="p">(</span><span class="s1">'#my-affix'</span><span class="p">).</span><span class="nx">affix</span><span class="p">({</span>
                 <span class="nx">offset</span><span class="o">:</span> <span class="p">{</span>
                 <span class="nx">top</span><span class="o">:</span> <span class="mi">100</span>
                 <span class="p">,</span> <span class="nx">bottom</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
@@ -8037,10 +8031,31 @@ Cras justo odio
   </div>
 </div>
 
-
 <div class="container portal-footer"></div> <!-- FOOTER -->
 
 <script src="/corporate-ui-docs/ux-lib.js"></script> 
+
+
+    <!-- 2. Include library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+
+    <!-- 3. Instantiate clipboard -->
+    <script>
+    var clipboard = new ClipboardJS('.btn-clipboard', {
+        target: function() {
+          console.log(this);
+            return document.querySelector('#clipboard-test');
+        }
+    });      
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
 
 <script>
 
@@ -8051,15 +8066,6 @@ $(function(){
     } else {
         $('.highlight').removeClass('hide');
     }
-
-
-    var clipboard = new ClipboardJS('button.btn-clipboard');
-    clipboard.on('success', function(e) {
-        console.log(e);
-    });
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
 
   });
 
