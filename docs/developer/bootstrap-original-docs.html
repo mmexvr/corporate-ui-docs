@@ -50,6 +50,8 @@
         targetSection = sectionId;
       }
     })
+  }  
+
 $(function(){
     $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
     $('.c-ui-tabs > li > a[href=#' + targetSection + ']').parent().addClass('active');
@@ -59,9 +61,8 @@ $(function(){
     if (location.hash) {
       location.href = location.hash;
     }
-  }
+  })
 
-})
 
 </script>
 
