@@ -17,6 +17,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
   <script src="/corporate-ui-docs/js/google-analytics.js"></script>
 
+  <script src="clipboard.js/clipboard.min.js"></script>
+
+
   <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">  
   <script src="holder.js"></script>
 
@@ -7851,6 +7854,12 @@ Cras justo odio
 
               <h3>Via JavaScript</h3>
               <p>Call the affix plugin via JavaScript:</p>
+
+
+
+
+              <div class="bd-clipboard"><button class="btn-clipboard" title="" data-clipboard-action="cut" data-clipboard-target="#affix-examples" data-original-title="Copy to clipboard">Copy</button></div>
+
               <div class="highlight"><pre><code class="js">  <span class="nx">$</span><span class="p">(</span><span class="s1">'#my-affix'</span><span class="p">).</span><span class="nx">affix</span><span class="p">({</span>
                 <span class="nx">offset</span><span class="o">:</span> <span class="p">{</span>
                 <span class="nx">top</span><span class="o">:</span> <span class="mi">100</span>
@@ -8042,6 +8051,16 @@ $(function(){
     } else {
         $('.highlight').removeClass('hide');
     }
+
+
+    var clipboard = new ClipboardJS('button.btn-clipboard');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+
   });
 
   // $(".bs-docs-sidebar .nav > li > a").css("padding","0 15px");
@@ -8263,6 +8282,43 @@ span.photo-background {
         padding-left: 15px;
         text-align: left;
     }     
+}
+
+
+.bd-clipboard {
+  position: relative;
+  display: none;
+  float: right
+}
+
+.bd-clipboard+.highlight {
+  margin-top: 0
+}
+
+.btn-clipboard {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  z-index: 10;
+  display: block;
+  padding: .25rem .5rem;
+  font-size: 75%;
+  color: #818a91;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  border-radius: .25rem
+}
+
+.btn-clipboard:hover {
+  color: #fff;
+  background-color: #027de7
+}
+
+@media (min-width:768px) {
+  .bd-clipboard {
+    display: block
+  }
 }
 
 
