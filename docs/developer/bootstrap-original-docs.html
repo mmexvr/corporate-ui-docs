@@ -349,19 +349,28 @@ setTimeout(function(){
                 <h3 id="corporate-header-headers">Header links</h3>
                 <p>You can add one or several <code>nav-item</code> to the Corporate Header. Typically these are used to link away from the site, to for example Scania.Com. This location is also used for language selectors and user menus.</p>
 
-                <h3 id="corporate-header-dealer-variation">Dealer variation</h3>
+                <h3 id="corporate-header-dealer-variation">Dealer variations</h3>
                 <p>Dealers have a slightly different header setup as they need to include their name and/or their logotype.</p>
+                <h4 id="corporate-header-headers-logotype">With custom logotype</h3>
+                <div class="bs-example">
 
+                  <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
+                      <iframe src="docs-example-corporate-dealer-header-logotype.html" frameborder="0" style="overflow:scroll !important" height="72px" width="100%"></iframe>
+                  </div>                  
+
+                </div>
+
+                <h4 id="corporate-header-headers-text">Without custom logotype</h3>
                 <div class="bs-example">
 
                   <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
                       <iframe src="docs-example-corporate-dealer-header.html" frameborder="0" style="overflow:scroll !important" height="72px" width="100%"></iframe>
                   </div>                  
 
-                </div>
+                </div>                
 
                 <div class="highlight"><pre><code class="html">
-<span class="nt">&lt;c-corporate-header</span> <span class="na">dealer-name=</span><span class="s">&quot;Bilmetro&quot;</span> <span class="na">short-name=</span><span class="s">&quot;Bilmetro&quot;</span>  <span class="na">dealer-url=</span></span><span class="s">&quot;/&quot;</span> <span class="na">dealer-logo=</span><span class="s">&quot;https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;c-corporate-header</span> <span class="na">dealer-name=</span><span class="s">&quot;Bilmetro&quot;</span> <span class="na">short-name=</span><span class="s">&quot;Bilmetro&quot;</span>  <span class="na">dealer-url=</span></span><span class="s">&quot;/&quot;</span>
   <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Configurator<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
 <span class="nt">&lt;/c-corporate-header<span class="nt">&gt;</span>
                 </code></pre></div>
