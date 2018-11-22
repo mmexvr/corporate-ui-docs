@@ -1629,7 +1629,6 @@ $(function(){
                     <div class="form-group has-warning">
                       <label for="exampleInputFile">File input</label>
                       <input type="file" id="exampleInputFile">
-                      <p class="help-block">Example block-level help text here.</p>
                     </div>
                     <div class="checkbox">
                       <label>
@@ -2013,14 +2012,17 @@ $(function(){
                     <div class="form-group has-success">
                       <label class="control-label" for="inputSuccess">Input with success</label>
                       <input type="text" class="form-control" id="inputSuccess">
+                      <p class="help-block">User <code>.help-block</code> to point out issues about regarding user interaction.</p>
                     </div>
                     <div class="form-group has-warning">
                       <label class="control-label" for="inputWarning">Input with warning</label>
                       <input type="text" class="form-control" id="inputWarning">
+                      <p class="help-block">User <code>.help-block</code> to point out issues about regarding user interaction.</p>
                     </div>
                     <div class="form-group has-error">
                       <label class="control-label" for="inputError">Input with error</label>
                       <input type="text" class="form-control" id="inputError">
+                      <p class="help-block">User <code>.help-block</code> to point out issues about regarding user interaction.</p>
                     </div>
                   </form>
                   <div class="highlight"><pre><code class="html">
@@ -6043,23 +6045,6 @@ Cras justo odio
 
                 <!--  Modal content for the above example -->
 
-
-<!-- <style>
-.scroll-y .modal-content {
-    top: 0;
-}
-
-.modal-fullscreen.scroll-y {
-    margin-left: -17px;
-    width: calc (100vw + 17px);
-}
-
-.modal-fullscreen .modal-body {
-    height: auto;
-}
-
-</style> -->
-
                 <div class="modal fade bs-example-modal-scroll" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg scroll-y modal-article">
                     <div class="modal-content">
@@ -6109,6 +6094,51 @@ Cras justo odio
        .modal-fullscreen .modal-content {
           top: 0px;
         }
+
+.help-block {
+    position: relative;
+    z-index: 0;
+    top: 6px;
+    background-color: #ffffff;
+    color: #53565a;
+    border-radius: 0;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    width: 100%;
+    margin-bottom: 3px;
+    font-size: 1.2rem !important;
+    font-weight: normal;
+    padding: 8px;
+    margin-top: 2px;
+    border: 1px solid #f0f0f0;
+    border-left: 4px solid #F2855F;
+}
+
+.has-info .help-block {
+    border-left: 3px solid #4a8ba4;
+}
+
+.has-info .help-primary {
+    border-left: 3px solid #033a6a;
+}
+
+.has-success .help-block {
+    border-left: 3px solid #3c763d;
+    color: #53565a;    
+}
+
+.has-warning .help-block {
+    border-left: 3px solid #F2855F;
+    color: #53565a;    
+}
+
+.has-danger .help-block,
+.has-error .help-block {
+    border-left: 3px solid #CC1040;
+    color: #53565a;
+}
+
     </style>  
  <!--                          <div style="overflow:hidden !important; -webkit-overflow-scrolling:touch !important;position:fixed;top:0px;left:0px;right:0px;bottom:0px">
                               <iframe src="https://traton.com" frameborder="0" style="overflow:scroll !important; -webkit-overflow-scrolling:touch !important;height:100%;width:100%;position:fixed;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
