@@ -31,40 +31,102 @@
 
 <script>
 
-window.onload = function(){
+$(function(){
 
-  if(location.hash) {
-    var tabElementsAnchors = {};
-    var targetSection = '';
 
-    $('.tab-content.zone > .tab-pane').each(function(key, section) {
-      tabElementsAnchors[section.id] = []
-      $('.bs-docs-sidebar ul > li > a', section).each(function(key, link) {
-        tabElementsAnchors[section.id].push($(link).attr('href'));
-      });
-    })
+  // window.onload = function(){
 
-    Object.keys(tabElementsAnchors).map(function(sectionId) {
-      var section = tabElementsAnchors[sectionId];
-      if(section.indexOf(location.hash) > -1) {
-        targetSection = sectionId;
-      }
-    })
+  // if(location.hash) {
+  //   var tabElementsAnchors = {};
+  //   var targetSection = '';
 
-    console.log(tabElementsAnchors);
+  //   $('.tab-content.zone > .tab-pane').each(function(key, section) {
+  //     tabElementsAnchors[section.id] = []
+  //     $('.bs-docs-sidebar ul > li > a', section).each(function(key, link) {
+  //       tabElementsAnchors[section.id].push($(link).attr('href'));
+  //     });
+  //   })
 
-    $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-    $('.c-ui-tabs > li > a[href=#' + targetSection + ']').parent().addClass('active');
-    $('.tab-pane').removeClass('fade active');
-    $('#' + targetSection + '.tab-pane').addClass('active');
+  //   Object.keys(tabElementsAnchors).map(function(sectionId) {
+  //     var section = tabElementsAnchors[sectionId];
+  //     if(section.indexOf(location.hash) > -1) {
+  //       targetSection = sectionId;
+  //     }
+  //   })
 
-    if (location.hash) {
-      location.href = location.hash;
-    }
+  //   console.log(tabElementsAnchors);
+
+  //   $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  //   $('.c-ui-tabs > li > a[href=#' + targetSection + ']').parent().addClass('active');
+  //   $('.tab-pane').removeClass('fade active');
+  //   $('#' + targetSection + '.tab-pane').addClass('active');
+
+  //   if (location.hash) {
+  //     location.href = location.hash;
+  //   }
+  // }
+
+
+  // }
+
+
+
+  var hash = window.location.hash;
+
+  var tabInstallationAnchors =  [ "#corporate-ui-installation-overview", "#corporate-ui-installation-overview"];
+  var tabElementsAnchors =  [ "#corporate-ui-components-overview", "#corporate-header", ,"#corporate-header-dealer-variation", "#main-content", "#main-nav", "#corporate-footer" ];
+  var tabComponentsAnchors =  [ "#components-overview", "#dropdowns", "#dropdowns-example", "#dropdowns-alignment", "#dropdowns-headers", "#dropdowns-disabled", "#btn-groups", "#btn-groups-single", "#btn-groups-toolbar", "#btn-groups-sizing", "#btn-groups-nested", "#btn-groups-vertical", "#btn-groups-justified", "#btn-dropdowns", "#btn-dropdowns-single", "#btn-dropdowns-split", "#btn-dropdowns-sizing", "#btn-dropdowns-dropup", "#input-groups", "#input-groups-basic", "#input-groups-sizing", "#input-groups-checkboxes-radios", "#input-groups-buttons", "#input-groups-buttons-dropdowns", "#input-groups-buttons-segmented", "#nav", "#nav-tabs", "#nav-pills", "#nav-justified", "#nav-disabled-links", "#nav-dropdowns", "#navbar", "#navbar-default", "#navbar-forms", "#navbar-buttons", "#navbar-text", "#navbar-links", "#navbar-component-alignment", "#navbar-fixed-top", "#navbar-fixed-bottom", "#navbar-static-top", "#navbar-inverted", "#breadcrumbs", "#pagination", "#pagination-default", "#pagination-pager", "#labels", "#badges", "#jumbotron", "#page-header", "#thumbnails", "#thumbnails-default", "#thumbnails-custom-content", "#alerts", "#alerts-examples", "#alerts-dismissable", "#alerts-links", "#progress", "#progress-basic", "#progress-label", "#progress-alternatives", "#progress-striped", "#progress-animated", "#progress-stacked", "#media", "#media-default", "#media-list", "#list-group", "#list-group-basic", "#list-group-badges", "#list-group-linked", "#list-group-contextual-classes", "#list-group-custom-content", "#panels", "#panels-basic", "#panels-heading", "#panels-alternatives", "#panels-tables", "#panels-list-group", "#wells" ];
+  var tabCSSAnchors =  ["#core-css-overview", "#overview-doctype", "#overview-mobile", "#overview-type-links", "#overview-normalize", "#overview-container", "#type", "#type-headings", "#type-body-copy", "#type-emphasis", "#type-abbreviations", "#type-addresses", "#type-blockquotes", "#type-lists", "#code", "#code-inline", "#code-user-input", "#code-block", "#tables", "#tables-example", "#tables-striped", "#tables-bordered", "#tables-hover-rows", "#tables-condensed", "#tables-contextual-classes", "#tables-responsive", "#forms", "#forms-example", "#forms-inline", "#forms-horizontal", "#forms-controls", "#forms-controls-static", "#forms-control-focus", "#forms-control-disabled", "#forms-control-validation", "#forms-control-sizes", "#forms-help-text", "#buttons", "#buttons-options", "#buttons-sizes", "#buttons-active", "#buttons-disabled", "#buttons-tags", "#images", "#images-responsive", "#images-shapes", "#helper-classes", "#helper-classes-colors", "#helper-classes-backgrounds", "#helper-classes-close", "#helper-classes-carets", "#helper-classes-floats", "#helper-classes-center", "#helper-classes-clearfix", "#helper-classes-show-hide", "#helper-classes-screen-readers", "#helper-classes-image-replacement", "#grid", "#grid-intro", "#grid-media-queries", "#grid-options", "#grid-example-basic", "#grid-example-fluid", "#grid-example-mixed", "#grid-example-mixed-complete", "#grid-responsive-resets", "#grid-offsetting", "#grid-nesting", "#grid-column-ordering", "#grid-less", "#responsive-utilities", "#responsive-utilities-classes", "#responsive-utilities-print", "#responsive-utilities-tests", "#bootstrap-4" ];
+  var tabJavaScriptAnchors =   ["#js-overview", "#js-individual-compiled", "#js-data-attrs", "#js-programmatic-api", "#js-noconflict", "#js-events", "#modals", "#modals-examples", "#modals-sizes", "#modals-usage", "#js-dropdowns", "#js-dropdowns-examples", "#js-dropdowns-usage", "#scrollspy", "#scrollspy-examples", "#scrollspy-usage", "#tabs", "#tabs-examples", "#tabs-usage", "#tooltips", "#tooltips-examples", "#tooltips-usage", "#popovers", "#popovers-examples", "#popovers-usage", "#js-alerts", "#alerts-examples", "#alerts-usage", "#js-buttons", "#js-buttons-examples", "#js-buttons-usage", "#collapse", "#collapse-examples", "#collapse-usage", "#affix", "#affix-examples", "#affix-usage" ];
+
+  console.dir(tabInstallationAnchors);
+  console.dir(tabElementsAnchors);
+  console.dir(tabComponentsAnchors);
+  console.dir(tabCSSAnchors);
+  console.dir(tabJavaScriptAnchors);       
+
+  if ( jQuery.inArray( hash, tabInstallationAnchors ) >= 0 ) {
+
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(1)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#corporate-ui-installation-section.tab-pane').addClass('active');
+
+  } else if ( jQuery.inArray( hash, tabElementsAnchors ) >= 0 ) {
+
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(2)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#custom-elements-section.tab-pane').addClass('active');
+
+  } else if ( jQuery.inArray( hash, tabComponentsAnchors ) >= 0 ) {
+
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(3)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#bootstrap-components-section.tab-pane').addClass('active');
+
+  }  else if ( jQuery.inArray( hash, tabCSSAnchors ) >= 0 ) {
+
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(4)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#bootstrap-css-section.tab-pane').addClass('active');
+
+  }  else if ( jQuery.inArray( hash, tabJavaScriptAnchors ) >= 0 ) {
+
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(5)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#bootstrap-javascript-section.tab-pane').addClass('active');
+
   }
 
+if (location.hash) {
+        location.href = location.hash;
+}
 
-  }
+})
 
 </script>
 
@@ -344,34 +406,19 @@ window.onload = function(){
                 <h3 id="corporate-header-headers">Header links</h3>
                 <p>You can add one or several <code>nav-item</code> to the Corporate Header. Typically these are used to link away from the site, to for example Scania.Com. This location is also used for language selectors and user menus.</p>
 
-                <h3 id="corporate-header-dealer-variation">Corporate Header for Dealers</h3>
+                <h3 id="corporate-header-dealer-variation">Dealer variation</h3>
                 <p>Dealers have a slightly different header setup as they need to include their name and/or their logotype.</p>
-                <h5 id="corporate-header-headers-logotype">With custom logotype</h5>
-                <div class="bs-example">
 
-                  <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
-                      <iframe src="docs-example-corporate-dealer-header-logotype.html" frameborder="0" style="overflow:scroll !important" height="72px" width="100%"></iframe>
-                  </div>                  
-
-                </div>
-
-                <div class="highlight"><pre><code class="html">
-<span class="nt">&lt;c-corporate-header</span> <span class="na">dealer-name=</span><span class="s">&quot;Bilmetro&quot;</span> <span class="na">short-name=</span><span class="s">&quot;Bilmetro&quot;</span>  <span class="na">dealer-url=</span></span><span class="s">&quot;/&quot;</span> <span class="na">dealer-logo=</span><span class="s">&quot;https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Configurator<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-<span class="nt">&lt;/c-corporate-header<span class="nt">&gt;</span>
-                </code></pre></div>                
-
-                <h5 id="corporate-header-headers-text">Without custom logotype</h5>
                 <div class="bs-example">
 
                   <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
                       <iframe src="docs-example-corporate-dealer-header.html" frameborder="0" style="overflow:scroll !important" height="72px" width="100%"></iframe>
                   </div>                  
 
-                </div>                
+                </div>
 
                 <div class="highlight"><pre><code class="html">
-<span class="nt">&lt;c-corporate-header</span> <span class="na">dealer-name=</span><span class="s">&quot;Bilmetro&quot;</span> <span class="na">short-name=</span><span class="s">&quot;Bilmetro&quot;</span>  <span class="na">dealer-url=</span></span><span class="s">&quot;/&quot;</span>
+<span class="nt">&lt;c-corporate-header</span> <span class="na">dealer-name=</span><span class="s">&quot;Bilmetro&quot;</span> <span class="na">short-name=</span><span class="s">&quot;Bilmetro&quot;</span>  <span class="na">dealer-url=</span></span><span class="s">&quot;/&quot;</span> <span class="na">dealer-logo=</span><span class="s">&quot;https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Configurator<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
 <span class="nt">&lt;/c-corporate-header<span class="nt">&gt;</span>
                 </code></pre></div>
@@ -1647,6 +1694,7 @@ window.onload = function(){
                     <div class="form-group has-warning">
                       <label for="exampleInputFile">File input</label>
                       <input type="file" id="exampleInputFile">
+                      <p class="help-block">Example block-level help text here.</p>
                     </div>
                     <div class="checkbox">
                       <label>
@@ -2038,7 +2086,6 @@ window.onload = function(){
                     <div class="form-group has-error">
                       <label class="control-label" for="inputError">Input with error</label>
                       <input type="text" class="form-control" id="inputError">
-                      <p class="help-block">Use <code>.help-block</code> to point out issues about regarding user interaction.</p>
                     </div>
                   </form>
                   <div class="highlight"><pre><code class="html">
@@ -2046,14 +2093,13 @@ window.onload = function(){
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"inputSuccess"</span><span class="nt">&gt;</span>Input with success<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputSuccess"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-warning"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-warning"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"inputWarning"</span><span class="nt">&gt;</span>Input with warning<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputWarning"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-error"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-error"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"inputError"</span><span class="nt">&gt;</span>Input with error<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputError"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"help-block"</span><span class="nt">&gt;</span>Example help text here.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
                   </code></pre></div>
 
@@ -2122,7 +2168,7 @@ window.onload = function(){
                   <h2 id="forms-help-text">Help text</h2>
                   <p>Block level help text for form controls.</p>
                   <form class="bs-example">
-                    <input type="text" class="form-control" placeholder="I'm a input field. Input something...">
+                    <input type="text" class="form-control">
   <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
                   </form>
                   <div class="highlight"><pre><code class="html">
@@ -6062,6 +6108,23 @@ Cras justo odio
 
                 <!--  Modal content for the above example -->
 
+
+<!-- <style>
+.scroll-y .modal-content {
+    top: 0;
+}
+
+.modal-fullscreen.scroll-y {
+    margin-left: -17px;
+    width: calc (100vw + 17px);
+}
+
+.modal-fullscreen .modal-body {
+    height: auto;
+}
+
+</style> -->
+
                 <div class="modal fade bs-example-modal-scroll" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg scroll-y modal-article">
                     <div class="modal-content">
@@ -6111,62 +6174,7 @@ Cras justo odio
        .modal-fullscreen .modal-content {
           top: 0px;
         }
-
-  .help-block {
-      position: relative;
-      z-index: 0;
-      top: 6px;
-      background-color: #ffffff;
-      color: #53565a;
-      border-radius: 0;
-      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
-      text-align: left;
-      width: 100%;
-      margin-bottom: 3px;
-      font-size: 1.2rem !important;
-      line-height: normal;
-      font-weight: normal;
-      padding: 8px;
-      margin-top: 2px;
-      border: 1px solid #f0f0f0;
-      border-left: 4px solid #F2855F;
-
-  }
-
-  p.help-block,
-  .app p.help-block  {
-      font-size: 1.2rem;
-      color: #53565a;
-      line-height: normal;
-  }
-
-  .has-info .help-block {
-      border-left: 3px solid #4a8ba4;
-  }
-
-  .has-info .help-primary {
-      border-left: 3px solid #033a6a;
-
-  }
-
-  .has-success .help-block {
-      border-left: 3px solid #3c763d;
-      color: #53565a;    
-  }
-
-  .has-warning .help-block {
-      border-left: 3px solid #F2855F;
-      color: #53565a;    
-  }
-
-  .has-danger .help-block,
-  .has-error .help-block {
-      border-left: 3px solid #CC1040;
-      color: #53565a;
-  }
-
-</style>  
+    </style>  
  <!--                          <div style="overflow:hidden !important; -webkit-overflow-scrolling:touch !important;position:fixed;top:0px;left:0px;right:0px;bottom:0px">
                               <iframe src="https://traton.com" frameborder="0" style="overflow:scroll !important; -webkit-overflow-scrolling:touch !important;height:100%;width:100%;position:fixed;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
                           </div>   -->  
