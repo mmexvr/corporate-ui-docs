@@ -6306,9 +6306,15 @@ It is a long established fact that a reader will be distracted by the readable c
           background-color: white; 
         }
 
+        .modal.fade:not(.in) .modal-fullscreen.modal-dialog {
+            -webkit-transform: translate3d(0, 25%, 0);
+            transform: translate3d(0, 25%, 0);
+        }
+
         .modal-fullscreen .modal-body {
           overflow-x: hidden;  
-          overflow-y: scroll; 
+          overflow-y: scroll;
+          -webkit-overflow-scrolling: touch;          
           height: calc(100vh - 110px);
           padding: 0 20px;            
         } 
@@ -8320,13 +8326,13 @@ span.photo-background {
     cursor: pointer;
   }
 
-  .modal .modal-body  {
+/*  .modal .modal-body  {
     font-size: inherit;
   }
   .modal.fade.in {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
-   }
+   }*/
 
   .bs-docs-sidebar.affix {
       position: fixed;
