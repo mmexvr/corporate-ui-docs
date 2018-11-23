@@ -6146,9 +6146,9 @@ Cras justo odio
                   <div class="modal-dialog modal-fullscreen">
                     <div class="modal-content">
 
-                      <div class="modal-header">
+                      <div class="modal-header text-center">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title" id="myLargeModalLabel">Fullscreen modal</h4>
+                        <h4 class="modal-title" id="myLargeModalLabel">FILTERS <small><a href="">reset all</a></small></h4>
                       </div>
                       <div class="modal-body">              
                         <div class="">
@@ -6282,10 +6282,18 @@ It is a long established fact that a reader will be distracted by the readable c
 </p>
     <style>
 
-       .modal.bs-example-modal-fullscreen {
-          overflow: hidden;
-          -webkit-overflow-scrolling: touch;
-      }
+         .modal-fullscreen .modal-content {
+            overflow: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        @media (max-width: 991px) {
+        .modal-fullscreen .modal-content {
+            top: 0px;
+            width: 100vw;
+            height: auto;
+          }
+        }      
 
        .modal-fullscreen.modal-dialog {
           position: fixed;
@@ -6301,6 +6309,7 @@ It is a long established fact that a reader will be distracted by the readable c
         .modal-fullscreen .modal-body {
           overflow-x: hidden;  
           overflow-y: scroll; 
+          height: calc(100vh - 110px);
           padding: 0 20px;            
         } 
 
@@ -6309,6 +6318,7 @@ It is a long established fact that a reader will be distracted by the readable c
             position: fixed;            
             bottom: 0px;
             text-align: left;
+            padding: 0;
             background-color: white; 
                          
         }    
@@ -6318,8 +6328,8 @@ It is a long established fact that a reader will be distracted by the readable c
 
 
                       </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-success" data-dismiss="modal" aria-hidden="true">Show Products</button>
+                      <div class="modal-footer text-center">
+                        <button type="button" class="btn btn-lg btn-block btn-success" data-dismiss="modal" aria-hidden="true">Show 34 Items</button>
                       </div>                      
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
