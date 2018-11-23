@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8">
+  <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+
+  <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
+
+  <title>UX Library - Bootstrap CSS for Applications</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
+  <script src="https://static.scania.com/build/global/2.5.0/js/corporate-ui.js"></script>
+  <link rel="stylesheet" href="css/scania-bootstrap-docs.css">
+
+  <style>
+ /*   c-main-navigation nav-item a:before, nav-itemc-main-navigation a:before, c-main-navigation nav-item a:after, nav-itemc-main-navigation a:after {
+        padding: 0 5px;
+      }*/
+  </style>
+</head>
+
+<body class="scania app" id="top">
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </c-corporate-header>
+
+  <c-main-content>
+
+    <c-main-navigation show-search>
+      <primary-items>
+        <nav-item location="/corporate-ui-docs/">Home</nav-item>
+        <nav-item location="/corporate-ui-docs/styleguide/">Style Guide</nav-item>            
+        <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html" class="active">Web Applications
+          <sub-navigation caption="Scania Bootstrap">
+            <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html" class="active">Bootstrap Documentation</nav-item>
+            <nav-item location="/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html">HTML Copy Paste</nav-item>
+          </sub-navigation>  
+        </nav-item>
+        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
+        <nav-item location="https://github.com/scania/corporate-ui/issues">Report an Issue</nav-item>
+        <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+        <nav-item location="https://github.com/scania/corporate-ui/issues">Another Item</nav-item>
+        <nav-item location="/corporate-ui-docs/developer/support.html">Keep on adding another item</nav-item>
+        <nav-item location="https://github.com/scania/corporate-ui/issues">There could be many</nav-item>
+        <nav-item location="/corporate-ui-docs/developer/support.html">As we know at Scania</nav-item>
+        <nav-item location="https://www.google.com">Linking to Google as well</nav-item>              
+      </primary-items>
+    </c-main-navigation>
+
+    <section class="light">
+      <div class="container-fluid">
+
+            <a href="bootstrap-original-docs.html#css-overview">Bootstrap CSS</a><br/>
+            <a href="bootstrap-original-docs.html#overview-doctype">HTML5 doctype</a><br/>
+            <a href="bootstrap-original-docs.html#overview-mobile">Mobile first</a><br/>
+            <a href="bootstrap-original-docs.html#overview-responsive-images">Responsive images</a><br/>
+            <a href="bootstrap-original-docs.html#overview-type-links">Typography and links</a><br/>
+            <a href="bootstrap-original-docs.html#overview-normalize">Normalize</a><br/>
+            <a href="bootstrap-original-docs.html#overview-container">Containers</a><br/>
+            <a href="bootstrap-original-docs.html#grid">Grid system</a><br/>
+            <a href="bootstrap-original-docs.html#grid-media-queries">Media queries</a><br/>
+            <a href="bootstrap-original-docs.html#grid-options">Grid options</a><br/>
+            <a href="bootstrap-original-docs.html#grid-example-basic">Example: Stacked-to-horizontal</a><br/>
+            <a href="bootstrap-original-docs.html#grid-example-mixed">Example: Mobile and desktop</a><br/>
+            <a href="bootstrap-original-docs.html#grid-example-mixed-complete">Example: Mobile, tablet, desktops</a><br/>
+            <a href="bootstrap-original-docs.html#grid-responsive-resets">Responsive column resets</a><br/>
+            <a href="bootstrap-original-docs.html#grid-offsetting">Offsetting columns</a><br/>
+            <a href="bootstrap-original-docs.html#grid-nesting">Nesting columns</a><br/>
+            <a href="bootstrap-original-docs.html#grid-column-ordering">Column ordering</a><br/>
+            <a href="bootstrap-original-docs.html#grid-less">LESS mixins and variables</a><br/>
+            <a href="bootstrap-original-docs.html#type">Typography</a><br/>
+            <a href="bootstrap-original-docs.html#type-body-copy">Body copy</a><br/>
+            <a href="bootstrap-original-docs.html#type-emphasis">Emphasis</a><br/>
+            <a href="bootstrap-original-docs.html#type-abbreviations">Abbreviations</a><br/>
+            <a href="bootstrap-original-docs.html#type-addresses">Addresses</a><br/>
+            <a href="bootstrap-original-docs.html#type-blockquotes">Blockquotes</a><br/>
+            <a href="bootstrap-original-docs.html#type-lists">Lists</a><br/>
+            <a href="bootstrap-original-docs.html#code">Code</a><br/>
+            <a href="bootstrap-original-docs.html#tables">Tables</a><br/>
+            <a href="bootstrap-original-docs.html#tables-example">Basic example</a><br/>
+            <a href="bootstrap-original-docs.html#tables-striped">Striped rows</a><br/>
+            <a href="bootstrap-original-docs.html#tables-bordered">Bordered table</a><br/>
+            <a href="bootstrap-original-docs.html#tables-hover-rows">Hover rows</a><br/>
+            <a href="bootstrap-original-docs.html#tables-condensed">Condensed table</a><br/>
+            <a href="bootstrap-original-docs.html#tables-contextual-classes">Contextual classes</a><br/>
+            <a href="bootstrap-original-docs.html#tables-responsive">Responsive tables</a><br/>
+            <a href="bootstrap-original-docs.html#forms">Forms</a><br/>
+            <a href="bootstrap-original-docs.html#forms-example">Basic example</a><br/>
+            <a href="bootstrap-original-docs.html#forms-inline">Inline form</a><br/>
+            <a href="bootstrap-original-docs.html#forms-horizontal">Horizontal form</a><br/>
+            <a href="bootstrap-original-docs.html#forms-controls">Supported controls</a><br/>
+            <a href="bootstrap-original-docs.html#forms-controls-static">Static control</a><br/>
+            <a href="bootstrap-original-docs.html#forms-control-states">Form states</a><br/>
+            <a href="bootstrap-original-docs.html#forms-input-focus">Input focus</a><br/>
+            <a href="bootstrap-original-docs.html#forms-disabled-inputs">Disabled inputs</a><br/>
+            <a href="bootstrap-original-docs.html#forms-disabled-fieldsets">Disabled fieldsets</a><br/>
+            <a href="bootstrap-original-docs.html#forms-validation">Validation states</a><br/>
+            <a href="bootstrap-original-docs.html#forms-control-sizes">Control sizing</a><br/>
+            <a href="bootstrap-original-docs.html#forms-help-text">Help text</a><br/>
+            <a href="bootstrap-original-docs.html#buttons">Buttons</a><br/>
+            <a href="bootstrap-original-docs.html#buttons-options">Options</a><br/>
+            <a href="bootstrap-original-docs.html#buttons-sizes">Sizes</a><br/>
+            <a href="bootstrap-original-docs.html#buttons-disabled">Disabled state</a><br/>
+            <a href="bootstrap-original-docs.html#buttons-tags">Button tags</a><br/>
+            <a href="bootstrap-original-docs.html#images">Images</a><br/>
+            <a href="bootstrap-original-docs.html#helper-classes">Helper classes</a><br/>
+            <a href="bootstrap-original-docs.html#responsive-utilities">Responsive utilities</a><br/>
+            <a href="bootstrap-original-docs.html#responsive-utilities-classes">Available classes</a><br/>
+            <a href="bootstrap-original-docs.html#responsive-utilities-print">Print classes</a><br/>
+            <a href="bootstrap-original-docs.html#responsive-utilities-tests">Test cases</a><br/>
+            <a href="bootstrap-original-docs.html#components-overview">Bootstrap Components</a><br/>
+            <a href="bootstrap-original-docs.html#dropdowns">Dropdowns</a><br/>
+            <a href="bootstrap-original-docs.html#dropdowns-example">Dropdowns Example</a><br/>
+            <a href="bootstrap-original-docs.html#dropdowns-alignment">Aligninment options</a><br/>
+            <a href="bootstrap-original-docs.html#dropdowns-headers">Headers</a><br/>
+            <a href="bootstrap-original-docs.html#dropdowns-disabled">Disabled menu items</a><br/>
+            <a href="bootstrap-original-docs.html#btn-groups">Button groups</a><br/>
+            <a href="bootstrap-original-docs.html#btn-groups-single">Basic example</a><br/>
+            <a href="bootstrap-original-docs.html#btn-groups-toolbar">Button toolbar</a><br/>
+            <a href="bootstrap-original-docs.html#btn-groups-sizing">Sizing</a><br/>
+            <a href="bootstrap-original-docs.html#btn-groups-nested">Nesting</a><br/>
+            <a href="bootstrap-original-docs.html#btn-groups-vertical">Vertical variation</a><br/>
+            <a href="bootstrap-original-docs.html#btn-groups-justified">Justified link variation</a><br/>
+            <a href="bootstrap-original-docs.html#btn-dropdowns">Button dropdowns</a><br/>
+            <a href="bootstrap-original-docs.html#btn-dropdowns-single">Single button dropdowns</a><br/>
+            <a href="bootstrap-original-docs.html#btn-dropdowns-split">Split button dropdowns</a><br/>
+            <a href="bootstrap-original-docs.html#btn-dropdowns-sizing">Sizing</a><br/>
+            <a href="bootstrap-original-docs.html#btn-dropdowns-dropup">Dropup variation</a><br/>
+            <a href="bootstrap-original-docs.html#input-groups">Input groups</a><br/>
+            <a href="bootstrap-original-docs.html#input-groups-basic">Basic example</a><br/>
+            <a href="bootstrap-original-docs.html#input-groups-sizing">Sizing</a><br/>
+            <a href="bootstrap-original-docs.html#input-groups-checkboxes-radios">Checkboxes and radio addons</a><br/>
+            <a href="bootstrap-original-docs.html#input-groups-buttons">Button addons</a><br/>
+            <a href="bootstrap-original-docs.html#input-groups-buttons-dropdowns">Buttons with dropdowns</a><br/>
+            <a href="bootstrap-original-docs.html#input-groups-buttons-segmented">Segmented buttons</a><br/>
+            <a href="bootstrap-original-docs.html#nav">Navs</a><br/>
+            <a href="bootstrap-original-docs.html#nav-tabs">Tabs</a><br/>
+            <a href="bootstrap-original-docs.html#nav-tabs">Tabs Light</a><br/>
+            <a href="bootstrap-original-docs.html#nav-pills">Pills</a><br/>
+            <a href="bootstrap-original-docs.html#nav-justified">Justified</a><br/>
+            <a href="bootstrap-original-docs.html#nav-disabled-links">Disabled links</a><br/>
+            <a href="bootstrap-original-docs.html#nav-dropdowns">Using dropdowns</a><br/>
+            <a href="bootstrap-original-docs.html#navbar">Navbar</a><br/>
+            <a href="bootstrap-original-docs.html#navbar-default">Default navbar</a><br/>
+            <a href="bootstrap-original-docs.html#navbar-buttons">Buttons</a><br/>
+            <a href="bootstrap-original-docs.html#navbar-text">Text</a><br/>
+            <a href="bootstrap-original-docs.html#navbar-links">Non-nav links</a><br/>
+            <a href="bootstrap-original-docs.html#navbar-component-alignment">Component alignment</a><br/>
+            <a href="bootstrap-original-docs.html#navbar-fixed-top">Fixed to top</a><br/>
+            <a href="bootstrap-original-docs.html#navbar-fixed-bottom">Fixed to bottom</a><br/>
+            <a href="bootstrap-original-docs.html#navbar-static-top">Static top</a><br/>
+            <a href="bootstrap-original-docs.html#navbar-inverted">Inverted navbar</a><br/>
+            <a href="bootstrap-original-docs.html#breadcrumbs">Breadcrumbs</a><br/>
+            <a href="bootstrap-original-docs.html#pagination">Pagination</a><br/>
+            <a href="bootstrap-original-docs.html#pagination-default">Default pagination</a><br/>
+            <a href="bootstrap-original-docs.html#pagination-pager">Pager</a><br/>
+            <a href="bootstrap-original-docs.html#labels">Labels</a><br/>
+            <a href="bootstrap-original-docs.html#badges">Badges</a><br/>
+            <a href="bootstrap-original-docs.html#jumbotron">Jumbotron</a><br/>
+            <a href="bootstrap-original-docs.html#page-header">Page header</a><br/>
+            <a href="bootstrap-original-docs.html#thumbnails">Thumbnails</a><br/>
+            <a href="bootstrap-original-docs.html#thumbnails-default">Default example</a><br/>
+            <a href="bootstrap-original-docs.html#thumbnails-custom-content">Custom content</a><br/>
+            <a href="bootstrap-original-docs.html#alerts">Alerts, indicators & callouts</a><br/>
+            <a href="bootstrap-original-docs.html#alerts-examples">Examples</a><br/>
+            <a href="bootstrap-original-docs.html#alerts-dismissable">Dismissable alerts</a><br/>
+            <a href="bootstrap-original-docs.html#alerts-links">Links in alerts</a><br/>
+            <a href="bootstrap-original-docs.html#alerts-indicators-examples">Alert indicators</a><br/>
+            <a href="bootstrap-original-docs.html#call-outs-examples">Callouts</a><br/>
+            <a href="bootstrap-original-docs.html#progress">Progress bars</a><br/>
+            <a href="bootstrap-original-docs.html#progress-basic">Basic example</a><br/>
+            <a href="bootstrap-original-docs.html#progress-alternatives">Contextual alternatives</a><br/>
+            <a href="bootstrap-original-docs.html#progress-striped">Striped</a><br/>
+            <a href="bootstrap-original-docs.html#progress-animated">Animated</a><br/>
+            <a href="bootstrap-original-docs.html#progress-stacked">Stacked</a><br/>
+            <a href="bootstrap-original-docs.html#media">Media object</a><br/>
+            <a href="bootstrap-original-docs.html#media-default">Default media</a><br/>
+            <a href="bootstrap-original-docs.html#media-list">Media list</a><br/>
+            <a href="bootstrap-original-docs.html#list-group">List group</a><br/>
+            <a href="bootstrap-original-docs.html#list-group-basic">Basic example</a><br/>
+            <a href="bootstrap-original-docs.html#list-group-badges">Badges</a><br/>
+            <a href="bootstrap-original-docs.html#list-group-linked">Linked items</a><br/>
+            <a href="bootstrap-original-docs.html#list-group-custom-content">Custom content</a><br/>
+            <a href="bootstrap-original-docs.html#panels">Panels</a><br/>
+            <a href="bootstrap-original-docs.html#panels-basic">Basic example</a><br/>
+            <a href="bootstrap-original-docs.html#panels-heading">Panel with heading</a><br/>
+            <a href="bootstrap-original-docs.html#panels-footer">Panel with footer</a><br/>
+            <a href="bootstrap-original-docs.html#panels-alternatives">Contextual alternatives</a><br/>
+            <a href="bootstrap-original-docs.html#panels-tables">With tables</a><br/>
+            <a href="bootstrap-original-docs.html#panels-list-group">With list groups</a><br/>
+            <a href="bootstrap-original-docs.html#wells">Wells</a><br/>
+            <a href="bootstrap-original-docs.html#js-overview">Bootstrap Javascript</a><br/>
+            <a href="bootstrap-original-docs.html#js-data-attrs">Data attributes</a><br/>
+            <a href="bootstrap-original-docs.html#js-programmatic-api">Programmatic API</a><br/>
+            <a href="bootstrap-original-docs.html#js-noconflict">No conflict</a><br/>
+            <a href="bootstrap-original-docs.html#js-events">Events</a><br/>
+            <a href="bootstrap-original-docs.html#callout-third-party-libs">
+            <a href="bootstrap-original-docs.html#transitions" class="page-header">Transitions <small>transition.js</small></a><br/>
+            <a href="bootstrap-original-docs.html#modals" class="page-header">Modals <small>modal.js</small></a><br/>
+            <a href="bootstrap-original-docs.html#modals-examples">Examples</a><br/>
+            <a href="bootstrap-original-docs.html#callout-stacked-modals">callout-stacked-modals</a><br/>
+            <a href="bootstrap-original-docs.html#callout-modal-markup-placement">Modal markup placement</a><br/>
+            <a href="bootstrap-original-docs.html#myModalLabel">Modal Heading</a><br/>
+            <a href="bootstrap-original-docs.html#modals-sizes">Optional sizes</a><br/>
+            <a href="bootstrap-original-docs.html#myLargeModalLabel">Large modal</a><br/>
+            <a href="bootstrap-original-docs.html#mySmallModalLabel">Small modal</a><br/>
+            <a href="bootstrap-original-docs.html#modals-usage">Usage</a><br/>
+            <a href="bootstrap-original-docs.html#js-dropdowns-examples">Examples</a><br/>
+            <a href="bootstrap-original-docs.html#js-dropdowns-usage">Usage</a><br/>
+            <a href="bootstrap-original-docs.html#scrollspy-examples">Example in navbar</a><br/>
+            <a href="bootstrap-original-docs.html#fat">@fat</a><br/>
+            <a href="bootstrap-original-docs.html#mdo">@mdo</a><br/>
+            <a href="bootstrap-original-docs.html#one">one</a><br/>
+            <a href="bootstrap-original-docs.html#two">two</a><br/>
+            <a href="bootstrap-original-docs.html#three">three</a><br/>
+            <a href="bootstrap-original-docs.html#scrollspy-usage">Usage</a><br/>
+            <a href="bootstrap-original-docs.html#tabs-examples">Example tabs</a><br/>
+            <a href="bootstrap-original-docs.html#tabs-usage">Usage</a><br/>
+            <a href="bootstrap-original-docs.html#tooltips-examples">Tooltip Examples</a><br/>
+            <a href="bootstrap-original-docs.html#tooltips-usage">Usage</a><br/>
+            <a href="bootstrap-original-docs.html#popovers-examples">Examples</a><br/>
+            <a href="bootstrap-original-docs.html#popovers-usage">Usage</a><br/>
+            <a href="bootstrap-original-docs.html#alerts-examples">Example alerts</a><br/>
+            <a href="bootstrap-original-docs.html#alerts-usage">Usage</a><br/>
+            <a href="bootstrap-original-docs.html#js-buttons-examples">Example uses</a><br/>
+            <a href="bootstrap-original-docs.html#js-buttons-usage">Usage</a><br/>
+            <a href="bootstrap-original-docs.html#collapse-examples">Example accordion</a><br/>
+            <a href="bootstrap-original-docs.html#collapse-usage">Usage</a><br/>
+            <a href="bootstrap-original-docs.html#affix-examples">Example</a><br/>
+            <a href="bootstrap-original-docs.html#affix-usage">Usage</a>
+    </div>
+  </section>
+</c-main-content>
+
+
+<div class="container portal-footer"></div> 
+
+<script src="/corporate-ui-docs/ux-lib.js"></script> 
+    
+</div>
+</section>  
+
+</body>
+</html>
