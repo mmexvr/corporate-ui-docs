@@ -9,7 +9,7 @@
 	<title>Scania Used Vehicles</title>
 
 	<script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/corporate-ui.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://static.scania.com/development/users/used-vehicles/css/used-vehicles.css">
+	<link rel="stylesheet" type="text/css" href="https://d31jnweo1ynb8u.cloudfront.net/development/users/used-vehicles/css/used-vehicles.css">
 
 </head>
 
@@ -41,121 +41,15 @@
 		</c-main-navigation>
 
 		<div class="sticky-filter container bg-white hidden-md hidden-lg">
-			<a class="btn-info btn-link" data-toggle="collapse" data-target="#filter-panel" aria-expanded="false" aria-controls="filter-panel">
+			<a class="btn-info btn-link" data-toggle="modal" data-target=".bs-example-modal-fullscreen">
 				<i class="scania-icon filter-icon xs"></i>
 				Filters <i class="fal fa-angle-down"></i>
 			</a>
-			<div class="collapse" id="filter-panel">
-				<div class="row pl-5">
-					<div class="filters-mobile col-xs-4">
-						<div class="form-group">
-					    	<h5>Application</h5>								
-							<div class="checkbox">
-					    		<label>
-					    			<input type="checkbox" name="applications-mobile">
-					    			<span></span>
-									3-way tipper
-					    		</label>
-					    	</div>
-					    	<div class="checkbox">
-					    		<label>
-					    			<input type="checkbox" name="applications-mobile">
-					    			<span></span>
-					    			Box body
-					    		</label>
-					    	</div>
-							<div class="checkbox">
-					    		<label>
-					    			<input type="checkbox" name="applications-mobile">
-					    			<span></span>
-					    			Concrete mixer
-					    		</label>
-					    	</div>
-					    	<div class="checkbox">
-					    		<label>
-					    			<input type="checkbox" name="applications-mobile">
-					    			<span></span>
-					    			Grain tipper
-					    		</label>
-					    	</div>
-							<div class="checkbox">
-					    		<label>
-					    			<input type="checkbox" name="applications-mobile">
-					    			<span></span>
-					    			Hook loader
-					    		</label>
-					    	</div>
-					    </div>	
-					</div>
-					<div class="filters-mobile col-xs-4">
-					    <div class="form-group">						    	
-					    	<h5>Axle configuration</h5>
-					    	<div class="checkbox">
-					    		<label>
-					    			<input type="checkbox" name="axle-config-mobile">
-					    			<span></span>
-					    			4x2 
-					    		</label>
-					    	</div>
-							<div class="checkbox">
-					    		<label>
-					    			<input type="checkbox" name="axle-config-mobile">
-					    			<span></span>
-					    			6x2
-					    		</label>
-					    	</div>
-					    	<div class="checkbox">
-					    		<label>
-					    			<input type="checkbox" name="axle-config-mobile">
-					    			<span></span>
-					    			6x2/4 
-					    		</label>
-					    	</div>
-							<div class="checkbox">
-					    		<label>
-					    			<input type="checkbox" name="axle-config-mobile">
-					    			<span></span>
-					    			6x4
-					    		</label>
-					    	</div>
-					    	<div class="checkbox">
-					    		<label>
-					    			<input type="checkbox" name="axle-config-mobile">
-					    			<span></span>
-					    			8x4*4
-					    		</label>
-					    	</div>   	
-					    </div>	
-					</div>						
-					<div class="filters-mobile col-xs-4">
-						<div class="form-group">
-					    	<h5>Emission</h5>								
-							<div class="checkbox">
-					    		<label>
-					    			<input type="checkbox" name="applications-mobile">
-					    			<span></span>
-									Euro 5
-					    		</label>
-					    	</div>
-					    	<div class="checkbox">
-					    		<label>
-					    			<input type="checkbox" name="applications-mobile">
-					    			<span></span>
-					    			Euro 6
-					    		</label>
-					    	</div>
-							<div class="checkbox">
-					    		<label>
-					    			<input type="checkbox" name="applications-mobile">
-					    			<span></span>
-					    			Euro 6 DPF 
-					    		</label>
-					    	</div>
-					    </div>
-					</div>	 
-				</div>
-		  	</div>
 		</div>
+
+
+
+
 
 		<section>
 			<div class="container">
@@ -480,6 +374,317 @@
 			<nav-item location="#">Privacy statement</nav-item>
 			<nav-item location="#">Cookies</nav-item>
 			<nav-item location="#">Contact us</nav-item>  
-		</c-corporate-footer>	
+		</c-corporate-footer>
+
+
+    <div class="modal fade bs-example-modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+
+          <div class="modal-header text-center">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myLargeModalLabel">FILTERS <small><a href="">reset all</a></small></h4>
+          </div>
+          <div class="modal-body">              
+            <div class="container-fluid">
+
+              <h4>Main Filters</h4>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" name="group6">
+                      <span></span>
+                      Unchecked
+                    </label>
+                  </div>  
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" checked="" name="group6">
+                      <span></span>
+                      Checked
+                    </label>
+                  </div>  
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" disabled="" name="group6">
+                      <span></span>
+                      Unchecked and Disabled
+                    </label>
+                  </div>     
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" disabled="" name="group6">
+                      <span></span>
+                      Unchecked and Disabled
+                    </label> 
+                  </div>              
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" checked="" name="group7">
+                      <span></span>
+                      Checked
+                    </label>
+                  </div>                 
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" disabled="" name="group7">
+                      <span></span>
+                      Unchecked and Disabled
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="group7">
+                      <span></span>
+                      Unchecked
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" checked="" disabled="" name="group7">
+                      <span></span>
+                      Checked and Disabled
+                    </label>
+                  </div>
+                </div>  
+                <div class="col-sm-6">  
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" name="group6">
+                      <span></span>
+                      Unchecked
+                    </label>
+                  </div>  
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" checked="" name="group6">
+                      <span></span>
+                      Checked
+                    </label>
+                  </div>  
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" disabled="" name="group6">
+                      <span></span>
+                      Unchecked and Disabled
+                    </label>
+                  </div>    
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" disabled="" name="group6">
+                      <span></span>
+                      Unchecked and Disabled
+                    </label> 
+                  </div>            
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" checked="" name="group7">
+                      <span></span>
+                      Checked
+                    </label>
+                  </div>                 
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" disabled="" name="group7">
+                      <span></span>
+                      Unchecked and Disabled
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="group7">
+                      <span></span>
+                      Unchecked
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" checked="" disabled="" name="group7">
+                      <span></span>
+                      Checked and Disabled
+                    </label>
+                  </div>                                                          
+                </div>
+              </div>  
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" name="group6">
+                      <span></span>
+                      Unchecked
+                    </label>
+                  </div>  
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" checked="" name="group6">
+                      <span></span>
+                      Checked
+                    </label>
+                  </div>  
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" disabled="" name="group6">
+                      <span></span>
+                      Unchecked and Disabled
+                    </label>
+                  </div>     
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" disabled="" name="group6">
+                      <span></span>
+                      Unchecked and Disabled
+                    </label> 
+                  </div>              
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" checked="" name="group7">
+                      <span></span>
+                      Checked
+                    </label>
+                  </div>                 
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" disabled="" name="group7">
+                      <span></span>
+                      Unchecked and Disabled
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="group7">
+                      <span></span>
+                      Unchecked
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" checked="" disabled="" name="group7">
+                      <span></span>
+                      Checked and Disabled
+                    </label>
+                  </div>
+                </div>  
+                <div class="col-sm-6">  
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" name="group6">
+                      <span></span>
+                      Unchecked
+                    </label>
+                  </div>  
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" checked="" name="group6">
+                      <span></span>
+                      Checked
+                    </label>
+                  </div>  
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" disabled="" name="group6">
+                      <span></span>
+                      Unchecked and Disabled
+                    </label>
+                  </div>    
+                  <div class="radio">
+                    <label class="radio">
+                      <input type="radio" disabled="" name="group6">
+                      <span></span>
+                      Unchecked and Disabled
+                    </label> 
+                  </div>            
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" checked="" name="group7">
+                      <span></span>
+                      Checked
+                    </label>
+                  </div>                 
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" disabled="" name="group7">
+                      <span></span>
+                      Unchecked and Disabled
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="group7">
+                      <span></span>
+                      Unchecked
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" checked="" disabled="" name="group7">
+                      <span></span>
+                      Checked and Disabled
+                    </label>
+                  </div>                                                          
+                </div>
+              </div>
+
+                <style>
+
+                     .modal-fullscreen .modal-content {
+                        overflow: hidden;
+                        -webkit-overflow-scrolling: touch;
+                    }
+
+                    @media (max-width: 991px) {
+                    .modal-fullscreen .modal-content {
+                        top: 0px;
+                        width: 100vw;
+                        height: auto;
+                      }
+                    }      
+
+                   .modal-fullscreen.modal-dialog {
+                      position: fixed;
+                      top: 0;
+                      bottom: 0;
+                      right: 0;
+                      width: 100%;
+                      min-height: 100%;
+                      max-height: 100vh;
+                      background-color: white; 
+                    }
+
+                    .modal.fade:not(.in) .modal-fullscreen.modal-dialog {
+                        -webkit-transform: translate3d(0, 25%, 0);
+                        transform: translate3d(0, 25%, 0);
+                    }
+
+                    .modal-fullscreen .modal-body {
+                      overflow-x: hidden;  
+                      overflow-y: scroll;
+                      -webkit-overflow-scrolling: touch;          
+                      height: calc(100vh - 110px);
+                      padding: 0;            
+                    } 
+
+                   .modal-fullscreen .modal-footer {
+                        width: 100%;
+                        position: fixed;            
+                        bottom: 0px;
+                        text-align: left;
+                        padding: 0;
+                        background-color: white; 
+                                     
+                    }    
+
+                </style>  
+
+
+            </div>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-lg btn-block btn-success" data-dismiss="modal" aria-hidden="true">Show 34 Items</button>
+          </div>                      
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal --> 		
 </body>
 </html>
