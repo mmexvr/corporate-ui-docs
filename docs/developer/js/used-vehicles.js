@@ -57,7 +57,6 @@ const enableBodyScrollButton = document.querySelector('.enableBodyScroll');
 
   var isIosDevice = typeof window !== 'undefined' && window.navigator && window.navigator.platform && /iP(ad|hone|od)/.test(window.navigator.platform);
 
-
   var locks = [];
   var documentListenerAdded = false;
   var initialClientY = -1;
@@ -255,6 +254,5 @@ const enableBodyScrollButton = document.querySelector('.enableBodyScroll');
     }
   };
 });
-alert('Jesper')
 
 },{}]},{},[1]);
