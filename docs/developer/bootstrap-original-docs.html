@@ -20,6 +20,23 @@
   <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">  
   <script src="holder.js"></script>
 
+<style>
+@media (max-width: 748px) {
+
+ .bs-example-modal.scroll-y {
+    margin-left: -12px;
+    margin-right: -30px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+  }
+
+  .bs-example-modal .modal-dialog.modal-lg.scroll-y.modal-article {
+      width: 90vw;
+      max-width: 90vw;
+  }
+}
+
+</style> 
 <script>
 
 $(function(){
@@ -6504,7 +6521,7 @@ Cras justo odio
 
                 <h3>Modals for displaying agreements and other text based content</h3>
                 <p>A rendered modal with extra padding in header, body, and set of actions in an always visible footer. To get the extra padding, add <code> modal-article</code> next to the modal-dialog class. To get the internal scroll, add the <code>scroll-y</code> at the same place.</p>
-                <div class="bs-example bs-example-modal">
+                <div class="bs-example bs-example-modal scroll-y">
                 <div class="modal">
                   <div class="modal-dialog modal-lg scroll-y modal-article" style="top:0">
                     <div class="modal-content">
@@ -8364,6 +8381,7 @@ span.photo-background {
     color: inherit;
   }
 
+
   strong {
     color: inherit;
   }
@@ -8396,10 +8414,7 @@ span.photo-background {
     font-size: 1.4rem;
     padding: 10px 20px 10px 10px;
     line-height: 2.2rem;
-  } 
-  
-
-    
+  }    
 
   .checkbox label {
     font-family: Scania Sans Semi Condensed;
