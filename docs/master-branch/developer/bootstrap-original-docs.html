@@ -21,7 +21,6 @@
   <script src="/corporate-ui-docs/developer/holder.js"></script>
 
 <style>
-
   @media (max-width: 748px) {
 
    .bs-example-modal.scroll-y {
@@ -41,6 +40,45 @@
 <script>
 
 $(function(){
+
+
+  // window.onload = function(){
+
+  // if(location.hash) {
+  //   var tabElementsAnchors = {};
+  //   var targetSection = '';
+
+  //   $('.tab-content.zone > .tab-pane').each(function(key, section) {
+  //     tabElementsAnchors[section.id] = []
+  //     $('.bs-docs-sidebar ul > li > a', section).each(function(key, link) {
+  //       tabElementsAnchors[section.id].push($(link).attr('href'));
+  //     });
+  //   })
+
+  //   Object.keys(tabElementsAnchors).map(function(sectionId) {
+  //     var section = tabElementsAnchors[sectionId];
+  //     if(section.indexOf(location.hash) > -1) {
+  //       targetSection = sectionId;
+  //     }
+  //   })
+
+  //   console.log(tabElementsAnchors);
+
+  //   $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  //   $('.c-ui-tabs > li > a[href=#' + targetSection + ']').parent().addClass('active');
+  //   $('.tab-pane').removeClass('fade active');
+  //   $('#' + targetSection + '.tab-pane').addClass('active');
+
+  //   if (location.hash) {
+  //     location.href = location.hash;
+  //   }
+  // }
+
+
+  // }
+
+
+  var hash = window.location.hash;
 
 
   var tabInstallationAnchors =  [ "#corporate-ui-installation-overview", "#corporate-ui-installation-overview"];
