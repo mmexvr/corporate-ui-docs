@@ -20,112 +20,128 @@
   <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">  
   <script src="holder.js"></script>
 
-  <style>
+<style>
 
-	.modal-fullscreen {
-		display: none;
-	    height: 100vh;
-	    left: 0;
-	    position: fixed;
-	    top: 0;
-	    width: 100vw;
-	    z-index: 1050;
-	}
+  @media (max-width: 748px) {
 
-	.modal-fullscreen .modal-dialog {
-	    width: 100vw;
-	    margin: 0;
-		position: unset;
-		background-color: #fff;
-	}
+   .bs-example-modal.scroll-y {
+      margin-left: -12px;
+      margin-right: -30px;
+      margin-bottom: 20px;
+      padding-bottom: 30px;
+    }
 
-	.modal-content {
-    	position: unset;
-   	} 
+    .bs-example-modal .modal-dialog.modal-lg.scroll-y.modal-article {
+        width: 90vw;
+        max-width: 90vw;
+    }
+  }
 
-	.modal-fullscreen .modal-header {
-	    height: 60px;
-	}
+</style> 
+<script>
 
-	.modal-fullscreen .modal-body {
-		background-color: #fff;
-	    bottom: 52px;
-	    position: absolute;
-	    top: 60px;
-	    overflow-y: auto;
-	    width: 100vw;
-	    -webkit-overflow-scrolling: touch;
-	}
-
-	.modal-fullscreen .modal-footer {
-		background-color: #fff;
-	    bottom: 0px;
-	    position: absolute;
-	    width: 100vw;
-	}
+$(function(){
 
 
+  var tabInstallationAnchors =  [ "#corporate-ui-installation-overview", "#corporate-ui-installation-overview"];
+  var tabElementsAnchors =  [ "#corporate-ui-components-overview", "#corporate-header", ,"#corporate-header-dealer-variation", "#main-content", "#main-nav", "#corporate-footer" ];
+  var tabComponentsAnchors =  [ "#components-overview", "#dropdowns", "#dropdowns-example", "#dropdowns-alignment", "#dropdowns-headers", "#dropdowns-disabled", "#btn-groups", "#btn-groups-single", "#btn-groups-toolbar", "#btn-groups-sizing", "#btn-groups-nested", "#btn-groups-vertical", "#btn-groups-justified", "#btn-dropdowns", "#btn-dropdowns-single", "#btn-dropdowns-split", "#btn-dropdowns-sizing", "#btn-dropdowns-dropup", "#input-groups", "#input-groups-basic", "#input-groups-sizing", "#input-groups-checkboxes-radios", "#input-groups-buttons", "#input-groups-buttons-dropdowns", "#input-groups-buttons-segmented", "#nav", "#nav-tabs", "#nav-pills", "#nav-justified", "#nav-disabled-links", "#nav-dropdowns", "#navbar", "#navbar-default", "#navbar-forms", "#navbar-buttons", "#navbar-text", "#navbar-links", "#navbar-component-alignment", "#navbar-fixed-top", "#navbar-fixed-bottom", "#navbar-static-top", "#navbar-inverted", "#breadcrumbs", "#pagination", "#pagination-default", "#pagination-pager", "#labels", "#badges", "#jumbotron", "#page-header", "#thumbnails", "#thumbnails-default", "#thumbnails-custom-content", "#alerts", "#alerts-examples", "#alerts-dismissable", "#alerts-links", "#progress", "#progress-basic", "#progress-label", "#progress-alternatives", "#progress-striped", "#progress-animated", "#progress-stacked", "#media", "#media-default", "#media-list", "#list-group", "#list-group-basic", "#list-group-badges", "#list-group-linked", "#list-group-contextual-classes", "#list-group-custom-content", "#panels", "#panels-basic", "#panels-heading", "#panels-alternatives", "#panels-tables", "#panels-list-group", "#wells" ];
+  var tabCSSAnchors =  ["#core-css-overview", "#overview-doctype", "#overview-mobile", "#overview-type-links", "#overview-normalize", "#overview-container", "#type", "#type-headings", "#type-body-copy", "#type-emphasis", "#type-abbreviations", "#type-addresses", "#type-blockquotes", "#type-lists", "#code", "#code-inline", "#code-user-input", "#code-block", "#tables", "#tables-example", "#tables-striped", "#tables-bordered", "#tables-hover-rows", "#tables-condensed", "#tables-contextual-classes", "#tables-responsive", "#forms", "#forms-example", "#forms-inline", "#forms-horizontal", "#forms-controls", "#forms-controls-static", "#forms-control-focus", "#forms-control-disabled", "#forms-control-validation", "#forms-validation", "#forms-control-sizes", "#forms-help-text", "#buttons", "#buttons-options", "#buttons-sizes", "#buttons-active", "#buttons-disabled", "#buttons-tags", "#images", "#images-responsive", "#images-shapes", "#helper-classes", "#helper-classes-colors", "#helper-classes-backgrounds", "#helper-classes-close", "#helper-classes-carets", "#helper-classes-floats", "#helper-classes-center", "#helper-classes-clearfix", "#helper-classes-show-hide", "#helper-classes-screen-readers", "#helper-classes-image-replacement", "#grid", "#grid-intro", "#grid-media-queries", "#grid-options", "#grid-example-basic", "#grid-example-fluid", "#grid-example-mixed", "#grid-example-mixed-complete", "#grid-responsive-resets", "#grid-offsetting", "#grid-nesting", "#grid-column-ordering", "#grid-less", "#responsive-utilities", "#responsive-utilities-classes", "#responsive-utilities-print", "#responsive-utilities-tests", "#bootstrap-4" ];
+  var tabJavaScriptAnchors =   ["#js-overview", "#js-individual-compiled", "#js-data-attrs", "#js-programmatic-api", "#js-noconflict", "#js-events", "#modals", "#modals-examples", "#modals-sizes", "#modals-usage", "#js-dropdowns", "#js-dropdowns-examples", "#js-dropdowns-usage", "#scrollspy", "#scrollspy-examples", "#scrollspy-usage", "#tabs", "#tabs-examples", "#tabs-usage", "#tooltips", "#tooltips-examples", "#tooltips-usage", "#popovers", "#popovers-examples", "#popovers-usage", "#js-alerts", "#alerts-examples", "#alerts-usage", "#js-buttons", "#js-buttons-examples", "#js-buttons-usage", "#collapse", "#collapse-examples", "#collapse-usage", "#affix", "#affix-examples", "#affix-usage" ];
 
-@media (max-width: 991px){
+  console.dir(tabInstallationAnchors);
+  console.dir(tabElementsAnchors);
+  console.dir(tabComponentsAnchors);
+  console.dir(tabCSSAnchors);
+  console.dir(tabJavaScriptAnchors);       
 
-	.modal-fullscreen .modal-body {
-    	margin: auto;
-    	padding: 20px 0;
-    	overflow-x: hidden;
-    	margin: 0px;
-   		height: calc(100vh - 140px) !important;
-	}
+  if ( jQuery.inArray( hash, tabInstallationAnchors ) >= 0 ) {
 
-	.modal-fullscreen .modal-footer {
-		background-color: #fff;
-	    bottom: 0px;
-	    position: absolute;
-	    width: 100vw;
-	}
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(1)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#corporate-ui-installation-section.tab-pane').addClass('active');
 
+  } else if ( jQuery.inArray( hash, tabElementsAnchors ) >= 0 ) {
 
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(2)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#custom-elements-section.tab-pane').addClass('active');
+
+  } else if ( jQuery.inArray( hash, tabComponentsAnchors ) >= 0 ) {
+
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(3)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#bootstrap-components-section.tab-pane').addClass('active');
+
+  }  else if ( jQuery.inArray( hash, tabCSSAnchors ) >= 0 ) {
+
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(4)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#bootstrap-css-section.tab-pane').addClass('active');
+
+  }  else if ( jQuery.inArray( hash, tabJavaScriptAnchors ) >= 0 ) {
+
+  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(5)').addClass('active');
+  $('.tab-pane').removeClass('fade active');
+  $('#bootstrap-javascript-section.tab-pane').addClass('active');
+
+  }
+
+if (location.hash) {
+        location.href = location.hash;
 }
-</style>
+
+})
+
+</script>
 
 
 </head>
 
-<body class="scania app ux-lib" data-env="Test" id="top">
-  <c-corporate-header site-name="Master Branch" site-url="/corporate-ui-docs/master-branch/">
-    <nav-item location="/corporate-ui-docs/master-branch/developer/support.html">Support</nav-item>
-    <nav-item location="https://github.com/scania/corporate-ui-docs">Master Docs @ GitHub</nav-item>
-  </c-corporate-header>
+<body class="scania app" id="top">
 
-  <c-main-content>
+<c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+  <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+  <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+</c-corporate-header>
 
-    <c-main-navigation show-search>
-      <primary-items>
-        <nav-item location="/corporate-ui-docs/master-branch/">Home</nav-item>
-        <nav-item location="/corporate-ui-docs/master-branch/styleguide/">Style Guide
-          <sub-navigation caption="Style Guide">
-            <nav-item location="/corporate-ui-docs/master-branch/logotype/">Logotype</nav-item>
-            <nav-item location="/corporate-ui-docs/master-branch/icons/">Icons</nav-item>
-            <nav-item location="/corporate-ui-docs/master-branch/colours/">Colours</nav-item>
-            <nav-item location="/corporate-ui-docs/master-branch/typography/">Typography</nav-item>
-          </sub-navigation>
-        </nav-item>            
-        <nav-item location="/corporate-ui-docs/master-branch/developer/" class="active">Web Applications
-          <sub-navigation caption="Scania Bootstrap">
-            <nav-item location="/corporate-ui-docs/master-branch/developer/bootstrap-original-docs.html" class="active">Bootstrap Documentation</nav-item>
-            <nav-item location="/corporate-ui-docs/master-branch/template/html-copy-paste/html-copy-paste.html">HTML Copy Paste</nav-item>
-          </sub-navigation>  
-        </nav-item>
-        <nav-item location="/corporate-ui-docs/master-branch/mobile-apps/">Mobile Apps</nav-item>
-        <nav-item location="https://github.com/scania/corporate-ui/issues">Report an Issue</nav-item>
-        <nav-item location="/corporate-ui-docs/master-branch/developer/support.html">Support</nav-item>
-      </primary-items>
-    </c-main-navigation>
+<c-main-content>
 
-    <section class="light">
-      <div class="container-fluid">
-       <div class="row">
+  <c-main-navigation>
+    <primary-items>
+      <nav-item location="/corporate-ui-docs/">Home</nav-item>
+      <nav-item location="/corporate-ui-docs/styleguide/">Style Guide
+        <sub-navigation caption="Style Guide">
+          <nav-item location="/corporate-ui-docs/logotype/">Logotype</nav-item>
+          <nav-item location="/corporate-ui-docs/icons/">Icons</nav-item>
+          <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
+          <nav-item location="/corporate-ui-docs/typography/">Typography</nav-item>
+        </sub-navigation>
+      </nav-item>          
+      <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
+        <sub-navigation caption="Web Applications">
+          <nav-item location="/corporate-ui-docs/developer/">Corporate UI</nav-item>
+          <nav-item location="/corporate-ui-docs/developer/corporate-ui-for-frameworks.html">JS Frameworks</nav-item>   
+          <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html" class="active">Scania Bootstrap</nav-item>
+          <nav-item location="/corporate-ui-docs/developer/uiaas.html">UIaaS</nav-item>
+          <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+        </sub-navigation>
+      </nav-item>
+      <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
+    </primary-items>
+    <secondary-items></secondary-items>
+  </c-main-navigation>
+
+  <section class="light">
+    <div class="container-fluid">
+       <div class="row" style="position: relative; z-index: 900;">
          <div class="col-md-9">
-          <ul class="nav nav-tabs">
+          <ul class="nav nav-tabs c-ui-tabs">
             <li class="active"><a data-toggle="tab" href="#corporate-ui-installation-section">Get Started</a></li>
             <li><a data-toggle="tab" href="#custom-elements-section">Custom Elements</a></li>
             <li><a data-toggle="tab" href="#bootstrap-components-section">HTML Components</a></li>
@@ -139,7 +155,7 @@
         </div>    
       </div> 
  
-      <div class="tab-content app zone">
+    <div class="tab-content app zone">
 
      <!-- CORPORATE UI COMPONENTS TAB CONTENT STARTS HERE -->
 
@@ -152,10 +168,10 @@
                   <h1 id="corporate-ui-installation-overview">Introduction</h1>
                   <p class="lead">Get started with Corporate UI, the design system based on the popular Bootstrap framework and that's extended with tailor made Corporate UI Custom Elements.</p>
                   <div>
-                    <a href="https://github.com/scania/corporate-ui" target="_blank"><img src="../img/github-logo.png" alt="" border="0" height="41" width="100" style="max-width: 100px; margin-left: 20px; margin-right: 8px;"></a><a href="https://github.com/scania/corporate-ui">Corporate UI is 100% open source, available at GitHub.</a>
+                    <a href="https://github.com/scania/corporate-ui" target="_blank"><img src="/corporate-ui-docs/developer/img/github-logo.png" alt="" border="0" height="41" width="100" style="max-width: 100px; margin-left: 20px; margin-right: 8px;"></a><a href="https://github.com/scania/corporate-ui">Corporate UI is 100% open source, available at GitHub.</a>
                   </div>
                   <div>
-                  <a href="https://corporate-ui.slack.com" target="_blank"><img src="../img/slack-white_logo.png" alt="" border="0" height="100" width="130" style="max-width: 130px;"></a><a href="https://corporate-ui.slack.com">Via Slack you'll reach the Corporate UI core team as well as many developers using and contributing to the framework.</a>
+                  <a href="https://corporate-ui.slack.com" target="_blank"><img src="/corporate-ui-docs/developer/img/slack-white_logo.png" alt="" border="0" height="100" width="130" style="max-width: 130px;"></a><a href="https://corporate-ui.slack.com">Via Slack you'll reach the Corporate UI core team as well as many developers using and contributing to the framework.</a>
                   </div>
 
                   <h2 id="quick-start"><div>Quick start<a class="anchorjs-link" href="#quick-start" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
@@ -330,11 +346,11 @@
                 <h1 id="corporate-ui-components-overview">Custom Elements</h1>
                 <p class="lead">The most common interaction patterns at Scania are made into custom elements, to offer easy implementation of sometimes advanced features. They also make it possible to create a coherent user experience over different applications and platforms. Custom elements are similar to framework specific components, except that they're supported by the browsers and normally have no dependencies to other technologies. A custom element works like any other HTML element why they are so easy to adopt.</p>
               <div class="bs-docs-section panel-x">
+                <div class="page-header">
+                    <h2 id="corporate-header">Corporate Header</h2>
+                </div>
               
-              <h2 id="corporate-header">Corporate Header</h2>
-              <h3 id="corporate-header-example">Example</h3>
-              <p></p>
-
+                <h3 id="corporate-header-example">Example</h3>
 
                 <div class="bs-example">
 
@@ -473,14 +489,14 @@
 
                 <h3 id="main-navigation-sub-navigation">Sub navigation</h3>
                 <p>Each of the primary navigation items can host their own sub navigation. Be sure that the sub navigation is wrapped within the nav item that is their parent.</p>
-<span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot; <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;</span>Style Guide
+<span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;</span><span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;</span>Style Guide
   <span class="nt">&lt;sub-navigation</span> <span class="na">caption=</span><span class="s">&quot;Style Guide&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Logotype<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-    <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Icons<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-  <span class="nt">&lt;/sub-navigation<span class="nt">&gt;</span>
-<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>  
+    <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Logotype<span class="nt">&lt;/nav-item</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Icons<span class="nt">&lt;/nav-item</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/sub-navigation</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/nav-item</span><span class="nt">&gt;</span>  
                 <h3 id="main-navigation-secondary-items">Secondary items (optional)</h3>
-                <p>In the  <code><span class="nt">&lt;secondary-items<span class="nt">&gt;</span></code> element you can place any custom markup that your solution demands. A common example is the user profile drop down exampled below. In desktop mode, on this page's main navigation, it's the blue box in the upper right hand side of the browser window. If you're in mobile mode, the user profile menu is avaiable among the navigation items on the mobile menu. </p>
+                <p>In the  <code><span class="nt">&lt;secondary-items</span><span class="nt">&gt;</span></code> element you can place any custom markup that your solution demands. A common example is the user profile drop down exampled below. In desktop mode, on this page's main navigation, it's the blue box in the upper right hand side of the browser window. If you're in mobile mode, the user profile menu is avaiable among the navigation items on the mobile menu. </p>
 
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;secondary-items<span class="nt">&gt;</span>
@@ -495,8 +511,8 @@
       <span class="nt">&lt;/div<span class="nt">&gt;</span>  
     <span class="nt">&lt;/div<span class="nt">&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="na">aria-labelledby=</span><span class="s">&quot;myDropdown&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">&quot;presentation&quot;</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">role=</span><span class="s">&quot;menuitem&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span><span class="nt">&gt;</span> <span class="na">href=</span><span class="s">&quot;https://idm.scania.com&quot;</span><span class="nt">&gt;</span> Change Password<span class="nt">&lt;/a<span class="nt">&gt;</span><span class="nt">&lt;/li<span class="nt">&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">&quot;presentation&quot;</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">role=</span><span class="s">&quot;menuitem&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span><span class="nt">&gt;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span> Logout<span class="nt">&lt;/a<span class="nt">&gt;</span><span class="nt">&lt;/li<span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">&quot;presentation&quot;</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">role=</span><span class="s">&quot;menuitem&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span><span class="nt">&gt;</span> <span class="na">href=</span><span class="s">&quot;https://idm.scania.com&quot;</span><span class="nt">&gt;</span>Change Password<span class="nt">&lt;/a<span class="nt">&gt;</span><span class="nt">&lt;/li<span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">&quot;presentation&quot;</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">role=</span><span class="s">&quot;menuitem&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span><span class="nt">&gt;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Logout<span class="nt">&lt;/a<span class="nt">&gt;</span><span class="nt">&lt;/li<span class="nt">&gt;</span>
     <span class="nt">&lt;/ul<span class="nt">&gt;</span>        
   <span class="nt">&lt;/div<span class="nt">&gt;</span>
 <span class="nt">&lt;/secondary-items<span class="nt">&gt;</span>          
@@ -504,17 +520,16 @@
 
 
                 <h3 id="main-navigation-mobile-navigation">Mobile navigation</h3>
-                <p>The desktop version will automaticly re-arrange and be displayed as a traditional mobile navigation with a hamburder icon. Any code included within the secondary items will be included in the mobile navigation but it might need some extra CSS to be displayed correctly below 992px viewport width. </p>     
-
-
-¨
+                <p>The desktop version will automaticly re-arrange and be displayed as a traditional mobile navigation with a hamburder icon. Any code included within the secondary items will be included in the mobile navigation but it might need some extra CSS to be displayed correctly below a 992px viewport width. To limit the scope not only to mobile mode, but to the the mobile navigation only, please prefix your selector with <span class="nc">.navigation-open</span></p>     
 
 
                 <div class="highlight"><pre><code class="css">
 <span class="k">@media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="k">991px</span><span class="o">)</span> <span class="p">{</span> 
-  <span class="o">Your custom CSS</span> 
+<span class="nc">.navigation-open .your-selector</span> <span class="p">{</span>
+  <span class="o">.</span><span class="n">your-custom</span><span class="o">:</span><span class="n">declaration</span><span class="p">();</span>
+<span class="p">}</span> 
 <span class="p">}</span>
-                </code></pre></div>
+              </code></pre></div>
 
               </div><!--  end of bs-docs-section -->
 
@@ -565,15 +580,15 @@
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;c-corporate-footer</span><span class="nt">&gt;</span>
   <span class="nt">&lt;c-social-media</span><span class="nt">&gt;</span>
-   <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;facebook&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot; <span class="na">onclick=</span><span class="s">&quot;window.open('https://www.facebook.com/scaniagroup/')&quot;<span class="nt"><span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-   <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;twitter&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-   <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;youtube&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-   <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;linkedin&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>         
+   <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;facebook&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;</span><span class="na">onclick=</span><span class="s">&quot;window.open('https://www.facebook.com/scaniagroup/')&quot;</span><span class="nt"><span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+   <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;twitter&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+   <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;youtube&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+   <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;linkedin&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>         
   <span class="nt">&lt;/c-social-media</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Legal notice<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Privacy statement<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Cookies<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Contact us<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>  
+  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Legal notice<span class="nt">&lt;/nav-item</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Privacy statement<span class="nt">&lt;/nav-item</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Cookies<span class="nt">&lt;/nav-item</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Contact us<span class="nt">&lt;/nav-item</span><span class="nt">&gt;</span>  
 <span class="nt">&lt;/c-corporate-footer</span><span class="nt">&gt;</span>
                 </code></pre></div>
 
@@ -665,9 +680,9 @@
 
             <div class="col-md-3">
                 <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
-                  <ul class="nav bs-docs-sidenav">
+                  <ul class="nav bs-docs-sidenav corporate-ui-components-overview">
                   <li>
-                    <a href="#top">Overview</a>
+                    <a href="#corporate-ui-components-overview">Overview</a>
                   </li>                                     
                   <li>
                     <a href="#corporate-header">Corporate Header</a>
@@ -708,7 +723,7 @@
             <div class="row">
               <div class="col-md-9" role="main">
                 <article class="mt-5 mr-5">
-                  <h1>Core CSS (Scania Bootstrap)</h1>
+                  <h1 id="core-css-overview">Core CSS (Scania Bootstrap)</h1>
                   <p class="lead">Scania Bootstrap is now a subset of the Corporate UI framework. Scania Bootstrap can still be used "stand alone" to tailor applications with the Corporate UI look and feel. Although, it will not fully take advantage of the easy uf use that our Custom Elements do offer. You'll simply have to develop and maintain a lot of the HTML and JavaScript code that's already availble in the components.</p>
                   <p class="lead">When it comes to designing your particular functionallity, please copy code snippets from the <a href="/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html">the HTML Copy Paste section</a> or from this code repository. The library is uppdated on a daily basis so make sure you'll visit it frequently.</p>
                   <p class="lead">All things that you'll need for your development, like icons, fonts. CSS and Custom Elements will become available for you once you're loading the <a href="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/corporate-ui.js">corporate-ui.js</a>.</p>
@@ -2037,10 +2052,12 @@
                     <div class="form-group has-warning">
                       <label class="control-label" for="inputWarning">Input with warning</label>
                       <input type="text" class="form-control" id="inputWarning">
+                      <p class="help-block">When needed, use .help-block to inform your users</p>
                     </div>
                     <div class="form-group has-error">
                       <label class="control-label" for="inputError">Input with error</label>
                       <input type="text" class="form-control" id="inputError">
+                      <p class="help-block">Can be used with all interaction colours</p>
                     </div>
                   </form>
                   <div class="highlight"><pre><code class="html">
@@ -2054,7 +2071,9 @@
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-error"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"inputError"</span><span class="nt">&gt;</span>Input with error<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"help-block"</span><span class="nt">&gt;</span>When needed, use .help-block to inform your users<span class="nt">&lt;/p&gt;</span>  
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputError"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"help-block"</span><span class="nt">&gt;</span>Can be used with all interaction colours<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
                   </code></pre></div>
 
@@ -3123,9 +3142,9 @@
 
 
                   <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
-                    <ul class="nav bs-docs-sidenav"> 
+                    <ul class="nav bs-docs-sidenav core-css-overview"> 
                     <li>
-                      <a href="#top">Overview</a>
+                      <a href="#core-css-overview">Overview</a>
                       <ul class="nav">
                         <li><a href="#overview-doctype">HTML5 doctype</a></li>
                         <li><a href="#overview-mobile">Mobile first</a></li>
@@ -3176,7 +3195,7 @@
                         <li><a href="#forms-controls-static">Static control</a></li>
                         <li><a href="#forms-control-focus">Focus state</a></li>
                         <li><a href="#forms-control-disabled">Disabled state</a></li>
-                        <li><a href="#forms-control-validation">Validation states</a></li>
+                        <li><a href="#forms-validation">Validation states</a></li>
                         <li><a href="#forms-control-sizes">Control sizing</a></li>
                         <li><a href="#forms-help-text">Help text</a></li>
                       </ul>
@@ -3269,7 +3288,7 @@
               <h1 id="components-overview">HTML Components</h1>
               <p class="lead">In this section you'll find pre designed markup, many of them from Bootstrap although you'll find a fews custom made as well. They differ from our custom elements in the aspect that they are markup and CSS only, so they do not offer much interaction. That part you'll need to create within your project.
               <div class="bs-docs-section panel-x">
-                <div class="page-body-x">
+                <div class="page-header">
                   <h2 id="dropdowns">Dropdowns</h2>
                 </div>
                 <p class="lead">Toggleable, contextual menu for displaying lists of links. Made interactive with <a href="https://thednp.github.io/bootstrap.native/" target="_blank">Bootstrap Native JS</a>.</p>
@@ -4373,316 +4392,40 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                   <h2 id="navbar">Navbar</h2>
                 </div>
 
-                <h2 id="navbar-default">Default navbar</h2>
-                <p>Navbars are responsive meta components that serve as navigation headers for your application or site. They begin collapsed (and are toggleable) in mobile views and become horizontal as the available viewport width increases.</p>
 
-                <div class="bs-callout bs-callout-info">
-                  <h4>Customize the collapsing point</h4>
-                  <p>Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the <code>@grid-float-breakpoint</code> variable or add your own media query.</p>
-                </div>
+                <div class="bs-callout bs-callout-success">
+                  <h4>Scania Main Navigation</h4>
+                  <p>To be sure that the site navigation is displayed as defined in the Scania Identity Manual, we've pagackaged the navbar as a custom element, and it should be used as such. Please use the <a href="#main-nav">Main Navigation Element</a> to swiftly create both the desktop and mobile versions by attaching the navigation items that you're in need of.</p>
+                </div>                
 
                 <div class="bs-example">
-                  <nav class="navbar navbar-default" role="navigation">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-  <span class="sr-only">Toggle navigation</span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Brand</a>
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse navbar-ex1-collapse">
-                      <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                      <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                      </form>
-                      <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Link</a></li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li><a href="#">Separated link</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div><!-- /.navbar-collapse -->
-                  </nav>
+                  <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
+                      <iframe src="docs-example-main-navigation.html" frameborder="0" style="overflow:scroll !important" height="90px" width="100%"></iframe>
+                  </div>
                 </div>
-                <div class="highlight"><pre><code class="html">
-<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-default&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
-  <span class="c">&lt;!-- Brand and toggle get grouped for better mobile display --&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar-header&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;navbar-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.navbar-ex1-collapse&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Toggle navigation<span class="nt">&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;/button&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Brand<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+                <div class="highlight">
+                  <pre><code class="language-html" data-lang="html">
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/js/corporate-ui.js"</span><span class="nt">&gt;</span>
 
-<span class="c">&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;collapse navbar-collapse navbar-ex1-collapse&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav navbar-nav&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/b&gt;&lt;/a&gt;</span>
-    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Separated link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>One more separated link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;/ul&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;/ul&gt;</span>
-    <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;navbar-form navbar-left&quot;</span> <span class="na">role=</span><span class="s">&quot;search&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
-                    <span class="nt">&lt;/form&gt;</span>
-    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav navbar-nav navbar-right&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/b&gt;&lt;/a&gt;</span>
-    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Separated link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;/ul&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;/ul&gt;</span>
-  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.navbar-collapse --&gt;</span>
-<span class="nt">&lt;/nav&gt;</span>
-                </code></pre></div>
-
-                <div class="bs-callout bs-callout-warning">
-                  <h4>Make navbars accessible</h4>
-                  <p>Be sure to add a <code>role="navigation"</code> to every navbar to help with accessibility.</p>
-                </div>
-
-
-                <h2 id="navbar-buttons">Buttons</h2>
-                <p>For buttons not residing in a <code>&lt;form&gt;</code>, add this class to vertically center buttons within a navbar.</p>
-                <div class="bs-example">
-                  <nav class="navbar navbar-default" role="navigation">
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex2-collapse">
-  <span class="sr-only">Toggle navigation</span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Brand</a>
-                    </div>
-                    <div class="collapse navbar-collapse navbar-ex2-collapse">
-                      <button type="button" class="btn btn-default navbar-btn">Sign in</button>
-                    </div>
-                  </nav>
-                </div>
-                <div class="highlight"><pre><code class="html">
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default navbar-btn&quot;</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
-                </code></pre></div>
-
-
-                <h2 id="navbar-text">Text</h2>
-                <p>Wrap strings of text in an element with <code>.navbar-text</code>, usually on a <code>&lt;p&gt;</code> tag for proper leading and color.</p>
-                <div class="bs-example">
-                  <nav class="navbar navbar-default" role="navigation">
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex3-collapse">
-  <span class="sr-only">Toggle navigation</span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Brand</a>
-                    </div>
-                    <div class="collapse navbar-collapse navbar-ex3-collapse">
-                      <p class="navbar-text">Signed in as Mark Otto</p>
-                    </div>
-                  </nav>
-                </div>
-                <div class="highlight"><pre><code class="html">
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;navbar-text&quot;</span><span class="nt">&gt;</span>Signed in as Mark Otto<span class="nt">&lt;/p&gt;</span>
-                </code></pre></div>
-
-
-                <h2 id="navbar-links">Non-nav links</h2>
-                <p>For folks using standard links that are not within the regular navbar navigation component, use the <code>.navbar-link</code> class to add the proper colors for the default and inverse navbar options.</p>
-                <div class="bs-example">
-                  <nav class="navbar navbar-default" role="navigation">
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex4-collapse">
-  <span class="sr-only">Toggle navigation</span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Brand</a>
-                    </div>
-                    <div class="collapse navbar-collapse navbar-ex4-collapse">
-                      <p class="navbar-text pull-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
-                    </div>
-                  </nav>
-                </div>
-                <div class="highlight"><pre><code class="html">
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;navbar-text pull-right&quot;</span><span class="nt">&gt;</span>Signed in as <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;navbar-link&quot;</span><span class="nt">&gt;</span>Mark Otto<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-                </code></pre></div>
-
-
-                <h2 id="navbar-component-alignment">Component alignment</h2>
-                <p>Align nav links, forms, buttons, or text, using the <code>.navbar-left</code> or <code>.navbar-right</code> utility classes. Both classes will add a CSS float in the specified direction. For example, to align nav links, put them in a separate <code>&lt;ul&gt;</code> with the respective utility class applied.</p>
-                <p>These classes are mixin-ed versions of <code>.pull-left</code> and <code>.pull-right</code>, but they're scoped to media queries for easier handling of navbar components across device sizes.</p>
-
-
-                <h2 id="navbar-fixed-top">Fixed to top</h2>
-                <p>Add <code>.navbar-fixed-top</code>.</p>
-                <div class="bs-example bs-navbar-top-example">
-
-                </div><!-- /example -->
-                <div class="highlight"><pre><code class="html">
-<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-default navbar-fixed-top&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
-  ...
-<span class="nt">&lt;/nav&gt;</span>
-                </code></pre></div>
-
-                <div class="bs-callout bs-callout-danger">
-                  <h4>Body padding required</h4>
-                  <p>The fixed navbar will overlay your other content, unless you add <code>padding</code> to the top of the <code>&lt;body&gt;</code>. Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.</p>
-                  <div class="highlight"><pre><code class="css"><span class="nt">body</span> <span class="p">{</span> <span class="k">padding-top</span><span class="o">:</span> <span class="m">70px</span><span class="p">;</span> <span class="p">}</span>
-                  </code></pre></div>
-                  <p>Make sure to include this <strong>after</strong> the core Bootstrap CSS.</p>
-                </div>
-
-
-                <h2 id="navbar-fixed-bottom">Fixed to bottom</h2>
-                <p>Add <code>.navbar-fixed-bottom</code> instead.</p>
-                <div class="bs-example bs-navbar-bottom-example">
-
-                </div><!-- /example -->
-                <div class="highlight"><pre><code class="html">
-<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-default navbar-fixed-bottom&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
-  ...
-<span class="nt">&lt;/nav&gt;</span>
-                </code></pre></div>
-
-                <div class="bs-callout bs-callout-danger">
-                  <h4>Body padding required</h4>
-                  <p>The fixed navbar will overlay your other content, unless you add <code>padding</code> to the bottom of the <code>&lt;body&gt;</code>. Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.</p>
-                  <div class="highlight"><pre><code class="css"><span class="nt">body</span> <span class="p">{</span> <span class="k">padding-bottom</span><span class="o">:</span> <span class="m">70px</span><span class="p">;</span> <span class="p">}</span>
-                  </code></pre></div>
-                  <p>Make sure to include this <strong>after</strong> the core Bootstrap CSS.</p>
-                </div>
-
-
-                <h2 id="navbar-static-top">Static top</h2>
-                <p>Create a full-width navbar that scrolls away with the page by adding <code>.navbar-static-top</code>. Unlike the <code>.navbar-fixed-*</code> classes, you do not need to change any padding on the <code>body</code>.</p>
-                <div class="bs-example bs-navbar-top-example">
-                  <nav class="navbar navbar-default navbar-static-top" role="navigation">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex7-collapse">
-  <span class="sr-only">Toggle navigation</span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Brand</a>
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse navbar-ex7-collapse">
-                      <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                      </ul>
-                    </div><!-- /.navbar-collapse -->
-                  </nav>
-                </div><!-- /example -->
-                <div class="highlight"><pre><code class="html">
-<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-default navbar-static-top&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
-  ...
-<span class="nt">&lt;/nav&gt;</span>
-                </code></pre></div>
-
-
-
-
-
-
-
-
-<!--                 <h2 id="navbar-inverted">Inverted navbar</h2>
-                <p>Modify the look of the navbar by adding <code>.navbar-inverse</code>.</p>
-                <div class="bs-example">
-                  <nav class="navbar navbar-inverse" role="navigation">
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex8-collapse">
-  <span class="sr-only">Toggle navigation</span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Brand</a>
-                    </div>
-                    <div class="collapse navbar-collapse navbar-ex8-collapse">
-                      <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                      </ul>
-                    </div>
-                  </nav>
-                </div>
-                <div class="highlight"><pre><code class="html">
-<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-inverse&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
-                  ...
-                  <span class="nt">&lt;/nav&gt;</span>
-                </code></pre></div> -->
-
-
-
-
-
-
-
+<span class="nt">&lt;c-main-navigation</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;primary-items</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/nav-item</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">"#" </span><span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Style Guide
+      <span class="nt">&lt;sub-navigation</span> <span class="na">caption=</span><span class="s">"Style Guide"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">"#"</span><span class="nt">&gt;</span>Logotype<span class="nt">&lt;/nav-item</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">"#"</span><span class="nt">&gt;</span>Icons<span class="nt">&lt;/nav-item</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/sub-navigation</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/nav-item</span><span class="nt">&gt;</span>  
+  <span class="nt">&lt;/primary-items</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;secondary-items</span><span class="nt">&gt;</span><span class="nt">&lt;/secondary-items</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/c-main-navigation</span><span class="nt">&gt;</span>
+                    </code></pre>
+                  </div>
               </div>
-
-
-
-
 
               <div class="bs-docs-section">
                 <div class="page-header">
-                  <h2 id="breadcrumbs">Breadcrumbs <small></small></h2>
+                  <h2 id="breadcrumbs">Breadcrumbs</h2>
                 </div>
                 <p class="lead">Indicate the current page's location within a navigational hierarchy.</p>
                 <p>Separators are automatically added in CSS through <code>:before</code> and <code>content</code>.</p>
@@ -5329,25 +5072,25 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                 </div>
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-success&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;40&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 40%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>40% Complete (success)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-info&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;20&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 20%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>20% Complete<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-warning&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;60&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 60%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>60% Complete (warning)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-danger&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;80&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 80%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>80% Complete<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-success&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;40&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 40%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>40% Complete (success)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-info&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;20&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 20%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>20% Complete<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-warning&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;60&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 60%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>60% Complete (warning)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-danger&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;80&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 80%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>80% Complete<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
                 </code></pre></div>
 
                 <h3 id="progress-striped">Striped</h3>
@@ -5376,25 +5119,25 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                 </div>
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-success&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;40&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 40%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>40% Complete (success)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-info&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;20&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 20%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>20% Complete<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-warning&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;60&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 60%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>60% Complete (warning)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-danger&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;80&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 80%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>80% Complete (danger)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-success&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;40&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 40%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>40% Complete (success)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-info&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;20&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 20%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>20% Complete<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-warning&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;60&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 60%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>60% Complete (warning)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-danger&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;80&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 80%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>80% Complete (danger)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
                 </code></pre></div>
 
                 <h3 id="progress-animated">Animated</h3>
@@ -5406,10 +5149,10 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                 </div>
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped active&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar&quot;</span>  <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;45&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 45%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>45% Complete<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar&quot;</span>  <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;45&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 45%&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>45% Complete<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
                 </code></pre></div>
 
                 <h3 id="progress-stacked">Stacked</h3>
@@ -5429,16 +5172,16 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                 </div>
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-success&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 35%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>35% Complete (success)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-warning&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 20%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>20% Complete (warning)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-danger&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 10%&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>10% Complete (danger)<span class="nt">&lt;/span&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-success&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 35%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>35% Complete (success)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-warning&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 20%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>20% Complete (warning)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-danger&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 10%&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>10% Complete (danger)<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
                 </code></pre></div>
               </div>
 
@@ -5481,14 +5224,14 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                 </div><!-- /.bs-example -->
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;media&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;media-object&quot;</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">alt=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;/a&gt;</span>
-                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;media-body&quot;</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;media-heading&quot;</span><span class="nt">&gt;</span>Media heading<span class="nt">&lt;/h4&gt;</span>
-                  ...
-                  <span class="nt">&lt;/div&gt;</span>
-                  <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;media-object&quot;</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">alt=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;media-body&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;media-heading&quot;</span><span class="nt">&gt;</span>Media heading<span class="nt">&lt;/h4&gt;</span>
+        ...
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
                 </code></pre></div>
 
                 <h3 id="media-list">Media list</h3>
@@ -5547,15 +5290,15 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                 </div>
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;media-list&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;media&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;media-object&quot;</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">alt=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;media-body&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;media-heading&quot;</span><span class="nt">&gt;</span>Media heading<span class="nt">&lt;/h4&gt;</span>
-...
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;media&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;media-object&quot;</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">alt=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;media-body&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;media-heading&quot;</span><span class="nt">&gt;</span>Media heading<span class="nt">&lt;/h4&gt;</span>
+      ...
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span>
                 </code></pre></div>
               </div>
@@ -5748,7 +5491,7 @@ Cras justo odio
                 <h3 id="panels-alternatives">Contextual alternatives & Sizing</h3>
                 <p>Like other components, easily make a panel more meaningful to a particular context by adding any of the contextual state classes, as well as making them smaller using the .panel-xs class.</p>
                 <div class="bs-example">
-                  <div class="col-md-3">
+                  <div class="col-md-4">
                     <div class="panel panel-xs panel-primary">
                       <div class="panel-heading">
                         <h3 class="panel-title">Panel title</h3>
@@ -5758,33 +5501,41 @@ Cras justo odio
                       </div>
                     </div>
                   </div>  
-                  <div class="col-md-3">
+                  <div class="col-md-4">
                     <div class="panel panel-xs panel-success">
-                      <h3 class="panel-title">Panel title</h3>
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                      </div>
                       <div class="panel-body">
                         Panel content
                       </div>
                     </div>
                   </div>  
-                  <div class="col-md-3">
+                  <div class="col-md-4">
                     <div class="panel panel-xs panel-info">
-                      <h3 class="panel-title">Panel title</h3>
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                      </div>
                       <div class="panel-body">
                         Panel content
                       </div>
                     </div>
                   </div>  
-                  <div class="col-md-3">
+                  <div class="col-md-4">
                     <div class="panel panel-xs panel-warning">
-                      <h3 class="panel-title">Panel title</h3>
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                      </div>
                       <div class="panel-body">
                         Panel content
                       </div>
                     </div>
                   </div>  
-                  <div class="col-md-3">
+                  <div class="col-md-4">
                     <div class="panel panel-xs panel-danger">
-                      <h3 class="panel-title">Panel title</h3>
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                      </div>
                       <div class="panel-body">
                         Panel content
                       </div>
@@ -5990,10 +5741,10 @@ Cras justo odio
             </div>
             <div class="col-md-3">
               <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
-                <ul class="nav bs-docs-sidenav">
+                <ul class="nav bs-docs-sidenav components-overview">
 
                   <li>
-                    <a href="#top">Overview</a>
+                    <a href="#components-overview">Overview</a>
                     <a href="#dropdowns">Dropdowns</a>
                     <ul class="nav">
                       <li><a href="#dropdowns-example">Example</a></li>
@@ -6295,14 +6046,13 @@ Cras justo odio
                 </div>
 
                 <h2 id="modals-sizes">Optional sizes</h2>
-                <p>Modals have two optional sizes, available via modifier classes to be placed on a <code>.modal-dialog</code>.</p>
+                <p>Modals have a few optional sizes, available via modifier classes to be placed on a <code>.modal-dialog</code>. Note that when the browsers viewport is narrowed down below 992px, they (small to xxl) will basically be displayd the same.</p>
                 <div class="bs-example">
                   <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>                  
                   <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
                   <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-xl">XL modal</button>
                   <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-xxl">XXL modal</button>
-                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-fullscreen">Fullscreen modal</button>                  
-                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-fullscreen-iframe">Fullscreen IFRAME</button>
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-fullscreen">Fullscreen modal</button>
                   <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-scroll">Article w. Scroll</button>                  
 
                 </div>
@@ -6330,24 +6080,6 @@ Cras justo odio
 <span class="nt">&lt;/div&gt;</span>
                 </code></pre></div>
 
-                <!--  Modal content for the above example -->
-
-
-<!-- <style>
-.scroll-y .modal-content {
-    top: 0;
-}
-
-.modal-fullscreen.scroll-y {
-    margin-left: -17px;
-    width: calc (100vw + 17px);
-}
-
-.modal-fullscreen .modal-body {
-    height: auto;
-}
-
-</style> -->
 
                 <div class="modal fade bs-example-modal-scroll" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg scroll-y modal-article">
@@ -6384,62 +6116,311 @@ Cras justo odio
                   </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
 
-                <div class="modal modal-fullscreen fade bs-example-modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
+                <div class="modal fade bs-example-modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-fullscreen">
                     <div class="modal-content">
 
-                      <div class="modal-header">
+                      <div class="modal-header text-center">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title" id="myLargeModalLabel">Fullscreen modal</h4>
+                        <h4 class="modal-title" id="myLargeModalLabel">FILTERS <small><a href="">reset all</a></small></h4>
                       </div>
-                      <div class="modal-body">
-                      	<section class="pt-5 mt-5">
-                      		<div class="container-fluid">
+                      <div class="modal-body">              
+                        <div class="container-fluid">
 
-                        <p>Our website uses cookies. Below, you will find further information on these cookies; what they are, what cookies we use, what our purpose is for using them, and how you go about blocking or deleting cookies.</p> 
-                        <p>With the exception of cookies that are strictly necessary to enable you to move around the website and use its features, we will only use cookies if you have allowed us to do so by checking the box “Yes, I accept your use of cookies”. Please be advised that if you do not allow us to use cookies, it may negatively affect your browsing experience.</p> 
-                        <h3>What is a cookie?</h3> 
-                        <p>Cookies are text files containing small amounts of information, which are downloaded to your device when you visit a website. Cookies are then sent back to the originating website on each subsequent visit, or to another website that recognises that cookie. Cookies are useful because they allow a website to recognise a user’s device.</p> 
-                        <p>One type of cookie will save a file permanently on your computer. It can thereafter be used to customise this website based on your choices and interests. Another common type of cookie is the “session cookie”. When you visit a website, session cookies are sent between your computer and the server to collect information. Session cookies are not saved after you close your internet browser. You can find more information about cookies at <a href="http://www.allaboutcookies.org/">www.allaboutcookies.org</a>.</p> 
-                        <h3>What do we use cookies for?</h3> 
-                        <p>We use cookies to enhance the functionality of our website. For example, cookies help authenticate the user if the user logs in to a secure area of the website, to determine what information is made available on a particular webpage. Also, login information can be stored in a cookie, so the user can enter and leave the website without having to re-enter the same authentication information over and over. Cookies are also used to help you save certain information on the website, such as favourite products etc. They are also used for collecting anonymous statistics about user behaviour to enable us to improve the website experience.</p> 
-                        <h3>Cookies used on our website</h3> 
-                        <p>We use the following categories of cookies on this website:</p> 
-                        <ul> 
-                         <li>Permanent cookies. Permanent cookies remain on the user's computer/device for a pre-defined period of time. Permanent cookies are used to collect identifying information about the user, such as browsing behaviour or user preferences for a specific website.</li> 
-                         <li>Session cookies. Session cookies are temporarily stored in your internet browser, and are erased when the browser is closed.</li> 
-                         <li>Third party cookies: Third party cookies allow third parties to download cookies to your device. They may be used to track your browsing history, or allow you to send a page from our website to your social media account such as Facebook or Twitter.</li> 
-                        </ul> 
-                        <p>For more information regarding what cookies we use please see our detailed cookie-list (below).&nbsp;</p> 
-                        <h3>How to block and/or delete cookies</h3> 
-                        <p>If you do not wish to accept cookies you can change your web browser settings to automatically block the storage of cookies or to inform you when a website wants to store cookies on your computer. Previously stored cookies can also be deleted through your web browser. More information can be found through your web browser’s support pages. If you use several different devices to access our website (computer, tablet or smartphone), you will have to change the browser settings on all devices.</p>
+                          <h4>Main Filters</h4>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" name="group6">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" checked="" name="group6">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>     
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label> 
+                              </div>              
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" name="group7">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>                 
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" disabled="" name="group7">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" name="group7">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" disabled="" name="group7">
+                                  <span></span>
+                                  Checked and Disabled
+                                </label>
+                              </div>
+                            </div>  
+                            <div class="col-sm-6">  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" name="group6">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" checked="" name="group6">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>    
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label> 
+                              </div>            
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" name="group7">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>                 
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" disabled="" name="group7">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" name="group7">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" disabled="" name="group7">
+                                  <span></span>
+                                  Checked and Disabled
+                                </label>
+                              </div>                                                          
+                            </div>
+                          </div>  
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" name="group6">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" checked="" name="group6">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>     
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label> 
+                              </div>              
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" name="group7">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>                 
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" disabled="" name="group7">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" name="group7">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" disabled="" name="group7">
+                                  <span></span>
+                                  Checked and Disabled
+                                </label>
+                              </div>
+                            </div>  
+                            <div class="col-sm-6">  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" name="group6">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" checked="" name="group6">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>    
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label> 
+                              </div>            
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" name="group7">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>                 
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" disabled="" name="group7">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" name="group7">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" disabled="" name="group7">
+                                  <span></span>
+                                  Checked and Disabled
+                                </label>
+                              </div>                                                          
+                            </div>
+                          </div>
+
+                            <style>
+
+                                 .modal-fullscreen .modal-content {
+                                    overflow: hidden;
+                                    -webkit-overflow-scrolling: touch;
+                                }
+
+                                @media (max-width: 991px) {
+                                .modal-fullscreen .modal-content {
+                                    top: 0px;
+                                    width: 100vw;
+                                    height: auto;
+                                  }
+                                }      
+
+                               .modal-fullscreen.modal-dialog {
+                                  position: fixed;
+                                  top: 0;
+                                  bottom: 0;
+                                  right: 0;
+                                  width: 100%;
+                                  min-height: 100%;
+                                  max-height: 100vh;
+                                  background-color: white; 
+                                }
+
+                                .modal.fade:not(.in) .modal-fullscreen.modal-dialog {
+                                    -webkit-transform: translate3d(0, 25%, 0);
+                                    transform: translate3d(0, 25%, 0);
+                                }
+
+                                .modal-fullscreen .modal-body {
+                                  overflow-x: hidden;  
+                                  overflow-y: scroll;
+                                  -webkit-overflow-scrolling: touch;          
+                                  height: calc(100vh - 110px);
+                                  padding: 0;            
+                                } 
+
+                               .modal-fullscreen .modal-footer {
+                                    width: 100%;
+                                    position: fixed;            
+                                    bottom: 0px;
+                                    text-align: left;
+                                    padding: 0;
+                                    background-color: white; 
+                                                 
+                                }    
+
+                            </style>  
+ 
+
+                        </div>
                       </div>
-                      	</section>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
-                      </div>                      
-                    </div><!-- /.modal-content -->
-                  </div><!-- /.modal-dialog -->
-                </div><!-- /.modal -->  
-
-
-                <div class="modal modal-fullscreen fade bs-example-modal-fullscreen-iframe" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title" id="myLargeModalLabel">Fullscreen modal</h4>
-                      </div>
-                      <div class="modal-body">
-
- 					<div style="overflow:hidden !important; -webkit-overflow-scrolling:touch !important;">
-                              <iframe src="https://traton.com" frameborder="0" style="overflow:scroll !important; -webkit-overflow-scrolling:touch !important;height:100%;width:100%;" height="100%" width="100%"></iframe>
-						</div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+                      <div class="modal-footer text-center">
+                        <button type="button" class="btn btn-lg btn-block btn-success" data-dismiss="modal" aria-hidden="true">Show 34 Items</button>
                       </div>                      
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
@@ -6506,7 +6487,7 @@ Cras justo odio
 
                 <h3>Modals for displaying agreements and other text based content</h3>
                 <p>A rendered modal with extra padding in header, body, and set of actions in an always visible footer. To get the extra padding, add <code> modal-article</code> next to the modal-dialog class. To get the internal scroll, add the <code>scroll-y</code> at the same place.</p>
-                <div class="bs-example bs-example-modal">
+                <div class="bs-example bs-example-modal scroll-y">
                 <div class="modal">
                   <div class="modal-dialog modal-lg scroll-y modal-article" style="top:0">
                     <div class="modal-content">
@@ -8111,7 +8092,10 @@ Cras justo odio
 
               <h3>Via JavaScript</h3>
               <p>Call the affix plugin via JavaScript:</p>
-              <div class="highlight"><pre><code class="js">  <span class="nx">$</span><span class="p">(</span><span class="s1">'#my-affix'</span><span class="p">).</span><span class="nx">affix</span><span class="p">({</span>
+
+              <div class="bd-clipboard"><button class="btn-clipboard">Copy</button></div>
+
+              <div class="highlight"><pre><code id="clipboard-test" class="js">  <span class="nx">$</span><span class="p">(</span><span class="s1">'#my-affix'</span><span class="p">).</span><span class="nx">affix</span><span class="p">({</span>
                 <span class="nx">offset</span><span class="o">:</span> <span class="p">{</span>
                 <span class="nx">top</span><span class="o">:</span> <span class="mi">100</span>
                 <span class="p">,</span> <span class="nx">bottom</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
@@ -8193,7 +8177,7 @@ Cras justo odio
             <ul class="nav bs-docs-sidenav">
 
               <li>
-                <a href="#top">Overview</a>
+                <a href="#js-overview">Overview</a>
                 <ul class="nav">
                   <li><a href="#js-individual-compiled">Individual or compiled</a></li>
                   <li><a href="#js-data-attrs">Data attributes</a></li>
@@ -8288,10 +8272,31 @@ Cras justo odio
   </div>
 </div>
 
-
 <div class="container portal-footer"></div> <!-- FOOTER -->
 
 <script src="/corporate-ui-docs/ux-lib.js"></script> 
+
+
+    <!-- 2. Include library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+
+    <!-- 3. Instantiate clipboard -->
+    <script>
+    var clipboard = new ClipboardJS('.btn-clipboard', {
+        target: function() {
+          console.log(this);
+            return document.querySelector('#clipboard-test');
+        }
+    });      
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
 
 <script>
 
@@ -8302,6 +8307,7 @@ $(function(){
     } else {
         $('.highlight').removeClass('hide');
     }
+
   });
 
   // $(".bs-docs-sidebar .nav > li > a").css("padding","0 15px");
@@ -8341,6 +8347,7 @@ span.photo-background {
     color: inherit;
   }
 
+
   strong {
     color: inherit;
   }
@@ -8373,58 +8380,7 @@ span.photo-background {
     font-size: 1.4rem;
     padding: 10px 20px 10px 10px;
     line-height: 2.2rem;
-  } 
-  
-  .highlight pre  {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-  } 
-
-  .highlight pre  {
-    white-space: nowrap;
-  }   
-
-  .highlight pre code {
-    white-space: pre;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .highlight pre::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 7px;
-    height: 6px;
-    background-color:transparent;
-  }
-
-  .highlight pre::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: rgba(0,0,0,.5);
-    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-    cursor: pointer;
-  }
-
-  .modal .modal-body  {
-    font-size: inherit;
-  }
-
-
-  .bs-docs-sidebar.affix {
-      position: fixed;
-      top: 210px;
-      margin-left: 30px;
-      z-index: 910;
-  }
-
-   .header-is-sticky .bs-docs-sidebar.affix {
-      top: 100px;
-  }
-
-  .bs-docs-sidebar .checkbox {
-      padding: 0px 15px;
-  } 
-    
+  }    
 
   .checkbox label {
     font-family: Scania Sans Semi Condensed;
@@ -8433,27 +8389,6 @@ span.photo-background {
     font-size: 1.4rem;
     font-weight: normal;
   }
-
-  .bs-docs-sidebar .nav > li > a:hover, .bs-docs-sidebar .nav > li > a:focus {
-    padding-left: 13px;
-    color: #041e42;
-    border-left: 2px solid #d6001c;
-  }
-
-  .bs-docs-sidebar .nav > li > a {
-      font-size: 14px;
-      font-weight: normal;
-      color: #999;
-      padding: 4px 15px;
-      text-transform: inherit;
-      font-family: 'Scania Sans Semi Condensed';
-  } 
-
-  .back-to-top {
-    margin-top: 8px;
-    margin-bottom: 8px;    
-    margin-left: 0;
-  }  
 
   .app article p.lead {
       font-size: 1.8rem;
@@ -8521,6 +8456,43 @@ span.photo-background {
         padding-left: 15px;
         text-align: left;
     }     
+}
+
+
+.bd-clipboard {
+  position: relative;
+  display: none;
+  float: right
+}
+
+.bd-clipboard+.highlight {
+  margin-top: 0
+}
+
+.btn-clipboard {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  z-index: 10;
+  display: block;
+  padding: .25rem .5rem;
+  font-size: 75%;
+  color: #818a91;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  border-radius: .25rem
+}
+
+.btn-clipboard:hover {
+  color: #fff;
+  background-color: #027de7
+}
+
+@media (min-width:768px) {
+  .bd-clipboard {
+    display: block
+  }
 }
 
 
