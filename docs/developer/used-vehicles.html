@@ -8,7 +8,7 @@
 
 	<title>Scania Used Vehicles</title>
 
-	<script src="https://d31jnweo1ynb8u.cloudfront.net/build/global/master/js/corporate-ui.js"></script>
+	<script src="https://static.scania.com/build/global/3.4.0/js/corporate-ui.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://d31jnweo1ynb8u.cloudfront.net/development/users/used-vehicles/css/used-vehicles.css">
 
 </head>
@@ -690,10 +690,13 @@
 
 </script>
 
-<link rel="import" href="https://d31jnweo1ynb8u.cloudfront.net/build/global/3.4.0-CF/components/cookie-message/cookie-message.html">
+<link rel="import" href="https://static.scania.com/build/global/3.4.0/components/cookie-message/cookie-message.html">
 
 <c-cookie-message name="cookieMessage" text="hideMessage" expire="2000" lang="en-gb"></c-cookie-message>
-
-
+<style>
+c-cookie-message a,
+c-cookie-message a:hover,
+c-cookie-message a:focus {color: inherit; font-weight: bold;}
+</style>
 </body>
 </html>
