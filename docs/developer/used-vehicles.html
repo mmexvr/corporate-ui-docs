@@ -628,7 +628,7 @@
 
                 <style>
 
-/*                    .modal-fullscreen .modal-content {
+                    .modal-fullscreen .modal-content {
                         overflow: hidden;
                         -webkit-overflow-scrolling: touch;
                     }
@@ -673,7 +673,7 @@
                         padding: 0;
                         background-color: white; 
                                      
-                    }  */
+                    }  
 
                 </style>  
 
@@ -697,6 +697,23 @@
 c-cookie-message a,
 c-cookie-message a:hover,
 c-cookie-message a:focus {color: inherit; font-weight: bold;}
+
+@media (max-width: 991px) {
+  c-cookie-message {
+    font-size: 1.4rem;
+    padding: 15px;
+    z-index: 9000;
+	}
+	c-cookie-message .text-cookie.c-cookie-message {
+	    width: 100%;
+	}	
+	c-cookie-message .close-cookie.c-cookie-message {
+	    margin: 3px 1px 15px 15px;
+	    display: inline-block;
+	}
+
+}	
+
 </style>
 </body>
 </html>
