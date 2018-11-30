@@ -464,6 +464,7 @@ a.trigger i {
 .nouislider-container {
     padding: 15px 0 45px;
     width: 30%;
+    margin-left: 10px;
 }
 
 .noUi-active .noUi-tooltip {
