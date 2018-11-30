@@ -426,7 +426,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 } 
 
 
-.modal-body {margin:0;padding:0;}
+.modal-fullscreen .modal-body {margin:0;padding:0;}
 
 
 .filterset {
