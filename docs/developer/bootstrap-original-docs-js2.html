@@ -5951,31 +5951,22 @@ Cras justo odio
               <h1 id="js-overview">Javascript</h1>
               <div class="bs-callout bs-callout-danger">
                 <h4>IMPORTANT NOTICE</h4>
-                <p>We have replaced the jQuery dependent bootstrap.js (Bootstrap Javascript Components) with the <a href="https://thednp.github.io/bootstrap.native/index.html" target="_blank">Bootstrap Native JavaScript library</a>, doing just about the same things as bootstrap.js. 
-              </div>
-
-
-    <div class="row">
-      <div id="container-content-column" class="col-sm-9" data-spy="scroll" data-target="#side-nav" data-offset="80">
-        <section id="use">
-          <h2>Read First</h2>
-          <p>Welcome to the demo page! Before you do anything, please make sure to check the <a href="https://github.com/thednp/bootstrap.native/wiki">Wiki pages</a>, as they give you a quick start with using the library and also provide a good set of valuable guides on how to get the best out of it.</p>
+                <p>We have replaced the jQuery dependent bootstrap.js (Bootstrap Javascript Components) with the <a href="https://thednp.github.io/bootstrap.native/index.html" target="_blank">Bootstrap Native JavaScript library</a>, doing just about the same things as bootstrap.js.</p>
           
-          <div class="list-group">
-            <a class="list-group-item" href="https://github.com/thednp/bootstrap.native/wiki/Acknowledgements" target="_blank>
-              <h4 class="list-group-item-heading">Acknowledgements</h4>
-              <p class="list-group-item-text">A quick note on some of the similarities and differences with the original jQuery plugins. Nothing to worry about, but still good to know all the tricks on how to maximize your workflow.</p>
-            </a>
-            <a class="list-group-item" href="https://github.com/thednp/bootstrap.native/wiki/FAQs" target="_blank">
-              <h4 class="list-group-item-heading">FAQs</h4>
-              <p class="list-group-item-text">A short list of frequent asked questions regarding the use of the library.</p>
-            </a>
-            <a class="list-group-item" href="https://github.com/thednp/bootstrap.native/wiki/About" target="_blank>
-              <h4 class="list-group-item-heading">About</h4>
-              <p class="list-group-item-text">Learn about the <code>bootstrap.native</code> project inception, goals and motivations.</p>
-            </a>
-          </div>
-        </section>
+            <div class="list-group">
+              <a class="list-group-item" href="https://github.com/thednp/bootstrap.native/wiki/Acknowledgements" target="_blank>
+                <h4 class="list-group-item-heading">Acknowledgements</h4>
+                <p class="list-group-item-text">A quick note on some of the similarities and differences with the original jQuery plugins. Nothing to worry about, but still good to know all the tricks on how to maximize your workflow.</p>
+              </a>
+              <a class="list-group-item" href="https://github.com/thednp/bootstrap.native/wiki/FAQs" target="_blank">
+                <h4 class="list-group-item-heading">FAQs</h4>
+                <p class="list-group-item-text">A short list of frequent asked questions regarding the use of the library.</p>
+              </a>
+              <a class="list-group-item" href="https://github.com/thednp/bootstrap.native/wiki/About" target="_blank>
+                <h4 class="list-group-item-heading">About</h4>
+                <p class="list-group-item-text">Learn about the <code>bootstrap.native</code> project inception, goals and motivations.</p>
+              </a>
+            </div>
 
           <section id="componentModal">
             <h2>Modal</h2>
@@ -6282,7 +6273,7 @@ myModal<span class="token punctuation">.</span><span class="token function">addE
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-success" data-toggle="modal" data-target="#anotherModal">Next</button> 
-                      <button type="button" class="btn btn-default" data-dismiss="modal"><i class="glyphicon glyphicon-remove"></i> Close</button> 
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
                     </div> 
                   </div>
                 </div>
@@ -6301,7 +6292,7 @@ myModal<span class="token punctuation">.</span><span class="token function">addE
                     </div>
                     <div class="modal-footer"> 
                       <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-primary">Back</button>
-                      <button type="button" class="btn btn-default" data-dismiss="modal"><i class="glyphicon glyphicon-remove"></i> Close</button> 
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
                     </div> 
                   </div>
                 </div>
@@ -6406,7 +6397,7 @@ btnModalNotTrigger<span class="token punctuation">.</span><span class="token fun
 
               <div id="myModalJS" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalJSLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                  <div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title" id="myModalJSLabel">Modal title</h4></div><div class="modal-body"><p>This is a damn awesome modal content template configured via Javascript, using the specific modal events like <code>show.bs.modal</code>, so please open your console and check the log entries.</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button><button type="button" class="btn btn-primary">Save changes</button></div></div>
+                  <div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title" id="myModalJSLabel">Modal title</h4></div><div class="modal-body"><p>This is a damn awesome modal content template configured via Javascript, using the specific modal events like <code>show.bs.modal</code>, so please open your console and check the log entries.</p></div><div class="modal-footer"><button type="button" class="btn btn-primary">Save changes</button><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div>
                 </div>
               </div>
 
@@ -6464,7 +6455,7 @@ changeModal2<span class="token punctuation">.</span><span class="token function"
                     <div class="modal-footer"> 
                       <button id="changeModal1" type="button" class="btn btn-primary hidden">Set content 1</button>
                       <button id="changeModal2" type="button" class="btn btn-primary">Set content 2</button>
-                      <button type="button" class="btn btn-default" data-dismiss="modal"><i class="glyphicon glyphicon-remove"></i> Close</button> 
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
                     </div> 
                   </div>
                 </div>
@@ -8806,15 +8797,9 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
 
             </section>
           </section>
-
-        </section>
       </div>
-
     </div>
 
-
-            </article>
-        </div>
 
 
         <div class="col-md-3">
@@ -8944,10 +8929,6 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
             </div>              
     </div>
   </div>
-</div>
-
-
-</div>
 </div>
 
 
