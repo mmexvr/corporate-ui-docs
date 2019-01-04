@@ -5940,6 +5940,37 @@ Cras justo odio
         </div>
       </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      <!-- JAVASCRIPT TAB CONTENT STARTS HERE -->
 
       <div id="bootstrap-javascript-section" class="tab-pane fade">
@@ -5969,8 +6000,10 @@ Cras justo odio
                 </a>
               </div>
 
-          <section id="componentModal">
-            <h2>Modal</h2>
+      <section class="bs-docs-section panel-x">
+      <div class="page-header">
+            <h2 id="componentModal">Modal</h2>
+          </div>  
             <p>The <b>Modal</b> component works exactly as the original in most regards, with minor exceptions on options, events and public methods. It provides both an initialization option and a public method to write directly into your modal content.</p>
             <p>In addition to adapting the spacing (padding) of the <code>&lt;body&gt;</code> elements like <code>&lt;nav class="navbar-fixed-top"&gt;</code> are also adapted in the same manner to get the smoothest possible transition. Like all components of the library, the component has the ability to provide access to the initialization even if your modal is setup via DATA API.</p>
             <section id="modalOptions">
@@ -6244,7 +6277,7 @@ myModal<span class="token punctuation">.</span><span class="token function">addE
               <h5>Using the DATA API</h5>
               <p>The first example is a modal with static content initialized via DATA API, exactly as described in the above <a href="#modalDataAPI">Use via DATA API</a> section, and showcasing the 
                 ability to show another modal from a modal currently visible.</p>
-              <p><button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-heart"></i> Launch simple modal</button></p>
+              <p><button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal">Launch simple modal</button></p>
               <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -6464,8 +6497,10 @@ changeModal2<span class="token punctuation">.</span><span class="token function"
             </section>
           </section>
 
-          <section id="componentDropdown">
-            <h2>Dropdown</h2>
+          <section class="bs-docs-section panel-x">
+      <div class="page-header">
+              <h2 id="componentDropdown">Dropdown</h2>
+          </div>
             <p>The <b>Dropdown</b> component works like the original jQuery plugin and offers an additional option and an ability to handle click event in a way that you can create nested dropdowns and other cool stuff with ease.</p>
             <p>Starting with version 2.0.20 the component supports some more robust accessibility features:</p>
             <ul>
@@ -6767,8 +6802,10 @@ makeMeDropdown<span class="token punctuation">.</span><span class="token functio
             </section>
           </section>
 
-          <section id="componentScrollspy">
-            <h2>Scrollspy</h2>
+          <section class="bs-docs-section panel-x">
+      <div class="page-header">
+              <h2 id="componentScrollspy">Scrollspy</h2>
+          </div>
             <p>The <b>ScrollSpy</b> component inherits some of the <a href="http://getbootstrap.com/javascript/#scrollspy-usage" target="_blank">layout and other requirements</a> from the original jQuery plugin in some cases, while in other cases a special markup is required. The component offers public methods, the specific original event, and can be used with JavaScript as well as via DATA API.</p>
             <p>The component will initialize for each element with <code>data-spy="scroll"</code> attribute, but will not work if the above requirements are not met or the anchors don't reference the containers accordingly.</p>
             
@@ -7040,8 +7077,10 @@ myScrollSpyInit<span class="token punctuation">.</span><span class="token functi
 
           </section>
 
-          <section id="componentTab">
-            <h2>Tab</h2>
+          <section class="bs-docs-section panel-x">
+      <div class="page-header">
+              <h2 id="componentTab">Tab</h2>
+          </div>
             <p>The <b>Tab</b> component covers all original jQuery plugin functionality and even comes with new features such as being able to work with any kind of navigation components in Bootstrap, or providing support for height animation as you can see in the example below.</p>
             <p>The component can initialize both via JavaScript and the DATA API, covers the original events and exposes a specific public method, but in contrast to the original plugin it offers some options for you to play with.</p>
 
@@ -7248,8 +7287,10 @@ myLastTab<span class="token punctuation">.</span><span class="token function">ad
 
           </section>
 
-          <section id="componentTooltip">
-            <h2>Tooltip</h2>
+          <section class="bs-docs-section panel-x">
+      <div class="page-header">
+              <h2 id="componentTooltip">Tooltip</h2>
+          </div>
             <p>Unlike the original jQuery plugin, our <b>Tooltip</b> component will initialize right away all elements with the <code>data-toggle="tooltip"</code> attribute. Additionally the component can do automatic placement without any options required. At half the size of the original plugin, our component here covers most needed options, methods and original events.</p>
 
             <section id="tooltipOptions">
@@ -7447,8 +7488,10 @@ myLinkWithTooltip<span class="token punctuation">.</span><span class="token func
             
           </section>
 
-          <section id="componentPopover">
-            <h2>Popover</h2>
+          <section class="bs-docs-section panel-x">
+      <div class="page-header">
+              <h2 id="componentPopover">Popover</h2>
+          </div>
             <p>Similar to the above, the <b>Popover</b> component will initialize all elements with the <code>data-toggle="popover"</code> attribute. Unlike the original jQuery plugin, this component does not require 
               the <b>Tooltip</b> component and works just about the same as the above except that <b>Popover</b> has the ability to work with templates and trigger options.</p>
 
@@ -7694,8 +7737,10 @@ myLinkWithPopover<span class="token punctuation">.</span><span class="token func
             </section>
           </section>
 
-          <section id="componentAlert">
-            <h2>Alert</h2>
+          <section class="bs-docs-section panel-x">
+      <div class="page-header">
+              <h2 id="componentAlert">Alert</h2>
+          </div>
             <p>The <b>Alert</b> component covers the specific original event and public method, but does not provide any option. Still, the component will initialize both via JavaScript or the DATA API. In 
               contrast with the original plugin is the fact that the component does not require the class <code>alert-dismissible</code> in order to work.</p>
 
@@ -7812,8 +7857,10 @@ myAlertInit<span class="token punctuation">.</span><span class="token function">
             </section>
           </section>
 
-          <section id="componentButton">
-            <h2>Button</h2>
+          <section class="bs-docs-section panel-x">
+      <div class="page-header">
+              <h2 id="componentButton">Button</h2>
+          </div>
             <p>The <b>Button</b> component provides text/stateful switch and toggle checkboxes and radio buttons for button groups. The component provides a custom event for the button groups' toggling, not covered by the original jQuery Plugin.</p>
             <p><b>Button</b> doesn't cover <a href="http://getbootstrap.com/javascript/#buttons-single-toggle" target="_blank">single toggle</a> feature. The supported toggle feature could very much fill the same purpose.</p>
             <section id="buttonOptions">
@@ -8036,8 +8083,10 @@ myCheckboxesButtonGroup<span class="token punctuation">.</span><span class="toke
             </section>
           </section>
 
-          <section id="componentCollapse">
-            <h2>Collapse</h2>
+          <section class="bs-docs-section panel-x">
+      <div class="page-header">
+              <h2 id="componentCollapse">Collapse</h2>
+          </div>
             <p>The <b>Collapse</b> component covers the original events and methods of the jQuery plugin counterpart. This component understands there is a triggering element that finds its target collapsible element via the <code>data-target="#collapse-id"</code> attribute or the <code>href="#collapse-id"</code> attribute if it's a link.</p> 
           
             <section id="collapseOptions">
@@ -8320,8 +8369,10 @@ myCollapseExample<span class="token punctuation">.</span><span class="token func
             </section>
           </section>
 
-          <section id="componentCarousel">
-            <h2>Carousel</h2>
+          <section class="bs-docs-section panel-x">
+      <div class="page-header">
+              <h2 id="componentCarousel">Carousel</h2>
+          </div>
             <p>The <b>Carousel</b> component covers the original events, along with a set of useful options and public methods. In addition it also provides a solid DATA API, it adds a <code>paused</code> class to the targeted element when in paused state, and a solid event handling implementation.</p>
 
             <section id="carouselOptions">
@@ -8598,8 +8649,10 @@ mainSlider<span class="token punctuation">.</span><span class="token function">a
 
           </section>
 
-          <section id="componentAffix">
-            <h2>Affix</h2>
+          <section class="bs-docs-section panel-x">
+      <div class="page-header">
+              <h2 id="componentAffix">Affix</h2>
+          </div>
             <p>The <b>Affix</b> component has it's own options and public method, but covers all the original events of the jQuery plugin. It inherits the same basic functionality as well as the CSS requirements to make it all work properly.</p>
             
             <section id="affixOptions">
@@ -8795,15 +8848,12 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
             <section id="affixExamples">
               <h4>Example</h4>
               <p>We don't have a working example for this component in this section, due to the complexity and requirements, however the navigation on the right side of this page is a good example, it covers initialization via DATA API, the required styling and the original events. </p>
-
             </section>
           </section>
       </div>
-    </div>
+    </article>
 
-
-
-        <div class="col-md-3">
+      <div class="col-md-3">
             <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
               <ul class="nav bs-docs-sidenav corporate-ui-javascript-overview">
               <li>
@@ -8931,6 +8981,44 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div class="container portal-footer"></div> <!-- FOOTER -->
