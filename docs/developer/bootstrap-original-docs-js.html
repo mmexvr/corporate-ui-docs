@@ -5985,6 +5985,632 @@ Cras justo odio
             <h2 id="componentModal">Modal</h2>
           </div>  
             <p>The <b>Modal</b> component works exactly as the original in most regards, with minor exceptions on options, events and public methods. It provides both an initialization option and a public method to write directly into your modal content.</p>
+
+
+
+
+
+                <h3>Static example</h3>
+                <p>A rendered modal with header, body, and set of actions in the footer.</p>
+                <div class="bs-example bs-example-modal">
+                  <div class="modal">
+                    <div class="modal-dialog">
+                      <div class="modal-content" style="top:0">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                          <h4 class="modal-title">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary">Save changes</button>                          
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
+                </div><!-- /example -->
+                <div class="highlight"><pre><code class="html">
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Modal title<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>One fine body<span class="ni">&amp;hellip;</span><span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Save changes<span class="nt">&lt;/button&gt;</span>        
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-content --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-dialog --&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal --&gt;</span>
+                </code></pre></div>
+
+
+                <h3>Live demo</h3>
+                <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
+                <!-- sample modal content -->
+                <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>Modal Heading
+                      </div>
+                      <div class="modal-body">
+                        <h4>Text in a modal-lg</h4>
+                        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+                        <h4>Popover in a modal</h4>
+                        <p>This <button style="margin:-5px 0 0 0" role="button" data-toggle="popover" class="btn btn-default" data-trigger="click" data-content="And here's some amazing content. It's very engaging. right?" data-title="A Title">button</button> should trigger a popover on click.</p>
+
+                        <h4>Tooltips in a modal</h4>
+                        <p><button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" data-original-title="<b>Tooltip on left</b><br>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">Left</button>
+                        <button id="tooltipWithEvents" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" data-original-title="<b>Tooltip on top</b><br>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">Top</button>
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" data-original-title="<b>Tooltip on bottom</b><br>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">Bottom</button>
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" data-original-title="<b>Tooltip on right</b><br>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">Right</button></p>
+                         
+                        <hr>
+
+                        <h4>Overflowing text to show scroll behavior</h4>
+                        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Save changes</button>                        
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="bs-example" style="padding-bottom: 24px;">
+                  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    Launch demo modal
+                  </button>
+                </div><!-- /example -->
+                <div class="highlight"><pre><code class="html">
+<span class="c">&lt;!-- Button trigger modal --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">"#myModal"</span><span class="nt">&gt;</span>Launch demo modal<span class="nt">&lt;/button&gt;</span>
+
+<span class="c">&lt;!-- Modal --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">id=</span><span class="s">"myModal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">aria-labelledby=</span><span class="s">"myModalLabel"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span> <span class="na">id=</span><span class="s">"myModalLabel"</span><span class="nt">&gt;</span>Modal title<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+      ...
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Save changes<span class="nt">&lt;/button&gt;</span>      
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+                </code></pre></div>
+
+
+                <div class="bs-callout bs-callout-warning">
+                  <h4>Make modals accessible</h4>
+                  <p>Be sure to add <code>role="dialog"</code> to <code>.modal</code>, <code>aria-labelledby="myModalLabel"</code> attribute to reference the modal title, and <code>aria-hidden="true"</code> to tell assistive technologies to skip the modal's DOM elements.</p>
+                  <p>Additionally, you may give a description of your modal dialog with <code>aria-describedby</code> on <code>.modal</code>.</p>
+                </div>
+
+                <h2 id="modals-sizes">Optional sizes</h2>
+                <p>Modals have a few optional sizes, available via modifier classes to be placed on a <code>.modal-dialog</code>. Note that when the browsers viewport is narrowed down below 992px, they (small to xxl) will basically be displayd the same.</p>
+                <div class="bs-example">
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>                  
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-xl">XL modal</button>
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-xxl">XXL modal</button>
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-fullscreen">Fullscreen modal</button>
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-scroll">Article w. Scroll</button>                  
+
+                </div>
+                <div class="highlight"><pre><code class="html">
+<span class="c">&lt;!-- Large modal --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">".bs-example-modal-lg"</span><span class="nt">&gt;</span>Large modal<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade bs-example-modal-lg"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">aria-labelledby=</span><span class="s">"myLargeModalLabel"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-lg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+    ...
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Small modal --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">".bs-example-modal-sm"</span><span class="nt">&gt;</span>Small modal<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade bs-example-modal-sm"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">aria-labelledby=</span><span class="s">"mySmallModalLabel"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-sm"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      ...
+      <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+                </code></pre></div>
+
+
+                <div class="modal fade bs-example-modal-scroll" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg scroll-y modal-article">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel">Modal for text based articles</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>Our website uses cookies. Below, you will find further information on these cookies; what they are, what cookies we use, what our purpose is for using them, and how you go about blocking or deleting cookies.</p> 
+                        <p>With the exception of cookies that are strictly necessary to enable you to move around the website and use its features, we will only use cookies if you have allowed us to do so by checking the box “Yes, I accept your use of cookies”. Please be advised that if you do not allow us to use cookies, it may negatively affect your browsing experience.</p> 
+                        <h3>What is a cookie?</h3> 
+                        <p>Cookies are text files containing small amounts of information, which are downloaded to your device when you visit a website. Cookies are then sent back to the originating website on each subsequent visit, or to another website that recognises that cookie. Cookies are useful because they allow a website to recognise a user’s device.</p> 
+                        <p>One type of cookie will save a file permanently on your computer. It can thereafter be used to customise this website based on your choices and interests. Another common type of cookie is the “session cookie”. When you visit a website, session cookies are sent between your computer and the server to collect information. Session cookies are not saved after you close your internet browser. You can find more information about cookies at <a href="http://www.allaboutcookies.org/">www.allaboutcookies.org</a>.</p> 
+                        <h3>What do we use cookies for?</h3> 
+                        <p>We use cookies to enhance the functionality of our website. For example, cookies help authenticate the user if the user logs in to a secure area of the website, to determine what information is made available on a particular webpage. Also, login information can be stored in a cookie, so the user can enter and leave the website without having to re-enter the same authentication information over and over. Cookies are also used to help you save certain information on the website, such as favourite products etc. They are also used for collecting anonymous statistics about user behaviour to enable us to improve the website experience.</p> 
+                        <h3>Cookies used on our website</h3> 
+                        <p>We use the following categories of cookies on this website:</p> 
+                        <ul> 
+                         <li>Permanent cookies. Permanent cookies remain on the user's computer/device for a pre-defined period of time. Permanent cookies are used to collect identifying information about the user, such as browsing behaviour or user preferences for a specific website.</li> 
+                         <li>Session cookies. Session cookies are temporarily stored in your internet browser, and are erased when the browser is closed.</li> 
+                         <li>Third party cookies: Third party cookies allow third parties to download cookies to your device. They may be used to track your browsing history, or allow you to send a page from our website to your social media account such as Facebook or Twitter.</li> 
+                        </ul> 
+                        <p>For more information regarding what cookies we use please see our detailed cookie-list (below).&nbsp;</p> 
+                        <h3>How to block and/or delete cookies</h3> 
+                        <p>If you do not wish to accept cookies you can change your web browser settings to automatically block the storage of cookies or to inform you when a website wants to store cookies on your computer. Previously stored cookies can also be deleted through your web browser. More information can be found through your web browser’s support pages. If you use several different devices to access our website (computer, tablet or smartphone), you will have to change the browser settings on all devices.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">I Accept</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+                      </div>  
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="modal fade bs-example-modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+
+                      <div class="modal-header text-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel">FILTERS <small><a href="">reset all</a></small></h4>
+                      </div>
+                      <div class="modal-body">              
+                        <div class="container-fluid">
+
+                          <h4>Main Filters</h4>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" name="group6">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" checked="" name="group6">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>     
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label> 
+                              </div>              
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" name="group7">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>                 
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" disabled="" name="group7">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" name="group7">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" disabled="" name="group7">
+                                  <span></span>
+                                  Checked and Disabled
+                                </label>
+                              </div>
+                            </div>  
+                            <div class="col-sm-6">  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" name="group6">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" checked="" name="group6">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>    
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label> 
+                              </div>            
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" name="group7">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>                 
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" disabled="" name="group7">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" name="group7">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" disabled="" name="group7">
+                                  <span></span>
+                                  Checked and Disabled
+                                </label>
+                              </div>                                                          
+                            </div>
+                          </div>  
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" name="group6">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" checked="" name="group6">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>     
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label> 
+                              </div>              
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" name="group7">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>                 
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" disabled="" name="group7">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" name="group7">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" disabled="" name="group7">
+                                  <span></span>
+                                  Checked and Disabled
+                                </label>
+                              </div>
+                            </div>  
+                            <div class="col-sm-6">  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" name="group6">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" checked="" name="group6">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>  
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>    
+                              <div class="radio">
+                                <label class="radio">
+                                  <input type="radio" disabled="" name="group6">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label> 
+                              </div>            
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" name="group7">
+                                  <span></span>
+                                  Checked
+                                </label>
+                              </div>                 
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" disabled="" name="group7">
+                                  <span></span>
+                                  Unchecked and Disabled
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" name="group7">
+                                  <span></span>
+                                  Unchecked
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" checked="" disabled="" name="group7">
+                                  <span></span>
+                                  Checked and Disabled
+                                </label>
+                              </div>                                                          
+                            </div>
+                          </div>
+
+                            <style>
+
+                                 .modal-fullscreen .modal-content {
+                                    overflow: hidden;
+                                    -webkit-overflow-scrolling: touch;
+                                }
+
+                                @media (max-width: 991px) {
+                                .modal-fullscreen .modal-content {
+                                    top: 0px;
+                                    width: 100vw;
+                                    height: auto;
+                                  }
+                                }      
+
+                               .modal-fullscreen.modal-dialog {
+                                  position: fixed;
+                                  top: 0;
+                                  bottom: 0;
+                                  right: 0;
+                                  width: 100%;
+                                  min-height: 100%;
+                                  max-height: 100vh;
+                                  background-color: white; 
+                                }
+
+                                .modal.fade:not(.in) .modal-fullscreen.modal-dialog {
+                                    -webkit-transform: translate3d(0, 25%, 0);
+                                    transform: translate3d(0, 25%, 0);
+                                }
+
+                                .modal-fullscreen .modal-body {
+                                  overflow-x: hidden;  
+                                  overflow-y: scroll;
+                                  -webkit-overflow-scrolling: touch;          
+                                  height: calc(100vh - 110px);
+                                  padding: 0;            
+                                } 
+
+                               .modal-fullscreen .modal-footer {
+                                    width: 100%;
+                                    position: fixed;            
+                                    bottom: 0px;
+                                    text-align: left;
+                                    padding: 0;
+                                    background-color: white; 
+                                                 
+                                }    
+
+                            </style>  
+ 
+
+                        </div>
+                      </div>
+                      <div class="modal-footer text-center">
+                        <button type="button" class="btn btn-lg btn-block btn-success" data-dismiss="modal" aria-hidden="true">Show 34 Items</button>
+                      </div>                      
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->                
+
+                <div class="modal fade bs-example-modal-xxl" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xxl">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel">XXL modal</h4>
+                      </div>
+                      <div class="modal-body">
+    ...
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="modal fade bs-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel">Extra large modal</h4>
+                      </div>
+                      <div class="modal-body">
+    ...
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+                      </div>
+                      <div class="modal-body">
+    ...
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="mySmallModalLabel">Small modal</h4>
+                      </div>
+                      <div class="modal-body">
+                      ...
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <h3>Modals for displaying agreements and other text based content</h3>
+                <p>A rendered modal with extra padding in header, body, and set of actions in an always visible footer. To get the extra padding, add <code> modal-article</code> next to the modal-dialog class. To get the internal scroll, add the <code>scroll-y</code> at the same place.</p>
+                <div class="bs-example bs-example-modal scroll-y">
+                <div class="modal">
+                  <div class="modal-dialog modal-lg scroll-y modal-article" style="top:0">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Cookie Agreement</h4>
+                      </div>
+                      <div class="modal-body" style="max-height: 260px;">
+                        <p>Our website uses cookies. Below, you will find further information on these cookies; what they are, what cookies we use, what our purpose is for using them, and how you go about blocking or deleting cookies.</p> 
+                        <p>With the exception of cookies that are strictly necessary to enable you to move around the website and use its features, we will only use cookies if you have allowed us to do so by checking the box “Yes, I accept your use of cookies”. Please be advised that if you do not allow us to use cookies, it may negatively affect your browsing experience.</p> 
+                        <h3>What is a cookie?</h3> 
+                        <p>Cookies are text files containing small amounts of information, which are downloaded to your device when you visit a website. Cookies are then sent back to the originating website on each subsequent visit, or to another website that recognises that cookie. Cookies are useful because they allow a website to recognise a user’s device.</p> 
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">I agree</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+                      </div>  
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                </div><!-- /example -->
+                <div class="highlight"><pre><code class="html">
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-lg scroll-y modal-article"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Cookie Agreement or Article<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Here goes your contnen<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-success"</span><span class="nt">&gt;</span>I agree<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/button&gt;</span>
+
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-content --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-dialog --&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal --&gt;</span>
+                </code></pre></div>
+
+
+
+
+                <h2 id="modals-usage">Usage</h2>
+                <p>The modal plugin toggles your hidden content on demand, via data attributes or JavaScript. It also adds <code>.modal-open</code> to the <code>&lt;body&gt;</code> to override default scrolling behavior and generates a <code>.modal-backdrop</code> to provide a click area for dismissing shown modals when clicking outside the modal.</p>
+
+
+
+
+
+
+
+
+            
             <p>In addition to adapting the spacing (padding) of the <code>&lt;body&gt;</code> elements like <code>&lt;nav class="navbar-fixed-top"&gt;</code> are also adapted in the same manner to get the smoothest possible transition. Like all components of the library, the component has the ability to provide access to the initialization even if your modal is setup via DATA API.</p>
             <section id="modalOptions">
               <h4>Options</h4>
