@@ -5977,10 +5977,8 @@ Cras justo odio
           </div>
         </section>
 
-        <section id="components">
-          <h2>Components</h2>
           <section id="componentModal">
-            <h3>Modal</h3>
+            <h2>Modal</h2>
             <p>The <b>Modal</b> component works exactly as the original in most regards, with minor exceptions on options, events and public methods. It provides both an initialization option and a public method to write directly into your modal content.</p>
             <p>In addition to adapting the spacing (padding) of the <code>&lt;body&gt;</code> elements like <code>&lt;nav class="navbar-fixed-top"&gt;</code> are also adapted in the same manner to get the smoothest possible transition. Like all components of the library, the component has the ability to provide access to the initialization even if your modal is setup via DATA API.</p>
             <section id="modalOptions">
@@ -6475,7 +6473,7 @@ changeModal2<span class="token punctuation">.</span><span class="token function"
           </section>
 
           <section id="componentDropdown">
-            <h3>Dropdown</h3>
+            <h2>Dropdown</h2>
             <p>The <b>Dropdown</b> component works like the original jQuery plugin and offers an additional option and an ability to handle click event in a way that you can create nested dropdowns and other cool stuff with ease.</p>
             <p>Starting with version 2.0.20 the component supports some more robust accessibility features:</p>
             <ul>
@@ -6778,7 +6776,7 @@ makeMeDropdown<span class="token punctuation">.</span><span class="token functio
           </section>
 
           <section id="componentScrollspy">
-            <h3>Scrollspy</h3>
+            <h2>Scrollspy</h2>
             <p>The <b>ScrollSpy</b> component inherits some of the <a href="http://getbootstrap.com/javascript/#scrollspy-usage" target="_blank">layout and other requirements</a> from the original jQuery plugin in some cases, while in other cases a special markup is required. The component offers public methods, the specific original event, and can be used with JavaScript as well as via DATA API.</p>
             <p>The component will initialize for each element with <code>data-spy="scroll"</code> attribute, but will not work if the above requirements are not met or the anchors don't reference the containers accordingly.</p>
             
@@ -6874,7 +6872,7 @@ makeMeDropdown<span class="token punctuation">.</span><span class="token functio
 
 <span class="token comment">&lt;!-- we need a target, any of the below elements with an ID will do --&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-example<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> <span class="token comment">&lt;!-- we can also target it's parent as well --&gt;</span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-example<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav nav-stacked<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> <span class="token comment">&lt;!-- this is our element's target --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-example<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> <span class="token comment">&lt;!-- this is our element's target --&gt;</span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#one<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>One<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#two<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Two<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#three<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Three<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
@@ -6918,11 +6916,11 @@ makeMeDropdown<span class="token punctuation">.</span><span class="token functio
 
 <span class="token comment">&lt;!-- we need a target, any of the below elements with an ID will do --&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-example<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> <span class="token comment">&lt;!-- we can also target it's parent as well --&gt;</span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-example<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav nav-stacked<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> <span class="token comment">&lt;!-- this is our element's target --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-example<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> <span class="token comment">&lt;!-- this is our element's target --&gt;</span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#one<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>One<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#two<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Two<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav nav-stacked<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#twoone<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Two One<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#twotwo<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Two Two<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
@@ -7051,7 +7049,7 @@ myScrollSpyInit<span class="token punctuation">.</span><span class="token functi
           </section>
 
           <section id="componentTab">
-            <h3>Tab</h3>
+            <h2>Tab</h2>
             <p>The <b>Tab</b> component covers all original jQuery plugin functionality and even comes with new features such as being able to work with any kind of navigation components in Bootstrap, or providing support for height animation as you can see in the example below.</p>
             <p>The component can initialize both via JavaScript and the DATA API, covers the original events and exposes a specific public method, but in contrast to the original plugin it offers some options for you to play with.</p>
 
@@ -7259,7 +7257,7 @@ myLastTab<span class="token punctuation">.</span><span class="token function">ad
           </section>
 
           <section id="componentTooltip">
-            <h3>Tooltip</h3>
+            <h2>Tooltip</h2>
             <p>Unlike the original jQuery plugin, our <b>Tooltip</b> component will initialize right away all elements with the <code>data-toggle="tooltip"</code> attribute. Additionally the component can do automatic placement without any options required. At half the size of the original plugin, our component here covers most needed options, methods and original events.</p>
 
             <section id="tooltipOptions">
@@ -7458,7 +7456,7 @@ myLinkWithTooltip<span class="token punctuation">.</span><span class="token func
           </section>
 
           <section id="componentPopover">
-            <h3>Popover</h3>
+            <h2>Popover</h2>
             <p>Similar to the above, the <b>Popover</b> component will initialize all elements with the <code>data-toggle="popover"</code> attribute. Unlike the original jQuery plugin, this component does not require 
               the <b>Tooltip</b> component and works just about the same as the above except that <b>Popover</b> has the ability to work with templates and trigger options.</p>
 
@@ -7705,7 +7703,7 @@ myLinkWithPopover<span class="token punctuation">.</span><span class="token func
           </section>
 
           <section id="componentAlert">
-            <h3>Alert</h3>
+            <h2>Alert</h2>
             <p>The <b>Alert</b> component covers the specific original event and public method, but does not provide any option. Still, the component will initialize both via JavaScript or the DATA API. In 
               contrast with the original plugin is the fact that the component does not require the class <code>alert-dismissible</code> in order to work.</p>
 
@@ -7823,7 +7821,7 @@ myAlertInit<span class="token punctuation">.</span><span class="token function">
           </section>
 
           <section id="componentButton">
-            <h3>Button</h3>
+            <h2>Button</h2>
             <p>The <b>Button</b> component provides text/stateful switch and toggle checkboxes and radio buttons for button groups. The component provides a custom event for the button groups' toggling, not covered by the original jQuery Plugin.</p>
             <p><b>Button</b> doesn't cover <a href="http://getbootstrap.com/javascript/#buttons-single-toggle" target="_blank">single toggle</a> feature. The supported toggle feature could very much fill the same purpose.</p>
             <section id="buttonOptions">
@@ -8047,7 +8045,7 @@ myCheckboxesButtonGroup<span class="token punctuation">.</span><span class="toke
           </section>
 
           <section id="componentCollapse">
-            <h3>Collapse</h3>
+            <h2>Collapse</h2>
             <p>The <b>Collapse</b> component covers the original events and methods of the jQuery plugin counterpart. This component understands there is a triggering element that finds its target collapsible element via the <code>data-target="#collapse-id"</code> attribute or the <code>href="#collapse-id"</code> attribute if it's a link.</p> 
           
             <section id="collapseOptions">
@@ -8331,7 +8329,7 @@ myCollapseExample<span class="token punctuation">.</span><span class="token func
           </section>
 
           <section id="componentCarousel">
-            <h3>Carousel</h3>
+            <h2>Carousel</h2>
             <p>The <b>Carousel</b> component covers the original events, along with a set of useful options and public methods. In addition it also provides a solid DATA API, it adds a <code>paused</code> class to the targeted element when in paused state, and a solid event handling implementation.</p>
 
             <section id="carouselOptions">
@@ -8571,19 +8569,19 @@ mainSlider<span class="token punctuation">.</span><span class="token function">a
                     <div class="item active">
                       <img src="https://unsplash.it/837/300?image=0" alt="">
                       <div class="carousel-caption">
-                      <h3>This is another carousel</h3>
+                      <h2>This is another carousel</h2>
                       </div>
                     </div>
                     <div class="item">
                       <img src="https://unsplash.it/837/300?image=10" alt="">
                       <div class="carousel-caption">
-                      <h3>This is a caption</h3>
+                      <h2>This is a caption</h2>
                       </div>
                     </div>
                     <div class="item">
                       <img src="https://unsplash.it/837/300?image=210" alt="">
                       <div class="carousel-caption">
-                      <h3>This is another caption</h3>
+                      <h2>This is another caption</h2>
                       </div>
                     </div>
                   </div>
@@ -8609,7 +8607,7 @@ mainSlider<span class="token punctuation">.</span><span class="token function">a
           </section>
 
           <section id="componentAffix">
-            <h3>Affix</h3>
+            <h2>Affix</h2>
             <p>The <b>Affix</b> component has it's own options and public method, but covers all the original events of the jQuery plugin. It inherits the same basic functionality as well as the CSS requirements to make it all work properly.</p>
             
             <section id="affixOptions">
@@ -8723,7 +8721,7 @@ mainSlider<span class="token punctuation">.</span><span class="token function">a
               <h5>Via DATA API</h5>
               <p>Alright, we put the styling out of the way, we'll have a look at our example here on this very page. So we configure an element to be pinned to top targeting a certain element's position and a bottom offset of around 120px.</p>
 
-<pre class=" language-markup"><code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myAffix<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav nav-stacked<span class="token punctuation">"</span></span> <span class="token attr-name">data-spy</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>affix<span class="token punctuation">"</span></span> <span class="token attr-name">data-target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#use<span class="token punctuation">"</span></span> <span class="token attr-name">data-offset-bottom</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>120<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<pre class=" language-markup"><code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myAffix<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">data-spy</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>affix<span class="token punctuation">"</span></span> <span class="token attr-name">data-target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#use<span class="token punctuation">"</span></span> <span class="token attr-name">data-offset-bottom</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>120<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token comment">&lt;!-- menu items --&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
@@ -8819,17 +8817,15 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
         </div>
 
 
-      <div id="side-nav" class="col-sm-3 hidden-xs">
-        <h3 class="visible-xs">Navigation</h3>
-        <ul id="nav-scrollspy" class="nav nav-stacked affix" data-spy="affix" data-target="#use" data-offset-bottom="120" style="width: 277px;">
-          <li class=""><a href="#myCarousel">Download</a></li>
-          <li class="active"><a href="#use">Read First</a></li>
-          <li class="list11 additional">
-            <a href="#components">Components</a>
-            <ul class="nav nav-stacked">
-              <li class="list5">
+        <div class="col-md-3">
+            <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
+              <ul class="nav bs-docs-sidenav corporate-ui-components-overview">
+              <li>
+                <a href="#corporate-ui-javascript-overview">Overview</a>
+              </li>                                     
+              <li>
                 <a href="#componentModal">Modal</a>
-                <ul class="nav nav-stacked">
+                <ul class="nav">
                   <li><a href="#modalOptions">Options</a></li>
                   <li class=""><a href="#modalMethods">Methods</a></li>
                   <li><a href="#modalEvents">Events</a></li>
@@ -8837,9 +8833,9 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
                   <li class=""><a href="#modalExamples">Examples</a></li>
                 </ul>
               </li>
-              <li class="list5">
+              <li>
                 <a href="#componentDropdown">Dropdown</a>
-                <ul class="nav nav-stacked">
+                <ul class="nav">
                   <li><a href="#dropdownOptions">Options</a></li>
                   <li><a href="#dropdownMethods">Methods</a></li>
                   <li class=""><a href="#dropdownEvents">Events</a></li>
@@ -8847,9 +8843,9 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
                   <li class=""><a href="#dropdownExamples">Examples</a></li>
                 </ul>
               </li>
-              <li class="list5">
+              <li>
                 <a href="#componentScrollspy">ScrollSpy</a>
-                <ul class="nav nav-stacked">
+                <ul class="nav">
                   <li><a href="#scrollspyOptions">Options</a></li>
                   <li><a href="#scrollspyMethods">Methods</a></li>
                   <li><a href="#scrollspyEvents">Events</a></li>
@@ -8857,9 +8853,9 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
                   <li><a href="#scrollspyExamples">Examples</a></li>
                 </ul>            
               </li>
-              <li class="list5">
+              <li>
                 <a href="#componentTab">Tab</a>
-                <ul class="nav nav-stacked">
+                <ul class="nav">
                   <li><a href="#tabOptions">Options</a></li>
                   <li class=""><a href="#tabMethods">Methods</a></li>
                   <li><a href="#tabEvents">Events</a></li>
@@ -8867,9 +8863,9 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
                   <li><a href="#tabExamples">Examples</a></li>
                 </ul>
               </li>
-              <li class="list5">
+              <li>
                 <a href="#componentTooltip">Tooltip</a>
-                <ul class="nav nav-stacked">
+                <ul class="nav">
                   <li class=""><a href="#tooltipOptions">Options</a></li>
                   <li><a href="#tooltipMethods">Methods</a></li>
                   <li class=""><a href="#tooltipEvents">Events</a></li>
@@ -8877,9 +8873,9 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
                   <li><a href="#tooltipExamples">Examples</a></li>
                 </ul>
               </li>
-              <li class="list5">
+              <li>
                 <a href="#componentPopover">Popover</a>
-                <ul class="nav nav-stacked">
+                <ul class="nav">
                   <li class=""><a href="#popoverOptions">Options</a></li>
                   <li class=""><a href="#popoverMethods">Methods</a></li>
                   <li><a href="#popoverEvents">Events</a></li>
@@ -8887,9 +8883,9 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
                   <li><a href="#popoverExamples">Examples</a></li>
                 </ul>
               </li>
-              <li class="list5">
+              <li>
                 <a href="#componentAlert">Alert</a>
-                <ul class="nav nav-stacked">
+                <ul class="nav">
                   <li><a href="#alertOptions">Options</a></li>
                   <li><a href="#alertMethods">Methods</a></li>
                   <li><a href="#alertEvents">Events</a></li>
@@ -8897,9 +8893,9 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
                   <li><a href="#alertExamples">Examples</a></li>
                 </ul>
               </li>
-              <li class="list5">
+              <li>
                 <a href="#componentButton">Button</a>
-                <ul class="nav nav-stacked">
+                <ul class="nav">
                   <li class=""><a href="#buttonOptions">Options</a></li>
                   <li class=""><a href="#buttonMethods">Methods</a></li>
                   <li class=""><a href="#buttonEvents">Events</a></li>
@@ -8907,9 +8903,9 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
                   <li class=""><a href="#buttonExamples">Examples</a></li>
                 </ul>
               </li>
-              <li class="list5">
+              <li>
                 <a href="#componentCollapse">Collapse</a>
-                <ul class="nav nav-stacked">
+                <ul class="nav">
                   <li class=""><a href="#collapseOptions">Options</a></li>
                   <li class=""><a href="#collapseMethods">Methods</a></li>
                   <li class=""><a href="#collapseEvents">Events</a></li>
@@ -8917,9 +8913,9 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
                   <li><a href="#collapseExamples">Examples</a></li>
                 </ul>
               </li>
-              <li class="list5">
+              <li>
                 <a href="#componentCarousel">Carousel</a>
-                <ul class="nav nav-stacked">
+                <ul class="nav">
                   <li><a href="#carouselOptions">Options</a></li>
                   <li><a href="#carouselMethods">Methods</a></li>
                   <li><a href="#carouselEvents">Events</a></li>
@@ -8927,9 +8923,9 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
                   <li><a href="#carouselExamples">Examples</a></li>
                 </ul>
               </li>
-              <li class="list5">
+              <li>
                 <a href="#componentAffix">Affix</a>
-                <ul class="nav nav-stacked">
+                <ul class="nav">
                   <li><a href="#affixOptions">Options</a></li>
                   <li><a href="#affixMethods">Methods</a></li>
                   <li><a href="#affixEvents">Events</a></li>
@@ -8937,105 +8933,15 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
                   <li><a href="#affixExamples">Examples</a></li>
                 </ul>
               </li>
+              <li>
+                <a class="back-to-top" href="#top">Back to top</a>
+              </li>  
             </ul>
-          </li>
-        </ul>
             <div class="checkbox">
               <label>
                 <input type="checkbox" class="code-sample"><span></span> Hide code samples
               </label>
             </div>              
-<!-- 
-
-          <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
-            <ul class="nav bs-docs-sidenav"> -->
-
- <!--              <li>
-                <a href="#js-overview">Overview</a>
-                <ul class="nav">
-                  <li><a href="#js-individual-compiled">Individual or compiled</a></li>
-                  <li><a href="#js-data-attrs">Data attributes</a></li>
-                  <li><a href="#js-programmatic-api">Programmatic API</a></li>
-                  <li><a href="#js-noconflict">No conflict</a></li>
-                  <li><a href="#js-events">Events</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#modals">Modal</a>
-                <ul class="nav">
-                  <li><a href="#modals-examples">Examples</a></li>
-                  <li><a href="#modals-sizes">Sizes</a></li>
-                  <li><a href="#modals-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#js-dropdowns">Dropdown</a>
-                <ul class="nav">
-                  <li><a href="#js-dropdowns-examples">Examples</a></li>
-                  <li><a href="#js-dropdowns-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#scrollspy">Scrollspy</a>
-                <ul class="nav">
-                  <li><a href="#scrollspy-examples">Examples</a></li>
-                  <li><a href="#scrollspy-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#tabs">Tab</a>
-                <ul class="nav">
-                  <li><a href="#tabs-examples">Examples</a></li>
-                  <li><a href="#tabs-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#tooltips">Tooltip</a>
-                <ul class="nav">
-                  <li><a href="#tooltips-examples">Examples</a></li>
-                  <li><a href="#tooltips-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#popovers">Popover</a>
-                <ul class="nav">
-                  <li><a href="#popovers-examples">Examples</a></li>
-                  <li><a href="#popovers-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#js-alerts">Alert</a>
-                <ul class="nav">
-                  <li><a href="#alerts-examples">Examples</a></li>
-                  <li><a href="#alerts-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#js-buttons">Button</a>
-                <ul class="nav">
-                  <li><a href="#js-buttons-examples">Examples</a></li>
-                  <li><a href="#js-buttons-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#collapse">Collapse</a>
-                <ul class="nav">
-                  <li><a href="#collapse-examples">Examples</a></li>
-                  <li><a href="#collapse-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#affix">Affix</a>
-                <ul class="nav">
-                  <li><a href="#affix-examples">Examples</a></li>
-                  <li><a href="#affix-usage">Usage</a></li>
-                </ul>
-              </li>
-              <li>
-                <a class="back-to-top" href="#top">Back to top</a>
-              </li>              
-            </ul> -->
-
     </div>
   </div>
 </div>
