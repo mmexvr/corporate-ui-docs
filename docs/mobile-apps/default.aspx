@@ -6,7 +6,7 @@
   <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
   <title>UX Library - Colours</title>
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
-  <script src="https://static.scania.com/build/global/master/js/corporate-ui.js"></script>
+  <script src="https://static.scania.com/build/global/3.5.0/js/corporate-ui.js"></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
   <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
