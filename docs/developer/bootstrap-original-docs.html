@@ -505,7 +505,10 @@ if (location.hash) {
                 <p>The nav items is where you specify what links you are going to have on your navigation and where they should link to. If you need to access the actual anchor <code><span class="nt">&lt;a<span class="nt">&gt;</span></code> element, it is possible - but not necessary - to add them in the actual nav-item. </p>
 
                 <h4 id="main-navigation-nav-item-active">Active nav-item</h4>
-                <p>Be sure to set the <code>class=&quot;active&quot;</p></code> on the nav-items that is going to be marked as active. If you have a sub navigation, both the parent nav-item element as well as the sub navigation item should have the active class on them.
+                <p>Be sure to set the <code>class=&quot;active&quot;</code> on the nav-items that is going to be marked as active. If you have a sub navigation, both the parent nav-item element as well as the sub navigation item should have the active class on them.</p>
+
+                <h4 id="main-navigation-nav-item-dropdown">Dropdown in a nav-item</h4>
+                <p>If you need to add a dropdown in a nav-item you can use the <code>dropdown=&quot;true&quot;</code> attribute to prevent that the page is reloaded.</p>                
 
                 <div class="highlight"><pre><code class="html">
  <span class="nt">&lt;nav-item</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://scania.com&quot;</span><span class="nt">&gt;</span>Scania.Com<span class="nt">&lt;/a<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
