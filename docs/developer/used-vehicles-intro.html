@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta charset="utf-8">
+	<noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+	<script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+
+	<title>Scania Used Vehicles</title>
+
+	<script src="https://static.scania.com/build/global/3.5.0/js/corporate-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="used-vehicles.css">
+	<link rel="stylesheet" type="text/css" href="https://legend.scania.com/development/users/used-vehicles/css/used-vehicles.css">
+
+	<script src="https://static.scania.com/vendors/components/pure-js/noUiSlider/12.1.0/src/nouislider.js"></script>
+	
+</head>
+
+<style>
+i.scania-icon-search.neg {
+    background-image: url(https://d31jnweo1ynb8u.cloudfront.net/resources/icons/scania/SVG_NEG/02_Icon_search-54-72px_neg.svg);
+    width: 200px;
+    height: 190px;
+    background-size: 200px;
+}
+
+</style>
+
+<body class="scania app used-vehicles">
+	<c-corporate-header site-name="Used Vehicles" short-name="Used Vehicles" site-url="/">
+		<nav-item location="#">Optional</nav-item>
+		<nav-item location="#">User Menu</nav-item>
+	</c-corporate-header>
+
+	<c-main-content class="light">
+		<c-main-navigation>
+			<primary-items>
+				<nav-item><a routerLink="/">Tractors</a></nav-item>
+				<nav-item><a routerLink="/">Ridgids</a></nav-item>
+				<nav-item><a routerLink="/">Buses & Coaches</a></nav-item>
+				<nav-item><a routerLink="/">Trailers</a></nav-item>
+				<nav-item><a routerLink="/">About</a></nav-item>								    
+			</primary-items>
+			<secondary-items>
+				<form class="search form-inline" role="form">
+					<div class="form-group">
+						<input type="search" class="form-control main-nav-search" placeholder="Search">
+					</div>
+					<div class="form-group">
+						<i class="scania-icon-search pull-right"></i>
+					</div>
+				</form>
+			</secondary-items>
+		</c-main-navigation>
+
+		<div class="public">
+			<c-main-hero image="https://static.scania.com/resources/images/demo/default-image.jpg">
+				<i class="scania-icon-search neg"></i>
+			    <h1>A headline</h1>
+			    <p>Some text</p>
+			</c-main-hero>
+		</div>	
+
+		<c-corporate-footer>
+			<c-social-media>
+				<nav-item icon="facebook" location="#" onclick="window.open('https://www.facebook.com/scaniagroup/')"></nav-item>
+				<nav-item icon="twitter" location="#"></nav-item>
+				<nav-item icon="youtube" location="#"></nav-item>
+				<nav-item icon="linkedin" location="#"></nav-item>         
+			</c-social-media>
+			<nav-item location="#">Legal notice</nav-item>
+			<nav-item location="#">Privacy statement</nav-item>
+			<nav-item location="#">Cookies</nav-item>
+			<nav-item location="#">Contact us</nav-item>  
+		</c-corporate-footer>
+</body>
+</html>
