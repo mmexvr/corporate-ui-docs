@@ -425,12 +425,30 @@ if (location.hash) {
                 </div>
 
                 <div class="highlight"><pre><code class="html">
+<span class="nt">&lt;c-corporate-header</span> <span class="na">dealer-name=</span><span class="s">&quot;Bilmetro&quot;</span> <span class="na">short-name=</span><span class="s">&quot;Bilmetro&quot;</span>  <span class="na">dealer-url=</span></span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Configurator<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+<span class="nt">&lt;/c-corporate-header<span class="nt">&gt;</span>
+                </code></pre></div>
+
+
+                <div class="bs-example">
+
+                  <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
+                      <iframe src="docs-example-corporate-dealer-header-logotype.html" frameborder="0" style="overflow:scroll !important" height="72px" width="100%"></iframe>
+                  </div>                  
+
+                </div>
+
+                <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;c-corporate-header</span> <span class="na">dealer-name=</span><span class="s">&quot;Bilmetro&quot;</span> <span class="na">short-name=</span><span class="s">&quot;Bilmetro&quot;</span>  <span class="na">dealer-url=</span></span><span class="s">&quot;/&quot;</span> <span class="na">dealer-logo=</span><span class="s">&quot;https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Configurator<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
 <span class="nt">&lt;/c-corporate-header<span class="nt">&gt;</span>
                 </code></pre></div>
 
               </div><!--  end of bs-docs-section -->
+
+
+
 
               <div class="bs-docs-section">
                 <div class="page-header">
@@ -8600,8 +8618,7 @@ xhr<span class="token punctuation">.</span><span class="token function">send</sp
 <span class="token keyword">var</span> myCheckboxesButtonGroupINIT <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Button</span><span class="token punctuation">(</span>myCheckboxesButtonGroup<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 
-              <p>If the component finds the markup to meet all requirements, it will initialize it and the <code>myCheckboxesButtonGroup</code> element will store the initialization, just like the other 
-                components of the library:</p>
+              <p>If the component finds the markup to meet all requirements, it will initialize it and the <code>myCheckboxesButtonGroup</code> element will store the initialization, just like the other components of the library:</p>
 
 <pre class="highlight language-javascript"><code class=" language-javascript"><span class="token comment">// reference the initialization, even for DATA API initialized btn-group elements</span>
 <span class="token keyword">var</span> myCheckboxesButtonGroupInit <span class="token operator">=</span> myCheckboxesButtonGroup<span class="token punctuation">.</span>Button<span class="token punctuation">;</span>
