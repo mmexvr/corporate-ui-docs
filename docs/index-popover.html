@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en-GB" class="corporate-ui">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html">
+  </noscript>
+
+  <title>UX Library - UI Guidelines - Corporate UI</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script> 
+  <script src="https://static.scania.com/build/global/3.4.0/js/corporate-ui.js"></script>
+
+</head>
+<body class="scania app fullscreen" data-env="">
+
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </c-corporate-header>
+
+  <c-main-content class="light">
+
+    <c-main-navigation>
+      <primary-items>
+        <nav-item location="/corporate-ui-docs/" class="active">Home</nav-item>
+        <nav-item location="/corporate-ui-docs/styleguide/" class="active">Style Guide
+          <sub-navigation caption="Style Guide">
+            <nav-item location="/corporate-ui-docs/logotype/">Logotype</nav-item>
+            <nav-item location="/corporate-ui-docs/icons/">Icons</nav-item>
+            <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
+            <nav-item location="/corporate-ui-docs/typography/" class="active">Typography</nav-item>
+            <nav-item class="pull-right">
+              <c-fullscreen data-dismissible="true" data-trigger="focus" data-toggle="popover" id="restore-help" data-title="Restore Navigation <span class='badge badge-success' style='vertical-align: bottom;'>NEW!</span>" data-placement="left" data-content="The map is now opened in a spacious view. To restore to default, please use this button."></c-fullscreen>
+            </nav-item>
+          </sub-navigation>
+        </nav-item>
+        <nav-item location="/corporate-ui-docs/developer/">Web Applications
+          <sub-navigation caption="Web Applications">
+            <nav-item location="/corporate-ui-docs/developer/">Corporate UI</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/corporate-ui-for-frameworks.html">JS Frameworks</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html">Scania Bootstrap</nav-item>            
+            <nav-item location="/corporate-ui-docs/developer/uiaas.html">UIaaS</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+          </sub-navigation>
+        </nav-item>
+        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
+      </primary-items>
+    </c-main-navigation>
+
+
+
+<script>
+
+
+    var restoreHelpPopover = document.getElementById('restore-help');
+
+    var myRestoreHelpInit = restoreHelpPopover.Popover;
+
+    document.querySelector("c-fullscreen").onmouseover = function() {myRestoreHelpInit.hide();};
+
+    setTimeout(function(){
+
+      myRestoreHelpInit.show();
+
+      setTimeout(function(){
+        myRestoreHelpInit.hide();
+        
+      }, 8000);
+
+    }, 1500);
+
+    document.querySelector(".close").onclick = function() {alert('Once the user click to close the popover, we need to remember not to show it again. Set a cookie.');};
+
+</script>
+
+
+
+  <section>
+    <div class="container">
+          <h1>Just a prototype for Full Screen handling</h1>
+    </div>      
+  </section>
+</c-main-content>
+
+<c-corporate-footer>
+  <c-social-media>
+    <nav-item location="#" icon="facebook"></nav-item>
+    <nav-item location="#" icon="twitter"></nav-item>
+    <nav-item location="#" icon="youtube"></nav-item>
+    <nav-item location="#" icon="linkedin"></nav-item>
+  </c-social-media>
+
+  <nav-item location="#">a link</nav-item>
+  <nav-item location="#">another link</nav-item>
+</c-corporate-footer>
+
+<style>
+
+  /* Fullscreen */
+  c-fullscreen {
+    display: inline-block;
+  }
+  c-fullscreen a.c-fullscreen {
+    padding-top: 6px;
+    padding-bottom: 0;
+  }
+  c-fullscreen a.c-fullscreen:hover:after {
+    border: 0;
+  }
+  c-fullscreen a.c-fullscreen .icon-fullscreen.c-fullscreen {
+    font-family: "Font Awesome 5 Pro";
+    line-height: 19px;
+    vertical-align: middle;
+    font-weight: 800;
+    font-size: 1.3em;
+  }
+  c-fullscreen a.c-fullscreen .icon-fullscreen.c-fullscreen:before {
+    content: "\f424";
+    padding: 4px 5px;
+    border-radius: 4px;
+    background-color: #033a6a;
+    color: #fafafa;
+  }
+  body.fullscreen c-fullscreen a.c-fullscreen .icon-fullscreen.c-fullscreen:before,
+  c-fullscreenbody.fullscreen a.c-fullscreen .icon-fullscreen.c-fullscreen:before {
+    content: "\f422";
+    padding: 4px 7px;
+    border-radius: 4px;
+    background-color: #033a6a;
+    color: #fafafa;
+  }
+  c-main-navigation c-fullscreen a.c-fullscreen,
+  c-fullscreenc-main-navigation a.c-fullscreen {
+    padding: 16px 4px 0 15px;
+  }
+  sub-navigation c-fullscreen a.c-fullscreen,
+  c-fullscreensub-navigation a.c-fullscreen {
+    padding: 12px 15px 0 15px;
+  }
+  .app c-fullscreen a.c-fullscreen,
+  c-fullscreen.app a.c-fullscreen {
+    padding-top: 6px;
+    padding-bottom: 0;
+  }
+  .app c-fullscreen a.c-fullscreen .icon-fullscreen.c-fullscreen,
+  c-fullscreen.app a.c-fullscreen .icon-fullscreen.c-fullscreen {
+    font-size: 1em;
+  }
+  .app c-fullscreen a.c-fullscreen .icon-fullscreen.c-fullscreen:before,
+  c-fullscreen.app a.c-fullscreen .icon-fullscreen.c-fullscreen:before {
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+  sub-navigation c-fullscreen,
+  c-fullscreensub-navigation {
+    margin-right: 8px;
+  }
+
+</style>
+
+
+</body>
+</html>
