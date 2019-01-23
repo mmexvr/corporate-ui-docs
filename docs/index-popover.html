@@ -16,37 +16,30 @@
 </head>
 <body class="scania app fullscreen" data-env="">
 
-  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
-    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
-    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  <c-corporate-header site-name="UX Library" site-url="#">
+    <nav-item location="index.popover.html">Support</nav-item>
+    <nav-item location="index.popover.html">GitHub</nav-item>
   </c-corporate-header>
 
   <c-main-content class="light">
 
     <c-main-navigation>
       <primary-items>
-        <nav-item location="/corporate-ui-docs/" class="active">Home</nav-item>
-        <nav-item location="/corporate-ui-docs/styleguide/" class="active">Style Guide
+        <nav-item location="index.popover.html" class="active">Home</nav-item>
+        <nav-item location="index.popover.html" class="active">Style Guide
           <sub-navigation caption="Style Guide">
-            <nav-item location="/corporate-ui-docs/logotype/">Logotype</nav-item>
-            <nav-item location="/corporate-ui-docs/icons/">Icons</nav-item>
-            <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
-            <nav-item location="/corporate-ui-docs/typography/" class="active">Typography</nav-item>
+            <nav-item location="index.popover.html">Logotype</nav-item>
+            <nav-item location="index.popover.html">Icons</nav-item>
+            <nav-item location="index.popover.html">Colours</nav-item>
+            <nav-item location="index.popover.html" class="active">Typography</nav-item>
             <nav-item class="pull-right">
               <c-fullscreen data-dismissible="true" data-trigger="focus" data-toggle="popover" id="restore-help" data-title="Restore Navigation <span class='badge badge-success' style='vertical-align: bottom;'>NEW!</span>" data-placement="left" data-content="The map is now opened in a spacious view. To restore to default, please use this button."></c-fullscreen>
             </nav-item>
           </sub-navigation>
         </nav-item>
-        <nav-item location="/corporate-ui-docs/developer/">Web Applications
-          <sub-navigation caption="Web Applications">
-            <nav-item location="/corporate-ui-docs/developer/">Corporate UI</nav-item>
-            <nav-item location="/corporate-ui-docs/developer/corporate-ui-for-frameworks.html">JS Frameworks</nav-item>
-            <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html">Scania Bootstrap</nav-item>            
-            <nav-item location="/corporate-ui-docs/developer/uiaas.html">UIaaS</nav-item>
-            <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
-          </sub-navigation>
+        <nav-item location="index.popover.html">Web Applications
         </nav-item>
-        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
+        <nav-item location="index.popover.html">Mobile Apps</nav-item>
       </primary-items>
     </c-main-navigation>
 
@@ -78,7 +71,17 @@
 
 </script>
 
-
+<style>
+/*To be added to Corporate UI
+corporate-ui.css:618*/
+body.fullscreen c-fullscreen a.c-fullscreen .icon-fullscreen.c-fullscreen:before, c-fullscreenbody.fullscreen a.c-fullscreen .icon-fullscreen.c-fullscreen:before {
+    content: "\f422";
+    padding: 4px 7px;
+    border-radius: 4px;
+    background-color: #033a6a;
+    color: #fafafa;
+}
+</style>
 
   <section>
     <div class="container">
