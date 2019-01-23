@@ -67,12 +67,14 @@
 
       setTimeout(function(){
         myRestoreHelpInit.hide();
-        
       }, 8000);
 
     }, 1500);
 
-    document.querySelector(".close").onclick = function() {alert('Once the user click to close the popover, we need to remember not to show it again. Set a cookie.');};
+    setTimeout(function(){
+      document.querySelector(".close").onclick = function() {alert('Once the user click to close the popover, we need to remember not to show it again. Set a cookie.');};
+    }, 3000);
+
 
 </script>
 
