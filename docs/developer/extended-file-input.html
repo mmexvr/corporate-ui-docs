@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8">
+  <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+
+  <title>UX Library - Scania Custom File Upload</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+
+  <!-- Table Sorter Plugin -->
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>
+
+  <script src="https://static.scania.com/build/global/3.5.0/js/corporate-ui.js?monitoring=true"></script>
+  <link rel="stylesheet" href="css/scania-bootstrap-docs.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
+  <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
+  <link rel="import" href="https://static.scania.com/build/global/3.5.0/components/file-upload/file-upload.html">
+
+</head>
+
+<body class="scania app">
+  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+    <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  </c-corporate-header>
+
+  <c-main-content>
+
+    <c-main-navigation>
+      <primary-items>
+        <nav-item location="/corporate-ui-docs/">Home</nav-item>
+        <nav-item location="/corporate-ui-docs/styleguide/">Style Guide
+          <sub-navigation caption="Style Guide">
+            <nav-item location="/corporate-ui-docs/logotype/">Logotype</nav-item>
+            <nav-item location="/corporate-ui-docs/icons/">Icons</nav-item>
+            <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
+            <nav-item location="/corporate-ui-docs/typography/">Typography</nav-item>
+          </sub-navigation>
+        </nav-item>              
+        <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html" class="active">Web Applications
+          <sub-navigation caption="Scania Bootstrap">
+            <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html">Bootstrap Documentation</nav-item>
+            <nav-item location="/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html">HTML Copy Paste</nav-item>
+          </sub-navigation>  
+        </nav-item>
+        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
+        <nav-item location="https://github.com/scania/corporate-ui/issues">Report an Issue</nav-item>
+        <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+      </primary-items>
+    </c-main-navigation>
+
+    <section class="light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Scania Custom File Upload</h1>
+              <marked-element class="markdown style-scope iron-doc-viewer">
+                <div class="markdown-html style-scope iron-doc-viewer"><h3 id="file-upload-input" class="style-scope iron-doc-viewer">File upload input</h3>
+                  <p class="style-scope iron-doc-viewer">This is a component for uploading single or multiple files with drag and drop support.</p>
+                  <p class="style-scope iron-doc-viewer">To use this component, put a tag <code class="style-scope iron-doc-viewer">&lt;c-file-upload&gt;&lt;/c-file-upload&gt;</code> in a page.</p>
+                  <h4 id="properties" class="style-scope iron-doc-viewer">Properties</h4>
+                  <p class="style-scope iron-doc-viewer">Change the value of the following properties to have different options.</p>
+                  <ul class="style-scope iron-doc-viewer">
+                    <li class="style-scope iron-doc-viewer"><code class="style-scope iron-doc-viewer">name</code> : String<ul class="style-scope iron-doc-viewer">
+                      <li class="style-scope iron-doc-viewer">This property will set the name of the upload file input component.</li>
+                    </ul>
+                  </li>
+                  <li class="style-scope iron-doc-viewer"><code class="style-scope iron-doc-viewer">multiple</code> : Boolean<ul class="style-scope iron-doc-viewer">
+                    <li class="style-scope iron-doc-viewer">Add <code class="style-scope iron-doc-viewer">multiple</code> property to enable multiple files selection.</li>
+                  </ul>
+                </li>
+                <li class="style-scope iron-doc-viewer"><code class="style-scope iron-doc-viewer">max-file-size</code> : Number (in KB)<ul class="style-scope iron-doc-viewer">
+                  <li class="style-scope iron-doc-viewer">This property will set maximum file size. The value should be any number in Kilobytes.</li>
+                </ul>
+              </li>
+              <li class="style-scope iron-doc-viewer"><code class="style-scope iron-doc-viewer">accept</code> : String<ul class="style-scope iron-doc-viewer">
+                <li class="style-scope iron-doc-viewer">Set the accepted MIME type or file extension to limit acceptable file types. If this property is not set, the file upload will receive any file types.</li>
+              </ul>
+            </li>
+          </ul>
+          <p class="style-scope iron-doc-viewer">On the example below, the component will have capabilities to select multiple files, only files with .jpg and .pdf extension are accepted, and the maximum file size is 1000KB.</p>
+          <p class="style-scope iron-doc-viewer"><code class="style-scope iron-doc-viewer">&lt;c-file-upload name="uxlib-file-input" multiple max-file-size=1000 accept=".jpg, .pdf"&gt;&lt;/c-file-upload&gt;</code></p>
+          <p class="style-scope iron-doc-viewer">On the example below, the component will have capabilities to select only one file, only image file is accepted, and the maximum file size is 1000KB.</p>
+          <p class="style-scope iron-doc-viewer"><code class="style-scope iron-doc-viewer">&lt;c-file-upload name="uxlib-file-input" max-file-size=1000 accept="image/*, application/pdf"&gt;&lt;/c-file-upload&gt;</code></p>
+          <h4 id="event" class="style-scope iron-doc-viewer">Event</h4>
+          <ul class="style-scope iron-doc-viewer">
+            <li class="style-scope iron-doc-viewer"><code class="style-scope iron-doc-viewer">uploadFiles</code> : CustomEvent. Fired when upload button inside the component is pressed.</li>
+          </ul>
+          <h4 id="method" class="style-scope iron-doc-viewer">Method</h4>
+          <ul class="style-scope iron-doc-viewer">
+            <li class="style-scope iron-doc-viewer"><code class="style-scope iron-doc-viewer">setProgressBarValue(file, progress)</code> . Triggers visual cues for upload progress such as progress bar and loading spinner.</li>
+          </ul>
+          <h3 id="developer-tutorial" class="style-scope iron-doc-viewer">Developer tutorial</h3>
+          <p class="style-scope iron-doc-viewer">You need to call the API to upload the files to your own server.</p>
+          <p class="style-scope iron-doc-viewer">There are 2 things you need to do in your application.</p>
+          <ul class="style-scope iron-doc-viewer">
+            <li class="style-scope iron-doc-viewer">Add event listener to the <code class="style-scope iron-doc-viewer">uploadFiles</code> event to have upload function works in your application setting.
+              Example:
+              <code class="style-scope iron-doc-viewer">document.addEventListener('uploadFiles',Upload, false);</code>
+            Then you can write your own upload function inside 'Upload'</li>
+          </ul>
+          <pre class="style-scope iron-doc-viewer"><code class="lang-javascript style-scope iron-doc-viewer">function Upload(event){
+            var files = event.detail.files;
+            // put your own upload function
+          }
+        </code></pre>
+        <ul class="style-scope iron-doc-viewer">
+          <li class="style-scope iron-doc-viewer">To make the progress bar works, retrieve the file upload component object via <code class="style-scope iron-doc-viewer">document.querySelector</code>.</li>
+        </ul>
+        <p class="style-scope iron-doc-viewer">Then set the progress bar value for each file inside with <code class="style-scope iron-doc-viewer">setProgressBarValue(file, progress)</code> function.
+          Set the progress value with the percentage that you get from the server response. <a href="https://www.sitepoint.com/tracking-upload-progress-with-php-and-javascript/" class="style-scope iron-doc-viewer">See example here</a></p>
+          <p class="style-scope iron-doc-viewer">Example:</p>
+          <pre class="style-scope iron-doc-viewer"><code class="lang-javascript style-scope iron-doc-viewer">var fileUploadComp = document.querySelector('c-file-upload');
+            document.addEventListener('uploadFiles',Upload, false);
+
+            function Upload(event){
+            var files = event.detail.files;
+            for(var i=0; i&lt;files.length; i++){
+            uploadSingleFile(files[i]);
+          }
+        }
+
+        function uploadSingleFile(file){
+        // ...
+
+        fileUploadComp.setProgressBarValue(file,progress);
+
+        // ...
+      }
+    </code></pre>
+</marked-element>
+</div>
+  <div class="demo-container style-scope demo-component">
+    <div id="demotemplate" class="demo-template style-scope demo-component">
+      <c-file-upload-variation-1>
+
+        <c-file-upload name="uxlib-file-input" multiple="" max-file-size="1000" accept="image/*">
+          <div class="upload-file-wrapper col-xs-12 style-scope c-file-upload">
+
+            <div id="simpleInput" class="input-group input-file-simple style-scope c-file-upload">
+              <input type="text" class="form-control style-scope c-file-upload" placeholder="Select file">
+              <div class="file-meta style-scope c-file-upload">
+                <i class="fal fa-times style-scope c-file-upload"></i>
+                <i class="fal fa-check style-scope c-file-upload"></i>
+                <i class="fal fa-spinner style-scope c-file-upload"></i>
+              </div>
+              <div class="pb-wrapper style-scope c-file-upload">
+                <c-progress-bar value="0" context="success" class="hidden style-scope c-file-upload">
+                  <div class="progress progress- style-scope c-progress-bar">
+                    <div class="progress-bar progress-bar-success style-scope c-progress-bar" style="width:0%"></div>
+                  </div>
+
+                </c-progress-bar>
+              </div>
+              <span class="input-group-btn style-scope c-file-upload">
+                <button type="button" class="btn btn-default disabled style-scope c-file-upload">Upload</button>
+              </span>
+            </div>
+            <!-- /input-group -->
+            <div id="dropArea" class="form-group style-scope c-file-upload">
+              <p class="cloud-icon style-scope c-file-upload"><i class="fal fa-cloud-upload style-scope c-file-upload"></i></p>
+              <p class="lead style-scope c-file-upload">
+                Drag &amp; drop here
+                <label class="text-info style-scope c-file-upload">
+                  or browse
+                  <input type="file" class="style-scope c-file-upload" multiple="" accept="image/*" name="uxlib-file-input">
+                </label>
+              </p>
+              <p class="style-scope c-file-upload">to upload your files</p>
+              <label class="btn-mobile btn btn-default style-scope c-file-upload">Select file</label>
+            </div>
+            <div id="fileerror" class="has-warning style-scope c-file-upload"></div>
+
+            <p class="files-to-upload style-scope c-file-upload" hidden="">File(s) to upload</p>
+            <div class="files-collection scroll-y style-scope c-file-upload">
+              <template is="dom-repeat" sort="sortFilenames" class="style-scope c-file-upload"></template>
+            </div>
+
+            <div class="action-btn-wrapper style-scope c-file-upload" hidden="">
+              <div class="buttons style-scope c-file-upload">
+                <span class="style-scope c-file-upload"><button type="button" name="button" class="btn btn-sm btn-primary style-scope c-file-upload"> </button></span>
+              </div>
+            </div>
+
+          </div>
+
+        </c-file-upload></c-file-upload-variation-1>
+
+      </div>
+      <div class="container code-template style-scope demo-component">
+        <marked-element class="markdown style-scope demo-component">
+
+          <div class="markdown-html style-scope demo-component"><div class="prewrapper"><div class="codeheader"><h5>Code <i class="icon-chevron-sign-up"></i></h5></div><pre class="style-scope demo-component" style=""><code class="style-scope demo-component">  &lt;link rel="import" href="/components/file-upload/file-upload.html"&gt;
+            &lt;c-file-upload name="uxlib-file-input" multiple max-file-size=1000 accept="image/*"&gt;
+
+            &lt;/c-file-upload&gt;
+          </code></pre></div></div>
+          <div id="content" class="hidden style-scope marked-element"></div>
+        </marked-element>
+      </div>
+    </div>
+
+    <div class="container style-scope iron-doc-viewer">
+      <marked-element class="markdown style-scope iron-doc-viewer">
+
+        <div class="markdown-html style-scope iron-doc-viewer"><h4 id="file-extension-icon" class="style-scope iron-doc-viewer">File extension icon</h4>
+        </div>
+        <div id="content" class="hidden style-scope marked-element"></div>
+      </marked-element>
+    </div>
+
+    <demo-component class="style-scope iron-doc-viewer">
+
+      <div class="demo-container style-scope demo-component">
+        <div id="demotemplate" class="demo-template style-scope demo-component">
+          <file-icon-variation-1><file-icon filename="Image.jpg">
+            <div class="file-icon-wrapper style-scope file-icon">
+              <i class="fal fa-file style-scope file-icon"></i>
+              <span class="extension jpg style-scope file-icon">jpg</span>
+            </div>
+
+          </file-icon></file-icon-variation-1>
+
+        </div>
+        <div class="container code-template style-scope demo-component">
+          <marked-element class="markdown style-scope demo-component">
+
+            <div class="markdown-html style-scope demo-component"><div class="prewrapper"><div class="codeheader"><h5>Code <i class="icon-chevron-sign-up"></i></h5></div><pre class="style-scope demo-component" style=""><code class="style-scope demo-component">  &lt;link rel="import" href="/components/file-upload/file-upload.html"&gt;
+              &lt;file-icon filename="Image.jpg"&gt;
+              &lt;/file-icon&gt;
+            </code></pre></div></div>
+            <div id="content" class="hidden style-scope marked-element"></div>
+          </marked-element>
+        </div>
+      </div>
+    </demo-component>
+    <template is="dom-if" class="style-scope iron-doc-viewer"></template>
+
+    <template is="dom-repeat" as="_descitems" class="style-scope iron-doc-viewer"></template>
+
+  </section>
+
+</iron-doc-viewer>
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <c-corporate-footer></c-corporate-footer>
+  </body>
+</html>

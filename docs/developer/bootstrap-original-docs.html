@@ -1996,6 +1996,29 @@ if (location.hash) {
                   </code></pre></div>
 
 
+
+
+
+                  <h3>File input</h3>
+                  <p>For file input, you can use the File Upload component that covers a lot more than the standard HTML element. The component require access to your server to fully work, but you can try out some front end actions in the example.</p>
+                  <form class="bs-example">
+                   <link rel="import" href="https://static.scania.com/build/global/3.5.0/components/file-upload/file-upload.html">
+                   <c-file-upload name="uxlib-file-input" multiple max-file-size=1000 accept="image/*"></c-file-upload>
+                  </form>
+                  <div class="highlight"><pre><code class="html">
+<span class="nt">&lt;c-file-upload</span> <span class="na">name=</span><span class="s">"uxlib-file-input"</span> <span class="na">multiple max-file-size=</span><span class="s">"1000"</span> <span class="na">accept=</span><span class="s">"image/*"</span><span class="nt">&gt;</span><span class="nt">&lt;/c-file-upload&gt;</span>
+                  </code></pre></div>
+
+                  
+                  <p>You'll need to import the component itself for the custom element to work.
+
+                  <div class="highlight"><pre><code class="html">
+<span class="nt">&lt;link </span> <span class="na">rel=</span><span class="s">"import"</span> <span class="na">href=</span><span class="s">"https://static.scania.com/build/global/3.5.0/components/file-upload/file-upload.html"</span><span class="nt">&gt;</span>
+                  </code></pre></div>
+                  
+                  <h4>File Upload Documentation</h4>
+                  <p>For detailed documentation please visit the <a href="extended-file-input.html">File Upload Components page</a>.
+
                   <h2 id="forms-controls-static">Static control</h2>
                   <p>When you need to place plain text next to a form label within a horizontal form, use the <code>.form-control-static</code> class on a <code>&lt;p&gt;</code>.</p>
                   <form class="bs-example form-horizontal">
