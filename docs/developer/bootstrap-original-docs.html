@@ -84,7 +84,7 @@ $(function(){
   var tabInstallationAnchors =  [ "#corporate-ui-installation-overview", "#corporate-ui-installation-overview"];
   var tabElementsAnchors =  [ "#corporate-ui-components-overview", "#corporate-header", ,"#corporate-header-dealer-variation", "#main-content", "#main-nav", "#corporate-footer" ];
   var tabComponentsAnchors =  [ "#components-overview", "#dropdowns", "#dropdowns-example", "#dropdowns-alignment", "#dropdowns-headers", "#dropdowns-disabled", "#btn-groups", "#btn-groups-single", "#btn-groups-toolbar", "#btn-groups-sizing", "#btn-groups-nested", "#btn-groups-vertical", "#btn-groups-justified", "#btn-dropdowns", "#btn-dropdowns-single", "#btn-dropdowns-split", "#btn-dropdowns-sizing", "#btn-dropdowns-dropup", "#input-groups", "#input-groups-basic", "#input-groups-sizing", "#input-groups-checkboxes-radios", "#input-groups-buttons", "#input-groups-buttons-dropdowns", "#input-groups-buttons-segmented", "#nav", "#nav-tabs", "#nav-pills", "#nav-justified", "#nav-disabled-links", "#nav-dropdowns", "#navbar", "#navbar-default", "#navbar-forms", "#navbar-buttons", "#navbar-text", "#navbar-links", "#navbar-component-alignment", "#navbar-fixed-top", "#navbar-fixed-bottom", "#navbar-static-top", "#navbar-inverted", "#breadcrumbs", "#pagination", "#pagination-default", "#pagination-pager", "#labels", "#badges", "#jumbotron", "#page-header", "#thumbnails", "#thumbnails-default", "#thumbnails-custom-content", "#alerts", "#alerts-examples", "#alerts-dismissable", "#alerts-links", "#progress", "#progress-basic", "#progress-label", "#progress-alternatives", "#progress-striped", "#progress-animated", "#progress-stacked", "#media", "#media-default", "#media-list", "#list-group", "#list-group-basic", "#list-group-badges", "#list-group-linked", "#list-group-contextual-classes", "#list-group-custom-content", "#panels", "#panels-basic", "#panels-heading", "#panels-alternatives", "#panels-tables", "#panels-list-group", "#wells" ];
-  var tabCSSAnchors =  ["#core-css-overview", "#overview-doctype", "#overview-mobile", "#overview-type-links", "#overview-normalize", "#overview-container", "#type", "#type-headings", "#type-body-copy", "#type-emphasis", "#type-abbreviations", "#type-addresses", "#type-blockquotes", "#type-lists", "#code", "#code-inline", "#code-user-input", "#code-block", "#tables", "#tables-example", "#tables-striped", "#tables-bordered", "#tables-hover-rows", "#tables-condensed", "#tables-contextual-classes", "#tables-responsive", "#forms", "#forms-example", "#forms-inline", "#forms-horizontal", "#forms-controls", "#forms-controls-static", "#forms-control-focus", "#forms-control-disabled", "#forms-control-validation", "#forms-validation", "#forms-control-sizes", "#forms-help-text", "#buttons", "#buttons-options", "#buttons-sizes", "#buttons-active", "#buttons-disabled", "#buttons-tags", "#images", "#images-responsive", "#images-shapes", "#helper-classes", "#helper-classes-colors", "#helper-classes-backgrounds", "#helper-classes-close", "#helper-classes-carets", "#helper-classes-floats", "#helper-classes-center", "#helper-classes-clearfix", "#helper-classes-show-hide", "#helper-classes-screen-readers", "#helper-classes-image-replacement", "#grid", "#grid-intro", "#grid-media-queries", "#grid-options", "#grid-example-basic", "#grid-example-fluid", "#grid-example-mixed", "#grid-example-mixed-complete", "#grid-responsive-resets", "#grid-offsetting", "#grid-nesting", "#grid-column-ordering", "#grid-less", "#responsive-utilities", "#responsive-utilities-classes", "#responsive-utilities-print", "#responsive-utilities-tests", "#bootstrap-4" ];
+  var tabCSSAnchors =  ["#core-css-overview", "#overview-doctype", "#overview-mobile", "#overview-type-links", "#overview-normalize", "#overview-container", "#type", "#type-headings", "#type-body-copy", "#type-emphasis", "#type-abbreviations", "#type-addresses", "#type-blockquotes", "#type-lists", "#code", "#code-inline", "#code-user-input", "#code-block", "#tables", "#tables-example", "#tables-striped", "#tables-bordered", "#tables-hover-rows", "#tables-condensed", "#tables-contextual-classes", "#tables-responsive", "#forms", "#forms-example", "#forms-inline", "#forms-horizontal", "#forms-controls", "#forms-controls-file-input", "#forms-controls-selects", "#forms-controls-checkradios", "#forms-controls-textarea", "#forms-controls-inputs", "#forms-controls-static", "#forms-control-focus", "#forms-control-disabled", "#forms-control-validation", "#forms-validation", "#forms-control-sizes", "#forms-help-text", "#buttons", "#buttons-options", "#buttons-sizes", "#buttons-active", "#buttons-disabled", "#buttons-tags", "#images", "#images-responsive", "#images-shapes", "#helper-classes", "#helper-classes-colors", "#helper-classes-backgrounds", "#helper-classes-close", "#helper-classes-carets", "#helper-classes-floats", "#helper-classes-center", "#helper-classes-clearfix", "#helper-classes-show-hide", "#helper-classes-screen-readers", "#helper-classes-image-replacement", "#grid", "#grid-intro", "#grid-media-queries", "#grid-options", "#grid-example-basic", "#grid-example-fluid", "#grid-example-mixed", "#grid-example-mixed-complete", "#grid-responsive-resets", "#grid-offsetting", "#grid-nesting", "#grid-column-ordering", "#grid-less", "#responsive-utilities", "#responsive-utilities-classes", "#responsive-utilities-print", "#responsive-utilities-tests", "#bootstrap-4" ];
   var tabJavaScriptAnchors =   ["#js-overview", "#componentModal", "#modalOptions", "#modalMethods", "#modalEvents", "#modalUsage", "#modalExamples", "#componentDropdown", "#dropdownOptions", "#dropdownMethods", "#dropdownEvents", "#dropdownUsage", "#dropdownExamples", "#componentScrollspy", "#scrollspyOptions", "#scrollspyMethods", "#scrollspyEvents", "#scrollspyUsage", "#scrollspyExamples", "#componentTab", "#tabOptions", "#tabMethods", "#tabEvents", "#tabUsage", "#tabExamples", "#componentTooltip", "#tooltipOptions", "#tooltipMethods", "#tooltipEvents", "#tooltipUsage", "#tooltipExamples", "#componentPopover", "#popoverOptions", "#popoverMethods", "#popoverEvents", "#popoverUsage", "#popoverExamples", "#componentAlert", "#alertOptions", "#alertMethods", "#alertEvents", "#alertUsage", "#alertExamples", "#componentButton", "#buttonOptions", "#buttonMethods", "#buttonEvents", "#buttonUsage", "#buttonExamples", "#componentCollapse", "#collapseOptions", "#collapseMethods", "#collapseEvents", "#collapseUsage", "#collapseExamples", "#componentCarousel", "#carouselOptions", "#carouselMethods", "#carouselEvents", "#carouselUsage", "#carouselExamples", "#componentAffix", "#affixOptions", "#affixMethods", "#affixEvents", "#affixUsage", "#affixExamples" ];
 
   console.dir(tabInstallationAnchors);
@@ -1865,11 +1865,10 @@ if (location.hash) {
 <span class="nt">&lt;/form&gt;</span>
                   </code></pre></div>
 
-
                   <h2 id="forms-controls">Supported controls</h2>
                   <p>Examples of standard form controls supported in an example form layout.</p>
 
-                  <h3>Inputs</h3>
+                  <h3 id="forms-controls-inputs">Inputs</h3>
                   <p>Most common form control, text-based input fields. Includes support for all HTML5 types: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code>.</p>
                   <div class="bs-callout bs-callout-danger">
                     <h4>Type declaration required</h4>
@@ -1882,7 +1881,7 @@ if (location.hash) {
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Text input"</span><span class="nt">&gt;</span>
                   </code></pre></div>
 
-                  <h3>Textarea</h3>
+                  <h3 id="forms-controls-textarea">Textarea</h3>
                   <p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
                   <form class="bs-example">
                     <textarea class="form-control" rows="3"></textarea>
@@ -1891,7 +1890,7 @@ if (location.hash) {
 <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
                   </code></pre></div>
 
-                  <h3>Checkboxes and radios</h3>
+                  <h3 id="forms-controls-checkradios">Checkboxes and radios</h3>
                   <p>Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many.</p>
                   <h4>Default (stacked)</h4>
                   <form class="bs-example">
@@ -1953,7 +1952,7 @@ if (location.hash) {
   <span class="nt">&lt;/label&gt;</span>
                   </code></pre></div>
 
-                  <h3>Selects</h3>
+                  <h3 id="forms-controls-selects">Selects</h3>
                   <p>Use the default option, or add <code>multiple</code> to show multiple options at once.</p>
                   <form class="bs-example">
                     <select class="form-control custom-select">
@@ -1990,11 +1989,7 @@ if (location.hash) {
   <span class="nt">&lt;/select&gt;</span>
                   </code></pre></div>
 
-
-
-
-
-                  <h3>File input</h3>
+                  <h3 id="forms-controls-file-input">File input</h3>
                   <p>For file input, you can use the File Upload component that covers a lot more than the standard HTML element. The component require access to your server to fully work, but you can try out some front end actions in the example.</p>
                   <form class="bs-example">
                    <link rel="import" href="https://static.scania.com/build/global/3.5.0/components/file-upload/file-upload.html">
