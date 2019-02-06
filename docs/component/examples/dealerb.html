@@ -10,9 +10,20 @@
     <script src="https://static.scania.com/build/global/3.5.2/js/corporate-ui.js"></script>
   </head>
   <body class="scania" ng-controller="Example as example">
-    <c-corporate-header site-name="Bilmetro" short-name="BM" site-url="dealerb.html" dealer-name="Bilmetro" dealer-logo="https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png" dealer-url="dealerb.html">
+<!--     <c-corporate-header site-name="Bilmetro" short-name="BM" site-url="dealerb.html" dealer-name="Bilmetro" dealer-logo="https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png" dealer-url="dealerb.html">
       <nav-item location="dealer.html">Generator</nav-item>
+    </c-corporate-header> -->
+
+<!--     <c-corporate-header dealer-name="Bilmetro" short-name="Bilmetro"  dealer-url="/" dealer-logo="https://scania.github.io/corporate-ui-docs/component/examples/bilmetro-logo.png">
+      <nav-item location="#">Configurator</nav-item>
+    </c-corporate-header> -->
+
+
+    <c-corporate-header dealer-name="Bilmetro" site-name="Bilmetro"  dealer-url="/">
+      <nav-item location="#">Configurator</nav-item>
     </c-corporate-header>
+
+
 
     <c-main-content>
       <c-main-navigation>
@@ -50,13 +61,45 @@
         c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header .navbar-symbol.c-corporate-header:before {
             background-image: url(https://static.scania.com/resources/logotype/scania/scania-symbol-logotype.svg);
             background-position: center right;
-            background-size: 202px 40px;
+            background-size: 228px 50px;
             background-color: white;
-            height: 38px;
-            top: 26px;
-            margin-bottom: 16px;
+            height: 50px;
         }
-        body.app c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header .navbar-symbol.c-corporate-header:before {        
+
+
+
+
+        .c-corporate-header:not([short-name=''])  {
+
+        }  
+
+
+      @media (max-width: 991px) {
+          .navbar-default .navbar-header[short-name],
+          .is-dealer a.dealer span {
+              font-family: 'Scania Sans Headline';
+              font-weight: normal;
+              color: #53565a;
+          } 
+        } 
+
+        .is-dealer a.dealer:hover {
+            text-decoration: none;
+        }  
+
+        .navbar-default .navbar-header {
+            font-family: 'Scania Sans Condensed';
+            padding: 12px 15px 3px;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }   
+
+        .navbar-default .navbar-header .navbar-brand:after {
+            border-left: none;
+        }
+
+
+/*        body.app c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header .navbar-symbol.c-corporate-header:before {        
             top: 16px;       
         }    
 
@@ -138,7 +181,7 @@
           padding-bottom: 9px;
           margin: 40px 0 0;
       }
-
+*/
       @media (max-width: 992px) {
 
         .c-corporate-header a.dealer.c-corporate-header img[src].c-corporate-header:not([src=""]),
