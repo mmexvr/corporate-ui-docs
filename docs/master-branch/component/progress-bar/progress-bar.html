@@ -1,0 +1,37 @@
+<!--### Progress bar
+
+There are 3 attributes you can set for the progress bar.
+
+`Value` will set the updated value of the progress bar.
+
+`Context` provide contextual alternatives `success, info, warning, danger`.
+
+`Striped` will create a stripe effect. Add `striped = "striped"` will create a static stripe effect. Add `striped = "striped active"` to add animation to the stripes.
+-->
+<dom-module id="c-progress-bar">
+  <link rel="import" href="variation-1.html"/>
+  <template>
+    <style>:host {
+  display: block;
+}
+
+    </style><div class$="progress progress-{{striped}}">
+  <div style$="width:{{value}}%" class$="progress-bar progress-bar-{{context}}"></div>
+</div>
+
+  </template>
+  <script>var name = 'c-progress-bar';!function(e){var t={};function r(n){if(t[n])return t[n].exports;var o=t[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,r),o.l=!0,o.exports}r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)r.d(n,o,function(t){return e[t]}.bind(null,o));return n},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s=49)}({49:function(e,t){Polymer({is:name,properties:{fullbleed:{type:Boolean,value:!0},value:{type:Number,value:0,notify:!0},context:{type:String},striped:{type:String}}})}});
+  </script>
+  <script>
+    if(window['params'].monitoring){
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'corporate-ui-component', //the object that user interact with on the page
+        eventAction: 'loaded', // type of interaction with the object
+        eventLabel: 'c-progress-bar'  //categorizing events
+      },{
+        nonInteraction: true
+      });
+    }
+  </script>
+</dom-module>

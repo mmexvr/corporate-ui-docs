@@ -7,7 +7,7 @@
 
   <title>Scania UX Library - Z-index Scale</title>
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
-  <script src="https://static.scania.com/build/global/master/js/corporate-ui.js"></script>
+  <script src="https://static.scania.com/build/global/3.5.2/js/corporate-ui.js"></script>
   <link rel="stylesheet" href="css/scania-bootstrap-docs.css">
   
 
@@ -96,8 +96,8 @@ pre {
 
 <body class="scania app">
 
-  <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
-    <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
+  <c-corporate-header site-name="UX Library" site-url="/">
+    <nav-item location="https://scania.github.io/corporate-ui-docs/developer/support.html">Support</nav-item>
     <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
   </c-corporate-header>
 
@@ -190,6 +190,137 @@ pre {
 
 </body>
 
+
+
+   <style>
+
+
+        c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header .navbar-symbol.c-corporate-header:before {
+            background-image: url(https://static.scania.com/resources/logotype/scania/scania-symbol-logotype.svg);
+            background-position: center right;
+            background-size: 202px 40px;
+            background-color: white;
+            height: 38px;
+            top: 26px;
+            margin-bottom: 16px;
+        }
+        body.app c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header .navbar-symbol.c-corporate-header:before {        
+            top: 16px;       
+        }    
+
+        .header-is-sticky c-corporate-header .is-dealer .navbar-symbol.should-stick, c-corporate-header.header-is-sticky .navbar-symbol.should-stick  {
+            width: 41px !important;
+            height: 37px !important;
+        }        
+
+      c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header .navbar-symbol.c-corporate-header {
+          margin-bottom: 14px;
+      }
+
+      c-corporate-header a.dealer.c-corporate-header img[src].c-corporate-header:not([src=""]) + span.c-corporate-header {
+          display: none;
+      }
+
+        body.header-is-sticky c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header .navbar-symbol.c-corporate-header:before {
+            background-image: url('https://static.scania.com/resources/logotype/scania/scania-symbol.svg') !important;
+            background-size: 40px !important;  
+            top: 9px !important;
+        }       
+
+        .navbar-default .navbar-header .navbar-symbol {
+            margin-left: 35px;
+        } 
+
+
+       pre code {font-size: 16px}
+       pre code.page.html {font-size: 14px}
+       pre {background-color: #f8f8f8;}
+
+      .navbar-default .navbar-header .navbar-brand.border-none:after {border:none;}
+
+      nav.nav.navbar-nav.navbar-right.style-scope.c-corporate-header > nav-item {
+          font-family: "Scania Sans";
+          font-weight: normal;
+          font-size: 12px;
+          color: #747472;
+          text-transform: uppercase;
+      }
+
+
+  .navbar-default .navbar-header .navbar-brand:after {
+      border-left: none;
+  }
+
+  a.dealer > span {
+      padding-top: 7px;
+      display: inline-block;
+  }
+
+
+      .navbar-default .navbar-header .navbar-nav a {
+      padding: 0;
+      vertical-align: top;
+      margin: -4px 0 0;
+      display: inline-block;
+      }
+
+      .navbar.navbar-default.is-dealer .navbar-header {
+          font-family: 'Scania Sans Condensed';
+          font-size: 2rem;
+          font-weight: bold;
+          color: #041042;
+      }   
+
+      c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header {
+          display: inline-block;
+          text-transform: uppercase;
+          font-family: 'Scania Sans Headline';
+          font-weight: normal;
+          font-size: 1.8rem;
+          vertical-align: middle;
+          margin: 14px -15px 13px 15px;
+      }
+
+
+      c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header:hover {
+          text-decoration: none;
+      }
+
+      c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header img.c-corporate-header {
+          vertical-align: super;
+      }
+
+      p a {font-weight: bold}
+
+      .page-header {
+          padding-bottom: 9px;
+          margin: 40px 0 0;
+      }
+
+      @media (max-width: 992px) {
+
+        .c-corporate-header a.dealer.c-corporate-header img[src].c-corporate-header:not([src=""]),
+        .c-corporate-header a.dealer.c-corporate-header > span {
+          display:none;
+        }
+
+        c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header .navbar-symbol.c-corporate-header:before {
+            background-image: url(https://static.scania.com/resources/logotype/scania/scania-symbol.svg);
+            background-position: center right;
+            background-size: 41px 37px;
+            width: 41px !important;
+            height: 37px !important;
+        }
+
+        c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header .navbar-symbol.c-corporate-header {
+            width: 41px;
+        }   
+
+      }
+
+    </style>
+
+    
 <script src="/corporate-ui-docs/ux-lib.js"></script> 
 
 <script src="https://static.scania.com/vendors/components/pure-js/progress-tracker/1.4.0/scripts/site.js"></script>
