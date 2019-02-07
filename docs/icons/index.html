@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-GB" class="corporate-ui">
 <head>
@@ -8,7 +9,7 @@
   <title>UX Library - Icons</title>
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
   <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
-  <script src="https://static.scania.com/build/global/3.5.2/js/corporate-ui.js?monitoring=true"></script>
+  <script src="https://static.scania.com/build/global/3.5.0/js/corporate-ui.js"></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
   <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
@@ -16,7 +17,6 @@
 
   <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">
   
-  <link rel="stylesheet" href="https://static.scania.com/resources/icons/font-awesome/5.0.9/web-fonts-with-css/css/fontawesome-all.min.css">
 
 
 <style type="text/css"> 
@@ -59,12 +59,21 @@
     th:nth-child(7) a, td:nth-child(7) a
     {display:block;}
 
+    .bg-plate {
+        width: 240px;
+        padding: 27px 25px 20px;
+        border-radius: 9px;
+        margin-bottom: 30px;
+    }
+
+    p a {font-weight: bold}
+
 </style>
 
 
   <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">
 </head>
-<body unresolved class="scania">
+<body data-env="Test" unresolved class="scania">
 
   <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
     <nav-item location="/corporate-ui-docs/developer/support.html">Support</nav-item>
@@ -104,12 +113,12 @@
         <div>
         <h2>Scania Icons</h2>
         <p>The design of the modern and custom-made icon system for communication is based on the Scania symbol, the experience throughout all applications. The icons enable clear and instantaneous communication for information graphics and sales support. The icons should always be supported by text (except for some UI icons used in web applications). Use the icons for information, never for decoration or as logotypes. 
-        </p><p>
-        Restrictions: The icons may only be used for their intended purposes. Any restrictions must be followed. The icons may not be modified. Any questions may be submitted to Scania identity helpdesk via <a href="mailto:identity@scania.com">identity@scania.com</a>.</p>
+        </p>
+        <p>Restrictions: The icons may only be used for their intended purposes. Any restrictions must be followed. The icons may not be modified. Any questions may be submitted to Scania identity helpdesk via <a href="mailto:identity@scania.com">identity@scania.com</a>.</p>
         <p>Scania Sans font family and the product DNA. It has been customised with the goal of unifying the Scania brand. 
         </p>
     </div>
-    <div class="alert alert-info">
+    <div class="col-md-12">
         <h4>Using the icons</h4>
         <p>The icons are available through CSS when using the Corporate UI framework. If you out want to use the icons without the Corporate UI framework, for example in a legacy application, you can include only the icons.css file and use the icons by the same CSS classes as described below (inspect each icon to obtain its CSS class).
         <xmp style="font-size: 18px;white-space: pre-line;text-align: center">
@@ -118,15 +127,20 @@
         <h4>Sizes and colors</h4>
         <p>The icons are currently available in a positive (Scania Blue) and negative (Scania White) color. By default you'll get them in Scania Blue and if you want to use the negative version, just add the class <b>neg</b> after the icon class. To show the icons in diffent sizes, use the classes <b>xs</b>, <b>sm</b>, <b>md</b>, <b>lg</b> and <b>xl</b>, <b>xxl</b>. For example:
         <xmp style="font-size: 18px;text-align: center"><i class="scania-icon-email neg xl"></i></xmp>
-        <div class="text-center">
-            <i class="scania-icon-search neg xl"></i></p>
-        </div>    
+        <div class="text-center">        
+            <div class="text-center bg-secondary-04 bg-plate" style="display:inline-block;">
+                <i class="scania-icon-email neg xl"></i></p>
+            </div>    
         <h4>Creating new icons</h4>
         <p>Even though we've aim at having an extensive icon library, chances are that you will not find the icon you need in our library. If you need to create your own icon, we've <a href="guideline-scania-icons.pdf" target="_blank">created these guidelines</a> to help you get it right.</p>
+
+        <h4>Icons for Scania applications</h4>
+        <p>For internal Scania applications you can use Font Awesome Pro, that offers a more application type iconset. These are licensed by Scania and can be used in Scania projects only. To use them in your application, please use the classes described in the <a href="https://fontawesome.com/cheatsheet/pro#light">Font Awesome Pro Cheat Sheet</a> and if you're want them for mockups, please use <a href="https://legend.scania.com/resources/icons/font-awesome/5.3.1/svgs/light/">the SVG versions</a> (available for Scania only). To align with the Scania Branding as much as possible, please use the Light version of Font Awesome.</p>
         </p>
+    </div>        
     </div>
     </div>        
-<div class="container-fluid light">
+<div class="container-fluid light mt-5">
 <div class="table-responsive">    
     <table class="table">
 
