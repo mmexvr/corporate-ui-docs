@@ -73,65 +73,69 @@ $(function(){
   //     location.href = location.hash;
   //   }
   // }
-
-
   // }
-
-
   var hash = window.location.hash;
-
-
   var tabInstallationAnchors =  [ "#corporate-ui-installation-overview", "#corporate-ui-installation-overview"];
   var tabElementsAnchors =  [ "#corporate-ui-components-overview", "#corporate-header", ,"#corporate-header-dealer-variation", "#main-content", "#main-nav", "#corporate-footer" ];
   var tabComponentsAnchors =  [ "#components-overview", "#dropdowns", "#dropdowns-example", "#dropdowns-alignment", "#dropdowns-headers", "#dropdowns-disabled", "#btn-groups", "#btn-groups-single", "#btn-groups-toolbar", "#btn-groups-sizing", "#btn-groups-nested", "#btn-groups-vertical", "#btn-groups-justified", "#btn-dropdowns", "#btn-dropdowns-single", "#btn-dropdowns-split", "#btn-dropdowns-sizing", "#btn-dropdowns-dropup", "#input-groups", "#input-groups-basic", "#input-groups-sizing", "#input-groups-checkboxes-radios", "#input-groups-buttons", "#input-groups-buttons-dropdowns", "#input-groups-buttons-segmented", "#nav", "#nav-tabs", "#nav-pills", "#nav-justified", "#nav-disabled-links", "#nav-dropdowns", "#navbar", "#navbar-default", "#navbar-forms", "#navbar-buttons", "#navbar-text", "#navbar-links", "#navbar-component-alignment", "#navbar-fixed-top", "#navbar-fixed-bottom", "#navbar-static-top", "#navbar-inverted", "#breadcrumbs", "#pagination", "#pagination-default", "#pagination-pager", "#labels", "#badges", "#jumbotron", "#page-header", "#thumbnails", "#thumbnails-default", "#thumbnails-custom-content", "#alerts", "#alerts-examples", "#alerts-dismissable", "#alerts-links", "#progress", "#progress-basic", "#progress-label", "#progress-alternatives", "#progress-striped", "#progress-animated", "#progress-stacked", "#media", "#media-default", "#media-list", "#list-group", "#list-group-basic", "#list-group-badges", "#list-group-linked", "#list-group-contextual-classes", "#list-group-custom-content", "#panels", "#panels-basic", "#panels-heading", "#panels-alternatives", "#panels-tables", "#panels-list-group", "#wells" ];
   var tabCSSAnchors =  ["#core-css-overview", "#overview-doctype", "#overview-mobile", "#overview-type-links", "#overview-normalize", "#overview-container", "#type", "#type-headings", "#type-body-copy", "#type-emphasis", "#type-abbreviations", "#type-addresses", "#type-blockquotes", "#type-lists", "#code", "#code-inline", "#code-user-input", "#code-block", "#tables", "#tables-example", "#tables-striped", "#tables-bordered", "#tables-hover-rows", "#tables-condensed", "#tables-contextual-classes", "#tables-responsive", "#forms", "#forms-example", "#forms-inline", "#forms-horizontal", "#forms-controls", "#forms-controls-file-input", "#forms-controls-selects", "#forms-controls-checkradios", "#forms-controls-textarea", "#forms-controls-inputs", "#forms-controls-static", "#forms-control-focus", "#forms-control-disabled", "#forms-control-validation", "#forms-validation", "#forms-control-sizes", "#forms-help-text", "#buttons", "#buttons-options", "#buttons-sizes", "#buttons-active", "#buttons-disabled", "#buttons-tags", "#images", "#images-responsive", "#images-shapes", "#helper-classes", "#helper-classes-colors", "#helper-classes-backgrounds", "#helper-classes-close", "#helper-classes-carets", "#helper-classes-floats", "#helper-classes-center", "#helper-classes-clearfix", "#helper-classes-show-hide", "#helper-classes-screen-readers", "#helper-classes-image-replacement", "#grid", "#grid-intro", "#grid-media-queries", "#grid-options", "#grid-example-basic", "#grid-example-fluid", "#grid-example-mixed", "#grid-example-mixed-complete", "#grid-responsive-resets", "#grid-offsetting", "#grid-nesting", "#grid-column-ordering", "#grid-less", "#responsive-utilities", "#responsive-utilities-classes", "#responsive-utilities-print", "#responsive-utilities-tests", "#bootstrap-4" ];
   var tabJavaScriptAnchors =   ["#js-overview", "#componentModal", "#modalOptions", "#modalMethods", "#modalEvents", "#modalUsage", "#modalExamples", "#componentDropdown", "#dropdownOptions", "#dropdownMethods", "#dropdownEvents", "#dropdownUsage", "#dropdownExamples", "#componentScrollspy", "#scrollspyOptions", "#scrollspyMethods", "#scrollspyEvents", "#scrollspyUsage", "#scrollspyExamples", "#componentTab", "#tabOptions", "#tabMethods", "#tabEvents", "#tabUsage", "#tabExamples", "#componentTooltip", "#tooltipOptions", "#tooltipMethods", "#tooltipEvents", "#tooltipUsage", "#tooltipExamples", "#componentPopover", "#popoverOptions", "#popoverMethods", "#popoverEvents", "#popoverUsage", "#popoverExamples", "#componentAlert", "#alertOptions", "#alertMethods", "#alertEvents", "#alertUsage", "#alertExamples", "#componentButton", "#buttonOptions", "#buttonMethods", "#buttonEvents", "#buttonUsage", "#buttonExamples", "#componentCollapse", "#collapseOptions", "#collapseMethods", "#collapseEvents", "#collapseUsage", "#collapseExamples", "#componentCarousel", "#carouselOptions", "#carouselMethods", "#carouselEvents", "#carouselUsage", "#carouselExamples", "#componentAffix", "#affixOptions", "#affixMethods", "#affixEvents", "#affixUsage", "#affixExamples" ];
+  var tabTemplateAnchors =   ["#template-overview"];
+
 
   console.dir(tabInstallationAnchors);
   console.dir(tabElementsAnchors);
   console.dir(tabComponentsAnchors);
   console.dir(tabCSSAnchors);
-  console.dir(tabJavaScriptAnchors);       
+  console.dir(tabJavaScriptAnchors);
+  console.dir(tabTemplateAnchors);
 
   if ( jQuery.inArray( hash, tabInstallationAnchors ) >= 0 ) {
 
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(1)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#corporate-ui-installation-section.tab-pane').addClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li:nth-child(1)').addClass('active');
+    $('.tab-pane').removeClass('fade active');
+    $('#corporate-ui-installation-section.tab-pane').addClass('active');
 
   } else if ( jQuery.inArray( hash, tabElementsAnchors ) >= 0 ) {
 
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(2)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#custom-elements-section.tab-pane').addClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li:nth-child(2)').addClass('active');
+    $('.tab-pane').removeClass('fade active');
+    $('#custom-elements-section.tab-pane').addClass('active');
 
   } else if ( jQuery.inArray( hash, tabComponentsAnchors ) >= 0 ) {
 
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(3)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#bootstrap-components-section.tab-pane').addClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li:nth-child(3)').addClass('active');
+    $('.tab-pane').removeClass('fade active');
+    $('#bootstrap-components-section.tab-pane').addClass('active');
 
   }  else if ( jQuery.inArray( hash, tabCSSAnchors ) >= 0 ) {
 
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(4)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#bootstrap-css-section.tab-pane').addClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li:nth-child(4)').addClass('active');
+    $('.tab-pane').removeClass('fade active');
+    $('#bootstrap-css-section.tab-pane').addClass('active');
 
   }  else if ( jQuery.inArray( hash, tabJavaScriptAnchors ) >= 0 ) {
 
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(5)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#bootstrap-javascript-section.tab-pane').addClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li:nth-child(5)').addClass('active');
+    $('.tab-pane').removeClass('fade active');
+    $('#bootstrap-javascript-section.tab-pane').addClass('active');
+
+  } else if ( jQuery.inArray( hash, tabTemplateAnchors ) >= 0 ) {
+
+    $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li:nth-child(5)').addClass('active');
+    $('.tab-pane').removeClass('fade active');
+    $('#bootstrap-template-section.tab-pane').addClass('active');
 
   }
 
 if (location.hash) {
-        location.href = location.hash;
+  location.href = location.hash;
 }
 
 })
@@ -160,7 +164,7 @@ if (location.hash) {
           <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
           <nav-item location="/corporate-ui-docs/typography/">Typography</nav-item>
         </sub-navigation>
-      </nav-item>          
+      </nav-item>
       <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
         <sub-navigation caption="Web Applications">
           <nav-item location="/corporate-ui-docs/developer/">Corporate UI</nav-item>
@@ -182,19 +186,37 @@ if (location.hash) {
             <li class="active"><a data-toggle="tab" href="#corporate-ui-installation-section">Get Started</a></li>
             <li><a data-toggle="tab" href="#custom-elements-section">Custom Elements</a></li>
             <li><a data-toggle="tab" href="#bootstrap-components-section">HTML Components</a></li>
-            <li><a data-toggle="tab" href="#bootstrap-css-section">Core CSS</a></li>        
+            <li><a data-toggle="tab" href="#bootstrap-css-section">Core CSS</a></li>
             <li><a data-toggle="tab" href="#bootstrap-javascript-section">JavaScript</a></li>
+            <li><a data-toggle="tab" href="#bootstrap-template-section">Template</a></li>
           </ul>
           <ul class="nav nav-tabs nav-tabs-light container">
             <li class="active app-styling"><a href="#">Application Styling</a></li>
-            <li class="public-styling"><a href="#">Public Site Styling</a></li>   
+            <li class="public-styling"><a href="#">Public Site Styling</a></li>
           </ul>
-        </div>    
-      </div> 
- 
+        </div>
+      </div>
     <div class="tab-content app zone">
 
-     <!-- CORPORATE UI COMPONENTS TAB CONTENT STARTS HERE -->
+    <!-- TEMPLATE TAB CONTENT STARTS HERE -->
+    <div id="bootstrap-template-section" class="tab-pane fade">
+        <div class="panel-x">
+            <div class="panel-body-x">
+              <div class="row"></div>
+              <div class="col-md-9 bs-docs-section">
+                  <article class="mt-5 mr-5">
+                  <h1 id="template-overview">Template</h1>
+                  <!-- Templates -->
+                    <section>
+                      test
+                    </section>
+                  </article>
+                </div>
+            </div>
+          </div>
+      </div>
+
+    <!-- CORPORATE UI COMPONENTS TAB CONTENT STARTS HERE -->
 
       <div id="corporate-ui-installation-section" class="tab-pane fade in active">
         <div class="bs-docs-section panel-x">
@@ -368,9 +390,7 @@ if (location.hash) {
         </div>    
        </div>
 
-     <!-- CORPORATE UI COMPONENTS TAB CONTENT STARTS HERE -->
-
-
+    <!-- CORPORATE UI COMPONENTS TAB CONTENT STARTS HERE -->
 
       <div id="custom-elements-section" class="tab-pane fade">
         <div class="bs-docs-section panel-x">
@@ -778,7 +798,7 @@ if (location.hash) {
         </div>
       </div>
 
-        <!-- CSS TAB CONTENT STARTS HERE -->
+    <!-- CSS TAB CONTENT STARTS HERE -->
 
         <div id="bootstrap-css-section" class="tab-pane fade">
          <div class="bs-docs-section panel-x">
@@ -3352,7 +3372,7 @@ if (location.hash) {
         </div>
       </div>
 
-      <!-- COMPONENTS TAB CONTENT STARTS HERE -->
+    <!-- COMPONENTS TAB CONTENT STARTS HERE -->
 
       <div id="bootstrap-components-section" class="tab-pane fade">
        <div class="panel-x">
@@ -5979,16 +5999,6 @@ Cras justo odio
         </div>
       </div>
 
-
-
-
-
-
-
-
-
-
-
      <!-- JAVASCRIPT TAB CONTENT STARTS HERE -->
 
       <div id="bootstrap-javascript-section" class="tab-pane fade">
@@ -6002,7 +6012,6 @@ Cras justo odio
                 <h4>IMPORTANT NOTICE</h4>
                 <p>We have replaced the jQuery dependent bootstrap.js (Bootstrap Javascript Components) with the <a href="https://thednp.github.io/bootstrap.native/index.html" target="_blank">Bootstrap Native JavaScript library</a>, doing just about the same things as bootstrap.js.</p>
               </div>
-          
               <div class="list-group">
                 <a class="list-group-item" href="https://github.com/thednp/bootstrap.native/wiki/Acknowledgements" target="_blank">
                   <h4 class="list-group-item-heading">Acknowledgements from the Bootstrap Native Team</h4>
@@ -9501,7 +9510,7 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
               <ul class="nav bs-docs-sidenav corporate-ui-javascript-overview">
               <li>
                 <a href="#js-overview">Overview</a>
-              </li>                                     
+              </li>
               <li>
                 <a href="#componentModal">Modal</a>
                 <ul class="nav">
@@ -9530,7 +9539,7 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
                   <li><a href="#scrollspyEvents">Events</a></li>
                   <li class=""><a href="#scrollspyUsage">Usage</a></li>
                   <li><a href="#scrollspyExamples">Examples</a></li>
-                </ul>            
+                </ul>
               </li>
               <li>
                 <a href="#componentTab">Tab</a>
@@ -9614,24 +9623,20 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
               </li>
               <li>
                 <a class="back-to-top" href="#top">Back to top</a>
-              </li>  
+              </li>
             </ul>
             <div class="checkbox">
               <label>
                 <input type="checkbox" class="code-sample"><span></span> Hide code samples
               </label>
-            </div>              
+            </div>
     </div>
   </div>
 </div>
 
+    <div class="container portal-footer"></div> <!-- FOOTER -->
 
-
-
-
-<div class="container portal-footer"></div> <!-- FOOTER -->
-
-<script src="/corporate-ui-docs/ux-lib.js"></script> 
+    <script src="/corporate-ui-docs/ux-lib.js"></script> 
 
 
     <!-- 2. Include library -->
@@ -9644,7 +9649,7 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
           console.log(this);
             return document.querySelector('#clipboard-test');
         }
-    });      
+    });
 
     clipboard.on('success', function(e) {
         console.log(e);
@@ -9655,204 +9660,202 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
     });
     </script>
 
-<script>
+    <script>
 
-$(function(){ 
-  $('.code-sample').change(function(){
-    if($(this).is(":checked")) {
-        $('.highlight').addClass('hide');
-    } else {
-        $('.highlight').removeClass('hide');
+    $(function(){
+      $('.code-sample').change(function(){
+        if($(this).is(":checked")) {
+            $('.highlight').addClass('hide');
+        } else {
+            $('.highlight').removeClass('hide');
+        }
+
+      });
+      // $(".bs-docs-sidebar .nav > li > a").css("padding","0 15px");
+      // $('.bs-example nav-item a').click(function(event) {
+      //     event.preventDefault();
+      //     console.log('Yes');
+      // });
+    })
+    </script>
+      </div>
+    </article>
+  </section>
+
+</c-main-content>
+  <style>
+
+  span.photo-background {
+      background-image: url(https://scania.github.io/corporate-ui-docs/images/background-sample.jpg);
+      display: inline-block;
+      background-position: 40% 40%;
+      margin-left: 9px;
+      background-origin: inherit;
+      background-size: cover;
+  }
+
+    .alert.alert-primary {
+      background-color: #041e42;
+      color: #fff;
     }
 
-  });
-
-  // $(".bs-docs-sidebar .nav > li > a").css("padding","0 15px");
-
-
-  // $('.bs-example nav-item a').click(function(event) {
-  //     event.preventDefault();
-  //     console.log('Yes');
-  // });
-
-})  
-</script>  
-</div>
-</article>
-</section>  
-<style>
-
-span.photo-background {
-    background-image: url(https://scania.github.io/corporate-ui-docs/images/background-sample.jpg);
-    display: inline-block;
-    background-position: 40% 40%;
-    margin-left: 9px;
-    background-origin: inherit;
-    background-size: cover;
-}
-
-  .alert.alert-primary {
-    background-color: #041e42;
-    color: #fff;
-  }
-
-  .alert.alert-sm {
-      padding: 6px 35px 6px 14px;
-  }
-
-  .alert .alert-link {
-    color: inherit;
-  }
-
-
-  strong {
-    color: inherit;
-  }
-
-  .alert.alert-primary.alert-dismissible .close {
-      top: 0px;
-      right: -21px;      
-      color: white;
-      opacity: 1;
-      text-shadow: none;
-  }
-
-  .panel.panel-xs {
-    font-family: "Scania Sans Semi Condensed";
-    width: 240px;
-    border-radius: 2px;
-    box-shadow: 0px 0px 8px rgba(0,0,0,0.16);
-  } 
-
-  .panel.panel-xs .panel-heading,
-  .panel.panel-xs .panel-heading .panel-title {
-    font-family: "Scania Sans Semi Condensed";    
-    font-weight: bold;
-    font-size: 1.2rem;
-    padding: 3px 6px 2px;
-  } 
-
-  .panel.panel-xs .panel-body {
-    font-weight: normal;
-    font-size: 1.4rem;
-    padding: 10px 20px 10px 10px;
-    line-height: 2.2rem;
-  }    
-
-  .checkbox label {
-    font-family: Scania Sans Semi Condensed;
-    padding-left: 0px;
-    color: #999;
-    font-size: 1.4rem;
-    font-weight: normal;
-  }
-
-  .app article p.lead {
-      font-size: 1.8rem;
-      line-height: 30px;
-  }
-
-  .app article h1 {
-      line-height: 0.98;
-  }
-
-
-.bs-example c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header img.c-corporate-header {
-    vertical-align: super;
-    height: 28px;
-    width: 123px;
-}
-
-.bs-example .navbar-default .navbar-header .navbar-brand:after {
-    border-left: none;
-}
-
-
-.bs-example c-corporate-header .navbar-default.c-corporate-header {
-    z-index: 900;
-  }
-
-
-.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
-    color: #fff;
-    text-decoration: none;
-    background-color: transparent;
-    outline: 0;
-}
-
-.user-profile-picture {
-    background-image: url(https://static.scania.com/resources/icons/scania/SVG_POS/08_My_scania_Mobile-24-48px.svg);
-    background-size: 106%;
-}
-
-
-
-  @media (max-width: 585px)  {
-      .alert.alert-primary.alert-dismissible .close {
-          top: -20px;
-          right: -26px;
-      }
-
-      .highlight pre code {
-          width: 220vw;
-      }    
+    .alert.alert-sm {
+        padding: 6px 35px 6px 14px;
     }
 
-  @media (max-width: 991px)  {
-    .bs-example-modal .scroll-y {
-      width: 84vw;
-      max-width: 84vw;
-      height: 550px;
+    .alert .alert-link {
+      color: inherit;
+    }
+
+
+    strong {
+      color: inherit;
+    }
+
+    .alert.alert-primary.alert-dismissible .close {
+        top: 0px;
+        right: -21px;      
+        color: white;
+        opacity: 1;
+        text-shadow: none;
+    }
+
+    .panel.panel-xs {
+      font-family: "Scania Sans Semi Condensed";
+      width: 240px;
+      border-radius: 2px;
+      box-shadow: 0px 0px 8px rgba(0,0,0,0.16);
+    }
+
+    .panel.panel-xs .panel-heading,
+    .panel.panel-xs .panel-heading .panel-title {
+      font-family: "Scania Sans Semi Condensed";    
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 3px 6px 2px;
+    }
+
+    .panel.panel-xs .panel-body {
+      font-weight: normal;
+      font-size: 1.4rem;
+      padding: 10px 20px 10px 10px;
+      line-height: 2.2rem;
+    }
+
+    .checkbox label {
+      font-family: Scania Sans Semi Condensed;
+      padding-left: 0px;
+      color: #999;
+      font-size: 1.4rem;
+      font-weight: normal;
+    }
+
+    .app article p.lead {
+        font-size: 1.8rem;
+        line-height: 30px;
+    }
+
+    .app article h1 {
+        line-height: 0.98;
+    }
+
+
+  .bs-example c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header img.c-corporate-header {
+      vertical-align: super;
+      height: 28px;
+      width: 123px;
+  }
+
+  .bs-example .navbar-default .navbar-header .navbar-brand:after {
+      border-left: none;
+  }
+
+
+  .bs-example c-corporate-header .navbar-default.c-corporate-header {
+      z-index: 900;
+    }
+
+
+  .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+      color: #fff;
+      text-decoration: none;
+      background-color: transparent;
+      outline: 0;
+  }
+
+  .user-profile-picture {
+      background-image: url(https://static.scania.com/resources/icons/scania/SVG_POS/08_My_scania_Mobile-24-48px.svg);
+      background-size: 106%;
+  }
+
+
+
+    @media (max-width: 585px)  {
+        .alert.alert-primary.alert-dismissible .close {
+            top: -20px;
+            right: -26px;
+        }
+
+        .highlight pre code {
+            width: 220vw;
+        }    
       }
 
-    .nav-tabs > li > a {
-        padding: 7px 12px 6px 12px;
-    } 
+    @media (max-width: 991px)  {
+      .bs-example-modal .scroll-y {
+        width: 84vw;
+        max-width: 84vw;
+        height: 550px;
+        }
 
-    .user-profile.user-menu .user-name {
-        padding-left: 15px;
-        text-align: left;
-    }     
-}
+      .nav-tabs > li > a {
+          padding: 7px 12px 6px 12px;
+      } 
+
+      .user-profile.user-menu .user-name {
+          padding-left: 15px;
+          text-align: left;
+      }     
+  }
 
 
-.bd-clipboard {
-  position: relative;
-  display: none;
-  float: right
-}
-
-.bd-clipboard+.highlight {
-  margin-top: 0
-}
-
-.btn-clipboard {
-  position: absolute;
-  top: .5rem;
-  right: .5rem;
-  z-index: 10;
-  display: block;
-  padding: .25rem .5rem;
-  font-size: 75%;
-  color: #818a91;
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
-  border-radius: .25rem
-}
-
-.btn-clipboard:hover {
-  color: #fff;
-  background-color: #027de7
-}
-
-@media (min-width:768px) {
   .bd-clipboard {
-    display: block
+    position: relative;
+    display: none;
+    float: right
   }
-}
 
-</style>
+  .bd-clipboard+.highlight {
+    margin-top: 0
+  }
+
+  .btn-clipboard {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    z-index: 10;
+    display: block;
+    padding: .25rem .5rem;
+    font-size: 75%;
+    color: #818a91;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    border-radius: .25rem
+  }
+
+  .btn-clipboard:hover {
+    color: #fff;
+    background-color: #027de7
+  }
+
+  @media (min-width:768px) {
+    .bd-clipboard {
+      display: block
+    }
+  }
+
+  </style>
     <script src="js/bootstrap-native-docs-scripts.js"></script>   
 </body>
 </html>
