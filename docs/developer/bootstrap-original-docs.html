@@ -9,16 +9,16 @@
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
 
   <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
-  <!--   3.4.0-CF   -->
+  <!--   3.5.2-CF   -->
   <script src="https://static.scania.com/build/global/3.5.2/js/corporate-ui.js"></script>
-  <link rel="stylesheet" href="/corporate-ui-docs/developer/css/scania-bootstrap-docs.css">
-  <link rel="stylesheet" href="/corporate-ui-docs/developer/css/prism.css">
+  <link rel="stylesheet" href="css/scania-bootstrap-docs.css">
+  <link rel="stylesheet" href="css/prism.css">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
-  <script src="/corporate-ui-docs/js/google-analytics.js"></script>
+  <script src="js/google-analytics.js"></script>
 
-  <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">  
-  <script src="/corporate-ui-docs/developer/holder.js"></script>
+  <link rel="stylesheet" href="ux-lib.css">  
+  <script src="holder.js"></script>
 
 <style>
 @media (max-width: 748px) {
@@ -40,10 +40,7 @@
 <script>
 
 $(function(){
-
-
   // window.onload = function(){
-
   // if(location.hash) {
   //   var tabElementsAnchors = {};
   //   var targetSection = '';
@@ -82,7 +79,6 @@ $(function(){
   var tabJavaScriptAnchors =   ["#js-overview", "#componentModal", "#modalOptions", "#modalMethods", "#modalEvents", "#modalUsage", "#modalExamples", "#componentDropdown", "#dropdownOptions", "#dropdownMethods", "#dropdownEvents", "#dropdownUsage", "#dropdownExamples", "#componentScrollspy", "#scrollspyOptions", "#scrollspyMethods", "#scrollspyEvents", "#scrollspyUsage", "#scrollspyExamples", "#componentTab", "#tabOptions", "#tabMethods", "#tabEvents", "#tabUsage", "#tabExamples", "#componentTooltip", "#tooltipOptions", "#tooltipMethods", "#tooltipEvents", "#tooltipUsage", "#tooltipExamples", "#componentPopover", "#popoverOptions", "#popoverMethods", "#popoverEvents", "#popoverUsage", "#popoverExamples", "#componentAlert", "#alertOptions", "#alertMethods", "#alertEvents", "#alertUsage", "#alertExamples", "#componentButton", "#buttonOptions", "#buttonMethods", "#buttonEvents", "#buttonUsage", "#buttonExamples", "#componentCollapse", "#collapseOptions", "#collapseMethods", "#collapseEvents", "#collapseUsage", "#collapseExamples", "#componentCarousel", "#carouselOptions", "#carouselMethods", "#carouselEvents", "#carouselUsage", "#carouselExamples", "#componentAffix", "#affixOptions", "#affixMethods", "#affixEvents", "#affixUsage", "#affixExamples" ];
   var tabTemplateAnchors =   ["#template-overview"];
 
-
   console.dir(tabInstallationAnchors);
   console.dir(tabElementsAnchors);
   console.dir(tabComponentsAnchors);
@@ -90,6 +86,7 @@ $(function(){
   console.dir(tabJavaScriptAnchors);
   console.dir(tabTemplateAnchors);
 
+  //Config for nav-pills on top(li:nth-child(X))
   if ( jQuery.inArray( hash, tabInstallationAnchors ) >= 0 ) {
 
     $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
@@ -126,25 +123,22 @@ $(function(){
     $('#bootstrap-javascript-section.tab-pane').addClass('active');
 
   } else if ( jQuery.inArray( hash, tabTemplateAnchors ) >= 0 ) {
-
+    debugger
     $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-    $('.nav.nav-tabs.c-ui-tabs > li:nth-child(5)').addClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li:nth-child(6)').addClass('active');
     $('.tab-pane').removeClass('fade active');
     $('#bootstrap-template-section.tab-pane').addClass('active');
 
   }
 
-if (location.hash) {
-  location.href = location.hash;
-}
+  if (location.hash) {
+    location.href = location.hash;
+  }
 
 })
 
 </script>
-
-
 </head>
-
 <body class="scania app" id="top">
 
 <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
@@ -208,10 +202,33 @@ if (location.hash) {
                   <h1 id="template-overview">Template</h1>
                   <!-- Templates -->
                     <section>
-                      test
+                      <p>Save time and use template</p>
                     </section>
                   </article>
                 </div>
+                <div class="col-md-3">
+                  <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250">
+                    <ul class="nav bs-docs-sidenav template-overview">
+                      <li>
+                        <a href="#template-overview">Overview</a>
+                      </li>
+                      <li>
+                        <a href="#sample-page-overview">Samle page</a>
+                      </li>
+                      <li>
+                          <a href="#email-template-overview">Email template</a>
+                      </li>
+                      <li>
+                        <a class="back-to-top" href="#top"> Back to top</a>
+                      </li>
+                      </ul>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" class="code-sample"><span></span> Hide code samples
+                        </label>
+                      </div>
+                    </nav>
+                  </div>
             </div>
           </div>
       </div>
@@ -9685,14 +9702,14 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
 </c-main-content>
   <style>
 
-  span.photo-background {
-      background-image: url(https://scania.github.io/corporate-ui-docs/images/background-sample.jpg);
-      display: inline-block;
-      background-position: 40% 40%;
-      margin-left: 9px;
-      background-origin: inherit;
-      background-size: cover;
-  }
+    span.photo-background {
+        background-image: url(https://scania.github.io/corporate-ui-docs/images/background-sample.jpg);
+        display: inline-block;
+        background-position: 40% 40%;
+        margin-left: 9px;
+        background-origin: inherit;
+        background-size: cover;
+    }
 
     .alert.alert-primary {
       background-color: #041e42;
@@ -9856,6 +9873,6 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
   }
 
   </style>
-    <script src="js/bootstrap-native-docs-scripts.js"></script>   
+  <script src="js/bootstrap-native-docs-scripts.js"></script>
 </body>
 </html>
