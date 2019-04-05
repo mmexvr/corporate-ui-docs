@@ -863,96 +863,21 @@ $(function(){
 
                 <h3 id="corporate-footer-site-name">Opening a link in a new browser window or tab</h3>
                 <p>If you prefere to open a nav-item in a new window, please use the JS event <code>onclick="window.open('https://wherever.com')"</code> to do the trick. It's included in the above code sample.</p>
-              </div>  
-
-
-
-
-
+              </div>
 
               <div class="bs-docs-section panel-x">
-                <div class="page-header">
-                  <h2 id="sample-page">Sample Page</h2>
-                </div>
-                <p>OK, so that's the basic components that most projects start out with. So, how does they all fit togheter? Copy the code sample below or <a href="sample-page.html" download>download it as a raw html file</a>. Then you're all set to go ahead with implementing the core needs of your requirements.
-                  NOTE: Using a JS Framework like Angular, Vue or React <a href="corporate-ui-for-frameworks.html">might take a little tweaking</a>.</p>
-
-
-
-                <div class="highlight"><pre><code class="html">
-  <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;scania app&quot;<span class="nt">&gt;</span>   
-    <span class="nt">&lt;c-corporate-header</span> <span class="na">site-name=</span><span class="s">&quot;My application name&quot;</span> <span class="na">short-name=</span><span class="s">&quot;My app&quot;</span><span class="na"> site-url=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Optional<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>User Menu<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-    <span class="nt">&lt;/c-corporate-header<span class="nt">&gt;</span>
-
-    <span class="nt">&lt;c-main-content</span><span class="nt">&gt;</span> 
-
-      <span class="nt">&lt;c-main-navigation<span class="nt">&gt;</span>
-        <span class="nt">&lt;primary-items<span class="nt">&gt;</span>
-          <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Home<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-          <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Style Guide<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-            <span class="nt">&lt;sub-navigation</span> <span class="na">caption=</span><span class="s">&quot;Style Guide&quot;<span class="nt">&gt;</span>
-              <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Logotype<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-              <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Icons<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-            <span class="nt">&lt;/sub-navigation<span class="nt">&gt;</span>
-          <span class="nt">&lt;/nav-item<span class="nt">&gt;</span>    
-        <span class="nt">&lt;/primary-items<span class="nt">&gt;</span>
-        <span class="nt">&lt;secondary-items<span class="nt">&gt;</span>
-           Secondary items are optional, more information below.
-        <span class="nt">&lt;/secondary-items<span class="nt">&gt;</span>
-      <span class="nt">&lt;/c-main-navigation<span class="nt">&gt;</span>
-
-      <span class="nt">&lt;section</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;<span class="nt">&gt;</span>
-
-        Your application goes here. If you are using .container-fluid,<br>
-        your page will take the whole browser width. <br>
-        Using .container, it will give you margins on wider screens.
-
-        <span class="nt">&lt;/div</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;/section</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/c-main-content<span class="nt">&gt;</span>
-
-    <span class="nt">&lt;c-corporate-footer</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;c-social-media</span><span class="nt">&gt;</span>
-       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;facebook&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot; <span class="na">onclick=</span><span class="s">&quot;window.open('https://www.facebook.com/scaniagroup/')&quot;<span class="nt"><span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;twitter&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;youtube&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;linkedin&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>         
-      <span class="nt">&lt;/c-social-media</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Legal notice<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Privacy statement<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Cookies<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Contact us<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>  
-    <span class="nt">&lt;/c-corporate-footer</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/body</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/html</span><span class="nt">&gt;</span>
-                </code></pre></div>
-
-
-
-                <h3 id="sample-page-app-public">Application vs. Public</h3>
+                <h2 id="sample-page-app-public">Application vs. Public</h2>
                 <p>You can always toogle between the layout zones by altering between the .app and .public classes on the body tag.</p>
-
-
-
-
-
-
               </div><!--  end of bs-docs-section -->
-
-              </article>
-
+            </article>
           </div><!-- col-9 -->
-
 
             <div class="col-md-3">
                 <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
                   <ul class="nav bs-docs-sidenav corporate-ui-components-overview">
                   <li>
                     <a href="#corporate-ui-components-overview">Overview</a>
-                  </li>                                     
+                  </li>
                   <li>
                     <a href="#corporate-header">Corporate Header</a>
                   </li>
@@ -966,20 +891,14 @@ $(function(){
                     <a href="#corporate-footer">Corporate Footer</a>
                   </li>
                   <li>
-                    <a href="#sample-page">Sample Page</a>
-                  </li>
-                  <li>
-                    <a href="https://scania.github.io/corporate-ui-docs/developer/email-template.html">Email Template</a>
-                  </li>
-                  <li>
                     <a class="back-to-top" href="#top"> Back to top</a>
-                  </li> 
+                  </li>
                   </ul>
                   <div class="checkbox">
                     <label>
                       <input type="checkbox" class="code-sample"><span></span> Hide code samples
                     </label>
-                  </div>                 
+                  </div>
                 </nav>
               </div>
             </div>
