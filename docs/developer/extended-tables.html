@@ -19,7 +19,7 @@
 
   <script type="text/javascript">
     $(function() {
-      $('.tablesorter').tablesorter({
+      $('.table-filterable').tablesorter({
         theme: 'bootstrap',
         headerTemplate: '{content}{icon}',
 
@@ -39,12 +39,6 @@
       });
     });
   </script>
-
-  <style>
-    sub-navigation .caption.sub-navigation {
-      background-color: transparent;
-    }
-  </style>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
   <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
@@ -1813,8 +1807,8 @@
                 </div>       
                 <div class="row">
                       <div class="col-md-12 col-sm-12">
-                        <h2>.table.tablesorter (dependent on the Tablesorter plugin)</h2>
-                        <table class="table tablesorter">
+                        <h2>.table.tablesorter.table-filterable (dependent on the Tablesorter plugin)</h2>
+                        <table class="table tablesorter table-filterable">
                             <thead>
                               <tr>
                                 <th>#</th>
@@ -1933,13 +1927,113 @@
                             </tbody>
                         </table>
                       </div>
+                    </div>  
+                    <div class="row">
+                      <div class="col-md-12 col-sm-12">
+                        <h2>.table.tablesorter.table-expandable (dependent on the Tablesorter plugin)</h2>
+                        <table class="tablesorter table table-striped table-expandable">
+                          <colgroup>
+                            <col width="85" />
+                            <col width="250" />
+                            <col width="100" />
+                            <col width="90" />
+                            <col width="70" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>Order #</th>
+                              <th>Customer</th>
+                              <th>PO</th>
+                              <th>Date</th>
+                              <th>Total</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td rowspan="2"> <!-- rowspan="2" makes the table look nicer -->
+                                <a href="#" class="toggle">SO71774</a> <!-- link to toggle view of the child row -->
+                              </td>
+                              <td>Good Toys</td>
+                              <td>PO348186287</td>
+                              <td>Jul 20, 2007</td>
+                              <td>$972.78</td>
+                            </tr>
+                            <tr class="tablesorter-childRow">
+                              <td colspan="4">
+                                <div class="bold">Shipping Address</div>
+                                <div>99700 Bell Road<br>Auburn, California 95603</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td rowspan="2"> <!-- rowspan="2" makes the table look nicer -->
+                                <a href="#" class="toggle">SO71775</a> <!-- link to toggle view of the child row -->
+                              </td>
+                              <td>Cycle Clearance</td>
+                              <td>PO58159451</td>
+                              <td>May 6, 2007</td>
+                              <td>$2,313.13</td>
+                            </tr>
+                            <tr class="tablesorter-childRow">
+                              <td colspan="4">
+                                <div class="bold">Shipping Address</div>
+                                <div>2255 254th Avenue Se<br>Albany, Oregon 97321</div>
+                              </td>
+                            </tr>
+
+                            <!-- View page source for complete HTML markup -->
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>  
                 </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </c-main-content>
-  <c-corporate-footer></c-corporate-footer>
+              </div>
+            </div>
+          </section>
+        </c-main-content>
+      <c-corporate-footer></c-corporate-footer>
+
+  <script>
+
+   $( function() {
+
+      var $table1 = $( '.table-expandable' )
+        .tablesorter({
+          theme : 'bootstrap',
+          // this is the default setting
+          cssChildRow : "tablesorter-childRow",
+
+          // initialize zebra and filter widgets
+
+          widgets: ['columns','resizable','uitheme'],
+          
+          widgetOptions: {
+          
+            filter_childRows  : true,
+          }
+
+        });
+
+
+      $table1.find( '.tablesorter-childRow td' ).addClass( 'hidden' );
+
+      $table1.delegate( '.toggle', 'click' ,function() {
+        // use "nextUntil" to toggle multiple child rows
+        // toggle table cells instead of the row
+        $( this )
+          .closest( 'tr' )
+          .nextUntil( 'tr.tablesorter-hasChildRow' )
+          .find( 'td' )
+          .toggleClass( 'hidden' );
+        return false;
+      });
+
+
+
+    });
+  </script>  
+
 
 </body>
 </html>
