@@ -8,16 +8,19 @@
   <title>UX Library - Bootstrap CSS for Applications</title>
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
 
-  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
-  <!--   3.4.0-CF   -->
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>
+
+  <!--   3.5.2-CF   -->
   <script src="https://static.scania.com/build/global/3.5.2/js/corporate-ui.js"></script>
+  <!-- Ux-library bootstrap docs specific css  -->
   <link rel="stylesheet" href="/corporate-ui-docs/developer/css/scania-bootstrap-docs.css">
   <link rel="stylesheet" href="/corporate-ui-docs/developer/css/prism.css">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>
   <script src="/corporate-ui-docs/js/google-analytics.js"></script>
 
-  <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">  
+  <link rel="stylesheet" href="/corporate-ui-docs/ux-lib.css">
   <script src="/corporate-ui-docs/developer/holder.js"></script>
 
 <style>
@@ -40,10 +43,7 @@
 <script>
 
 $(function(){
-
-
   // window.onload = function(){
-
   // if(location.hash) {
   //   var tabElementsAnchors = {};
   //   var targetSection = '';
@@ -73,74 +73,64 @@ $(function(){
   //     location.href = location.hash;
   //   }
   // }
-
-
   // }
-
-
   var hash = window.location.hash;
-
-
   var tabInstallationAnchors =  [ "#corporate-ui-installation-overview", "#corporate-ui-installation-overview"];
   var tabElementsAnchors =  [ "#corporate-ui-components-overview", "#corporate-header", ,"#corporate-header-dealer-variation", "#main-content", "#main-nav", "#corporate-footer" ];
   var tabComponentsAnchors =  [ "#components-overview", "#dropdowns", "#dropdowns-example", "#dropdowns-alignment", "#dropdowns-headers", "#dropdowns-disabled", "#btn-groups", "#btn-groups-single", "#btn-groups-toolbar", "#btn-groups-sizing", "#btn-groups-nested", "#btn-groups-vertical", "#btn-groups-justified", "#btn-dropdowns", "#btn-dropdowns-single", "#btn-dropdowns-split", "#btn-dropdowns-sizing", "#btn-dropdowns-dropup", "#input-groups", "#input-groups-basic", "#input-groups-sizing", "#input-groups-checkboxes-radios", "#input-groups-buttons", "#input-groups-buttons-dropdowns", "#input-groups-buttons-segmented", "#nav", "#nav-tabs", "#nav-pills", "#nav-justified", "#nav-disabled-links", "#nav-dropdowns", "#navbar", "#navbar-default", "#navbar-forms", "#navbar-buttons", "#navbar-text", "#navbar-links", "#navbar-component-alignment", "#navbar-fixed-top", "#navbar-fixed-bottom", "#navbar-static-top", "#navbar-inverted", "#breadcrumbs", "#pagination", "#pagination-default", "#pagination-pager", "#labels", "#badges", "#jumbotron", "#page-header", "#thumbnails", "#thumbnails-default", "#thumbnails-custom-content", "#alerts", "#alerts-examples", "#alerts-dismissable", "#alerts-links", "#progress", "#progress-basic", "#progress-label", "#progress-alternatives", "#progress-striped", "#progress-animated", "#progress-stacked", "#media", "#media-default", "#media-list", "#list-group", "#list-group-basic", "#list-group-badges", "#list-group-linked", "#list-group-contextual-classes", "#list-group-custom-content", "#panels", "#panels-basic", "#panels-heading", "#panels-alternatives", "#panels-tables", "#panels-list-group", "#wells" ];
   var tabCSSAnchors =  ["#core-css-overview", "#overview-doctype", "#overview-mobile", "#overview-type-links", "#overview-normalize", "#overview-container", "#type", "#type-headings", "#type-body-copy", "#type-emphasis", "#type-abbreviations", "#type-addresses", "#type-blockquotes", "#type-lists", "#code", "#code-inline", "#code-user-input", "#code-block", "#tables", "#tables-example", "#tables-striped", "#tables-bordered", "#tables-hover-rows", "#tables-condensed", "#tables-contextual-classes", "#tables-responsive", "#forms", "#forms-example", "#forms-inline", "#forms-horizontal", "#forms-controls", "#forms-controls-file-input", "#forms-controls-selects", "#forms-controls-checkradios", "#forms-controls-textarea", "#forms-controls-inputs", "#forms-controls-static", "#forms-control-focus", "#forms-control-disabled", "#forms-control-validation", "#forms-validation", "#forms-control-sizes", "#forms-help-text", "#buttons", "#buttons-options", "#buttons-sizes", "#buttons-active", "#buttons-disabled", "#buttons-tags", "#images", "#images-responsive", "#images-shapes", "#helper-classes", "#helper-classes-colors", "#helper-classes-backgrounds", "#helper-classes-close", "#helper-classes-carets", "#helper-classes-floats", "#helper-classes-center", "#helper-classes-clearfix", "#helper-classes-show-hide", "#helper-classes-screen-readers", "#helper-classes-image-replacement", "#grid", "#grid-intro", "#grid-media-queries", "#grid-options", "#grid-example-basic", "#grid-example-fluid", "#grid-example-mixed", "#grid-example-mixed-complete", "#grid-responsive-resets", "#grid-offsetting", "#grid-nesting", "#grid-column-ordering", "#grid-less", "#responsive-utilities", "#responsive-utilities-classes", "#responsive-utilities-print", "#responsive-utilities-tests", "#bootstrap-4" ];
   var tabJavaScriptAnchors =   ["#js-overview", "#componentModal", "#modalOptions", "#modalMethods", "#modalEvents", "#modalUsage", "#modalExamples", "#componentDropdown", "#dropdownOptions", "#dropdownMethods", "#dropdownEvents", "#dropdownUsage", "#dropdownExamples", "#componentScrollspy", "#scrollspyOptions", "#scrollspyMethods", "#scrollspyEvents", "#scrollspyUsage", "#scrollspyExamples", "#componentTab", "#tabOptions", "#tabMethods", "#tabEvents", "#tabUsage", "#tabExamples", "#componentTooltip", "#tooltipOptions", "#tooltipMethods", "#tooltipEvents", "#tooltipUsage", "#tooltipExamples", "#componentPopover", "#popoverOptions", "#popoverMethods", "#popoverEvents", "#popoverUsage", "#popoverExamples", "#componentAlert", "#alertOptions", "#alertMethods", "#alertEvents", "#alertUsage", "#alertExamples", "#componentButton", "#buttonOptions", "#buttonMethods", "#buttonEvents", "#buttonUsage", "#buttonExamples", "#componentCollapse", "#collapseOptions", "#collapseMethods", "#collapseEvents", "#collapseUsage", "#collapseExamples", "#componentCarousel", "#carouselOptions", "#carouselMethods", "#carouselEvents", "#carouselUsage", "#carouselExamples", "#componentAffix", "#affixOptions", "#affixMethods", "#affixEvents", "#affixUsage", "#affixExamples" ];
+  var tabTemplateAnchors =   ["#template-overview", "#sample-page-overview","#email-template-overview"];
 
   console.dir(tabInstallationAnchors);
   console.dir(tabElementsAnchors);
   console.dir(tabComponentsAnchors);
   console.dir(tabCSSAnchors);
-  console.dir(tabJavaScriptAnchors);       
+  console.dir(tabJavaScriptAnchors);
+  console.dir(tabTemplateAnchors);
 
+  //Config for nav-pills on top(li:nth-child(X))
   if ( jQuery.inArray( hash, tabInstallationAnchors ) >= 0 ) {
-
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(1)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#corporate-ui-installation-section.tab-pane').addClass('active');
-
+    $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li:nth-child(1)').addClass('active');
+    $('.tab-pane').removeClass('fade active');
+    $('#corporate-ui-installation-section.tab-pane').addClass('active');
   } else if ( jQuery.inArray( hash, tabElementsAnchors ) >= 0 ) {
-
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(2)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#custom-elements-section.tab-pane').addClass('active');
-
+    $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li:nth-child(2)').addClass('active');
+    $('.tab-pane').removeClass('fade active');
+    $('#custom-elements-section.tab-pane').addClass('active');
   } else if ( jQuery.inArray( hash, tabComponentsAnchors ) >= 0 ) {
-
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(3)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#bootstrap-components-section.tab-pane').addClass('active');
-
+    $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li:nth-child(3)').addClass('active');
+    $('.tab-pane').removeClass('fade active');
+    $('#bootstrap-components-section.tab-pane').addClass('active');
   }  else if ( jQuery.inArray( hash, tabCSSAnchors ) >= 0 ) {
-
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(4)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#bootstrap-css-section.tab-pane').addClass('active');
-
+    $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li:nth-child(4)').addClass('active');
+    $('.tab-pane').removeClass('fade active');
+    $('#bootstrap-css-section.tab-pane').addClass('active');
   }  else if ( jQuery.inArray( hash, tabJavaScriptAnchors ) >= 0 ) {
+    $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li:nth-child(5)').addClass('active');
+    $('.tab-pane').removeClass('fade active');
+    $('#bootstrap-javascript-section.tab-pane').addClass('active');
 
-  $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  $('.nav.nav-tabs.c-ui-tabs > li:nth-child(5)').addClass('active');
-  $('.tab-pane').removeClass('fade active');
-  $('#bootstrap-javascript-section.tab-pane').addClass('active');
-
+  } else if ( jQuery.inArray( hash, tabTemplateAnchors ) >= 0 ) {
+    debugger
+    $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
+    $('.nav.nav-tabs.c-ui-tabs > li:nth-child(6)').addClass('active');
+    $('.tab-pane').removeClass('fade active');
+    $('#bootstrap-template-section.tab-pane').addClass('active');
   }
 
-if (location.hash) {
-        location.href = location.hash;
-}
-
+  if (location.hash) {
+    location.href = location.hash;
+  }
 })
 
 </script>
-
-
 </head>
-
 <body class="scania app" id="top">
 
 <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
@@ -160,7 +150,7 @@ if (location.hash) {
           <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
           <nav-item location="/corporate-ui-docs/typography/">Typography</nav-item>
         </sub-navigation>
-      </nav-item>          
+      </nav-item>
       <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
         <sub-navigation caption="Web Applications">
           <nav-item location="/corporate-ui-docs/developer/">Corporate UI</nav-item>
@@ -182,19 +172,244 @@ if (location.hash) {
             <li class="active"><a data-toggle="tab" href="#corporate-ui-installation-section">Get Started</a></li>
             <li><a data-toggle="tab" href="#custom-elements-section">Custom Elements</a></li>
             <li><a data-toggle="tab" href="#bootstrap-components-section">HTML Components</a></li>
-            <li><a data-toggle="tab" href="#bootstrap-css-section">Core CSS</a></li>        
+            <li><a data-toggle="tab" href="#bootstrap-css-section">Core CSS</a></li>
             <li><a data-toggle="tab" href="#bootstrap-javascript-section">JavaScript</a></li>
+            <li><a data-toggle="tab" href="#bootstrap-template-section">Template</a></li>
           </ul>
           <ul class="nav nav-tabs nav-tabs-light container">
             <li class="active app-styling"><a href="#">Application Styling</a></li>
-            <li class="public-styling"><a href="#">Public Site Styling</a></li>   
+            <li class="public-styling"><a href="#">Public Site Styling</a></li>
           </ul>
-        </div>    
-      </div> 
- 
+        </div>
+      </div>
     <div class="tab-content app zone">
 
-     <!-- CORPORATE UI COMPONENTS TAB CONTENT STARTS HERE -->
+    <!-- TEMPLATE TAB CONTENT STARTS HERE-->
+
+    <div id="bootstrap-template-section" class="tab-pane fade">
+        <div class="panel-x">
+            <div class="panel-body-x">
+              <div class="row"></div>
+              <div class="col-md-9 bs-docs-section">
+                  <article class="mt-5 mr-5">
+                  <h1 id="template-overview">Templates</h1>
+                  <!-- Templates -->
+                    <section>
+                      <p>Save time and use template</p>
+                      <div class="bs-docs-section panel-x">
+                        <div class="page-header">
+                            <h2 id="sample-page-overview">Sample Page</h2>
+                        </div>
+                        <p>OK, so that's the basic components that most projects start out with. So, how does they all fit togheter? Copy the code sample below or
+                          <a href="sample-page.html" download>download it as a raw html file</a>. Then you're all set to go ahead with implementing the core needs of your requirements.
+                          NOTE: Using a JS Framework like Angular, Vue or React <a href="corporate-ui-for-frameworks.html">might take a little tweaking</a>.</p>
+                          <!-- Sample-page code example -->
+                        <div class="highlight"><pre><code class="html">
+      <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;scania app&quot;<span class="nt">&gt;</span>   
+        <span class="nt">&lt;c-corporate-header</span> <span class="na">site-name=</span><span class="s">&quot;My application name&quot;</span> <span class="na">short-name=</span><span class="s">&quot;My app&quot;</span><span class="na"> site-url=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Optional<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+          <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>User Menu<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+        <span class="nt">&lt;/c-corporate-header<span class="nt">&gt;</span>
+    
+        <span class="nt">&lt;c-main-content</span><span class="nt">&gt;</span> 
+    
+          <span class="nt">&lt;c-main-navigation<span class="nt">&gt;</span>
+            <span class="nt">&lt;primary-items<span class="nt">&gt;</span>
+              <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Home<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+              <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Style Guide<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+                <span class="nt">&lt;sub-navigation</span> <span class="na">caption=</span><span class="s">&quot;Style Guide&quot;<span class="nt">&gt;</span>
+                  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Logotype<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+                  <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Icons<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+                <span class="nt">&lt;/sub-navigation<span class="nt">&gt;</span>
+              <span class="nt">&lt;/nav-item<span class="nt">&gt;</span>    
+            <span class="nt">&lt;/primary-items<span class="nt">&gt;</span>
+            <span class="nt">&lt;secondary-items<span class="nt">&gt;</span>
+                Secondary items are optional, more information below.
+            <span class="nt">&lt;/secondary-items<span class="nt">&gt;</span>
+          <span class="nt">&lt;/c-main-navigation<span class="nt">&gt;</span>
+    
+          <span class="nt">&lt;section</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;<span class="nt">&gt;</span>
+    
+            Your application goes here. If you are using .container-fluid,<br>
+            your page will take the whole browser width. <br>
+            Using .container, it will give you margins on wider screens.
+    
+            <span class="nt">&lt;/div</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/section</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/c-main-content<span class="nt">&gt;</span>
+    
+        <span class="nt">&lt;c-corporate-footer</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;c-social-media</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;facebook&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot; <span class="na">onclick=</span><span class="s">&quot;window.open('https://www.facebook.com/scaniagroup/')&quot;<span class="nt"><span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+            <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;twitter&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+            <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;youtube&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+            <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;linkedin&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>         
+          <span class="nt">&lt;/c-social-media</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Legal notice<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+          <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Privacy statement<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+          <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Cookies<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
+          <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Contact us<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>  
+        <span class="nt">&lt;/c-corporate-footer</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/body</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/html</span><span class="nt">&gt;</span>
+                        </code></pre></div>
+                      <h3 id="sample-page-app-public">Application vs. Public</h3>
+                      <p>You can always toogle between the layout zones by altering between the .app and .public classes on the body tag.</p>
+                    </div><!--  end of bs-docs-section -->
+                    <div class="bs-docs-section panel-x email-template-example">
+                        <div class="page-header">
+                          <h2 id="email-template-overview">Email template</h2>
+                        </div>
+                        <div class="row row-eq-height">
+                            <div class="col-xs-12 col-lg-7">
+                              <div class="card card-email-template">
+                                <div class="card-body">
+                                  <section>
+                                    <p class="card-text">
+                                  </section>
+                                  <section>
+                                    <strong>
+                                      <p>The email template enables you to create emails with Scania look and feel like</p>
+                                    </strong>
+                                    <ul>
+                                      <li>Newsletters</li>
+                                      <li>Status updates</li>
+                                      <li>Order approval</li>
+                                      <li>etc..</li>
+                                    </ul>
+                                  </section>
+                                  <section>
+                                    <p> The template consist of several section with different code samples. Code samples is marked
+                                      with HTML comments</p> <strong>
+                                      <p>Example</p>
+                                    </strong>
+                                    <code><p>&lt;-- H1 Default Headline Start --&gt;</p></code>
+                                    <span><em>and ended with:</em></span>
+                                    <code><p>&lt;-- H1 Default Headline End --&gt; </p></code>
+                                  </section>
+                                  <section>
+                                    <strong>
+                                      <p>Design your email step by step</p>
+                                    </strong>
+                                    <ul>
+                                      <li>Remove parts of the template you don’t want to use.</li>
+                                      <li>Move the code samples and arrange them in the order you want to use them.</li>
+                                      <li>Edit the placeholder text and fill out the content.</li>
+                                      <li>Edit/add links together with the link text that are necessary with the.</li>
+                                      <li>Run test (https://putsmail.com/ is a useful testing service).</li>
+                                    </ul>
+                                    <a class="card-link"><button type="button" class="btn btn-primary btn-md pull-right"
+                                        data-toggle="modal" data-target="#myModal">
+                                        View template
+                                      </button></a>
+                                  </section>
+                                </div>
+                              </div>
+                              <div class="modal fade" id="myModal">
+                                <div class="modal-dialog modal-xl">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                      <h4 class="modal-title">Preview</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <a href="https://scania.github.io/corporate-ui-docs/template/html-mail/index.html" download
+                                        target="_blank">
+                                        <h4 class="text-right">Download template</h4>
+                                      </a>
+                                      <div class="row">
+                                        <div class="col-xs-12 col-lg-12">
+                                          <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" frameborder="0"
+                                            style="border:none;">
+                                            <iframe
+                                              src="https://scania.github.io/corporate-ui-docs/template/html-mail/index.html"></iframe>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-lg-5">
+                              <div class="card">
+                                <div class="card-body">
+                                  <section>
+                                    <h3 class="card-title">Technical information</h3>
+                                    <p class="card-text">
+                                  </section>
+                                  <section>
+                                    <strong>Code languages used</strong>
+                                    <ul style="list-style: none; padding-left: 0;">
+                                      <li>HTML</li>
+                                      <li>CSS</li>
+                                    </ul>
+                                  </section>
+                                  <section>
+                                    <strong>Tested Mail applications</strong>
+                                    <ul style="list-style: none; padding-left: 0;">
+                                      <li>Outlook</li>
+                                      <li>Gmail</li>
+                                      <li>iOS mail</li>
+                                    </ul>
+                                  </section>
+                                  <section>
+                                    <strong>Tested Web browsers</strong>
+                                    <ul style="list-style: none; padding-left: 0;">
+                                      <li>Google Chrome</li>
+                                      <li>Internet Explorer 11</li>
+                                      <li>Microsoft Edge</li>
+                                      <li>Mozilla FireFox</li>
+                                    </ul>
+                                  </section>
+                                  <section>
+                                    <strong>
+                                      <p>OBS!</p>
+                                    </strong>
+                                    <p>Different browsers and mail applications render the template differenty which can result in
+                                      varaitions in look.
+                                      For example the use of Scania Fonts wont work in most cases, to compensate for this Arial and
+                                      Helvetica is used as
+                                      fallback fonts.</p>
+                                    </p>
+                                  </section>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                  </section>
+                  </article>
+                </div>
+                <div class="col-md-3">
+                  <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250">
+                    <ul class="nav bs-docs-sidenav template-overview">
+                      <li>
+                        <a href="#template-overview">Overview</a>
+                      </li>
+                      <li>
+                        <a href="#sample-page-overview">Samle page</a>
+                      </li>
+                      <li>
+                          <a href="#email-template-overview">Email template</a>
+                      </li>
+                      <li>
+                        <a class="back-to-top" href="#top"> Back to top</a>
+                      </li>
+                      </ul>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" class="code-sample"><span></span> Hide code samples
+                        </label>
+                      </div>
+                    </nav>
+                  </div>
+            </div>
+          </div>
+    </div>
+
+    <!-- CORPORATE UI INSTALLATION TAB CONTENT STARTS HERE -->
 
       <div id="corporate-ui-installation-section" class="tab-pane fade in active">
         <div class="bs-docs-section panel-x">
@@ -368,9 +583,7 @@ if (location.hash) {
         </div>    
        </div>
 
-     <!-- CORPORATE UI COMPONENTS TAB CONTENT STARTS HERE -->
-
-
+    <!-- CORPORATE UI COMPONENTS TAB CONTENT STARTS HERE -->
 
       <div id="custom-elements-section" class="tab-pane fade">
         <div class="bs-docs-section panel-x">
@@ -383,19 +596,14 @@ if (location.hash) {
                 <p class="lead">The most common interaction patterns at Scania are made into custom elements, to offer easy implementation of sometimes advanced features. They also make it possible to create a coherent user experience over different applications and platforms. Custom elements are similar to framework specific components, except that they're supported by the browsers and normally have no dependencies to other technologies. A custom element works like any other HTML element why they are so easy to adopt.</p>
               <div class="bs-docs-section panel-x">
                 <div class="page-header">
-                    <h2 id="corporate-header">Corporate Header</h2>
+                  <h2 id="corporate-header">Corporate Header</h2>
                 </div>
-              
                 <h3 id="corporate-header-example">Example</h3>
-
                 <div class="bs-example">
-
                   <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
                   <iframe src="docs-example-corporate-header.html" frameborder="0" style="overflow:scroll !important" height="72px" width="100%"></iframe>
-                  </div>                  
-
+                  </div>
                 </div>
-
 
                 <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;c-corporate-header</span> <span class="na">site-name=</span><span class="s">&quot;My application name&quot;</span> <span class="na">short-name=</span><span class="s">&quot;My app&quot;</span><span class="na"> site-url=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
@@ -419,7 +627,7 @@ if (location.hash) {
 
                   <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
                       <iframe src="docs-example-corporate-dealer-header.html" frameborder="0" style="overflow:scroll !important" height="72px" width="100%"></iframe>
-                  </div>                  
+                  </div>
 
                 </div>
 
@@ -434,7 +642,7 @@ if (location.hash) {
 
                   <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
                       <iframe src="docs-example-corporate-dealer-header-logotype.html" frameborder="0" style="overflow:scroll !important" height="72px" width="100%"></iframe>
-                  </div>                  
+                  </div>
 
                 </div>
 
@@ -490,7 +698,7 @@ if (location.hash) {
 
                   <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
                       <iframe src="docs-example-main-navigation.html" frameborder="0" style="overflow:scroll !important" height="90px" width="100%"></iframe>
-                  </div>              
+                  </div>
 
                 </div>
 
@@ -504,7 +712,7 @@ if (location.hash) {
         <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Logotype<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
         <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Icons<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
       <span class="nt">&lt;/sub-navigation<span class="nt">&gt;</span>
-    <span class="nt">&lt;/nav-item<span class="nt">&gt;</span>  
+    <span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
   <span class="nt">&lt;/primary-items<span class="nt">&gt;</span>
   <span class="nt">&lt;secondary-items<span class="nt">&gt;</span>
      Secondary items are optional, more information below.
@@ -654,96 +862,21 @@ if (location.hash) {
 
                 <h3 id="corporate-footer-site-name">Opening a link in a new browser window or tab</h3>
                 <p>If you prefere to open a nav-item in a new window, please use the JS event <code>onclick="window.open('https://wherever.com')"</code> to do the trick. It's included in the above code sample.</p>
-              </div>  
-
-
-
-
-
+              </div>
 
               <div class="bs-docs-section panel-x">
-                <div class="page-header">
-                  <h2 id="sample-page">Sample Page</h2>
-                </div>
-                <p>OK, so that's the basic components that most projects start out with. So, how does they all fit togheter? Copy the code sample below or <a href="sample-page.html" download>download it as a raw html file</a>. Then you're all set to go ahead with implementing the core needs of your requirements.
-                  NOTE: Using a JS Framework like Angular, Vue or React <a href="corporate-ui-for-frameworks.html">might take a little tweaking</a>.</p>
-
-
-
-                <div class="highlight"><pre><code class="html">
-  <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;scania app&quot;<span class="nt">&gt;</span>   
-    <span class="nt">&lt;c-corporate-header</span> <span class="na">site-name=</span><span class="s">&quot;My application name&quot;</span> <span class="na">short-name=</span><span class="s">&quot;My app&quot;</span><span class="na"> site-url=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Optional<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>User Menu<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-    <span class="nt">&lt;/c-corporate-header<span class="nt">&gt;</span>
-
-    <span class="nt">&lt;c-main-content</span><span class="nt">&gt;</span> 
-
-      <span class="nt">&lt;c-main-navigation<span class="nt">&gt;</span>
-        <span class="nt">&lt;primary-items<span class="nt">&gt;</span>
-          <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Home<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-          <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Style Guide<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-            <span class="nt">&lt;sub-navigation</span> <span class="na">caption=</span><span class="s">&quot;Style Guide&quot;<span class="nt">&gt;</span>
-              <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Logotype<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-              <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Icons<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-            <span class="nt">&lt;/sub-navigation<span class="nt">&gt;</span>
-          <span class="nt">&lt;/nav-item<span class="nt">&gt;</span>    
-        <span class="nt">&lt;/primary-items<span class="nt">&gt;</span>
-        <span class="nt">&lt;secondary-items<span class="nt">&gt;</span>
-           Secondary items are optional, more information below.
-        <span class="nt">&lt;/secondary-items<span class="nt">&gt;</span>
-      <span class="nt">&lt;/c-main-navigation<span class="nt">&gt;</span>
-
-      <span class="nt">&lt;section</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;<span class="nt">&gt;</span>
-
-        Your application goes here. If you are using .container-fluid,<br>
-        your page will take the whole browser width. <br>
-        Using .container, it will give you margins on wider screens.
-
-        <span class="nt">&lt;/div</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;/section</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/c-main-content<span class="nt">&gt;</span>
-
-    <span class="nt">&lt;c-corporate-footer</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;c-social-media</span><span class="nt">&gt;</span>
-       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;facebook&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot; <span class="na">onclick=</span><span class="s">&quot;window.open('https://www.facebook.com/scaniagroup/')&quot;<span class="nt"><span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;twitter&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;youtube&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-       <span class="nt">&lt;nav-item</span> <span class="na">icon=</span><span class="s">&quot;linkedin&quot;<span class="nt"> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span><span class="nt">&lt;/nav-item<span class="nt">&gt;</span>         
-      <span class="nt">&lt;/c-social-media</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Legal notice<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Privacy statement<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Cookies<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>
-      <span class="nt">&lt;nav-item</span> <span class="na">location=</span><span class="s">&quot;#&quot;<span class="nt">&gt;</span>Contact us<span class="nt">&lt;/nav-item<span class="nt">&gt;</span>  
-    <span class="nt">&lt;/c-corporate-footer</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/body</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/html</span><span class="nt">&gt;</span>
-                </code></pre></div>
-
-
-
-                <h3 id="sample-page-app-public">Application vs. Public</h3>
+                <h2 id="sample-page-app-public">Application vs. Public</h2>
                 <p>You can always toogle between the layout zones by altering between the .app and .public classes on the body tag.</p>
-
-
-
-
-
-
               </div><!--  end of bs-docs-section -->
-
-              </article>
-
+            </article>
           </div><!-- col-9 -->
-
 
             <div class="col-md-3">
                 <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="250"> 
                   <ul class="nav bs-docs-sidenav corporate-ui-components-overview">
                   <li>
                     <a href="#corporate-ui-components-overview">Overview</a>
-                  </li>                                     
+                  </li>
                   <li>
                     <a href="#corporate-header">Corporate Header</a>
                   </li>
@@ -757,20 +890,14 @@ if (location.hash) {
                     <a href="#corporate-footer">Corporate Footer</a>
                   </li>
                   <li>
-                    <a href="#sample-page">Sample Page</a>
-                  </li>
-                  <li>
-                    <a href="https://scania.github.io/corporate-ui-docs/developer/email-template.html">Email Template</a>
-                  </li>
-                  <li>
                     <a class="back-to-top" href="#top"> Back to top</a>
-                  </li> 
+                  </li>
                   </ul>
                   <div class="checkbox">
                     <label>
                       <input type="checkbox" class="code-sample"><span></span> Hide code samples
                     </label>
-                  </div>                 
+                  </div>
                 </nav>
               </div>
             </div>
@@ -778,7 +905,7 @@ if (location.hash) {
         </div>
       </div>
 
-        <!-- CSS TAB CONTENT STARTS HERE -->
+    <!-- CSS TAB CONTENT STARTS HERE -->
 
         <div id="bootstrap-css-section" class="tab-pane fade">
          <div class="bs-docs-section panel-x">
@@ -798,8 +925,8 @@ if (location.hash) {
 
                   <h2>Custom CSS</h2>
                   <p>Most of the CSS that you'll need should be available using the Custom Elements togheter with the Corporate UI CSS that's described in this section. From a maintainance perspective it's important that you keep custom CSS classes to a minimum. If you have a need that is not covered in our design system, please <a href="/corporate-ui-docs/developer/support/">contact us</a> and we'll find a solution for you.</p>
- 
-                <div class="page-header">
+
+                  <div class="page-header">
                   <h2 id="css-overview">Bootstrap CSS</h2>
                 </div>
 
@@ -3352,7 +3479,7 @@ if (location.hash) {
         </div>
       </div>
 
-      <!-- COMPONENTS TAB CONTENT STARTS HERE -->
+    <!-- COMPONENTS TAB CONTENT STARTS HERE -->
 
       <div id="bootstrap-components-section" class="tab-pane fade">
        <div class="panel-x">
@@ -5979,16 +6106,6 @@ Cras justo odio
         </div>
       </div>
 
-
-
-
-
-
-
-
-
-
-
      <!-- JAVASCRIPT TAB CONTENT STARTS HERE -->
 
       <div id="bootstrap-javascript-section" class="tab-pane fade">
@@ -6002,7 +6119,6 @@ Cras justo odio
                 <h4>IMPORTANT NOTICE</h4>
                 <p>We have replaced the jQuery dependent bootstrap.js (Bootstrap Javascript Components) with the <a href="https://thednp.github.io/bootstrap.native/index.html" target="_blank">Bootstrap Native JavaScript library</a>, doing just about the same things as bootstrap.js.</p>
               </div>
-          
               <div class="list-group">
                 <a class="list-group-item" href="https://github.com/thednp/bootstrap.native/wiki/Acknowledgements" target="_blank">
                   <h4 class="list-group-item-heading">Acknowledgements from the Bootstrap Native Team</h4>
@@ -9501,7 +9617,7 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
               <ul class="nav bs-docs-sidenav corporate-ui-javascript-overview">
               <li>
                 <a href="#js-overview">Overview</a>
-              </li>                                     
+              </li>
               <li>
                 <a href="#componentModal">Modal</a>
                 <ul class="nav">
@@ -9530,7 +9646,7 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
                   <li><a href="#scrollspyEvents">Events</a></li>
                   <li class=""><a href="#scrollspyUsage">Usage</a></li>
                   <li><a href="#scrollspyExamples">Examples</a></li>
-                </ul>            
+                </ul>
               </li>
               <li>
                 <a href="#componentTab">Tab</a>
@@ -9614,24 +9730,20 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
               </li>
               <li>
                 <a class="back-to-top" href="#top">Back to top</a>
-              </li>  
+              </li>
             </ul>
             <div class="checkbox">
               <label>
                 <input type="checkbox" class="code-sample"><span></span> Hide code samples
               </label>
-            </div>              
+            </div>
     </div>
   </div>
 </div>
 
+    <div class="container portal-footer"></div> <!-- FOOTER -->
 
-
-
-
-<div class="container portal-footer"></div> <!-- FOOTER -->
-
-<script src="/corporate-ui-docs/ux-lib.js"></script> 
+    <script src="/corporate-ui-docs/ux-lib.js"></script> 
 
 
     <!-- 2. Include library -->
@@ -9644,7 +9756,7 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
           console.log(this);
             return document.querySelector('#clipboard-test');
         }
-    });      
+    });
 
     clipboard.on('success', function(e) {
         console.log(e);
@@ -9655,204 +9767,238 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
     });
     </script>
 
-<script>
+    <script>
 
-$(function(){ 
-  $('.code-sample').change(function(){
-    if($(this).is(":checked")) {
-        $('.highlight').addClass('hide');
-    } else {
-        $('.highlight').removeClass('hide');
+    $(function(){
+      $('.code-sample').change(function(){
+        if($(this).is(":checked")) {
+            $('.highlight').addClass('hide');
+        } else {
+            $('.highlight').removeClass('hide');
+        }
+
+      });
+      // $(".bs-docs-sidebar .nav > li > a").css("padding","0 15px");
+      // $('.bs-example nav-item a').click(function(event) {
+      //     event.preventDefault();
+      //     console.log('Yes');
+      // });
+    })
+    </script>
+      </div>
+    </article>
+  </section>
+
+</c-main-content>
+  <style>
+
+    span.photo-background {
+        background-image: url(https://scania.github.io/corporate-ui-docs/images/background-sample.jpg);
+        display: inline-block;
+        background-position: 40% 40%;
+        margin-left: 9px;
+        background-origin: inherit;
+        background-size: cover;
     }
 
-  });
-
-  // $(".bs-docs-sidebar .nav > li > a").css("padding","0 15px");
-
-
-  // $('.bs-example nav-item a').click(function(event) {
-  //     event.preventDefault();
-  //     console.log('Yes');
-  // });
-
-})  
-</script>  
-</div>
-</article>
-</section>  
-<style>
-
-span.photo-background {
-    background-image: url(https://scania.github.io/corporate-ui-docs/images/background-sample.jpg);
-    display: inline-block;
-    background-position: 40% 40%;
-    margin-left: 9px;
-    background-origin: inherit;
-    background-size: cover;
-}
-
-  .alert.alert-primary {
-    background-color: #041e42;
-    color: #fff;
-  }
-
-  .alert.alert-sm {
-      padding: 6px 35px 6px 14px;
-  }
-
-  .alert .alert-link {
-    color: inherit;
-  }
-
-
-  strong {
-    color: inherit;
-  }
-
-  .alert.alert-primary.alert-dismissible .close {
-      top: 0px;
-      right: -21px;      
-      color: white;
-      opacity: 1;
-      text-shadow: none;
-  }
-
-  .panel.panel-xs {
-    font-family: "Scania Sans Semi Condensed";
-    width: 240px;
-    border-radius: 2px;
-    box-shadow: 0px 0px 8px rgba(0,0,0,0.16);
-  } 
-
-  .panel.panel-xs .panel-heading,
-  .panel.panel-xs .panel-heading .panel-title {
-    font-family: "Scania Sans Semi Condensed";    
-    font-weight: bold;
-    font-size: 1.2rem;
-    padding: 3px 6px 2px;
-  } 
-
-  .panel.panel-xs .panel-body {
-    font-weight: normal;
-    font-size: 1.4rem;
-    padding: 10px 20px 10px 10px;
-    line-height: 2.2rem;
-  }    
-
-  .checkbox label {
-    font-family: Scania Sans Semi Condensed;
-    padding-left: 0px;
-    color: #999;
-    font-size: 1.4rem;
-    font-weight: normal;
-  }
-
-  .app article p.lead {
-      font-size: 1.8rem;
-      line-height: 30px;
-  }
-
-  .app article h1 {
-      line-height: 0.98;
-  }
-
-
-.bs-example c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header img.c-corporate-header {
-    vertical-align: super;
-    height: 28px;
-    width: 123px;
-}
-
-.bs-example .navbar-default .navbar-header .navbar-brand:after {
-    border-left: none;
-}
-
-
-.bs-example c-corporate-header .navbar-default.c-corporate-header {
-    z-index: 900;
-  }
-
-
-.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
-    color: #fff;
-    text-decoration: none;
-    background-color: transparent;
-    outline: 0;
-}
-
-.user-profile-picture {
-    background-image: url(https://static.scania.com/resources/icons/scania/SVG_POS/08_My_scania_Mobile-24-48px.svg);
-    background-size: 106%;
-}
-
-
-
-  @media (max-width: 585px)  {
-      .alert.alert-primary.alert-dismissible .close {
-          top: -20px;
-          right: -26px;
-      }
-
-      .highlight pre code {
-          width: 220vw;
-      }    
+    .alert.alert-primary {
+      background-color: #041e42;
+      color: #fff;
     }
 
-  @media (max-width: 991px)  {
-    .bs-example-modal .scroll-y {
-      width: 84vw;
-      max-width: 84vw;
-      height: 550px;
+    .alert.alert-sm {
+        padding: 6px 35px 6px 14px;
+    }
+
+    .alert .alert-link {
+      color: inherit;
+    }
+
+
+    strong {
+      color: inherit;
+    }
+
+    .alert.alert-primary.alert-dismissible .close {
+        top: 0px;
+        right: -21px;      
+        color: white;
+        opacity: 1;
+        text-shadow: none;
+    }
+
+    .panel.panel-xs {
+      font-family: "Scania Sans Semi Condensed";
+      width: 240px;
+      border-radius: 2px;
+      box-shadow: 0px 0px 8px rgba(0,0,0,0.16);
+    }
+
+    .panel.panel-xs .panel-heading,
+    .panel.panel-xs .panel-heading .panel-title {
+      font-family: "Scania Sans Semi Condensed";    
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 3px 6px 2px;
+    }
+
+    .panel.panel-xs .panel-body {
+      font-weight: normal;
+      font-size: 1.4rem;
+      padding: 10px 20px 10px 10px;
+      line-height: 2.2rem;
+    }
+
+    .checkbox label {
+      font-family: Scania Sans Semi Condensed;
+      padding-left: 0px;
+      color: #999;
+      font-size: 1.4rem;
+      font-weight: normal;
+    }
+
+    .app article p.lead {
+        font-size: 1.8rem;
+        line-height: 30px;
+    }
+
+    .app article h1 {
+        line-height: 0.98;
+    }
+
+
+  .bs-example c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header img.c-corporate-header {
+      vertical-align: super;
+      height: 28px;
+      width: 123px;
+  }
+
+  .bs-example .navbar-default .navbar-header .navbar-brand:after {
+      border-left: none;
+  }
+
+
+  .bs-example c-corporate-header .navbar-default.c-corporate-header {
+      z-index: 900;
+    }
+
+
+  .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+      color: #fff;
+      text-decoration: none;
+      background-color: transparent;
+      outline: 0;
+  }
+
+  .user-profile-picture {
+      background-image: url(https://static.scania.com/resources/icons/scania/SVG_POS/08_My_scania_Mobile-24-48px.svg);
+      background-size: 106%;
+  }
+
+
+
+    @media (max-width: 585px)  {
+        .alert.alert-primary.alert-dismissible .close {
+            top: -20px;
+            right: -26px;
+        }
+
+        .highlight pre code {
+            width: 220vw;
+        }    
       }
 
-    .nav-tabs > li > a {
-        padding: 7px 12px 6px 12px;
-    } 
+    @media (max-width: 991px)  {
+      .bs-example-modal .scroll-y {
+        width: 84vw;
+        max-width: 84vw;
+        height: 550px;
+        }
 
-    .user-profile.user-menu .user-name {
-        padding-left: 15px;
-        text-align: left;
-    }     
-}
+      .nav-tabs > li > a {
+          padding: 7px 12px 6px 12px;
+      } 
+
+      .user-profile.user-menu .user-name {
+          padding-left: 15px;
+          text-align: left;
+      }     
+  }
 
 
-.bd-clipboard {
-  position: relative;
-  display: none;
-  float: right
-}
-
-.bd-clipboard+.highlight {
-  margin-top: 0
-}
-
-.btn-clipboard {
-  position: absolute;
-  top: .5rem;
-  right: .5rem;
-  z-index: 10;
-  display: block;
-  padding: .25rem .5rem;
-  font-size: 75%;
-  color: #818a91;
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
-  border-radius: .25rem
-}
-
-.btn-clipboard:hover {
-  color: #fff;
-  background-color: #027de7
-}
-
-@media (min-width:768px) {
   .bd-clipboard {
-    display: block
+    position: relative;
+    display: none;
+    float: right
   }
-}
 
-</style>
-    <script src="js/bootstrap-native-docs-scripts.js"></script>   
+  .bd-clipboard+.highlight {
+    margin-top: 0
+  }
+
+  .btn-clipboard {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    z-index: 10;
+    display: block;
+    padding: .25rem .5rem;
+    font-size: 75%;
+    color: #818a91;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    border-radius: .25rem
+  }
+
+  .btn-clipboard:hover {
+    color: #fff;
+    background-color: #027de7
+  }
+
+  @media (min-width:768px) {
+    .bd-clipboard {
+      display: block
+    }
+  }
+
+  </style>
+  <!-- Email template section specific css -->
+  <style>
+      .email-template-example .card-body {
+        padding: 4.0rem;
+      }
+
+      .card-email-template.card {
+        border: none;
+      }
+
+      .card-email-template.card .card-body {
+        padding: 0;
+      }
+
+      .email-template-example .card-body section {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+      }
+
+      .email-template-example  .card-body code {
+        padding: 10px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+      }
+
+      .email-template-example .card-body code p {
+        margin: 0px;
+      }
+
+      @media(max-width:768px) {
+        .row-eq-height {
+          margin: 10px;
+        }
+      }
+    </style>
+  <script src="js/bootstrap-native-docs-scripts.js"></script>
 </body>
 </html>
