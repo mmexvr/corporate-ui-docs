@@ -3332,9 +3332,11 @@ $(function(){
                   <p>Here are some features that you can try out:<p>
                     <ul>
                       <li><a href="https://getbootstrap.com/docs/4.1/layout/grid/" target="_blank">Grid (add .bs4)</a></li>
+                      <li><a href="https://getbootstrap.com/docs/4.1/components/modal/" target="_blank">Modal (add .bs4)</a></li>
                       <li><a href="bootstrap-cards.html">Cards</a></li>
                       <li><a href="https://getbootstrap.com/docs/4.1/utilities/vertical-align/" target="_blank">Utilities: Vertical align</a></li>
-                      <li><a href="https://getbootstrap.com/docs/4.1/utilities/spacing/" target="_blank">Utilities: Spacing</a></li>  
+                      <li><a href="https://getbootstrap.com/docs/4.1/utilities/spacing/" target="_blank">Utilities: Spacing</a></li>
+                      <li><a href="https://getbootstrap.com/docs/4.1/utilities/text/" target="_blank">Utilities: Text</a></li>  
                     </ul>                                            
                   </p>
                 </div>
@@ -6585,59 +6587,6 @@ Cras justo odio
                               </div>                                                          
                             </div>
                           </div>
-
-                            <style>
-
-                                 .modal-fullscreen .modal-content {
-                                    overflow: hidden;
-                                    -webkit-overflow-scrolling: touch;
-                                }
-
-                                @media (max-width: 991px) {
-                                .modal-fullscreen .modal-content {
-                                    top: 0px;
-                                    width: 100vw;
-                                    height: auto;
-                                  }
-                                }      
-
-                               .modal-fullscreen.modal-dialog {
-                                  position: fixed;
-                                  top: 0;
-                                  bottom: 0;
-                                  right: 0;
-                                  width: 100%;
-                                  min-height: 100%;
-                                  max-height: 100vh;
-                                  background-color: white; 
-                                }
-
-                                .modal.fade:not(.in) .modal-fullscreen.modal-dialog {
-                                    -webkit-transform: translate3d(0, 25%, 0);
-                                    transform: translate3d(0, 25%, 0);
-                                }
-
-                                .modal-fullscreen .modal-body {
-                                  overflow-x: hidden;  
-                                  overflow-y: scroll;
-                                  -webkit-overflow-scrolling: touch;          
-                                  height: calc(100vh - 110px);
-                                  padding: 0;            
-                                } 
-
-                               .modal-fullscreen .modal-footer {
-                                    width: 100%;
-                                    position: fixed;            
-                                    bottom: 0px;
-                                    text-align: left;
-                                    padding: 0;
-                                    background-color: white; 
-                                                 
-                                }    
-
-                            </style>  
- 
-
                         </div>
                       </div>
                       <div class="modal-footer text-center">
@@ -9801,71 +9750,6 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
         background-size: cover;
     }
 
-    .alert.alert-primary {
-      background-color: #041e42;
-      color: #fff;
-    }
-
-    .alert.alert-sm {
-        padding: 6px 35px 6px 14px;
-    }
-
-    .alert .alert-link {
-      color: inherit;
-    }
-
-
-    strong {
-      color: inherit;
-    }
-
-    .alert.alert-primary.alert-dismissible .close {
-        top: 0px;
-        right: -21px;      
-        color: white;
-        opacity: 1;
-        text-shadow: none;
-    }
-
-    .panel.panel-xs {
-      font-family: "Scania Sans Semi Condensed";
-      width: 240px;
-      border-radius: 2px;
-      box-shadow: 0px 0px 8px rgba(0,0,0,0.16);
-    }
-
-    .panel.panel-xs .panel-heading,
-    .panel.panel-xs .panel-heading .panel-title {
-      font-family: "Scania Sans Semi Condensed";    
-      font-weight: bold;
-      font-size: 1.2rem;
-      padding: 3px 6px 2px;
-    }
-
-    .panel.panel-xs .panel-body {
-      font-weight: normal;
-      font-size: 1.4rem;
-      padding: 10px 20px 10px 10px;
-      line-height: 2.2rem;
-    }
-
-    .checkbox label {
-      font-family: Scania Sans Semi Condensed;
-      padding-left: 0px;
-      color: #999;
-      font-size: 1.4rem;
-      font-weight: normal;
-    }
-
-    .app article p.lead {
-        font-size: 1.8rem;
-        line-height: 30px;
-    }
-
-    .app article h1 {
-        line-height: 0.98;
-    }
-
 
   .bs-example c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header img.c-corporate-header {
       vertical-align: super;
@@ -9926,45 +9810,8 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
   }
 
 
-  .bd-clipboard {
-    position: relative;
-    display: none;
-    float: right
-  }
-
-  .bd-clipboard+.highlight {
-    margin-top: 0
-  }
-
-  .btn-clipboard {
-    position: absolute;
-    top: .5rem;
-    right: .5rem;
-    z-index: 10;
-    display: block;
-    padding: .25rem .5rem;
-    font-size: 75%;
-    color: #818a91;
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
-    border-radius: .25rem
-  }
-
-  .btn-clipboard:hover {
-    color: #fff;
-    background-color: #027de7
-  }
-
-  @media (min-width:768px) {
-    .bd-clipboard {
-      display: block
-    }
-  }
-
-  </style>
   <!-- Email template section specific css -->
-  <style>
+
       .email-template-example .card-body {
         padding: 4.0rem;
       }
