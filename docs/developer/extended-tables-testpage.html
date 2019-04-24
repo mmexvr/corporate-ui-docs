@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+
+
+  <title>UX Library - Extended Tables</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+
+  <script src="https://static.scania.com/build/global/3.5.3/js/corporate-ui.js?monitoring=true"></script>
+
+
+
+
+</head>
+
+<body class="scania app">
+
+
+
+
+
+
+  <table class="table table-expandable">
+      <thead>
+          <tr><th>Column</th><th>Column</th><th>Column</th><th>Column</th></tr>
+      </thead>
+      <tbody class="" data-target="#group-of-rows-1" aria-expanded="false" aria-controls="group-of-rows-1" data-toggle="collapse">
+          <tr>
+              <td>Jesper</td>
+              <td>data</td>
+              <td>data</td>  
+              <td>data</td>
+          </tr>
+      </tbody>
+      <tbody id="group-of-rows-1" class="collapse in">
+          <tr>
+              <th>child row</th>
+              <th>data 1</th>
+              <th>data 1</th>  
+              <th>data 1</th>
+          </tr>
+          <hr />      
+          <tr>
+              <td>child row</td>
+              <td>data 1</td>
+              <td>data 1</td>  
+              <td>data 1</td>
+          </tr>
+          <tr>
+              <td>child row</td>
+              <td>data 1</td>
+              <td>data 1</td>  
+              <td>data 1</td>
+          </tr>       
+      </tbody>
+      <tbody class="collapsed" data-target="#group-of-rows-2" aria-expanded="false" aria-controls="group-of-rows-2" data-toggle="collapse">
+          <tr>
+              <td>Andreas</td>
+              <td>data</td>
+              <td>data</td>  
+              <td>data</td>
+          </tr>
+      </tbody>
+      <tbody id="group-of-rows-2" class="collapse">
+          <tr>
+              <td colspan="4">
+                <div class="">Adding a div in here and you can do quite much anything.</div>
+              </td>
+          </tr>
+      </tbody>
+      <tbody class="collapsed" data-target="#group-of-rows-3" aria-expanded="false" aria-controls="group-of-rows-3" data-toggle="collapse">
+          <tr>
+              <td>Martin</td>
+              <td>data</td>
+              <td>data</td>  
+              <td>data</td>
+          </tr>
+      </tbody>
+      <tbody id="group-of-rows-3" class="collapse">
+          <tr>
+              <td>child row</td>
+              <td>data 2</td>
+              <td>data 2</td>  
+              <td>data 2</td>
+          </tr>
+          <tr>
+              <td>child row</td>
+              <td>data 2</td>
+              <td>data 2</td>  
+              <td>data 2</td>
+          </tr>
+      </tbody>    
+  </table>
+
+
+
+</body>
+</html>
