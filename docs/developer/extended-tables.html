@@ -1931,7 +1931,7 @@
                     <div class="row">
                       <div class="col-md-12 col-sm-12">
                         <h2>.table.tablesorter.table-expandable (dependent on the Tablesorter plugin)</h2>
-                        <table class="tablesorter table table-striped table-expandable">
+                        <table class="tablesorter table table-striped table-sorter-expandable">
                           <colgroup>
                             <col width="85" />
                             <col width="250" />
@@ -1984,6 +1984,197 @@
 
                           </tbody>
                         </table>
+
+                        
+
+                        <table class="table table-expandable">
+                            <thead>
+                                <tr><th>Column</th><th>Column</th><th>Column</th><th>Column</th></tr>
+                            </thead>
+                            <tbody class="" data-target="#group-of-rows-1" aria-expanded="false" aria-controls="group-of-rows-1" data-toggle="collapse">
+                                <tr>
+                                    <td>Jesper</td>
+                                    <td>data</td>
+                                    <td>data</td>  
+                                    <td>data</td>
+                                </tr>
+                            </tbody>
+                            <tbody id="group-of-rows-1" class="collapse in">
+                                <tr>
+                                    <th>child row</th>
+                                    <th>data 1</th>
+                                    <th>data 1</th>  
+                                    <th>data 1</th>
+                                </tr>
+                                <hr />      
+                                <tr>
+                                    <td>child row</td>
+                                    <td>data 1</td>
+                                    <td>data 1</td>  
+                                    <td>data 1</td>
+                                </tr>
+                                <tr>
+                                    <td>child row</td>
+                                    <td>data 1</td>
+                                    <td>data 1</td>  
+                                    <td>data 1</td>
+                                </tr>       
+                            </tbody>
+                            <tbody class="collapsed" data-target="#group-of-rows-2" aria-expanded="false" aria-controls="group-of-rows-2" data-toggle="collapse">
+                                <tr>
+                                    <td>Andreas</td>
+                                    <td>data</td>
+                                    <td>data</td>  
+                                    <td>data</td>
+                                </tr>
+                            </tbody>
+                            <tbody id="group-of-rows-2" class="collapse">
+                                <tr>
+                                    <td>
+                                      <div class="">Jesper's alernative</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody class="collapsed" data-target="#group-of-rows-3" aria-expanded="false" aria-controls="group-of-rows-3" data-toggle="collapse">
+                                <tr>
+                                    <td>Martin</td>
+                                    <td>data</td>
+                                    <td>data</td>  
+                                    <td>data</td>
+                                </tr>
+                            </tbody>
+                            <tbody id="group-of-rows-3" class="collapse">
+                                <tr>
+                                    <td>child row</td>
+                                    <td>data 2</td>
+                                    <td>data 2</td>  
+                                    <td>data 2</td>
+                                </tr>
+                                <tr>
+                                    <td>child row</td>
+                                    <td>data 2</td>
+                                    <td>data 2</td>  
+                                    <td>data 2</td>
+                                </tr>
+                            </tbody>    
+                        </table>
+
+<style>
+
+
+
+/* First set the outer border */
+
+.table-expandable {
+  /*** First set the outer border of the table  ***/
+
+  border: 1px solid #dadada;
+  /*** No borders between rows in an expandable table  ***/
+
+  /*** Lets make it striped (we can't use the .table-striped class for this purpose)  ***/
+
+  /*** Setting border around the expanded section  ***/
+
+}
+.table-expandable > tbody + tbody {
+  border-top: none;
+  border-bottom: none;
+}
+.table-expandable > tbody + tbody tr td {
+  border-top: none;
+  border-bottom: none;
+}
+.table-expandable tbody[data-toggle="collapse"] {
+  background-color: #ebf2f5;
+  /*** An expandable row always have an pointer when hovering  ***/
+
+  /*** Let's style the table in the expanded row  ***/
+
+  /*** Styles for the angle-up angle-down icon and animation  ***/
+
+  /*** fix = code from bootstrap 3  ***/
+
+}
+.table-expandable tbody[data-toggle="collapse"]:nth-child(4n) {
+  background-color: #f9f9f9;
+}
+.table-expandable tbody[data-toggle="collapse"] > tr {
+  cursor: pointer;
+}
+.table-expandable tbody[data-toggle="collapse"] + tbody {
+  background-color: #fff;
+  margin: 5px;
+  margin-bottom: 14px;
+}
+.table-expandable tbody[data-toggle="collapse"] + tbody tr:hover td {
+  background-color: #f3f3f3;
+}
+.table-expandable tbody[data-toggle="collapse"] + tbody > tr > th {
+  background-color: #fff;
+  font-size: 12px;
+  padding: 18px 10px 6px;
+  border-top-color: #0000;
+}
+.table-expandable tbody[data-toggle="collapse"] + tbody > tr > td {
+  background-color: #fff;
+  font-size: 12px;
+  padding: 6px 10px ;
+  border-top-color: #0000;
+}
+.table-expandable tbody[data-toggle="collapse"] + tbody > tr > th:first-child,
+.table-expandable tbody[data-toggle="collapse"] + tbody > tr > td:first-child {
+  padding-left: 40px;
+}
+.table-expandable tbody[data-toggle="collapse"] + tbody > tr > td.empty {
+  min-height: 30px;
+}
+.table-expandable tbody[data-toggle="collapse"] > tr > td:first-child:before {
+  content: "\f106";
+  vertical-align: middle;
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 300;
+  font-size: 20px;
+  color: #041e42;
+  margin-top: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  transform: rotate(0deg);
+  /*** Standard  ***/
+
+  transition: all 0.3s ease;
+  /*** Firefox  ***/
+
+  -moz-transition: all 0.3s ease;
+  /*** WebKit  ***/
+
+  -webkit-transition: all 0.3s ease;
+  /*** Opera  ***/
+
+  -o-transition: all 0.3s ease;
+  display: inline-block;
+}
+.table-expandable tbody[data-toggle="collapse"].collapsed > tr > td:first-child:before {
+  transform: rotate(180deg);
+}
+.table-expandable tbody[data-toggle="collapse"] tbody.collapsed.in {
+  display: table-row-group;
+}
+.table-expandable tbody[data-toggle="collapse"]:not(.collapsed) {
+  border: 1px solid #4a8ba4;
+  border-bottom: #4a8ba4;
+  background-color: #d9e8ef;
+}
+.table-expandable > tbody[data-toggle="collapse"]:not(.collapsed) + tbody {
+  border-top: none;
+  border-right: 1px solid #4a8ba4;
+  border-bottom: 1px solid #4a8ba4;
+  border-left: 1px solid #4a8ba4;
+}
+
+
+
+</style>
+
                       </div>
                     </div>
                   </div>  
@@ -1998,7 +2189,7 @@
 
    $( function() {
 
-      var $table1 = $( '.table-expandable' )
+      var $table1 = $( '.table-sorter-expandable' )
         .tablesorter({
           theme : 'bootstrap',
           // this is the default setting
