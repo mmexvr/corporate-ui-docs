@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-GB" class="corporate-ui">
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
-
 
   <title>UX Library - Developers</title>
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
 
-  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>
   <script src="https://static.scania.com/build/global/3.5.3/js/corporate-ui.js?monitoring=true"></script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
-  <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>
+  <script src="/corporate-ui-docs/js/google-analytics.js"></script>
 
   <link rel="stylesheet" href="/corporate-ui-docs/css/ux-lib.css">
 </head>
@@ -24,7 +22,7 @@
     <nav-item location="/corporate-ui-docs/developer/contact-us.html">Contact Us</nav-item>
     <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
   </c-corporate-header>
-  
+
   <c-main-content>
     <c-main-navigation>
       <primary-items>
@@ -36,14 +34,15 @@
             <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
             <nav-item location="/corporate-ui-docs/typography/">Typography</nav-item>
           </sub-navigation>
-        </nav-item>          
+        </nav-item>
         <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
           <sub-navigation caption="Web Applications">
             <nav-item location="/corporate-ui-docs/developer/">Corporate UI</nav-item>
-            <nav-item location="/corporate-ui-docs/developer/corporate-ui-for-frameworks.html" class="active">JS Frameworks</nav-item>
-            <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html">Scania Bootstrap</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/corporate-ui-for-frameworks.html">JS Frameworks</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html" class="active">Scania Bootstrap</nav-item>
+            <nav-item location="/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html" >HTML copy paste</nav-item>
             <nav-item location="/corporate-ui-docs/developer/faq.html">FAQ</nav-item>
-        <nav-item location="/corporate-ui-docs/developer/contact-us.html">Contact Us</nav-item>
+            <nav-item location="/corporate-ui-docs/developer/contact-us.html">Contact Us</nav-item>
           </sub-navigation>
         </nav-item>
         <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
@@ -58,7 +57,6 @@
           line-height: normal;
           margin-bottom: 34px;
       }
-
     </style>
 
     <section class="light">
@@ -85,23 +83,25 @@ export class AppComponent {
   constructor(){
     window.CorporateUi.baseComponents();
   }
-} 
+}
           </xmp>
 
-          <p><a href="../template/Angular5/src.zip" class="btn btn-default" download>Download Angular 5 Sample Files</a>
-           <a href="/corporate-ui-docs/template/angular-basic-template.html" class="btn btn-default">View Angular JS Demo</a><p>
+          <p>
+            <a href="../template/Angular5/src.zip" class="btn btn-default" download>Download Angular 5 Sample Files</a>
+            <a href="/corporate-ui-docs/template/angular-basic-template.html" class="btn btn-default">View Angular JS Demo</a>
+          <p>
           <p>So, that is basically that you'll need to know. There might of course be additional questions that you'll have and they will be swiftly answered in the <a href="https://corporate-ui.slack.com" target="_blank">corporate-ui.slack.com</a> channel, or perhaps not as quick, using standard <a href="mailto:corporate-ui@scania.com">e-mail</a>.</p>
           <h2>Next step: Developing your application</h2>
           <p>Now you're good to go and you'll have pretty much everything you'll need at your disposal. Developing your app using additional Web Component from the library or design your user interface with the <a href="bootstrap-original-docs.html">Scania standard CSS classes from Scania Bootstrap</a>.</p>
+          </div>
+        </article>
+      </section>
+    </c-main-content>
 
-          </article>
-        </section>
-      </c-main-content>
+  <c-corporate-footer></c-corporate-footer>
 
-      <c-corporate-footer></c-corporate-footer>
+  <script src="/corporate-ui-docs/js/ux-lib.js"></script>
 
-      <script src="/corporate-ui-docs/js/ux-lib.js"></script>
-
-    </body>
-    </html>
+</body>
+</html>
 
