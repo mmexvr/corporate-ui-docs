@@ -143,27 +143,30 @@ $(function(){
   <c-main-navigation>
     <primary-items>
       <nav-item location="/corporate-ui-docs/">Home</nav-item>
-      <nav-item location="/corporate-ui-docs/styleguide/">Style Guide
-        <sub-navigation caption="Style Guide">
-          <nav-item location="/corporate-ui-docs/logotype/">Logotype</nav-item>
-          <nav-item location="/corporate-ui-docs/icons/">Icons</nav-item>
-          <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
-          <nav-item location="/corporate-ui-docs/typography/">Typography</nav-item>
-        </sub-navigation>
-      </nav-item>
-      <nav-item location="/corporate-ui-docs/developer/" class="active">Web Applications
-        <sub-navigation caption="Web Applications">
-          <nav-item location="/corporate-ui-docs/developer/">Corporate UI</nav-item>
+      <nav-item location="/corporate-ui-docs/developer/" class="active">Corporate UI
+        <sub-navigation caption="Corporate UI">
+          <nav-item location="/corporate-ui-docs/developer/">About</nav-item>
+          <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html" class="active">Components</nav-item>
+          <nav-item location="/corporate-ui-docs/developer/html-copy-paste/html-copy-paste.html">HTML copy paste</nav-item>
           <nav-item location="/corporate-ui-docs/developer/corporate-ui-for-frameworks.html">JS Frameworks</nav-item>
-          <nav-item location="/corporate-ui-docs/developer/bootstrap-original-docs.html" class="active">Scania Bootstrap</nav-item>
-          <nav-item location="/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html" >HTML copy paste</nav-item>
           <nav-item location="/corporate-ui-docs/developer/faq.html">FAQ</nav-item>
           <nav-item location="/corporate-ui-docs/developer/contact-us.html">Contact Us</nav-item>
         </sub-navigation>
       </nav-item>
       <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps</nav-item>
+      <nav-item location="/corporate-ui-docs/styleguide/">Style Guide
+        <sub-navigation caption="Style Guide">
+          <nav-item location="/corporate-ui-docs/logotype/">Logotype</nav-item>
+          <nav-item location="/corporate-ui-docs/styleguide/icons/">Icons</nav-item>
+          <nav-item location="/corporate-ui-docs/colours/">Colours</nav-item>
+          <nav-item location="/corporate-ui-docs/typography/">Typography</nav-item>
+        </sub-navigation>
+      </nav-item>
     </primary-items>
-    <secondary-items></secondary-items>
+
+    <secondary-items>
+      <nav-item> <a href="https://www.scania.com/ux-library/en/home.html" target="_blank">Comon editors</a></nav-item>
+    </secondary-items>
   </c-main-navigation>
 
   <section class="light">
@@ -603,7 +606,7 @@ $(function(){
                 <h3 id="corporate-header-example">Example</h3>
                 <div class="bs-example">
                   <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
-                  <iframe src="docs-example-corporate-header.html" frameborder="0" style="overflow:scroll !important" height="72px" width="100%"></iframe>
+                  <iframe src="components-iframe/docs-example-corporate-header.html" frameborder="0" style="overflow:scroll !important" height="72px" width="100%"></iframe>
                   </div>
                 </div>
 
@@ -628,7 +631,7 @@ $(function(){
                 <div class="bs-example">
 
                   <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
-                      <iframe src="docs-example-corporate-dealer-header.html" frameborder="0" style="overflow:scroll !important" height="72px" width="100%"></iframe>
+                      <iframe src="components-iframe/docs-example-corporate-dealer-header.html" frameborder="0" style="overflow:scroll !important" height="72px" width="100%"></iframe>
                   </div>
 
                 </div>
@@ -643,7 +646,7 @@ $(function(){
                 <div class="bs-example">
 
                   <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
-                      <iframe src="docs-example-corporate-dealer-header-logotype.html" frameborder="0" style="overflow:scroll !important" height="72px" width="100%"></iframe>
+                      <iframe src="components-iframe/docs-example-corporate-dealer-header-logotype.html" frameborder="0" style="overflow:scroll !important" height="72px" width="100%"></iframe>
                   </div>
 
                 </div>
@@ -699,7 +702,7 @@ $(function(){
                <div class="bs-example">
 
                   <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
-                      <iframe src="docs-example-main-navigation.html" frameborder="0" style="overflow:scroll !important" height="90px" width="100%"></iframe>
+                      <iframe src="components-iframe/docs-example-main-navigation.html" frameborder="0" style="overflow:scroll !important" height="90px" width="100%"></iframe>
                   </div>
 
                 </div>
@@ -917,7 +920,7 @@ $(function(){
                 <article class="mt-5 mr-5">
                   <h1 id="core-css-overview">Core CSS (Scania Bootstrap)</h1>
                   <p class="lead">Scania Bootstrap is now a subset of the Corporate UI framework. Scania Bootstrap can still be used "stand alone" to tailor applications with the Corporate UI look and feel. Although, it will not fully take advantage of the easy uf use that our Custom Elements do offer. You'll simply have to develop and maintain a lot of the HTML and JavaScript code that's already availble in the components.</p>
-                  <p class="lead">When it comes to designing your particular functionallity, please copy code snippets from the <a href="/corporate-ui-docs/template/html-copy-paste/html-copy-paste.html">the HTML Copy Paste section</a> or from this code repository. The library is uppdated on a daily basis so make sure you'll visit it frequently.</p>
+                  <p class="lead">When it comes to designing your particular functionallity, please copy code snippets from the <a href="/corporate-ui-docs/developer/html-copy-paste/html-copy-paste.html">the HTML Copy Paste section</a> or from this code repository. The library is uppdated on a daily basis so make sure you'll visit it frequently.</p>
                   <p class="lead">All things that you'll need for your development, like icons, fonts. CSS and Custom Elements will become available for you once you're loading the <a href="https://static.scania.com/build/global/3.5.3/js/corporate-ui.js">corporate-ui.js</a>.</p>
 
                   <h2>CSS: Custom, Bootstrap 3 and Bootstrap 4</h2>
@@ -4618,7 +4621,7 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
 
                 <div class="bs-example">
                   <div style="overflow:visible !important; -webkit-overflow-scrolling:touch !important;">
-                      <iframe src="docs-example-main-navigation.html" frameborder="0" style="overflow:scroll !important" height="90px" width="100%"></iframe>
+                      <iframe src="components-iframe/docs-example-main-navigation.html" frameborder="0" style="overflow:scroll !important" height="90px" width="100%"></iframe>
                   </div>
                 </div>
                 <div class="highlight">
