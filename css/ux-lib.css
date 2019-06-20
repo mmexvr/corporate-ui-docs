@@ -47,7 +47,7 @@ body.CRStest {background:red !important}
 
 .panel .panel-body, .panel .portlet-application {
     padding: 20px 30px;
-}  
+}
 
 @media (max-width: 991px) {
   .ux-lib .ux-sections img {
@@ -57,10 +57,16 @@ body.CRStest {background:red !important}
 
   .panel .panel-body, .panel .portlet-application {
       padding: 15px;
-  }  
+  }
 
 }
 
+@media (min-width: 991px) {
+  img.mobile-apps {
+    min-width: 256px;
+    min-height: 256px;
+  }
+}
 
 .ux-lib .main-item {
   margin: 30px 0 50px 0;
