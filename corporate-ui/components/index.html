@@ -134,8 +134,8 @@ $(function(){
 <body class="scania app" id="top">
 
 <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
-      <nav-item location="/corporate-ui-docs/corporate-ui/contact-us.html">Contact Us</nav-item>
   <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
+  <nav-item location="https://github.com/scania/corporate-ui-docs">Edit Docs</nav-item>
 </c-corporate-header>
 
 <c-main-content>
@@ -327,7 +327,7 @@ $(function(){
                                       <h4 class="modal-title">Preview</h4>
                                     </div>
                                     <div class="modal-body">
-                                      <a href="https://scania.github.io/corporate-ui-docs/template/html-mail/index.html" download
+                                      <a href="/corporate-ui-docs/corporate-ui/template/html-mail/index.html" download
                                         target="_blank">
                                         <h4 class="text-right">Download template</h4>
                                       </a>
@@ -336,7 +336,7 @@ $(function(){
                                           <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" frameborder="0"
                                             style="border:none;">
                                             <iframe
-                                              src="https://scania.github.io/corporate-ui-docs/template/html-mail/index.html"></iframe>
+                                              src="/corporate-ui-docs/corporate-ui/template/html-mail/index.html"></iframe>
                                           </div>
                                         </div>
                                       </div>
@@ -6204,7 +6204,7 @@ Cras justo odio
                 <h3>Live demo</h3>
                 <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
                 <!-- sample modal content -->
-                <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div id="myModalDemo1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -6222,7 +6222,6 @@ Cras justo odio
                         <button id="tooltipWithEvents" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" data-original-title="<b>Tooltip on top</b><br>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">Top</button>
                         <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" data-original-title="<b>Tooltip on bottom</b><br>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">Bottom</button>
                         <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" data-original-title="<b>Tooltip on right</b><br>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">Right</button></p>
-                         
                         <hr>
 
                         <h4>Overflowing text to show scroll behavior</h4>
@@ -6237,7 +6236,7 @@ Cras justo odio
                         <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Save changes</button>                        
+                        <button type="button" class="btn btn-primary">Save changes</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                       </div>
 
@@ -6246,7 +6245,7 @@ Cras justo odio
                 </div><!-- /.modal -->
 
                 <div class="bs-example" style="padding-bottom: 24px;">
-                  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalDemo1">
                     Launch demo modal
                   </button>
                 </div><!-- /example -->
@@ -6989,7 +6988,7 @@ myModal<span class="token punctuation">.</span><span class="token function">addE
 <span class="token comment">// OR a triggering element is the target of the Modal constructor</span>
 <span class="token keyword">var</span> myModalInstance <span class="token operator">===</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'myModalTrigger'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Modal<span class="token punctuation">;</span> 
 </code></pre>
-              
+
               <p>These references are used internally to hide currently visible modals when showing another one. When the component is used via JavaScript only without a triggering element, you need to manually hide (via <code>.hide()</code> instance method) any visible modal before showing another modal (via the <code>.show()</code> instance method).</p>
             </section>
 
@@ -6999,8 +6998,8 @@ myModal<span class="token punctuation">.</span><span class="token function">addE
               <h5>Using the DATA API</h5>
               <p>The first example is a modal with static content initialized via DATA API, exactly as described in the above <a href="#modalDataAPI">Use via DATA API</a> section, and showcasing the 
                 ability to show another modal from a modal currently visible.</p>
-              <p><button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal">Launch simple modal</button></p>
-              <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <p><button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModalDemo2">Launch simple modal</button></p>
+              <div id="myModalDemo2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
