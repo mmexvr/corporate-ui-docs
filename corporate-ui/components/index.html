@@ -133,10 +133,7 @@ $(function(){
 </head>
 <body class="scania app" id="top">
 
-<c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
-  <nav-item location="https://github.com/scania/corporate-ui">GitHub</nav-item>
-  <nav-item location="https://github.com/scania/corporate-ui-docs">Edit Docs</nav-item>
-</c-corporate-header>
+<c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/"></c-corporate-header>
 
 <c-main-content>
 
@@ -9750,79 +9747,74 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
     </article>
   </section>
 
-</c-main-content>
-  <style>
-
-    span.photo-background {
+  </c-main-content>
+  <c-corporate-footer>
+    <nav-item><a href="https://github.com/scania/corporate-ui" target="_blank">Github</a></nav-item>
+    <nav-item location="mailto:corporate-ui@scania.com">Contact</nav-item>
+  </c-corporate-footer>
+    <style>
+      span.photo-background {
         background-image: url(https://scania.github.io/corporate-ui-docs/images/background-sample.jpg);
         display: inline-block;
         background-position: 40% 40%;
         margin-left: 9px;
         background-origin: inherit;
         background-size: cover;
-    }
+      }
 
+      .bs-example c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header img.c-corporate-header {
+        vertical-align: super;
+        height: 28px;
+        width: 123px;
+      }
 
-  .bs-example c-corporate-header .is-dealer.c-corporate-header .navbar-header.c-corporate-header a.dealer.c-corporate-header img.c-corporate-header {
-      vertical-align: super;
-      height: 28px;
-      width: 123px;
-  }
+      .bs-example .navbar-default .navbar-header .navbar-brand:after {
+        border-left: none;
+      }
 
-  .bs-example .navbar-default .navbar-header .navbar-brand:after {
-      border-left: none;
-  }
+      .bs-example c-corporate-header .navbar-default.c-corporate-header {
+        z-index: 900;
+      }
 
+      .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+        color: #fff;
+        text-decoration: none;
+        background-color: transparent;
+        outline: 0;
+      }
 
-  .bs-example c-corporate-header .navbar-default.c-corporate-header {
-      z-index: 900;
-    }
+      .user-profile-picture {
+        background-image: url(https://static.scania.com/resources/icons/scania/SVG_POS/08_My_scania_Mobile-24-48px.svg);
+        background-size: 106%;
+      }
 
-
-  .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
-      color: #fff;
-      text-decoration: none;
-      background-color: transparent;
-      outline: 0;
-  }
-
-  .user-profile-picture {
-      background-image: url(https://static.scania.com/resources/icons/scania/SVG_POS/08_My_scania_Mobile-24-48px.svg);
-      background-size: 106%;
-  }
-
-
-
-    @media (max-width: 585px)  {
+      @media (max-width: 585px)  {
         .alert.alert-primary.alert-dismissible .close {
-            top: -20px;
-            right: -26px;
+          top: -20px;
+          right: -26px;
         }
 
         .highlight pre code {
-            width: 220vw;
-        }    
+          width: 220vw;
+        }
       }
 
-    @media (max-width: 991px)  {
-      .bs-example-modal .scroll-y {
-        width: 84vw;
-        max-width: 84vw;
-        height: 550px;
+      @media (max-width: 991px)  {
+        .bs-example-modal .scroll-y {
+          width: 84vw;
+          max-width: 84vw;
+          height: 550px;
         }
 
-      .nav-tabs > li > a {
-          padding: 7px 12px 6px 12px;
-      } 
+        .nav-tabs > li > a {
+            padding: 7px 12px 6px 12px;
+        }
 
-      .user-profile.user-menu .user-name {
+        .user-profile.user-menu .user-name {
           padding-left: 15px;
           text-align: left;
-      }     
-  }
-
-
-  <!-- Email template section specific css -->
+        }
+      }
 
       .email-template-example .card-body {
         padding: 4.0rem;

@@ -42,6 +42,8 @@ body.CRStest {background:red !important}
     height: auto;
     min-height: 128px;
     min-width: 128px;
+    max-width: 200px;
+    max-height: 200px;
     margin: 10% 5% 0;
 }
 
@@ -63,8 +65,8 @@ body.CRStest {background:red !important}
 
 @media (min-width: 991px) {
   img.mobile-apps {
-    min-width: 256px;
-    min-height: 256px;
+    min-width: 200px;
+    min-height: 200px;
   }
 }
 

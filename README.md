@@ -13,5 +13,14 @@
 
 <p>Do you want to have an introduction to Web Component development at Scania? Please throw an e-mail at <a href="mailto:corporate-ui@scania.com">the Corporate UI Librarians</a>.</p>
 
+<h2>Local Env</h2>
+<ul>
+	<li> Clone this repo: <strong>git clone https://github.com/scania/corporate-ui-docs.git</strong></li>
+	<li>Install Ruby https://rubyinstaller.org/</li>
+	<li>Install a gem for Jekyll bundler: <strong>gem install jekyll bundler</strong>. Read more <a href="https://jekyllrb.com/docs/">Here</a></li>
+	<li>Run command: <strong>bundle exec jekyll serve</strong></li>
+	<li>When documentation are generated go to http://localhost:4000/corporate-ui-docs/</li>
+</ul>
+
 <h2>License</h2>
 <p>The Scania brand identity and the interaction patterns found in this repository are not available on an open source basis. Although we have great freedom to make improvements and new components, some changes to interaction patterns and use of colours etc may not be approved.</p>
