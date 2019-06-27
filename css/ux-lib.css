@@ -40,10 +40,10 @@ body.CRStest {background:red !important}
 .ux-sections img {
     width: auto;
     height: auto;
-    min-height: 128px;
-    min-width: 128px;
-    max-width: 200px;
-    max-height: 200px;
+    min-height: 108px;
+    min-width: 108px;
+    max-width: 180px;
+    max-height: 180px;
     margin: 10% 5% 0;
 }
 
@@ -65,8 +65,8 @@ body.CRStest {background:red !important}
 
 @media (min-width: 991px) {
   img.mobile-apps {
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 180px;
+    min-height: 180px;
   }
 }
 
