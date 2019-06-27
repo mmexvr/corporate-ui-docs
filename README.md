@@ -15,9 +15,11 @@
 
 <h2>Local Env</h2>
 <ul>
+	<li> Clone this repo: <strong>git clone https://github.com/scania/corporate-ui-docs.git</strong></li>
 	<li>Install Ruby https://rubyinstaller.org/</li>
-	<li>Install gem Jekyll Command " gem install jekyll bundler " Read more <a href="https://jekyllrb.com/docs/ ">Here</a></li>
-	<li>Run command " bundle exec jekyll serve</li>
+	<li>Install a gem for Jekyll bundler with Command <strong>gem install jekyll bundler</strong> Read more <a href="https://jekyllrb.com/docs/">Here</a></li>
+	<li>Run command <strong>bundle exec jekyll serve</strong></li>
+	<li>When documentation are generated go to https:/ls/localhost:4000</li>
 </ul>
 
 <h2>License</h2>
