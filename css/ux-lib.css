@@ -1,18 +1,15 @@
-
-
 body[data-env]:before {
-    background-color: #ddd;
-    padding: 80px 80px 0;
-    text-transform: uppercase;
-    font-size: 25px;
-    border: 2px solid #dadada;
-    font-family: 'Scania Sans Condensed Bold';
-    background-color: #D6001C;
-    color: #dadada;
+  background-color: #ddd;
+  padding: 80px 80px 0;
+  text-transform: uppercase;
+  font-size: 25px;
+  border: 2px solid #dadada;
+  font-family: 'Scania Sans Condensed Bold';
+  background-color: #D6001C;
+  color: #dadada;
 }
 
 body.CRStest {background:red !important}
-
 
 .ux-lib[version-notfound]:after {
   content: "Version '" attr(version-notfound) "' was not found. Fallback to '" attr(data-env) "'";
@@ -33,22 +30,18 @@ body.CRStest {background:red !important}
   opacity: 0;
 }
 
-.ux-lib demo-component .modal {
-  position: relative;
-}
-
 .ux-sections img {
-    width: auto;
-    height: auto;
-    min-height: 108px;
-    min-width: 108px;
-    max-width: 180px;
-    max-height: 180px;
-    margin: 10% 5% 0;
+  width: auto;
+  height: auto;
+  min-height: 108px;
+  min-width: 108px;
+  max-width: 180px;
+  max-height: 180px;
+  margin: 10% 5% 0;
 }
 
 .panel .panel-body, .panel .portlet-application {
-    padding: 20px 30px;
+  padding: 20px 30px;
 }
 
 @media (max-width: 991px) {
@@ -58,7 +51,7 @@ body.CRStest {background:red !important}
   }
 
   .panel .panel-body, .panel .portlet-application {
-      padding: 15px;
+    padding: 15px;
   }
 
 }
