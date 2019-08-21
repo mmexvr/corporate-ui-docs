@@ -16,7 +16,7 @@
 <h2>Local Env</h2>
 <ul>
 	<li> Clone this repo: <strong>git clone https://github.com/scania/corporate-ui-docs.git</strong></li>
-	<li>Install Ruby https://rubyinstaller.org/</li>
+	<li>Install <strong>Ruby+devkit v2.4+</strong> from https://rubyinstaller.org/ or follow the instruction from <a href="https://jekyllrb.com/docs/installation/">jekyll documentation</a></li>
 	<li>Install a gem for Jekyll bundler: <strong>gem install jekyll bundler</strong>. Read more <a href="https://jekyllrb.com/docs/">Here</a></li>
 	<li>Run command: <strong>bundle exec jekyll serve</strong></li>
 	<li>When documentation are generated go to http://localhost:4000/corporate-ui-docs/</li>
