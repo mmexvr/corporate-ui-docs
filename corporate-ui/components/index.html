@@ -10,8 +10,9 @@
 
   <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>
 
-  <!--   3.5.2-CF   -->
+  <!--   3.5.3-CF   -->
   <script src="https://static.scania.com/build/global/3.5.3/js/corporate-ui.js"></script>
+
   <!-- Ux-library bootstrap docs specific css  -->
   <link rel="stylesheet" href="/corporate-ui-docs/corporate-ui/css/scania-bootstrap-docs.css">
   <link rel="stylesheet" href="/corporate-ui-docs/corporate-ui/css/prism.css">
@@ -20,7 +21,6 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>
   <script src="/corporate-ui-docs/js/google-analytics.js"></script>
 
-  <link rel="stylesheet" href="/corporate-ui-docs/css/ux-lib.css">
   <script src="/corporate-ui-docs/js/holder.js"></script>
 
 <style>
@@ -43,37 +43,6 @@
 <script>
 
 $(function(){
-  // window.onload = function(){
-  // if(location.hash) {
-  //   var tabElementsAnchors = {};
-  //   var targetSection = '';
-
-  //   $('.tab-content.zone > .tab-pane').each(function(key, section) {
-  //     tabElementsAnchors[section.id] = []
-  //     $('.bs-docs-sidebar ul > li > a', section).each(function(key, link) {
-  //       tabElementsAnchors[section.id].push($(link).attr('href'));
-  //     });
-  //   })
-
-  //   Object.keys(tabElementsAnchors).map(function(sectionId) {
-  //     var section = tabElementsAnchors[sectionId];
-  //     if(section.indexOf(location.hash) > -1) {
-  //       targetSection = sectionId;
-  //     }
-  //   })
-
-  //   console.log(tabElementsAnchors);
-
-  //   $('.nav.nav-tabs.c-ui-tabs > li').removeClass('active');
-  //   $('.c-ui-tabs > li > a[href=#' + targetSection + ']').parent().addClass('active');
-  //   $('.tab-pane').removeClass('fade active');
-  //   $('#' + targetSection + '.tab-pane').addClass('active');
-
-  //   if (location.hash) {
-  //     location.href = location.hash;
-  //   }
-  // }
-  // }
   var hash = window.location.hash;
   var tabInstallationAnchors =  [ "#corporate-ui-installation-overview", "#corporate-ui-installation-overview"];
   var tabElementsAnchors =  [ "#corporate-ui-components-overview", "#corporate-header", ,"#corporate-header-dealer-variation", "#main-content", "#main-nav", "#corporate-footer" ];
@@ -82,12 +51,12 @@ $(function(){
   var tabJavaScriptAnchors =   ["#js-overview", "#componentModal", "#modalOptions", "#modalMethods", "#modalEvents", "#modalUsage", "#modalExamples", "#componentDropdown", "#dropdownOptions", "#dropdownMethods", "#dropdownEvents", "#dropdownUsage", "#dropdownExamples", "#componentScrollspy", "#scrollspyOptions", "#scrollspyMethods", "#scrollspyEvents", "#scrollspyUsage", "#scrollspyExamples", "#componentTab", "#tabOptions", "#tabMethods", "#tabEvents", "#tabUsage", "#tabExamples", "#componentTooltip", "#tooltipOptions", "#tooltipMethods", "#tooltipEvents", "#tooltipUsage", "#tooltipExamples", "#componentPopover", "#popoverOptions", "#popoverMethods", "#popoverEvents", "#popoverUsage", "#popoverExamples", "#componentAlert", "#alertOptions", "#alertMethods", "#alertEvents", "#alertUsage", "#alertExamples", "#componentButton", "#buttonOptions", "#buttonMethods", "#buttonEvents", "#buttonUsage", "#buttonExamples", "#componentCollapse", "#collapseOptions", "#collapseMethods", "#collapseEvents", "#collapseUsage", "#collapseExamples", "#componentCarousel", "#carouselOptions", "#carouselMethods", "#carouselEvents", "#carouselUsage", "#carouselExamples", "#componentAffix", "#affixOptions", "#affixMethods", "#affixEvents", "#affixUsage", "#affixExamples" ];
   var tabTemplateAnchors =   ["#template-overview", "#sample-page-overview","#email-template-overview"];
 
-  console.dir(tabInstallationAnchors);
-  console.dir(tabElementsAnchors);
-  console.dir(tabComponentsAnchors);
-  console.dir(tabCSSAnchors);
-  console.dir(tabJavaScriptAnchors);
-  console.dir(tabTemplateAnchors);
+  // console.dir(tabInstallationAnchors);
+  // console.dir(tabElementsAnchors);
+  // console.dir(tabComponentsAnchors);
+  // console.dir(tabCSSAnchors);
+  // console.dir(tabJavaScriptAnchors);
+  // console.dir(tabTemplateAnchors);
 
   //Config for nav-pills on top(li:nth-child(X))
   if ( jQuery.inArray( hash, tabInstallationAnchors ) >= 0 ) {
@@ -2525,9 +2494,9 @@ $(function(){
 
                   <p>Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.</p>
                   <div class="bs-example bs-example-images">
-                    <img data-src="/corporate-ui-docs/js/holder.js/140x140" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAErUlEQVR4Xu3YwStscRjG8d8QQnZEFkqyY6NE/n0rlOxkS1ZqrCiFe/udOtPcue6YJ889Gc93Vtz7eo/3eT/9zjl6/X7/V+FDAhMm0APMhElR1iQAGCBICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpgakH8/7+Xs7Ozsrz83M5OTkpi4uLfwRwd3dXbm5uyvr6etnf32/+r9/vl6urq1J/tn729vbKxsbGRMF1fb2JfqkOi6YazOvrazk9PS1vb2+l1+v9BaZd7tPT0wBM+zNLS0vl6OioXF5eNtjq13Nzc2Oj7/p6HTqY+FJTC2Z4eXXaj8BcX1+Xh4eHUmvX1taaE6Y9cba3t8vOzs7g+3rKzM/PNyfP8vJyA6j+/P39fXMCra6uDnC6rjfpqTbxNjsonGowFxcX5eDgYHBKDN+S2tvO1tZWub29/RRMC6ieOI+Pj+X4+Licn5+X9iSq6P7H9TrYsfUSUwumTeGjZ4r232ZmZsru7m5zarQnTHtqjJ4w7feT3naGn5m+cj3rNjto9iPBDN9K2tvMZ7ekFkzNvJ4y9YQaflAeB/Sr1+tgz7ZL/DgwCwsLzVtTfdAd/aysrJTNzc3mremjZ5j6TNHeyuoD8MvLy19vUKMn2levZ9tkR41+HJjR1+oWQHvCjHtLmp2dbbDVt67Dw8PmpKlfD79BffZarVzvs7eyjgxIl4kDM+7vMP96vhm+Nalgxl1P2tQ3KZ56MN8kx5hfAzAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gz6G1HzSbXtC7t7AAAAAElFTkSuQmCC" class="img-rounded" alt="140x140" style="width: 140px; height: 140px;">
-                    <img data-src="/corporate-ui-docs/js/holder.js/140x140" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAErUlEQVR4Xu3YwStscRjG8d8QQnZEFkqyY6NE/n0rlOxkS1ZqrCiFe/udOtPcue6YJ889Gc93Vtz7eo/3eT/9zjl6/X7/V+FDAhMm0APMhElR1iQAGCBICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpgakH8/7+Xs7Ozsrz83M5OTkpi4uLfwRwd3dXbm5uyvr6etnf32/+r9/vl6urq1J/tn729vbKxsbGRMF1fb2JfqkOi6YazOvrazk9PS1vb2+l1+v9BaZd7tPT0wBM+zNLS0vl6OioXF5eNtjq13Nzc2Oj7/p6HTqY+FJTC2Z4eXXaj8BcX1+Xh4eHUmvX1taaE6Y9cba3t8vOzs7g+3rKzM/PNyfP8vJyA6j+/P39fXMCra6uDnC6rjfpqTbxNjsonGowFxcX5eDgYHBKDN+S2tvO1tZWub29/RRMC6ieOI+Pj+X4+Licn5+X9iSq6P7H9TrYsfUSUwumTeGjZ4r232ZmZsru7m5zarQnTHtqjJ4w7feT3naGn5m+cj3rNjto9iPBDN9K2tvMZ7ekFkzNvJ4y9YQaflAeB/Sr1+tgz7ZL/DgwCwsLzVtTfdAd/aysrJTNzc3mremjZ5j6TNHeyuoD8MvLy19vUKMn2levZ9tkR41+HJjR1+oWQHvCjHtLmp2dbbDVt67Dw8PmpKlfD79BffZarVzvs7eyjgxIl4kDM+7vMP96vhm+Nalgxl1P2tQ3KZ56MN8kx5hfAzAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gz6G1HzSbXtC7t7AAAAAElFTkSuQmCC" class="img-circle" alt="140x140" style="width: 140px; height: 140px;">
-                    <img data-src="/corporate-ui-docs/js/holder.js/140x140" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAErUlEQVR4Xu3YwStscRjG8d8QQnZEFkqyY6NE/n0rlOxkS1ZqrCiFe/udOtPcue6YJ889Gc93Vtz7eo/3eT/9zjl6/X7/V+FDAhMm0APMhElR1iQAGCBICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpgakH8/7+Xs7Ozsrz83M5OTkpi4uLfwRwd3dXbm5uyvr6etnf32/+r9/vl6urq1J/tn729vbKxsbGRMF1fb2JfqkOi6YazOvrazk9PS1vb2+l1+v9BaZd7tPT0wBM+zNLS0vl6OioXF5eNtjq13Nzc2Oj7/p6HTqY+FJTC2Z4eXXaj8BcX1+Xh4eHUmvX1taaE6Y9cba3t8vOzs7g+3rKzM/PNyfP8vJyA6j+/P39fXMCra6uDnC6rjfpqTbxNjsonGowFxcX5eDgYHBKDN+S2tvO1tZWub29/RRMC6ieOI+Pj+X4+Licn5+X9iSq6P7H9TrYsfUSUwumTeGjZ4r232ZmZsru7m5zarQnTHtqjJ4w7feT3naGn5m+cj3rNjto9iPBDN9K2tvMZ7ekFkzNvJ4y9YQaflAeB/Sr1+tgz7ZL/DgwCwsLzVtTfdAd/aysrJTNzc3mremjZ5j6TNHeyuoD8MvLy19vUKMn2levZ9tkR41+HJjR1+oWQHvCjHtLmp2dbbDVt67Dw8PmpKlfD79BffZarVzvs7eyjgxIl4kDM+7vMP96vhm+Nalgxl1P2tQ3KZ56MN8kx5hfAzAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gz6G1HzSbXtC7t7AAAAAElFTkSuQmCC" class="img-thumbnail" alt="140x140" style="width: 140px; height: 140px;">
+                    <img data-src="holder.js/140x140" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAErUlEQVR4Xu3YwStscRjG8d8QQnZEFkqyY6NE/n0rlOxkS1ZqrCiFe/udOtPcue6YJ889Gc93Vtz7eo/3eT/9zjl6/X7/V+FDAhMm0APMhElR1iQAGCBICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpgakH8/7+Xs7Ozsrz83M5OTkpi4uLfwRwd3dXbm5uyvr6etnf32/+r9/vl6urq1J/tn729vbKxsbGRMF1fb2JfqkOi6YazOvrazk9PS1vb2+l1+v9BaZd7tPT0wBM+zNLS0vl6OioXF5eNtjq13Nzc2Oj7/p6HTqY+FJTC2Z4eXXaj8BcX1+Xh4eHUmvX1taaE6Y9cba3t8vOzs7g+3rKzM/PNyfP8vJyA6j+/P39fXMCra6uDnC6rjfpqTbxNjsonGowFxcX5eDgYHBKDN+S2tvO1tZWub29/RRMC6ieOI+Pj+X4+Licn5+X9iSq6P7H9TrYsfUSUwumTeGjZ4r232ZmZsru7m5zarQnTHtqjJ4w7feT3naGn5m+cj3rNjto9iPBDN9K2tvMZ7ekFkzNvJ4y9YQaflAeB/Sr1+tgz7ZL/DgwCwsLzVtTfdAd/aysrJTNzc3mremjZ5j6TNHeyuoD8MvLy19vUKMn2levZ9tkR41+HJjR1+oWQHvCjHtLmp2dbbDVt67Dw8PmpKlfD79BffZarVzvs7eyjgxIl4kDM+7vMP96vhm+Nalgxl1P2tQ3KZ56MN8kx5hfAzAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gz6G1HzSbXtC7t7AAAAAElFTkSuQmCC" class="img-rounded" alt="140x140" style="width: 140px; height: 140px;">
+                    <img data-src="holder.js/140x140" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAErUlEQVR4Xu3YwStscRjG8d8QQnZEFkqyY6NE/n0rlOxkS1ZqrCiFe/udOtPcue6YJ889Gc93Vtz7eo/3eT/9zjl6/X7/V+FDAhMm0APMhElR1iQAGCBICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpgakH8/7+Xs7Ozsrz83M5OTkpi4uLfwRwd3dXbm5uyvr6etnf32/+r9/vl6urq1J/tn729vbKxsbGRMF1fb2JfqkOi6YazOvrazk9PS1vb2+l1+v9BaZd7tPT0wBM+zNLS0vl6OioXF5eNtjq13Nzc2Oj7/p6HTqY+FJTC2Z4eXXaj8BcX1+Xh4eHUmvX1taaE6Y9cba3t8vOzs7g+3rKzM/PNyfP8vJyA6j+/P39fXMCra6uDnC6rjfpqTbxNjsonGowFxcX5eDgYHBKDN+S2tvO1tZWub29/RRMC6ieOI+Pj+X4+Licn5+X9iSq6P7H9TrYsfUSUwumTeGjZ4r232ZmZsru7m5zarQnTHtqjJ4w7feT3naGn5m+cj3rNjto9iPBDN9K2tvMZ7ekFkzNvJ4y9YQaflAeB/Sr1+tgz7ZL/DgwCwsLzVtTfdAd/aysrJTNzc3mremjZ5j6TNHeyuoD8MvLy19vUKMn2levZ9tkR41+HJjR1+oWQHvCjHtLmp2dbbDVt67Dw8PmpKlfD79BffZarVzvs7eyjgxIl4kDM+7vMP96vhm+Nalgxl1P2tQ3KZ56MN8kx5hfAzAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gz6G1HzSbXtC7t7AAAAAElFTkSuQmCC" class="img-circle" alt="140x140" style="width: 140px; height: 140px;">
+                    <img data-src="holder.js/140x140" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAErUlEQVR4Xu3YwStscRjG8d8QQnZEFkqyY6NE/n0rlOxkS1ZqrCiFe/udOtPcue6YJ889Gc93Vtz7eo/3eT/9zjl6/X7/V+FDAhMm0APMhElR1iQAGCBICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpAcBIcVEMGAxICQBGiotiwGBASgAwUlwUAwYDUgKAkeKiGDAYkBIAjBQXxYDBgJQAYKS4KAYMBqQEACPFRTFgMCAlABgpLooBgwEpgakH8/7+Xs7Ozsrz83M5OTkpi4uLfwRwd3dXbm5uyvr6etnf32/+r9/vl6urq1J/tn729vbKxsbGRMF1fb2JfqkOi6YazOvrazk9PS1vb2+l1+v9BaZd7tPT0wBM+zNLS0vl6OioXF5eNtjq13Nzc2Oj7/p6HTqY+FJTC2Z4eXXaj8BcX1+Xh4eHUmvX1taaE6Y9cba3t8vOzs7g+3rKzM/PNyfP8vJyA6j+/P39fXMCra6uDnC6rjfpqTbxNjsonGowFxcX5eDgYHBKDN+S2tvO1tZWub29/RRMC6ieOI+Pj+X4+Licn5+X9iSq6P7H9TrYsfUSUwumTeGjZ4r232ZmZsru7m5zarQnTHtqjJ4w7feT3naGn5m+cj3rNjto9iPBDN9K2tvMZ7ekFkzNvJ4y9YQaflAeB/Sr1+tgz7ZL/DgwCwsLzVtTfdAd/aysrJTNzc3mremjZ5j6TNHeyuoD8MvLy19vUKMn2levZ9tkR41+HJjR1+oWQHvCjHtLmp2dbbDVt67Dw8PmpKlfD79BffZarVzvs7eyjgxIl4kDM+7vMP96vhm+Nalgxl1P2tQ3KZ56MN8kx5hfAzAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gwKGE+OMV0AE7Nqz6CA8eQY0wUwMav2DAoYT44xXQATs2rPoIDx5BjTBTAxq/YMChhPjjFdABOzas+ggPHkGNMFMDGr9gz6G1HzSbXtC7t7AAAAAElFTkSuQmCC" class="img-thumbnail" alt="140x140" style="width: 140px; height: 140px;">
                   </div>
                   <div class="highlight"><pre><code class="html">
 <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-rounded"</span><span class="nt">&gt;</span>
@@ -5018,22 +4987,22 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                   <div class="row">
                     <div class="col-sm-6 col-md-3">
                       <a href="#" class="thumbnail">
-                        <img data-src="/corporate-ui-docs/js/holder.js/100x180" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
+                        <img data-src="holder.js/100x180" alt="Generic placeholder thumbnail" data-holder-rendered="true">
                       </a>
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <a href="#" class="thumbnail">
-                        <img data-src="/corporate-ui-docs/js/holder.js/100x180" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
+                        <img data-src="holder.js/100x180" alt="Generic placeholder thumbnail">
                       </a>
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <a href="#" class="thumbnail">
-                        <img data-src="/corporate-ui-docs/js/holder.js/100x180" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
+                        <img data-src="holder.js/100x180" alt="Generic placeholder thumbnail">
                       </a>
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <a href="#" class="thumbnail">
-                        <img data-src="/corporate-ui-docs/js/holder.js/100x180" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
+                        <img data-src="holder.js/100x180" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
                       </a>
                     </div>
                   </div>
@@ -5054,7 +5023,7 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                   <div class="row">
                     <div class="col-sm-6 col-md-3">
                       <div class="thumbnail">
-                        <img data-src="/corporate-ui-docs/js/holder.js/300x200" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
+                        <img data-src="holder.js/300x200" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
                         <div class="caption">
                           <h3>Thumbnail label</h3>
                           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -5064,7 +5033,7 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <div class="thumbnail">
-                        <img data-src="/corporate-ui-docs/js/holder.js/300x200" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
+                        <img data-src="holder.js/300x200" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
                         <div class="caption">
                           <h3>Thumbnail label</h3>
                           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -5074,7 +5043,7 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <div class="thumbnail">
-                        <img data-src="/corporate-ui-docs/js/holder.js/300x200" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
+                        <img data-src="holder.js/300x200" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
                         <div class="caption">
                           <h3>Thumbnail label</h3>
                           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -5423,7 +5392,7 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                 <div class="bs-example">
                   <div class="media">
                     <a class="pull-left" href="#">
-                      <img class="media-object" data-src="/corporate-ui-docs/js/holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
+                      <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
                     </a>
                     <div class="media-body">
                       <h4 class="media-heading">Media heading</h4>
@@ -5432,14 +5401,14 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                   </div>
                   <div class="media">
                     <a class="pull-left" href="#">
-                      <img class="media-object" data-src="/corporate-ui-docs/js/holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
+                      <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
                     </a>
                     <div class="media-body">
                       <h4 class="media-heading">Media heading</h4>
                       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                       <div class="media">
                         <a class="pull-left" href="#">
-                          <img class="media-object" data-src="/corporate-ui-docs/js/holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
+                          <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
                         </a>
                         <div class="media-body">
                           <h4 class="media-heading">Media heading</h4>
@@ -5467,7 +5436,7 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                   <ul class="media-list">
                     <li class="media">
                       <a class="pull-left" href="#">
-                        <img class="media-object" data-src="/corporate-ui-docs/js/holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
+                        <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
                       </a>
                       <div class="media-body">
                         <h4 class="media-heading">Media heading</h4>
@@ -5475,7 +5444,7 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                         <!-- Nested media object -->
                         <div class="media">
                           <a class="pull-left" href="#">
-                            <img class="media-object" data-src="/corporate-ui-docs/js/holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
+                            <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
                           </a>
                           <div class="media-body">
                             <h4 class="media-heading">Nested media heading</h4>
@@ -5483,7 +5452,7 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                             <!-- Nested media object -->
                             <div class="media">
                               <a class="pull-left" href="#">
-                                <img class="media-object" data-src="/corporate-ui-docs/js/holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
+                                <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
                               </a>
                               <div class="media-body">
                                 <h4 class="media-heading">Nested media heading</h4>
@@ -5495,7 +5464,7 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                         <!-- Nested media object -->
                         <div class="media">
                           <a class="pull-left" href="#">
-                            <img class="media-object" data-src="/corporate-ui-docs/js/holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
+                            <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
                           </a>
                           <div class="media-body">
                             <h4 class="media-heading">Nested media heading</h4>
@@ -5506,7 +5475,7 @@ Extra small button <span class="nt">&lt;span</span> <span class="na">class=</spa
                     </li>
                     <li class="media">
                       <a class="pull-right" href="#">
-                        <img class="media-object" data-src="/corporate-ui-docs/js/holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
+                        <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
                       </a>
                       <div class="media-body">
                         <h4 class="media-heading">Media heading</h4>
@@ -9850,6 +9819,5 @@ theAffixInit<span class="token punctuation">.</span><span class="token function"
         }
       }
     </style>
-  <script src="js/bootstrap-native-docs-scripts.js"></script>
 </body>
 </html>

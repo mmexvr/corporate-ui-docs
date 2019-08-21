@@ -8,70 +8,63 @@
 
   <title>UX Library - Icons</title>
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
-  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>   
   <script src="https://static.scania.com/build/global/3.5.3/js/corporate-ui.js"></script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>  
-  <script src="/corporate-ui-docs/js/google-analytics.js"></script>  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>
+  <script src="/corporate-ui-docs/js/google-analytics.js"></script>
 
+    <style type="text/css">
+      .scania.bootstrap p {
+        text-align: center;
+        margin:20px 15% 40px;
+      }
 
-  <link rel="stylesheet" href="/corporate-ui-docs/css/ux-lib.css">
-  
+      .scania.bootstrap table {
+        font-size: 14px;
+        border: 1px solid #041e42;
+        font-family: 'Scania Sans',Arial, Helvetica, sans-serif;
+      }
 
+      .scania.bootstrap td {
+        padding: 4px 8px 4px;
+        margin: 3px;
+        border: 1px solid #041e42;
+      }
 
-<style type="text/css"> 
+      .scania.bootstrap td a {
+        display: block;
+      }
 
-    .scania.bootstrap p {text-align: center;margin:20px 15% 40px;}
+      .scania.bootstrap th {
+        padding: 8px 8px;
+        font-size: 16px;
+        text-transform: uppercase;
+        background-color: #041e42;
+        color: #FFF;
+        font-weight: bold;
+        font-family: 'Scania Sans Bold',Arial, Helvetica, sans-serif;
+      }
 
-    .scania.bootstrap table { 
-      font-size: 14px;
-      border: 1px solid #041e42; 
-      font-family: 'Scania Sans',Arial, Helvetica, sans-serif;
-    } 
+      th:nth-child(1), td:nth-child(1),
+      th:nth-child(4), td:nth-child(4),
+      th:nth-child(8), td:nth-child(8),
+      th:nth-child(9), td:nth-child(9),
+      th:nth-child(10), td:nth-child(10)
+      {display:none;}
 
-    .scania.bootstrap td {
-      padding: 4px 8px 4px;
-      margin: 3px;
-      border: 1px solid #041e42;
-    }
+      th:nth-child(7) a, td:nth-child(7) a
+      {display:block;}
 
-    .scania.bootstrap td a {
-      display: block;
-    }
-
-    .scania.bootstrap th {
-      padding: 8px 8px;
-      font-size: 16px;      
-      text-transform: uppercase;
-      background-color: #041e42; 
-      color: #FFF;
-      font-weight: bold;
-      font-family: 'Scania Sans Bold',Arial, Helvetica, sans-serif;      
-    }
-
-    th:nth-child(1), td:nth-child(1),
-    th:nth-child(4), td:nth-child(4),    
-    th:nth-child(8), td:nth-child(8),
-    th:nth-child(9), td:nth-child(9),
-    th:nth-child(10), td:nth-child(10)
-    {display:none;}
-
-    th:nth-child(7) a, td:nth-child(7) a
-    {display:block;}
-
-    .bg-plate {
+      .bg-plate {
         width: 240px;
         padding: 27px 25px 20px;
         border-radius: 9px;
         margin-bottom: 30px;
-    }
+      }
 
-    p a {font-weight: bold}
+      p a {font-weight: bold}
+    </style>
 
-</style>
-
-
-  <link rel="stylesheet" href="/corporate-ui-docs/css/ux-lib.css">
 </head>
 <body class="scania">
 
@@ -2401,8 +2394,6 @@
     <nav-item><a href="https://github.com/scania/corporate-ui" target="_blank">Github</a></nav-item>
     <nav-item location="mailto:corporate-ui@scania.com">Contact</nav-item>
   </c-corporate-footer>
-
-  <script src="/corporate-ui-docs/js/ux-lib.js"></script>
 </body>
 </html>
 
