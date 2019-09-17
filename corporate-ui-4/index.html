@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="corporate-ui">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+
+
+  <title>UX Library - Developers</title>
+  <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+
+  <script src="https://static.scania.com/build/global/3.5.3-1/js/corporate-ui.js?monitoring=true"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>
+  <script src="/corporate-ui-docs/js/google-analytics.js"></script>
+
+</head>
+<body class="scania app">
+
+ <c-corporate-header site-name="UX Library" site-url="/corporate-ui-docs/">
+  </c-corporate-header>
+
+  <c-main-content>
+    <c-main-navigation>
+      <primary-items>
+        <nav-item location="/corporate-ui-docs/">Home</nav-item>
+        <nav-item location="/corporate-ui-docs/corporate-ui/">Corporate UI
+          <sub-navigation caption="Corporate UI">
+            <nav-item location="/corporate-ui-docs/corporate-ui/">About</nav-item>
+            <nav-item location="/corporate-ui-docs/corporate-ui/components/">Components</nav-item>
+            <nav-item location="/corporate-ui-docs/corporate-ui/html-copy-paste/" >HTML copy paste</nav-item>
+            <nav-item location="/corporate-ui-docs/corporate-ui/frameworks/">JS Frameworks</nav-item>
+            <nav-item location="/corporate-ui-docs/corporate-ui/faq/">FAQ</nav-item>
+            <nav-item location="/corporate-ui-docs/corporate-ui/contact-us.html">Contact Us</nav-item>
+          </sub-navigation>
+        </nav-item>
+        <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps
+          <sub-navigation caption="Mobile Apps">
+            <nav-item location="/corporate-ui-docs/mobile-apps/">Overview</nav-item>
+            <nav-item location="/corporate-ui-docs/mobile-apps/mobile-docs/mobile-docs.html">Documentation</nav-item>
+            <nav-item location="/corporate-ui-docs/mobile-apps/mobile-example/mobile-example.html">Example</nav-item>
+            <nav-item location="/corporate-ui-docs/mobile-apps/mobile-contact/mobile-contact.html">Contact us</nav-item>
+          </sub-navigation>
+        </nav-item>
+        <nav-item location="/corporate-ui-docs/styleguide/">Style Guide
+          <sub-navigation caption="Style Guide">
+            <nav-item location="/corporate-ui-docs/styleguide/">Home</nav-item>
+            <nav-item location="/corporate-ui-docs/styleguide/logotypes/">Logotype</nav-item>
+            <nav-item location="/corporate-ui-docs/styleguide/icons/">Icons</nav-item>
+            <nav-item location="/corporate-ui-docs/styleguide/colours/">Colours</nav-item>
+            <nav-item location="/corporate-ui-docs/styleguide/typography/">Typography</nav-item>
+          </sub-navigation>
+        </nav-item>
+        <nav-item location="/corporate-ui-docs/corporate-ui-4/" class="active">Corporate UI 4
+          <sub-navigation caption="Corporate UI 4">
+            <nav-item location="/corporate-ui-docs/corporate-ui-4/" class="active">About</nav-item>
+          </sub-navigation>
+        </nav-item>
+      </primary-items>
+
+      <secondary-items>
+          <nav-item> <a href="https://www.scania.com/ux-library/en/home.html" target="_blank">Comon editors<i class="fal fa-external-link ml-2"></i></a></nav-item>
+      </secondary-items>
+    </c-main-navigation>
+
+    <style>
+     article p a {font-family: 'Scania Sans Bold'}
+    </style>
+
+
+    <section class="light">
+      <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <article>
+            <div>
+              <div>
+                <h1>Corporate UI 4.x</h1>
+                <p class="lead">Corporate UI is in the final stages to release a major update, version 4.x. With it comes several improvements based on feedback and insights from the previous versions of Corporate UI. The goal to deliver a consistent styling combined with reusable components remains the same, but the way of achieving that goal has received a few changes.</p>
+                <h3>Web components</h3>
+                <p>
+                  The most prominent change is to the technology used to create Web components. In this version of Corporate UI it has been decided to move away from Google Polymer to StencilJS. The reason for this change is the request for a more simple, lightweight and future proof Corporate UI by the developer community.
+                  Stencil generates standard web component that works in any framework or no framework at all. The logic is now moved from the runtime to the compilation phase to optimize load time. With this technology it is now possible to import component as a module. In addition, web components now available as self-contained components where the styling is scoped within the components.
+                  More information about Web components can be found in the new Corporate UI 4 repository.
+                </p>
+                <p>
+                  <a href="#">Corporate Ui 4 repository</a>
+                </p>
+                <h3>Bootstrap Upgrade</h3>
+                <p>
+                  The most prominent change is to the technology used to create Web components. In this version of Corporate UI it has been decided to move away from Google Polymer to StencilJS. The reason for this change is the request for a more simple, lightweight and future proof Corporate UI by the developer community.
+                  Stencil generates standard web component that works in any framework or no framework at all. The logic is now moved from the runtime to the compilation phase to optimize load time. With this technology it is now possible to import component as a module. In addition, web components now available as self-contained components where the styling is scoped within the components.
+                  More information about Web components can be found in the new Corporate UI 4 repository.
+                </p>
+                <p>
+                  <a href="#">Read More</a>
+                </p>
+                <h3>Styling</h3>
+                <p>
+                  Another change that was made is the configuration for styling to deliver a better developer experience.
+                  The style theme has now been separated from Corporate UI in order to give developers better control of the theming.
+                  Separating the style theme from Corporate UI enables parallel updates to be made to the different repository’s.
+                  Furthermore it enables for additional brand themes to be created and added to apply on the Corporate UI components.
+                  Applying the themes is made easy by using a new component called c-theme. All assets such as favicons, fonts, logotype and wordmark is now also bundled together and available in the theme package.
+                  While Scania will stick to the theme approved and aligned with Scania Identity Guidelines, this welcome suggestions how to expand the current theme to areas of use that has special requirements.
+                  Check out Scania theme repository for a more detail documentation.
+                </p>
+                <p>
+                  <a href="#">Read More</a>
+                </p>
+                <h3>Distribution</h3>
+                <p>
+                    In addition to the CDN delivery, it is now possible to use Corporate UI and Scania theme as a package as it is available in NPM.
+                    This will enable projects to host assets from Corporate UI how they want without relying on an internet connection.
+                    Furthermore it will add flexibility to how they want to manipulate the package to fit their project’s needs.
+                </p>
+                <strong>CDN</strong>
+                <p>Add link to the script by adding the following to the <code>&lt;head&gt;</code>. Make sure to include scania-theme script BEFORE the corporate-ui script.</p>
+                <div>
+                  <code>&lt;script src="https://static.scania.com/build/global/themes/scania/1.x/scania-theme.js"&gt;&lt;/script&gt;</code>
+                </div>
+                <div>
+                  <code>&lt;script src=&quot;https://static.scania.com/build/global/4.x/corporate-ui.js&quot;&gt;&lt;/script&gt;</code>
+                </div>
+                <p>Replace x with <a href="#">available releases</a>.</p>
+                <div>
+                  <strong>NPM:</strong>
+                </div>
+                <p>
+                  <a href="#">Corporate-UI Npm package</a>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </c-main-content>
+
+  <c-corporate-footer>
+    <nav-item><a href="https://github.com/scania/corporate-ui" target="_blank">Github</a></nav-item>
+    <nav-item location="mailto:corporate-ui@scania.com">Contact</nav-item>
+  </c-corporate-footer>
+  <c-cookie-message name="cookieMessage" text="hideMessage" path="/"></c-cookie-message>
+</body>
+</html>
+
