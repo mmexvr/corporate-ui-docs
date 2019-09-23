@@ -11,16 +11,29 @@
 
   <title>UX Library - UI Guidelines</title>
   <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
-  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script> 
+  <script src="https://static.scania.com/vendors/frameworks/jQuery/1.11.3/jquery-1.11.3.min.js"></script>
   <script src="https://static.scania.com/build/global/3.5.3-1/js/corporate-ui.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165423-1"></script>
   <script src="/corporate-ui-docs/js/google-analytics.js"></script>
 
   <link rel="stylesheet" href="/corporate-ui-docs/css/ux-lib.css">
   <style>
+
     .page-header h1 small {
       font-family: inherit;
       font-weight: normal;
+    }
+    .headline-v4 {
+      display:block;
+    }
+    .headline-v4 h4 {
+      display:inline-block;
+    }
+    .badge {
+      vertical-align: text-top;
+    }
+    c-main-content > section {
+      padding: 0;
     }
   </style>
 </head>
@@ -43,6 +56,11 @@
             <nav-item location="/corporate-ui-docs/corporate-ui/contact-us.html">Contact Us</nav-item>
           </sub-navigation>
         </nav-item>
+        <!-- <nav-item location="/corporate-ui-docs/corporate-ui-4/">Corporate UI 4
+          <sub-navigation caption="Corporate UI 4">
+            <nav-item location="/corporate-ui-docs/corporate-ui-4/">About</nav-item>
+          </sub-navigation>
+        </nav-item> -->
         <nav-item location="/corporate-ui-docs/mobile-apps/">Mobile Apps
           <sub-navigation caption="Mobile Apps">
             <nav-item location="/corporate-ui-docs/mobile-apps/">Overview</nav-item>
@@ -60,11 +78,6 @@
             <nav-item location="/corporate-ui-docs/styleguide/typography/">Typography</nav-item>
           </sub-navigation>
         </nav-item>
-        <nav-item location="/corporate-ui-docs/corporate-ui-4/">Corporate UI 4
-          <sub-navigation caption="Corporate UI 4">
-            <nav-item location="/corporate-ui-docs/corporate-ui-4/">About</nav-item>
-          </sub-navigation>
-        </nav-item>
       </primary-items>
 
       <secondary-items>
@@ -73,25 +86,43 @@
     </c-main-navigation>
 
     <section class="light ux-sections">
+      <div class="app">
+        <div class="alert alert-primary text-center"><strong>Good news!</strong> New version of <strong>Corporate UI Beta</strong> out.
+          <a class="alert-link" href="/corporate-ui-docs/corporate-ui-4/">Read more!</a>
+        </div>
+      </div>
       <div class="container text-center page-header">
-        <h1 class="text-center">UX Library<small>For the Corporate UI<br />Design System</small></h1>
-        <p>Welcome to Scania UX Library. Here you'll find information about how to implement and use our new design elements like the logotype, fonts, icons and web components. The UX Library serves a big audience and many types of stakeholders. Please select the appropriate section for you particular needs.</p>
+        <div class="row">
+          <h1 class="text-center">UX Library<small>For the Corporate UI<br />Design System</small></h1>
+          <p>Welcome to Scania UX Library. Here you'll find information about how to implement and use our new design elements like the logotype, fonts, icons and web components. The UX Library serves a big audience and many types of stakeholders. Please select the appropriate section for you particular needs.</p>
+        </div>
 
         <div class="row">
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <a href="/corporate-ui-docs/corporate-ui/"><img src="/corporate-ui-docs/images/templates-sample.svg"></a>
-            <h4>Corporate UI</h4>
-            <p>If you're a Designer or Developer please pick the correct patterns from the <a href="/corporate-ui-docs/corporate-ui/components/">Corporate UI Design System</a>.</p>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="content-landing-page">
+              <a href="/corporate-ui-docs/corporate-ui/"><img src="/corporate-ui-docs/images/templates-sample.svg"></a>
+              <h4>Corporate UI</h4>
+              <p>If you're a Designer or Developer please pick the correct patterns from the Design System. </p>
+            </div>
           </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <a href="/corporate-ui-docs/mobile-apps/"><img class="mobile-apps" src="/corporate-ui-docs/images/interaction.svg"></a>
-            <h4>Mobile Apps</h4>
-            <p>Developing a native mobile application differs from developing for the web.</p>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="content-landing-page">
+              <a href="/corporate-ui-docs/mobile-apps/"><img class="mobile-apps" src="/corporate-ui-docs/images/interaction.svg"></a>
+              <h4>Mobile Apps</h4>
+              <p>Developing a native mobile application differs from developing for the web.</p>
+            </div>
           </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <a href="/corporate-ui-docs/styleguide/"><img src="/corporate-ui-docs/images/styleguide.svg"></a>
-            <h4>Styleguide</h4>
-            <p>In the styleguide you'll find out more about how to use the new <a href="/corporate-ui-docs/styleguide/icons/">icons</a>, <a href="/corporate-ui-docs/styleguide/typography/">typography</a> and  <a href="/corporate-ui-docs/styleguide/logotypes/">logotype</a> in web based applications. They are all included in the <a href="/corporate-ui-docs/corporate-ui/">Corporate UI Design System</a>.</p>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="content-landing-page">
+              <a href="/corporate-ui-docs/styleguide/"><img src="/corporate-ui-docs/images/styleguide.svg"></a>
+              <h4>Styleguide</h4>
+              <p>In the styleguide you'll find out more about how to use the new
+                <a href="/corporate-ui-docs/styleguide/icons/">icons</a>,
+                <a href="/corporate-ui-docs/styleguide/typography/">typography</a> and
+                <a href="/corporate-ui-docs/styleguide/logotypes/">logotype</a> in web based applications. They are all included in the
+                <a href="/corporate-ui-docs/corporate-ui/">Corporate UI Design System</a>.
+              </p>
+            </div>
           </div>
         </div>
       </div>
