@@ -134,6 +134,9 @@ types:
                   {% else %}
                     {% assign url = type.short | append: '_ZIP/' | append: icon.file %}
                   {% endif %}
+                  {% if icon.category == "SIS" %}
+                    {% assign url = url | prepend: 'sis-icons/' %}
+                  {% endif %}
 
                   <a href="{{root}}{{ url }}.zip" download>{{ type.name }}</a>
                 {% endfor %}
