@@ -1635,7 +1635,7 @@
     {
         "name": "Open 24h",
         "class": "open-24h",
-        "folder": "ICON_open_24h"
+        "folder": "ICON_Open_24h"
     },
     {
         "name": "Alternative fuels",
