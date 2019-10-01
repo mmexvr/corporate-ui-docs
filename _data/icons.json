@@ -1853,9 +1853,9 @@
         "folder": "ICON_Recovery_body"
     },
     {
-        "name": "refuse collection body",
+        "name": "Refuse collection body",
         "class": "refuse_collection_body",
-        "folder": "ICON_refuse_collection_body"
+        "folder": "ICON_Refuse_collection_body"
     },
     {
         "name": "Tail lift",
