@@ -1826,5 +1826,65 @@
         "name": "Zoom out",
         "class": "zoom-out",
         "folder": "ICON_Zoom-out"
+    },
+    {
+        "name": "Crane",
+        "class": "crane",
+        "folder": "ICON_Crane"
+    },
+    {
+        "name": "Fifth Wheel",
+        "class": "fifth_wheel",
+        "folder": "ICON_Fifth_wheel"
+    },
+    {
+        "name": "Fire engine",
+        "class": "fire_engine",
+        "folder": "ICON_Fire_engine"
+    },
+    {
+        "name": "Hook lift",
+        "class": "hook_lift",
+        "folder": "ICON_Hook_lift"
+    },
+    {
+        "name": "Recovery Body",
+        "class": "recovery_body",
+        "folder": "ICON_Recovery_body"
+    },
+    {
+        "name": "refuse collection body",
+        "class": "refuse_collection_body",
+        "folder": "ICON_refuse_collection_body"
+    },
+    {
+        "name": "Tail lift",
+        "class": "tail_lift",
+        "folder": "ICON_Tail_lift"
+    },
+    {
+        "name": "Tank body",
+        "class": "tank_body",
+        "folder": "ICON_Tank_body"
+    },
+    {
+        "name": "Timber body",
+        "class": "timber_body",
+        "folder": "ICON_Timber_body"
+    },
+    {
+        "name": "Tipper body",
+        "class": "tipper_body",
+        "folder": "ICON_Tipper_body"
+    },
+    {
+        "name": "Trailer",
+        "class": "trailer",
+        "folder": "ICON_Trailer"
+    },
+    {
+        "name": "Vehicle transport body",
+        "class": "vehicle_transport_body",
+        "folder": "ICON_Vehicle_transport_body"
     }
 ]
