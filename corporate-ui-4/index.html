@@ -37,26 +37,23 @@
         <div class="col-lg-offset-1 col-lg-10 col-md-12 col-sm-12">
           <article>
             <section class="mt-5">
-              <h1 style="display:inline-block;">Corporate UI 4.x <span style="vertical-align: bottom" class="label label-success">Beta</span></h1>
-              <p class="lead">Corporate UI is in the final stages to release a major update, version 4.x. With it comes several improvements based on feedback and insights from the previous versions of Corporate UI. The goal to deliver a consistent styling combined with reusable components remains the same, but the way of achieving that goal has received a few changes.</p>
+              <h1 style="display:inline-block;">Corporate UI 4.x</h1>
+              <p class="lead">After months of work we have now release Corporate UI 4. With it comes several improvements based on feedback and insights from the previous versions of Corporate UI. The goal to deliver a consistent styling combined with reusable components remains the same, but the way of achieving that goal has received a few changes.</p>
               <p><a href="https://scania.github.io/corporate-ui-site/info/corporateui" target="_blank">Developer Documentation</a></p>
-              <p><a href="https://github.com/scania/corporate-ui-dev/wiki/" target="_blank">Corporate-ui 4.x Wiki</a></p>
             </section>
             <section>
               <h3>Web components</h3>
               <p>
                 The most prominent change is to the technology used to create Web components. In this version of Corporate UI it has been decided to move away from Google Polymer to <a href="https://stenciljs.com/docs/introduction/" target="_blank">StencilJS </a>. The reason for this change is the request for a more simple, lightweight and future proof Corporate UI by the developer community.
                 Stencil generates standard web component that works in any framework or no framework at all. The logic is now moved from the runtime to the compilation phase to optimize load time. With this technology it is now possible to import component as a module. In addition, web components now available as self-contained components where the styling is scoped within the components.
-                More information about Web components can be found in the <a target="_blank" href="https://github.com/scania/corporate-ui-dev"> new Corporate UI 4 repository</a>.
+                More information about Web components can be found in the <a target="_blank" href="https://github.com/scania/corporate-ui"> new Corporate UI 4 repository</a>.
               </p>
             </section>
             <section>
               <h3>Bootstrap Upgrade</h3>
               <p>
                 In this version Bootstrap will get a requested upgrade from <a target="_blank" href="https://getbootstrap.com/docs/4.3/migration/">Bootstrap 3 to Bootstrap 4 </a>.
-                This will bring a few changes to the elements available in the Corporate UI, where some frequently used elements like Panels will be replaced by Cards.
-                However, in order to smooth the transition from bootstrap 3 to 4, an additional CSS that contains the deprecated elements will be provided.
-                Going forward, the goal is to stay close to the latest stable version of Bootstrap available.
+                This will bring a few changes to the elements available in the Corporate UI, where some frequently used elements like Panels will be replaced by Cards. Going forward, the goal is to stay close to the latest stable version of Bootstrap available.
               </p>
             </section>
             <section>
@@ -80,34 +77,35 @@
                 Bootstrap is upgraded from 3 to 4. Some CSS have been either deprecated or changes into new classes.
                 More information can be found in the <a target="_blank" href="https://getbootstrap.com/docs/4.3/migration/">Bootstrap summary</a>.
                 Styling is now being contained in its own package called Scania theme.
-                Full list of breaking changes can be found in the <a targetr="_blank" href="https://github.com/scania/corporate-ui-dev/wiki/Upgrade-from-version-3.x-to-4.x">Corporate UI 4 Wiki</a>.
+                Full list of breaking changes can be found in the <a targetr="_blank" href="https://scania.github.io/corporate-ui-site/info/migration">Corporate UI documentation</a>.
               </p>
             </section>
             <section>
               <h3>Distribution</h3>
               <p>
-                  In addition to the CDN delivery, it is now possible to use Corporate UI and Scania theme as a package as it is available in NPM.
-                  This will enable projects to host assets from Corporate UI how they want without relying on an internet connection.
-                  Furthermore it will add flexibility to how they want to manipulate the package to fit their project’s needs.
+                In addition to the CDN delivery, it is now possible to use Corporate UI and Scania theme as a package as it is available in NPM.
+                This will enable projects to host assets from Corporate UI how they want without relying on an internet connection.
+                Furthermore it will add flexibility to how they want to manipulate the package to fit their project’s needs.
               </p>
+              <div>
+                  <strong>NPM</strong>
+                </div>
+                <p>
+                  <a target="_blank" href="https://www.npmjs.com/package/corporate-ui">Corporate UI package</a>
+                </p>
+                <p>
+                  <a target="_blank" href="https://www.npmjs.com/package/scania-theme">Scania Theme package</a>
+                </p>
               <strong>CDN</strong>
               <p>Add link to the script by adding the following to the <code>&lt;head&gt;</code>. Make sure to include scania-theme script BEFORE the corporate-ui script.</p>
               <div>
                 <code>&lt;script src="https://static.scania.com/build/global/themes/scania/1.x/scania-theme.js"&gt;&lt;/script&gt;</code>
               </div>
               <div>
-                <code>&lt;script src=&quot;https://static.scania.com/build/global/4.x/corporate-ui/corporate-ui.js&quot;&gt;&lt;/script&gt;</code>
+                <code>&lt;script src=&quot;https://static.scania.com/build/global/4.x/corporate-ui.js&quot;&gt;&lt;/script&gt;</code>
               </div>
-              <p>Replace x with <a target="_blank" href="https://github.com/scania/corporate-ui-dev/releases">available releases</a>.</p>
-              <div>
-                <strong>NPM:</strong>
-              </div>
-              <p>
-                <a target="_blank" href="https://www.npmjs.com/package/corporate-ui-dev">Corporate UI package</a>
-              </p>
-              <p>
-                <a target="_blank" href="https://www.npmjs.com/package/scania-theme">Scania Theme package</a>
-              </p>
+              <p>Corporate-UI <a target="_blank" href="https://github.com/scania/corporate-ui/releases">available releases</a>.</p>
+              <p>Scania-theme <a target="_blank" href="https://github.com/scania/scania-theme/releases">available releases</a>.</p>
             </section>
           </article>
         </div>
