@@ -69,46 +69,74 @@
             <div>
               <div>
                 <h1>Corporate UI 3.x</h1>
+
+                <div class="alert alert-primary">Support for Corporate UI 3 will end in August 2021. Read more below.</div>  
+
                 <h2 style="margin-top: 0 !important">Scania's Web Components Collection</h2>
               </div>
               <p>The new Scania user interface is now largely supplied as ready to run web components. This means that you no longer has to develop common elements like the header, main navigation or the page footer. Filtered and sortable tables are available to use straight of the shelf as well as a lot of other components as well.</p>
 
-              <p>Web Components consists of several separate technologies. You can think of Web Components as reusable user interface widgets that are created using open Web technology. An existing Web Component can be used without writing much of the code, simply by adding an import statement to an HTML page. Since Web Components use new or still-developing standard browser capabilities, we are currently using Google Polymer to package the Scania components in a smart way and use their polyfills to make the components more browser independent.</p>
+              <h2>Future of Corporate UI 3.x</h2>
+              <p>By 2019, Chrome stop supporting some main features that is used to build Corporate UI 3.x. With the development of web component technology, an improved solution for Scania web component collections is made by releasing <a href="https://digitaldesign.scania.com/getting-started/development" target="_blank">Corporate UI version 4</a>. The improved information of design system is also released through the development of Scania Digital Design System. With these situations, we plan to deprecate and stop support for Corporate UI 3.5 and below.</p>
 
-              <h2>Latest Version</h2>
-              <p>We're aiming at doing weekley releases and usually the UX Library is the first site to run the latest stable version. Currently, you'll get all the latest updates by including this file on your page:</p>
-              <p class="text-info">https://static.scania.com/build/global/3.5.5/js/corporate-ui.js</p>
+              <h2>Summary</h2>
+              <p><strong>We plan to deprecate and stop support for Corporate UI 3.5 and below</strong>. Regarding the deprecation, scripts for Corporate UI 3.x will still be hosted in static.scania.com until further notice.</p>
+              <p>Timeline for deprecation of CUI 3.5 and below.</p>
 
-              <h2>Ground-breaking improvement in Scania's reuse approach</h2>
-              <p>With Custom Elements (a part of the Web Components standard) Scania developers and partner companies can use functionality "off the shelf", create new HTML tags or extend the components other developers have created.</p>
-              <p>Google Polymer is the foundation of our web components and it brings a web standards-based way to create reusable components using nothing more than JS/HTML/CSS as well as, possibly, using libraries or frameworks like Angular and React to improve them even more. The result is less code, modular code, and higher grade of reuse in our applications. Now, you can totally focus on the user experience that you actually are here to develop.</p>
-
-              <h2>A single code base</h2>
-              <p>Scania stores its custom elements and Web Components in one single master repository. This gives us a unique opportunity to make continues improvements to shared elements. If for example a date picker is improved in one place, that one will immediately be available for other applications using the Scania standard. The economic effect is that much of our IT investments within this area automatically is shared and used for improvements and core UX rather than re-inventing the wheel from scratch every single time.</p>
-
-              <h2>Getting started</h2>
-              <p>In the UX Library you'll find a lot of ready to use elements and components ranging from a standalone Scania Corporate Header including our wordmark and logotype, to advanced Product Carousels and Tables with sorting, filtering and responsive utilities. </p>
-              <p>You'll find many components in the <a href="https://github.com/scania/corporate-ui">Corporate UI GitHub Repository</a>.</p>
-              <h3>Standard HTML Template</h3>
-              <p>If your solution is a traditional website it is very straight forward to start using Corporate UI. Download <a href="../corporate-ui/template/basic-template-app.html" target="_blank">this basic template for applications</a> or this <a href="../corporate-ui/template/basic-template.html" target="_blank">this basic template for public sites</a>. Then open it in your browser to explore our custom and standard HTML elements. Then reuse code samples from Scania Bootstrap to create the user interface.</p>
-
-              <h3>Using Corporate UI with frameworks</h3>
-              <p>If you're creating an application using Angular, React or equivalent - you basically will use the same code as on the templates shown above. But there are <a href="/corporate-ui-docs/corporate-ui/frameworks/">a few things to that you must do differently</a>.</p>
-
-              <h3>Strong skills in Bootstrap</h3>
-              <p>Since we won't be able to standardize each and every component made at Scania, you'll need to develop your core UX within your project. As we’re using the Bootstrap Grid within our components, you'll highly benefit from using it in your custom development as well. Here's a few good starting points:</p>
+              <p><strong>2020 Q3</strong></p>
               <ul>
-                <li><a href="/corporate-ui-docs/corporate-ui/components/">Bootstrap Documentation</a></li>
-                <li><a href="https://www.youtube.com/playlist?list=PL7029EEFC21D2DC58" target="_blank">An introduction to Standard Bootstrap (YouTube videos)</a></li>
+                <li>Reach out to developers about the deprecation</li>
+                <li>Start to reduce support for issues reported related to CUI 3.x and below</li>
+                <li>Only provide support for severe issues or severe bugs in CUI 3.x and below that affecting every application</li>
+                <li>New project is suggested to use CUI 4.x and no support for CUI 3.x for new projects.</li>
+                <li>Start removing issues in Github related to CUI 3.x and below</li>
               </ul>
 
-              <h3>Basic knowledge of Web Components and Google Polymer</h3>
-              <p>Using Web Components is so easy it is almost beyond imagination. Although, you will benefit from spending some time reading up on the basic ideas. Here's a few links to start out at:</p>
+              <p><strong>2020 Q4</strong></p>
               <ul>
-                <li><a href="https://meowni.ca/posts/polymer-cheatsheet/">Polymer Cheatsheet</a></li>
-                <li><a href="https://blog.revillweb.com/why-web-components-are-so-important-66ad0bd4807a#.dyerfqvci" target="_blank">Why Web Components are so important</a></li>
-                <li><a href="https://developers.google.com/web/fundamentals/getting-started/primers/customelements" target="_blank">Custom Elements v1: Reusable Web Components</a></li>
-                <li><a href="https://www.polymer-project.org/1.0/start/" target="_blank">Get started with Google Polymer</a></li>
+                <li>Start restructuring Corporate UI repositories to be more adequate with Digital Design System</li>
+              </ul>
+
+              <p><strong>2021 Q1</strong></p>
+              <ul>
+                  <li>Move resources for CUI 4.x and above from static.scania.com to digitaldesign.scania.com</li>
+                  <li>Merge all relevant contents from UX Library into digitaldesign.scania.com</li>
+              </ul>
+
+              <p><strong>2021 Q3</strong></p>
+              <ul>
+                <li>Stop support for Corporate UI 3.x and below</li>
+                <li>Merge UX Library into digitaldesign.scania.com (close UX Library)</li>
+                <li>Archive CUI 3.x repository and documentation</li>
+              </ul>
+
+              <h2>Motivation</h2>
+              <p>Corporate UI 3.5 is using Polymer v1 which built on top of Web component v0 specs. Web component v0 specs are only available in Chrome and polyfill is used for browser that not supports v0 specs. In 2018, Chrome announced that they will remove Web Component v0 features in Chrome v73 (released in April 2019). Although, polyfill still can be used for application with v0 specs. One of the main feature in v0 is the use of HTML Imports which is not adopted by other browser. Instead, various browser engines adopted Web Component v1 specs.</p>
+              <p>Read more about this here:</p>
+              <ul>
+                <li><a href="https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/h-JwMiPUnuU/sl79aLoLBQAJ" target="_blank">Official announcement from Google</a></li>
+                <li><a href="https://www.polymer-project.org/blog/2018-10-02-webcomponents-v0-deprecations" target="_blank">Polymer - Web Components v0 deprecation</a></li>
+              </ul>
+
+              <p>HTML Imports that is used in CUI v3.x and below was never standardized and is not supported in major browsers. In the development of CUI 4.x, we focused on creating a solution which will work with standard Javascript modules and following the new Web Component v1 specs that are more widely used in various browsers. Our focus is to develop a more easy to use, framework-agnostic, and sustainable solution.</p>
+ 
+              <p>With these reasons, we decided to deprecate support for CUI v3.x and focus on improving CUI 4.x to be more flexible and make it available for wider usage.</p>
+
+              <h2>Suggestion for developers</h2>
+              <p>If you have used Corporate UI version 3.x and below, thank you so much!
+              <p>If you have existing application using Corporate UI 2.x or 3.x, we strongly suggest you to migrate to version 4.x.</p> 
+              <p>Follow through our migration checklist : <a href="https://digitaldesign.scania.com/getting-started/development/migration-guide-from-v3-to-v4-" target="_blank">Migrate from 3.x to version 4</a> </p>
+              <p>Although the application with Corporate UI v3.x or below might still run with polyfill, it is not guaranteed it will work properly in modern browser since the native features are already removed in Chrome specification. <a href="https://developers.google.com/web/updates/2019/07/web-components-time-to-upgrade" target="_blank">Read more how to handle applications that are still using Polymer v1.x or v2.x.</a></p>
+
+              <h2>Digital Design System Resources</h2>
+              <p>UX Library has provided valuable contents for users, especially documentation for Corporate UI 3.x. Since then, we tried to deliver a more stable design system. The new design system has been released in Q1 2020 and we decided to merge UX Library into the new site digitaldesign.scania.com by the end of Q3 2021. We will move and improve relevant contents from UX Library to digitaldesign.scania.com. Documentation and resources will be available in digitaldesign.scania.com website or under digitaldesign.scania.com domain.</p>
+              
+              <h2>Useful Links</h2>
+              <ul>
+                <li><a href="https://digitaldesign.scania.com/home" target="_blank">Scania Digital Design System</a></li>
+                <li><a href="https://github.com/scania/corporate-ui" target="_blank">Components Repository in Github</a></li>
+                <li><a href="https://github.com/scania/scania-theme/" target="_blank">Scania Theme Respository in Github</a></li>
+                <li><a href="https://teams.microsoft.com/l/team/19%3a1257007a64d44c64954acca27a9d4b46%40thread.skype/conversations?groupId=79f9bfeb-73e2-424d-9477-b236191ece5e&tenantId=3bc062e4-ac9d-4c17-b4dd-3aad637ff1ac" target="_blank">Teams Channel</a></li>
               </ul>
             </div>
           </article>
