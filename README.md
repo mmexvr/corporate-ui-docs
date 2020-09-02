@@ -1,5 +1,13 @@
 <h1>The Corporate UI Design System</h1>
 
+
+<h3> :warning: This is being deprecated and closed in 2021 around Q4, Please visit our new home Scania Digital Design System https://digitaldesign.scania.com/ . </h3>
+	
+<p>You can read more about the timeline and next steps in https://scania.github.io/corporate-ui-docs/corporate-ui/ </p>
+
+<p> This repo will be archived in 2021 </p>
+---
+
 <p>In this repository you'll find all documentation of the components contained in <a href="https://github.com/Scania/corporate-ui">the Corporate UI repository.</a>.</p>
 
 <h2>The Corporate UI Development Process</h2>
