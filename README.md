@@ -6,6 +6,7 @@
 <p>You can read more about the timeline and next steps in https://scania.github.io/corporate-ui-docs/corporate-ui/ </p>
 
 <p> This repo will be archived in 2021 </p>
+
 ---
 
 <p>In this repository you'll find all documentation of the components contained in <a href="https://github.com/Scania/corporate-ui">the Corporate UI repository.</a>.</p>
